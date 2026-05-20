@@ -27,10 +27,6 @@ jobs:
 
       - name: 配信リストを取得
         run: python scripts/scrape.py
-        # 詳細ページ（あらすじ・ジャンル）の取得数を絞りたい場合は
-        # 下の env を有効化（0=全件取得 / 例: 300=各サービス300件まで）
-        # env:
-        #   DETAIL_LIMIT: '300'
 
       - name: 変更があればコミット
         run: |
