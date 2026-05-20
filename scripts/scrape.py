@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-MOVIE WALKER PRESS の配信中リストから、Netflix / Prime Video の作品を取得する（軽量版）。
+Filmarks の配信中リストから、Netflix / Prime Video の映画（見放題のみ）を取得する。
 
 設計方針:
-- 一覧ページ（全ページ）だけを巡回して作品の基本情報（タイトル・年・サムネ・リンク・ジャンル）を取得する。
-- 各作品の個別詳細ページにはアクセスしない（大量アクセスによるブロック/404を回避するため）。
-- あらすじはサイト側の「作品情報を見る」リンク（MOVIE WALKER）で確認できるため、ここでは取得しない。
-- 連続して404が続いたら、そのサービスの巡回を打ち切る（存在しないページへの空振りを防ぐ）。
+- /list/vod/ の映画一覧ページのみを巡回（個別ページは叩かない）。
+- 見放題ラベル（label-svod クラス）が付いた作品のみ採用する。
+- Prime は採用数が PRIME_TARGET_COUNT に達したら打ち切る。
+- 1日1サービス（4日サイクル: 偶数位相=Netflix / 奇数位相=Prime）。
+- その日取得しないサービスは既存データを維持する。
+- ユーザーレビュー本文は取得・保存しない（他人の著作物）。
 
-この json に載っている作品だけがサイトに表示される。
-リストから消えた作品は次回実行時に json から消えるため、自動的にサイトからも除外される。
-
-GitHub Actions 上で毎日実行される想定。実行は数分で完了する。
+GitHub Actions 上で毎日実行される想定。
 """
 
 import json
@@ -23,12 +22,11 @@ import datetime
 import requests
 from bs4 import BeautifulSoup
 
-BASE = "https://press.moviewalker.jp"
+BASE = "https://filmarks.com"
 
-# 取得対象サービス（key はサイト側の識別子, slug は一覧URLのスラッグ）
 SERVICES = {
     "netflix": "netflix",
-    "prime":   "prime-video",
+    "prime":   "prime_video",
 }
 
 HEADERS = {
@@ -37,21 +35,21 @@ HEADERS = {
                    "Chrome/124.0.0.0 Safari/537.36"),
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
+    "Referer": "https://filmarks.com/",
 }
 
-# 待機・リトライ設定
-SLEEP_LIST = 1.5        # 一覧ページ間の待機（秒）。礼儀正しく巡回する
-SLEEP_BETWEEN_SERVICES = 20  # サービス切り替え時の待機（秒）。連続アクセスによるブロック回避
-TIMEOUT = 60            # 重い一覧ページ（Primeは1万作品超）に備えて長めに
-MAX_RETRY = 3           # 一覧ページ取得のリトライ回数
-FIRST_PAGE_RETRY = 6    # 各サービスの開始ページは重要なので多めにリトライ
-STOP_AFTER_404 = 3      # 404 ページがこの回数連続したら巡回を打ち切る
-HARD_PAGE_CAP = 800     # 安全装置：最大ページ数の上限（Primeは約694ページ）
+SLEEP_LIST = 1.5
+TIMEOUT = 60
+MAX_RETRY = 3
+FIRST_PAGE_RETRY = 6
+STOP_AFTER_404 = 3
+HARD_PAGE_CAP = 900
+PRIME_TARGET_COUNT = 2500
+CYCLE_LEN = 4
 
 
 def get(url, retry=MAX_RETRY):
-    """GET。成功なら本文、404 なら "404"、その他失敗なら None を返す。
-    どんな失敗でも必ず理由をログに出す。"""
+    """GET。成功なら本文、404なら "404"、その他失敗なら None を返す。"""
     for attempt in range(1, retry + 1):
         try:
             r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
@@ -65,191 +63,159 @@ def get(url, retry=MAX_RETRY):
         except requests.RequestException as e:
             print(f"  [warn] {url} -> 接続エラー: {e} (try {attempt}/{retry})", file=sys.stderr)
         except Exception as e:
-            # 想定外の例外も必ず表示する（沈黙して失敗しないように）
             print(f"  [warn] {url} -> 予期せぬエラー: {type(e).__name__}: {e} (try {attempt}/{retry})", file=sys.stderr)
         time.sleep(3 * attempt)
     return None
 
 
-def parse_total_pages(html):
-    """一覧1ページ目から総ページ数を推定する（参考値）。"""
-    soup = BeautifulSoup(html, "html.parser")
-    pages = [1]
-    for a in soup.find_all("a", href=re.compile(r"/list/vod/[^/]+/p(\d+)/")):
-        m = re.search(r"/p(\d+)/", a.get("href", ""))
-        if m:
-            pages.append(int(m.group(1)))
-    m = re.search(r"\b1\s*/\s*(\d+)\b", soup.get_text())
-    if m:
-        pages.append(int(m.group(1)))
-    return max(pages)
+def parse_cassette(cassette, service_key):
+    """js-cassette div 1つから作品データを抽出する。
+    見放題でなければ None を返す。レビュー本文は取得しない。
+    """
+    # movie_id を data-clip 属性の JSON から取得
+    data_clip = cassette.get("data-clip", "{}")
+    try:
+        clip_data = json.loads(data_clip)
+        movie_id = str(clip_data.get("movie_id", ""))
+    except (json.JSONDecodeError, AttributeError):
+        movie_id = ""
+    if not movie_id:
+        return None
 
+    # 見放題ラベル確認（label-svod クラスが存在するか）
+    if not cassette.find("div", class_="label-svod"):
+        return None  # レンタル/購入のみ → スキップ
 
-# 一覧ページに現れる既知ジャンル名（作品ブロック内のテキストから拾う）
-KNOWN_GENRES = [
-    "アニメ", "ホラー", "アクション", "コメディ", "ドキュメンタリー", "恋愛", "時代劇",
-    "SF", "ファンタジー", "戦争", "社会派", "アート", "西部劇", "伝記", "ミュージカル",
-    "ヒューマンドラマ", "ファミリー", "文芸", "歴史", "青春", "スリラー", "舞台・音楽",
-    "パニック", "冒険・アドベンチャー", "バイオレンス", "任侠・アウトロー", "キッズ",
-    "特撮", "韓国", "サスペンス・ミステリー",
-]
+    # タイトル
+    title_el = cassette.find("h3", class_="p-content-cassette__title")
+    title = title_el.get_text(strip=True) if title_el else ""
+    if not title:
+        return None
+
+    # サムネイル
+    thumb = ""
+    jacket = cassette.find("div", class_="c2-poster-m")
+    if jacket:
+        img = jacket.find("img")
+        if img:
+            thumb = img.get("src", "")
+
+    # 公開年（「上映日：YYYY年MM月DD日」から西暦を取得）
+    year = None
+    date_info = cassette.find("div", class_="up-screen_and_country")
+    if date_info:
+        for span in date_info.find_all("span"):
+            m = re.search(r"(\d{4})年", span.get_text(strip=True))
+            if m:
+                year = int(m.group(1))
+                break
+
+    # ジャンル（ul.genres > li > a のリンクテキスト）
+    genres = []
+    genres_ul = cassette.find("ul", class_="genres")
+    if genres_ul:
+        genres = [a.get_text(strip=True) for a in genres_ul.find_all("a") if a.get_text(strip=True)]
+
+    # あらすじ（p.p-content-cassette__synopsis-desc-text）
+    # ユーザーレビューは取得しない（div.p-content-cassette__reviews は触らない）
+    synopsis = ""
+    syn_el = cassette.find("p", class_="p-content-cassette__synopsis-desc-text")
+    if syn_el:
+        synopsis = syn_el.get_text(strip=True)
+        synopsis = re.sub(r"[…]+\s*$", "", synopsis).strip()
+
+    # 視聴URL（a.p-content-cassette__vod-button の href）
+    watch_url = ""
+    vod_btn = cassette.find("a", class_="p-content-cassette__vod-button")
+    if vod_btn:
+        href = vod_btn.get("href", "")
+        if service_key == "prime":
+            href = re.sub(r"\?.*$", "", href)  # アフィリエイトタグ（?tag=filmarks_web-22 等）を削除
+        watch_url = href
+
+    url = f"{BASE}/movies/{movie_id}"
+    if not watch_url:
+        watch_url = url  # フォールバック: Filmarks 作品ページ
+
+    return {
+        "id":       movie_id,
+        "title":    title,
+        "url":      url,
+        "thumb":    thumb,
+        "year":     year,
+        "platform": service_key,
+        "genres":   genres,
+        "synopsis": synopsis,
+        "watch_url": watch_url,
+    }
 
 
 def parse_list_page(html, service_key):
-    """一覧ページから作品の基本情報を抽出する。
-
-    作品ごとに /mvXXXXX/ へのリンクが複数（画像リンク + 見出しリンク）あるため、
-    作品IDを基準にまとめて1作品として扱う。
-    """
+    """一覧ページから見放題作品のリストを抽出する。"""
     soup = BeautifulSoup(html, "html.parser")
-    movies = {}
-
-    for a in soup.find_all("a", href=re.compile(r"/mv\d+/?$")):
-        href = a.get("href", "")
-        mid_m = re.search(r"/mv(\d+)/?$", href)
-        if not mid_m:
-            continue
-        mid = mid_m.group(1)
-        m = movies.setdefault(mid, {"id": mid, "title": "", "thumb": "", "block": None})
-
-        txt = a.get_text(strip=True)
-        if txt:
-            in_heading = a.find_parent(["h1", "h2", "h3", "h4"]) is not None
-            if in_heading or not m["title"]:
-                m["title"] = txt
-                blk = a.find_parent(["li", "article", "div"])
-                if blk is not None:
-                    m["block"] = blk
-
-        img = a.find("img")
-        if img and img.get("src") and not m["thumb"]:
-            src = img["src"]
-            if src.startswith("/"):
-                src = BASE + src
-            if "notfound" not in src and "temporaryImage" not in src:
-                m["thumb"] = src
-
+    cassettes = soup.find_all("div", class_="js-cassette")
     items = []
-    for mid, m in movies.items():
-        title = m["title"]
-        if not title:
-            continue
-        year = None
-        genres = []
-        synopsis = ""
-        if m["block"] is not None:
-            btext = m["block"].get_text(" ", strip=True)
-            ym = re.search(r"(\d{4})年(\d{1,2})月(\d{1,2})日", btext)
-            if ym:
-                year = int(ym.group(1))
-            for g in KNOWN_GENRES:
-                if g in btext:
-                    genres.append(g)
-            genres = list(dict.fromkeys(genres))[:4]
-            # あらすじ抽出: 一覧ブロック内に紹介文が含まれる場合がある（特にPrime）
-            # 「配信中」の後ろに続く説明文を拾う。末尾の「もっと見る」は除去。
-            synopsis = extract_synopsis(m["block"], title)
-        items.append({
-            "id": mid,
-            "title": title,
-            "url": BASE + f"/mv{mid}/",
-            "thumb": m["thumb"],
-            "year": year,
-            "platform": service_key,
-            "genres": genres,
-            "synopsis": synopsis,
-        })
+    for c in cassettes:
+        item = parse_cassette(c, service_key)
+        if item:
+            items.append(item)
     return items
 
 
-def extract_synopsis(block, title):
-    """一覧の作品ブロックから紹介文（あらすじ）を抽出する。無ければ空文字。"""
-    # ブロック内の各テキストノードを見て、説明文らしい長文を探す
-    candidates = []
-    for s in block.stripped_strings:
-        t = s.strip()
-        # 紹介文は通常そこそこ長い。メタ情報（年・分・ジャンル・配信中等）を除外
-        if len(t) < 25:
-            continue
-        if "配信中" in t or "公開" in t or "もっと見る" in t and len(t) < 30:
-            continue
-        if title and t == title:
-            continue
-        candidates.append(t)
-    if not candidates:
-        return ""
-    # 最も長いものを採用し、末尾の「···」「もっと見る」を除去
-    syn = max(candidates, key=len)
-    syn = re.sub(r"[･・]{2,}.*$", "", syn)   # 「···もっと見る」以降を切る
-    syn = re.sub(r"もっと見る\s*$", "", syn)
-    syn = re.sub(r"\s+", " ", syn).strip()
-    return syn[:300]
-
-
-def scrape_service(service_key, slug, start_page=1, max_pages=None):
+def scrape_service(service_key, slug, prime_target=None):
     """指定サービスを巡回する。
-    start_page: 開始ページ（1始まり）
-    max_pages : このサービスで取得する最大ページ数（None=末尾まで）
+    prime_target: Prime のみ使用。見放題採用数がこの値に達したら打ち切る（None=上限なし）。
     """
     label = f"{service_key} ({slug})"
-    if start_page > 1 or max_pages:
-        label += f" [p{start_page}〜 最大{max_pages}ページ]"
+    if prime_target:
+        label += f" [見放題上限 {prime_target} 件]"
     print(f"\n=== {label} ===", file=sys.stderr)
 
-    # 1ページ目（実際の開始ページ）は重要なので多めにリトライ
-    first_url = f"{BASE}/list/vod/{slug}/" if start_page == 1 else f"{BASE}/list/vod/{slug}/p{start_page}/"
-    first = get(first_url, retry=FIRST_PAGE_RETRY)
-    if not first or first == "404":
-        print("  [error] 開始ページを取得できませんでした", file=sys.stderr)
-        return []
-
-    if start_page == 1:
-        hint = parse_total_pages(first)
-        print(f"  総ページ数の参考値: {hint}", file=sys.stderr)
-
     by_id = {}
-    for it in parse_list_page(first, service_key):
-        by_id[it["id"]] = it
-    print(f"  page {start_page}: 計 {len(by_id)}", file=sys.stderr)
-
-    pages_done = 1
     consecutive_404 = 0
-    page = start_page + 1
-    while page <= HARD_PAGE_CAP:
-        if max_pages and pages_done >= max_pages:
-            print(f"  → 上限{max_pages}ページに到達。打ち切ります。", file=sys.stderr)
-            break
-        html = get(f"{BASE}/list/vod/{slug}/p{page}/")
+
+    for page in range(1, HARD_PAGE_CAP + 1):
+        url = f"{BASE}/list/vod/{slug}?page={page}"
+        retry = FIRST_PAGE_RETRY if page == 1 else MAX_RETRY
+        html = get(url, retry=retry)
+
         if html == "404":
             consecutive_404 += 1
             print(f"  page {page}: 404 ({consecutive_404}/{STOP_AFTER_404})", file=sys.stderr)
             if consecutive_404 >= STOP_AFTER_404:
                 print(f"  → 404が{STOP_AFTER_404}回連続。巡回を打ち切ります。", file=sys.stderr)
                 break
-            page += 1
             time.sleep(SLEEP_LIST)
             continue
 
         if html is None:
+            if page == 1:
+                print("  [error] 一覧1ページ目を取得できませんでした", file=sys.stderr)
+                return []
             print(f"  page {page}: 取得失敗（スキップ）", file=sys.stderr)
-            page += 1
             time.sleep(SLEEP_LIST)
             continue
 
         consecutive_404 = 0
         page_items = parse_list_page(html, service_key)
-        if not page_items:
+
+        if not page_items and page > 1:
             print(f"  page {page}: 作品0件。末尾とみなして終了。", file=sys.stderr)
             break
+
         for it in page_items:
             by_id[it["id"]] = it
-        pages_done += 1
-        print(f"  page {page}: +{len(page_items)} (計 {len(by_id)})", file=sys.stderr)
-        page += 1
+
+        print(f"  page {page}: +{len(page_items)}件 (累計 {len(by_id)}件)", file=sys.stderr)
+
+        if prime_target and len(by_id) >= prime_target:
+            print(f"  → 採用上限 {prime_target} 件に到達。打ち切ります。", file=sys.stderr)
+            break
+
         time.sleep(SLEEP_LIST)
 
     items = list(by_id.values())
-    print(f"  取得作品数: {len(items)}", file=sys.stderr)
+    print(f"  取得完了: {len(items)}件", file=sys.stderr)
     return items
 
 
@@ -265,60 +231,54 @@ def load_existing():
     return {"services": {"netflix": [], "prime": []}}
 
 
-# 取得スケジュール（4日サイクル）
-# 1サイクル = [Prime前半, Prime中間, Prime後半, Netflix全件]
-# 毎日この中の1つだけを取得する（連続巡回によるブロックを回避）。
-PRIME_SPLITS = 3
-PRIME_PAGES_PER_RUN = 240   # 1ブロックあたりの取得ページ数（3ブロック×240=720ページ≒全694ページをカバー）
-CYCLE_LEN = 4               # Prime3ブロック + Netflix1 = 4日で一巡
-
-
 def main():
     today = datetime.date.today()
-    phase = today.toordinal() % CYCLE_LEN  # 0,1,2 = Primeブロック / 3 = Netflix
-    print(f"本日 {today} / サイクル位相: {phase} "
-          f"(0=Prime前半,1=Prime中間,2=Prime後半,3=Netflix)", file=sys.stderr)
+    phase = today.toordinal() % CYCLE_LEN
+    # 偶数位相 → Netflix 全件 / 奇数位相 → Prime（見放題 2,500 件上限）
+    do_netflix = (phase % 2 == 0)
+    target_service = "netflix" if do_netflix else "prime"
 
-    # 既存データを土台にする（この日に取得しないサービスは保持される）
+    print(
+        f"本日 {today} / サイクル位相: {phase} → {target_service} を更新",
+        file=sys.stderr,
+    )
+
     existing = load_existing()
     services = {
         "netflix": {it["id"]: it for it in existing["services"].get("netflix", [])},
-        "prime":   {it["id"]: it for it in existing["services"].get("prime", [])},
+        "prime":   {it["id"]: it for it in existing["services"].get("prime",   [])},
     }
 
-    # 初回（どちらかが空）は、空のほうを優先的に埋める
+    # 初回起動（どちらかが空）は空のほうを優先
     nf_empty = len(services["netflix"]) == 0
-    pr_empty = len(services["prime"]) == 0
+    pr_empty = len(services["prime"])   == 0
+    if nf_empty and not pr_empty:
+        do_netflix = True
+        target_service = "netflix"
+        print("  Netflix のデータが空のため、優先的に取得します。", file=sys.stderr)
+    elif pr_empty and not nf_empty:
+        do_netflix = False
+        target_service = "prime"
+        print("  Prime のデータが空のため、優先的に取得します。", file=sys.stderr)
 
-    if phase == 3 or (nf_empty and not pr_empty):
-        # --- Netflix を取得する日 ---
-        nf_items = scrape_service("netflix", SERVICES["netflix"])
-        if nf_items:
-            services["netflix"] = {it["id"]: it for it in nf_items}
-            print(f"  Netflix を {len(nf_items)} 件で更新しました。", file=sys.stderr)
+    if do_netflix:
+        items = scrape_service("netflix", SERVICES["netflix"])
+        if items:
+            services["netflix"] = {it["id"]: it for it in items}
+            print(f"  Netflix を {len(items)} 件で更新しました。", file=sys.stderr)
         else:
-            print("  [warn] Netflix取得0件。既存データを維持します。", file=sys.stderr)
+            print("  [warn] Netflix 取得0件。既存データを維持します。", file=sys.stderr)
     else:
-        # --- Prime のいずれかのブロックを取得する日 ---
-        block = phase  # 0,1,2
-        if pr_empty:
-            print("  Primeの既存データが空のため、まず前半(p1〜)から取得します。", file=sys.stderr)
-            block = 0
-        start_page = block * PRIME_PAGES_PER_RUN + 1
-        pr_items = scrape_service("prime", SERVICES["prime"],
-                                  start_page=start_page, max_pages=PRIME_PAGES_PER_RUN)
-        if pr_items:
-            for it in pr_items:
-                services["prime"][it["id"]] = it
-            print(f"  Prime ブロック{block} を {len(pr_items)} 件取得（統合後 計{len(services['prime'])}件）。",
-                  file=sys.stderr)
+        items = scrape_service("prime", SERVICES["prime"], prime_target=PRIME_TARGET_COUNT)
+        if items:
+            services["prime"] = {it["id"]: it for it in items}
+            print(f"  Prime を {len(items)} 件で更新しました。", file=sys.stderr)
         else:
-            print("  [warn] Prime取得0件。既存データを維持します。", file=sys.stderr)
+            print("  [warn] Prime 取得0件。既存データを維持します。", file=sys.stderr)
 
-    # 保存用に整形
     result = {
-        "updated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        "source": "MOVIE WALKER PRESS",
+        "updated_at":       datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "source":           "Filmarks",
         "cycle_phase_today": phase,
         "services": {
             "netflix": list(services["netflix"].values()),

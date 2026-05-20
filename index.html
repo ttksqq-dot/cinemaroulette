@@ -180,8 +180,8 @@
   </div>
 
   <p class="footer-note">
-    配信データ出典：MOVIE WALKER PRESS（配信中リスト）。GitHub Actionsで毎日自動更新しています。<br>
-    Prime Videoは見放題・レンタル・購入を区別していません（見放題とは限りません）。視聴可否や料金区分は各サービスでご確認ください。<br>
+    配信データ出典：<a href="https://filmarks.com" target="_blank" rel="noopener noreferrer" style="color:inherit">Filmarks</a>。GitHub Actionsで毎日自動更新しています。<br>
+    見放題作品のみ掲載しています。配信状況は変動するため、視聴前に各サービスでご確認ください。<br>
     リストから外れた作品は自動的に表示対象から除外されます。
   </p>
 </div>
@@ -309,14 +309,13 @@ function renderMovie(m, shuffling){
     watch.style.visibility='hidden'; detail.style.visibility='hidden';
   }else{
     watch.style.visibility='visible'; detail.style.visibility='visible';
-    const q = encodeURIComponent(m.title);
     if(m.platform==='netflix'){
       watch.className='watch-btn watch-netflix';
-      watch.href='https://www.netflix.com/search?q='+q;
+      watch.href=m.watch_url || 'https://www.netflix.com/search?q='+encodeURIComponent(m.title);
       watch.textContent='▶ NETFLIXで見る';
     }else{
       watch.className='watch-btn watch-prime';
-      watch.href='https://www.amazon.co.jp/s?k='+q+'&i=instant-video';
+      watch.href=m.watch_url || 'https://www.amazon.co.jp/s?k='+encodeURIComponent(m.title)+'&i=instant-video';
       watch.textContent='▶ PRIME VIDEOで見る';
     }
     detail.href = m.url || '#';
