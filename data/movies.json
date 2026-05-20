@@ -1,0 +1,17 @@
+{
+  "updated_at": null,
+  "source": "MOVIE WALKER PRESS",
+  "note": "これは初回表示用のサンプルです。GitHub Actions が初めて実行されると、全作品の最新リストに置き換わります。",
+  "services": {
+    "netflix": [
+      {"id":"92944","title":"愛しのアサシン","url":"https://press.moviewalker.jp/mv92944/","thumb":"","year":2026,"platform":"netflix","genres":["アクション","コメディ"],"synopsis":"GitHub Actions の初回実行後、ここに実際のあらすじが入ります。"},
+      {"id":"92585","title":"パーフェクト・ルームメイト","url":"https://press.moviewalker.jp/mv92585/","thumb":"","year":2026,"platform":"netflix","genres":["スリラー"],"synopsis":"GitHub Actions の初回実行後、ここに実際のあらすじが入ります。"},
+      {"id":"92353","title":"エイペックス・プレデター","url":"https://press.moviewalker.jp/mv92353/","thumb":"","year":2026,"platform":"netflix","genres":["アクション","SF"],"synopsis":"GitHub Actions の初回実行後、ここに実際のあらすじが入ります。"},
+      {"id":"92727","title":"クラッシュ: 暴走したのは愛か狂気か","url":"https://press.moviewalker.jp/mv92727/","thumb":"","year":2026,"platform":"netflix","genres":["スリラー","恋愛"],"synopsis":"GitHub Actions の初回実行後、ここに実際のあらすじが入ります。"},
+      {"id":"92783","title":"トースター","url":"https://press.moviewalker.jp/mv92783/","thumb":"","year":2026,"platform":"netflix","genres":["コメディ"],"synopsis":"GitHub Actions の初回実行後、ここに実際のあらすじが入ります。"}
+    ],
+    "prime": [
+      {"id":"sample-p1","title":"（初回実行までお待ちください）","url":"https://press.moviewalker.jp/list/vod/prime-video/","thumb":"","year":2026,"platform":"prime","genres":["ヒューマンドラマ"],"synopsis":"GitHub Actions が初めて実行されると、Prime Video の配信中作品がここに入ります。"}
+    ]
+  }
+}

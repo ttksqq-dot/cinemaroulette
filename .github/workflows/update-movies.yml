@@ -1,0 +1,45 @@
+name: 配信リストを毎日更新
+
+# 実行タイミング
+on:
+  schedule:
+    # UTC 21:00 = 日本時間 朝6:00 に毎日実行
+    - cron: '0 21 * * *'
+  workflow_dispatch:   # 手動実行も可能にする（Actionsタブから「Run workflow」）
+
+permissions:
+  contents: write   # movies.json をコミットするために必要
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 依存ライブラリをインストール
+        run: pip install requests beautifulsoup4
+
+      - name: 配信リストを取得
+        run: python scripts/scrape.py
+        # 詳細ページ（あらすじ・ジャンル）の取得数を絞りたい場合は
+        # 下の env を有効化（0=全件取得 / 例: 300=各サービス300件まで）
+        # env:
+        #   DETAIL_LIMIT: '300'
+
+      - name: 変更があればコミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/movies.json
+          if git diff --staged --quiet; then
+            echo "変更なし。コミットをスキップします。"
+          else
+            git commit -m "chore: 配信リストを自動更新 ($(date -u +%Y-%m-%d))"
+            git push
+          fi

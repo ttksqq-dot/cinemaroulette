@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CINEMA ROULETTE — 今夜の一本</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0c; --bg-2:#121216; --ink:#f5f3ee; --muted:#8a8a92;
+    --line:rgba(255,255,255,.08); --netflix:#e50914; --prime:#00a8e1; --gold:#d4af37;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{font-family:"Noto Sans JP",sans-serif;background:var(--bg);color:var(--ink);
+    min-height:100vh;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(900px 600px at 15% -10%, rgba(229,9,20,.18), transparent 60%),
+      radial-gradient(900px 600px at 110% 20%, rgba(0,168,225,.16), transparent 60%),
+      radial-gradient(700px 700px at 50% 120%, rgba(212,175,55,.07), transparent 60%);}
+  body::after{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .wrap{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:48px 24px 90px}
+
+  header{text-align:center;margin-bottom:40px}
+  .kicker{font-family:"Bebas Neue",sans-serif;letter-spacing:.5em;font-size:14px;
+    color:var(--muted);text-transform:uppercase;margin-bottom:8px;padding-left:.5em}
+  h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(56px,11vw,120px);line-height:.86;letter-spacing:.01em;
+    background:linear-gradient(180deg,#fff 0%,#cfcfd6 60%,#8c8c93 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 4px 30px rgba(0,0,0,.6))}
+  .sub{margin-top:14px;color:var(--muted);font-size:14px;letter-spacing:.04em}
+  .updated{margin-top:10px;color:#55555c;font-size:12px;letter-spacing:.04em}
+
+  .step-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;
+    font-family:"Bebas Neue",sans-serif;letter-spacing:.18em;font-size:18px;color:var(--gold)}
+  .step-tag .num{width:30px;height:30px;border:1px solid var(--gold);border-radius:50%;
+    display:grid;place-items:center;font-size:15px;color:var(--gold)}
+
+  .panel{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
+    border:1px solid var(--line);border-radius:20px;padding:34px 30px;
+    backdrop-filter:blur(8px);margin-bottom:30px;animation:rise .55s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+  .platforms{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:560px){.platforms{grid-template-columns:1fr}}
+  .plat{position:relative;cursor:pointer;border-radius:16px;overflow:hidden;
+    border:1px solid var(--line);background:var(--bg-2);padding:38px 26px;text-align:center;transition:.3s}
+  .plat:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.25)}
+  .plat .glow{position:absolute;inset:0;opacity:0;transition:.3s}
+  .plat:hover .glow{opacity:.22}
+  .plat[data-p="netflix"] .glow{background:radial-gradient(circle at 50% 40%,var(--netflix),transparent 70%)}
+  .plat[data-p="prime"] .glow{background:radial-gradient(circle at 50% 40%,var(--prime),transparent 70%)}
+  .plat.active{border-color:#fff;box-shadow:0 0 0 1px #fff inset}
+  .plat-name{position:relative;font-family:"Bebas Neue",sans-serif;font-size:42px;letter-spacing:.04em;line-height:1}
+  .plat[data-p="netflix"] .plat-name{color:var(--netflix)}
+  .plat[data-p="prime"] .plat-name{color:var(--prime)}
+  .plat-desc{position:relative;margin-top:8px;color:var(--muted);font-size:13px}
+  .plat-count{position:relative;margin-top:4px;color:#5a5a62;font-size:11px;letter-spacing:.05em}
+
+  .genres{display:flex;flex-wrap:wrap;gap:12px}
+  .chip{cursor:pointer;border:1px solid var(--line);background:var(--bg-2);color:var(--ink);
+    padding:12px 20px;border-radius:999px;font-size:14px;transition:.25s;letter-spacing:.02em}
+  .chip:hover{border-color:rgba(255,255,255,.4);transform:translateY(-2px)}
+  .chip.active{background:var(--gold);color:#1a1505;border-color:var(--gold);font-weight:700}
+  .chip.random{border-color:var(--gold);color:var(--gold)}
+  .chip.random.active{background:var(--gold);color:#1a1505}
+
+  .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+  .btn{cursor:pointer;border:none;border-radius:999px;padding:16px 38px;
+    font-family:"Bebas Neue",sans-serif;font-size:22px;letter-spacing:.1em;transition:.25s}
+  .btn-primary{background:linear-gradient(180deg,#fff,#d8d8dd);color:#0a0a0c;box-shadow:0 10px 30px rgba(255,255,255,.12)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(255,255,255,.2)}
+  .btn-primary:disabled{opacity:.35;cursor:not-allowed;transform:none;box-shadow:none}
+  .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}
+  .btn-ghost:hover{color:var(--ink);border-color:rgba(255,255,255,.4)}
+  .hint{color:var(--muted);font-size:12.5px;margin-top:16px;line-height:1.7}
+
+  #result{display:none;animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+  .result-card{display:grid;grid-template-columns:300px 1fr;gap:36px;
+    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+    border:1px solid var(--line);border-radius:22px;padding:36px;position:relative;overflow:hidden}
+  @media(max-width:720px){.result-card{grid-template-columns:1fr;gap:24px;text-align:center}}
+  .poster{width:100%;aspect-ratio:2/3;border-radius:14px;overflow:hidden;
+    box-shadow:0 30px 60px rgba(0,0,0,.7);position:relative;background:#1a1a20}
+  .poster img{width:100%;height:100%;object-fit:cover;display:block}
+  .poster .fallback{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:18px;
+    font-family:"Shippori Mincho",serif;font-size:22px;line-height:1.4;
+    background:linear-gradient(160deg,#23232b,#0f0f14);color:#e8e6df}
+  .meta-badge{display:inline-block;font-family:"Bebas Neue",sans-serif;letter-spacing:.12em;
+    font-size:15px;padding:5px 14px;border-radius:6px;margin-bottom:14px}
+  .badge-netflix{background:var(--netflix);color:#fff}
+  .badge-prime{background:var(--prime);color:#04222e}
+  .result-title{font-family:"Shippori Mincho",serif;font-weight:800;font-size:clamp(26px,5vw,42px);line-height:1.15;margin-bottom:10px}
+  .result-info{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:18px;color:var(--muted);font-size:13.5px}
+  @media(max-width:720px){.result-info{justify-content:center}}
+  .result-info b{color:var(--ink);font-weight:700}
+  .result-genres{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  @media(max-width:720px){.result-genres{justify-content:center}}
+  .gtag{font-size:12px;border:1px solid var(--line);padding:5px 12px;border-radius:999px;color:var(--muted)}
+  .synopsis{font-size:15px;line-height:1.9;color:#d6d4cd;min-height:1.5em}
+  .watch-btn{display:inline-flex;align-items:center;gap:10px;margin-top:24px;text-decoration:none;
+    border-radius:999px;padding:14px 30px;font-family:"Bebas Neue",sans-serif;font-size:20px;letter-spacing:.08em;transition:.25s;color:#fff}
+  .watch-btn:hover{transform:translateY(-3px)}
+  .watch-netflix{background:var(--netflix);box-shadow:0 10px 30px rgba(229,9,20,.35)}
+  .watch-prime{background:var(--prime);color:#04222e;box-shadow:0 10px 30px rgba(0,168,225,.35)}
+  .detail-link{display:inline-block;margin-top:14px;margin-left:14px;color:var(--muted);font-size:13px;text-decoration:underline}
+  .again{margin-top:26px;text-align:center}
+  .shuffling .poster img{filter:blur(6px) brightness(.6)}
+  .footer-note{text-align:center;color:#55555c;font-size:12px;margin-top:48px;line-height:1.8}
+
+  #loading{text-align:center;padding:60px 20px;color:var(--muted)}
+  .spinner{width:42px;height:42px;border:3px solid var(--line);border-top-color:var(--gold);
+    border-radius:50%;margin:0 auto 18px;animation:spin 1s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  #error{display:none;background:rgba(229,9,20,.08);border:1px solid rgba(229,9,20,.3);
+    border-radius:14px;padding:20px;color:#f0b8bb;font-size:13.5px;line-height:1.7;margin-bottom:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">What to watch tonight</div>
+    <h1>CINEMA ROULETTE</h1>
+    <p class="sub">迷ったら、運命にまかせよう。— 今夜の一本をランダムに。</p>
+    <p class="updated" id="updated"></p>
+  </header>
+
+  <div id="loading"><div class="spinner"></div>配信リストを読み込んでいます…</div>
+  <div id="error"></div>
+
+  <div id="app" style="display:none">
+    <section class="panel" id="panel-platform">
+      <div class="step-tag"><span class="num">1</span> 配信サービスを選ぶ</div>
+      <div class="platforms">
+        <div class="plat" data-p="netflix" onclick="selectPlatform('netflix',this)">
+          <div class="glow"></div>
+          <div class="plat-name">NETFLIX</div>
+          <div class="plat-desc">ネットフリックス配信中の作品から</div>
+          <div class="plat-count" id="count-netflix"></div>
+        </div>
+        <div class="plat" data-p="prime" onclick="selectPlatform('prime',this)">
+          <div class="glow"></div>
+          <div class="plat-name">prime video</div>
+          <div class="plat-desc">プライムビデオ配信中の作品から</div>
+          <div class="plat-count" id="count-prime"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-genre" style="display:none">
+      <div class="step-tag"><span class="num">2</span> ジャンルを選ぶ</div>
+      <div class="genres" id="genre-list"></div>
+      <div class="actions">
+        <button class="btn btn-primary" id="spin-btn" disabled onclick="spin()">▶ 映画をまわす</button>
+        <button class="btn btn-ghost" onclick="resetAll()">最初に戻る</button>
+      </div>
+      <p class="hint">「完全ランダム」を選ぶとジャンル不問で1本選びます。お好みのジャンルを選んでもOK。</p>
+    </section>
+
+    <section id="result">
+      <div class="step-tag"><span class="num">★</span> 今夜のあなたの一本</div>
+      <div class="result-card">
+        <div class="poster" id="poster"></div>
+        <div>
+          <span class="meta-badge" id="r-badge"></span>
+          <h2 class="result-title" id="r-title"></h2>
+          <div class="result-info" id="r-info"></div>
+          <div class="result-genres" id="r-genres"></div>
+          <p class="synopsis" id="r-synopsis"></p>
+          <a class="watch-btn" id="r-watch" href="#" target="_blank" rel="noopener noreferrer"></a>
+          <a class="detail-link" id="r-detail" href="#" target="_blank" rel="noopener noreferrer">作品情報を見る ↗</a>
+        </div>
+      </div>
+      <div class="again">
+        <button class="btn btn-primary" onclick="spin()">↻ もう一回まわす</button>
+        <button class="btn btn-ghost" onclick="resetAll()">条件を変える</button>
+      </div>
+    </section>
+  </div>
+
+  <p class="footer-note">
+    配信データ出典：MOVIE WALKER PRESS（配信中リスト）。GitHub Actionsで毎日自動更新しています。<br>
+    リストから外れた作品は自動的に表示対象から除外されます。実際の視聴可否は各サービスでご確認ください。
+  </p>
+</div>
+
+<script>
+let DATA = null;
+let state = { platform:null, genre:null };
+
+// movies.json を読み込む。失敗時は内蔵デモデータにフォールバック。
+async function loadData(){
+  try{
+    const res = await fetch('data/movies.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    DATA = await res.json();
+    initApp();
+  }catch(err){
+    // file:// で直接開いた等で fetch 不可の場合
+    console.warn('movies.json 読み込み失敗、デモデータを使用:', err);
+    DATA = DEMO_DATA;
+    const e = document.getElementById('error');
+    e.style.display='block';
+    e.innerHTML = '⚠ 配信データ（data/movies.json）を読み込めなかったため、デモ用の作品で表示しています。'
+      + 'GitHub Pages 等のサーバー経由で開くと、自動更新された最新リストが表示されます。';
+    initApp();
+  }
+}
+
+function initApp(){
+  document.getElementById('loading').style.display='none';
+  document.getElementById('app').style.display='block';
+
+  // 更新日時
+  if(DATA.updated_at){
+    const d = new Date(DATA.updated_at);
+    if(!isNaN(d)){
+      document.getElementById('updated').textContent =
+        '配信リスト更新: ' + d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate();
+    }
+  }
+  // 作品数表示
+  const nf = (DATA.services.netflix||[]).length;
+  const pr = (DATA.services.prime||[]).length;
+  document.getElementById('count-netflix').textContent = nf ? nf+'作品' : '';
+  document.getElementById('count-prime').textContent = pr ? pr+'作品' : '';
+}
+
+function moviesOf(platform){
+  return (DATA.services[platform] || []);
+}
+
+function selectPlatform(p, el){
+  state.platform = p;
+  document.querySelectorAll('.plat').forEach(x=>x.classList.remove('active'));
+  el.classList.add('active');
+  buildGenres();
+  const gp = document.getElementById('panel-genre');
+  gp.style.display = 'block';
+  gp.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function buildGenres(){
+  const list = document.getElementById('genre-list');
+  const base = moviesOf(state.platform);
+  const avail = [...new Set(base.flatMap(m=>m.genres||[]))].sort();
+  let html = `<div class="chip random" data-g="__random__" onclick="selectGenre('__random__',this)">🎲 完全ランダム</div>`;
+  html += avail.map(g=>`<div class="chip" data-g="${g}" onclick="selectGenre('${g}',this)">${g}</div>`).join('');
+  list.innerHTML = html;
+  state.genre = null;
+  document.getElementById('spin-btn').disabled = true;
+}
+
+function selectGenre(g, el){
+  state.genre = g;
+  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('spin-btn').disabled = false;
+}
+
+function spin(){
+  let pool = moviesOf(state.platform);
+  if(state.genre && state.genre!=="__random__"){
+    pool = pool.filter(m=>(m.genres||[]).includes(state.genre));
+  }
+  if(pool.length===0){ alert('該当する作品がありませんでした'); return; }
+
+  const result = document.getElementById('result');
+  result.style.display = 'block';
+
+  let ticks = 0; const totalTicks = 14;
+  const reel = setInterval(()=>{
+    renderMovie(pool[Math.floor(Math.random()*pool.length)], true);
+    if(++ticks>=totalTicks){
+      clearInterval(reel);
+      renderMovie(pool[Math.floor(Math.random()*pool.length)], false);
+      result.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  }, 70);
+}
+
+function renderMovie(m, shuffling){
+  const card = document.querySelector('.result-card');
+  card.classList.toggle('shuffling', shuffling);
+
+  const poster = document.getElementById('poster');
+  if(m.thumb){
+    poster.innerHTML = `<img src="${m.thumb}" alt="${escapeHtml(m.title)}" onerror="this.parentNode.innerHTML='<div class=\\'fallback\\'>${escapeHtml(m.title)}</div>'">`;
+  }else{
+    poster.innerHTML = `<div class="fallback">${escapeHtml(m.title)}</div>`;
+  }
+
+  const badge = document.getElementById('r-badge');
+  if(m.platform==='netflix'){ badge.className='meta-badge badge-netflix'; badge.textContent='NETFLIX'; }
+  else { badge.className='meta-badge badge-prime'; badge.textContent='PRIME VIDEO'; }
+
+  document.getElementById('r-title').textContent = m.title;
+
+  let info = [];
+  if(m.year) info.push(`<span><b>${m.year}</b>年</span>`);
+  document.getElementById('r-info').innerHTML = info.join('');
+
+  document.getElementById('r-genres').innerHTML =
+    (m.genres||[]).map(g=>`<span class="gtag">${g}</span>`).join('');
+
+  document.getElementById('r-synopsis').textContent =
+    m.synopsis || 'あらすじ情報は「作品情報を見る」からご確認ください。';
+
+  const watch = document.getElementById('r-watch');
+  const detail = document.getElementById('r-detail');
+  if(shuffling){
+    watch.style.visibility='hidden'; detail.style.visibility='hidden';
+  }else{
+    watch.style.visibility='visible'; detail.style.visibility='visible';
+    const q = encodeURIComponent(m.title);
+    if(m.platform==='netflix'){
+      watch.className='watch-btn watch-netflix';
+      watch.href='https://www.netflix.com/search?q='+q;
+      watch.textContent='▶ NETFLIXで見る';
+    }else{
+      watch.className='watch-btn watch-prime';
+      watch.href='https://www.amazon.co.jp/s?k='+q+'&i=instant-video';
+      watch.textContent='▶ PRIME VIDEOで見る';
+    }
+    detail.href = m.url || '#';
+  }
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function resetAll(){
+  state = { platform:null, genre:null };
+  document.querySelectorAll('.plat').forEach(x=>x.classList.remove('active'));
+  document.getElementById('panel-genre').style.display='none';
+  document.getElementById('result').style.display='none';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ---- フォールバック用の最小デモデータ（movies.jsonが読めない時だけ使用）----
+const DEMO_DATA = {
+  updated_at: null,
+  services: {
+    netflix: [
+      {id:"demo1",title:"インセプション",url:"#",thumb:"",year:2010,platform:"netflix",
+       genres:["SF","アクション","スリラー"],synopsis:"他人の夢に入り込みアイデアを盗む男の、夢の階層をめぐる物語。"},
+      {id:"demo2",title:"パルプ・フィクション",url:"#",thumb:"",year:1994,platform:"netflix",
+       genres:["クライム","ドラマ"],synopsis:"複数の物語が時系列を超えて交錯する伝説的クライム劇。"},
+    ],
+    prime: [
+      {id:"demo3",title:"ショーシャンクの空に",url:"#",thumb:"",year:1994,platform:"prime",
+       genres:["ヒューマンドラマ"],synopsis:"無実の罪で投獄された男が希望を捨てず自由を目指す感動作。"},
+      {id:"demo4",title:"マッドマックス 怒りのデス・ロード",url:"#",thumb:"",year:2015,platform:"prime",
+       genres:["アクション","SF"],synopsis:"荒廃した世界を駆け抜けるノンストップ・アクション。"},
+    ]
+  }
+};
+
+loadData();
+</script>
+</body>
+</html>
