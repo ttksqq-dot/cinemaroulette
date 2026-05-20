@@ -59,7 +59,6 @@
   .plat[data-p="netflix"] .plat-name{color:var(--netflix)}
   .plat[data-p="prime"] .plat-name{color:var(--prime)}
   .plat-desc{position:relative;margin-top:8px;color:var(--muted);font-size:13px}
-  .plat-count{position:relative;margin-top:4px;color:#5a5a62;font-size:11px;letter-spacing:.05em}
 
   .genres{display:flex;flex-wrap:wrap;gap:12px}
   .chip{cursor:pointer;border:1px solid var(--line);background:var(--bg-2);color:var(--ink);
@@ -140,13 +139,11 @@
           <div class="glow"></div>
           <div class="plat-name">NETFLIX</div>
           <div class="plat-desc">ネットフリックス配信中の作品から</div>
-          <div class="plat-count" id="count-netflix"></div>
         </div>
         <div class="plat" data-p="prime" onclick="selectPlatform('prime',this)">
           <div class="glow"></div>
           <div class="plat-name">prime video</div>
           <div class="plat-desc">プライムビデオ配信中の作品から</div>
-          <div class="plat-count" id="count-prime"></div>
         </div>
       </div>
     </section>
@@ -224,11 +221,6 @@ function initApp(){
         '配信リスト更新: ' + d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate();
     }
   }
-  // 作品数表示
-  const nf = (DATA.services.netflix||[]).length;
-  const pr = (DATA.services.prime||[]).length;
-  document.getElementById('count-netflix').textContent = nf ? nf+'作品' : '';
-  document.getElementById('count-prime').textContent = pr ? pr+'作品' : '';
 }
 
 function moviesOf(platform){
