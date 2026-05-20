@@ -41,16 +41,17 @@ HEADERS = {
 
 # 待機・リトライ設定
 SLEEP_LIST = 1.5        # 一覧ページ間の待機（秒）。礼儀正しく巡回する
-SLEEP_BETWEEN_SERVICES = 8  # サービス切り替え時の待機（秒）。連続アクセスによるブロック回避
-TIMEOUT = 30
-MAX_RETRY = 2           # 一覧ページ取得のリトライ回数
-FIRST_PAGE_RETRY = 5    # 各サービス1ページ目は重要なので多めにリトライ
+SLEEP_BETWEEN_SERVICES = 20  # サービス切り替え時の待機（秒）。連続アクセスによるブロック回避
+TIMEOUT = 60            # 重い一覧ページ（Primeは1万作品超）に備えて長めに
+MAX_RETRY = 3           # 一覧ページ取得のリトライ回数
+FIRST_PAGE_RETRY = 6    # 各サービスの開始ページは重要なので多めにリトライ
 STOP_AFTER_404 = 3      # 404 ページがこの回数連続したら巡回を打ち切る
-HARD_PAGE_CAP = 200     # 安全装置：最大ページ数の上限（暴走防止）
+HARD_PAGE_CAP = 800     # 安全装置：最大ページ数の上限（Primeは約694ページ）
 
 
 def get(url, retry=MAX_RETRY):
-    """GET。成功なら本文、404 なら "404"、その他失敗なら None を返す。"""
+    """GET。成功なら本文、404 なら "404"、その他失敗なら None を返す。
+    どんな失敗でも必ず理由をログに出す。"""
     for attempt in range(1, retry + 1):
         try:
             r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
@@ -58,10 +59,15 @@ def get(url, retry=MAX_RETRY):
                 return r.text
             if r.status_code == 404:
                 return "404"
-            print(f"  [warn] {url} -> HTTP {r.status_code} (try {attempt})", file=sys.stderr)
+            print(f"  [warn] {url} -> HTTP {r.status_code} (try {attempt}/{retry})", file=sys.stderr)
+        except requests.exceptions.Timeout:
+            print(f"  [warn] {url} -> タイムアウト({TIMEOUT}秒) (try {attempt}/{retry})", file=sys.stderr)
         except requests.RequestException as e:
-            print(f"  [warn] {url} -> {e} (try {attempt})", file=sys.stderr)
-        time.sleep(2 * attempt)
+            print(f"  [warn] {url} -> 接続エラー: {e} (try {attempt}/{retry})", file=sys.stderr)
+        except Exception as e:
+            # 想定外の例外も必ず表示する（沈黙して失敗しないように）
+            print(f"  [warn] {url} -> 予期せぬエラー: {type(e).__name__}: {e} (try {attempt}/{retry})", file=sys.stderr)
+        time.sleep(3 * attempt)
     return None
 
 
@@ -278,17 +284,7 @@ def main():
         "prime":   {it["id"]: it for it in existing["services"].get("prime", [])},
     }
 
-    # --- Netflix: 毎日全件更新（作品数が少ないので分割不要）---
-    nf_items = scrape_service("netflix", SERVICES["netflix"])
-    if nf_items:
-        # 全件取得できたので、Netflixは丸ごと置き換え（配信終了作品も自動で消える）
-        services["netflix"] = {it["id"]: it for it in nf_items}
-    else:
-        print("  [warn] Netflix取得0件。既存データを維持します。", file=sys.stderr)
-
-    # サービス間の待機
-    print(f"\n(次のサービスまで {SLEEP_BETWEEN_SERVICES}秒 待機)", file=sys.stderr)
-    time.sleep(SLEEP_BETWEEN_SERVICES)
+    # === 取得順: Prime を先に（最初のアクセスにして連続アクセスの影響を避ける） ===
 
     # --- Prime: 3日分割。本日の担当ブロックのページ範囲だけ取得して上書き ---
     # ただし初回（既存Primeデータが空）は、まず前半（人気の新作が多い）から取得する
@@ -302,6 +298,18 @@ def main():
     # 取得できた分を既存に統合（同じIDは新情報で更新、未取得の作品は残る）
     for it in pr_items:
         services["prime"][it["id"]] = it
+
+    # サービス間の待機
+    print(f"\n(次のサービスまで {SLEEP_BETWEEN_SERVICES}秒 待機)", file=sys.stderr)
+    time.sleep(SLEEP_BETWEEN_SERVICES)
+
+    # --- Netflix: 毎日全件更新（作品数が少ないので分割不要）---
+    nf_items = scrape_service("netflix", SERVICES["netflix"])
+    if nf_items:
+        # 全件取得できたので、Netflixは丸ごと置き換え（配信終了作品も自動で消える）
+        services["netflix"] = {it["id"]: it for it in nf_items}
+    else:
+        print("  [warn] Netflix取得0件。既存データを維持します。", file=sys.stderr)
 
     # 保存用に整形
     result = {
