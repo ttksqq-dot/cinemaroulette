@@ -265,57 +265,61 @@ def load_existing():
     return {"services": {"netflix": [], "prime": []}}
 
 
-# Prime を何分割するか（3日で一巡）
+# 取得スケジュール（4日サイクル）
+# 1サイクル = [Prime前半, Prime中間, Prime後半, Netflix全件]
+# 毎日この中の1つだけを取得する（連続巡回によるブロックを回避）。
 PRIME_SPLITS = 3
-# Prime の1回あたりの取得ページ数の上限（安全側。3分割×この数で十分カバー）
-PRIME_PAGES_PER_RUN = 240
+PRIME_PAGES_PER_RUN = 240   # 1ブロックあたりの取得ページ数（3ブロック×240=720ページ≒全694ページをカバー）
+CYCLE_LEN = 4               # Prime3ブロック + Netflix1 = 4日で一巡
 
 
 def main():
     today = datetime.date.today()
-    # 通算日を基準に、その日に取得する Prime の担当ブロック（0,1,2）を決める
-    block = today.toordinal() % PRIME_SPLITS
-    print(f"本日 {today} / Prime 担当ブロック: {block} (0=前半,1=中間,2=後半)", file=sys.stderr)
+    phase = today.toordinal() % CYCLE_LEN  # 0,1,2 = Primeブロック / 3 = Netflix
+    print(f"本日 {today} / サイクル位相: {phase} "
+          f"(0=Prime前半,1=Prime中間,2=Prime後半,3=Netflix)", file=sys.stderr)
 
-    # 既存データを土台にする（取得しなかった分は保持される）
+    # 既存データを土台にする（この日に取得しないサービスは保持される）
     existing = load_existing()
     services = {
         "netflix": {it["id"]: it for it in existing["services"].get("netflix", [])},
         "prime":   {it["id"]: it for it in existing["services"].get("prime", [])},
     }
 
-    # === 取得順: Prime を先に（最初のアクセスにして連続アクセスの影響を避ける） ===
+    # 初回（どちらかが空）は、空のほうを優先的に埋める
+    nf_empty = len(services["netflix"]) == 0
+    pr_empty = len(services["prime"]) == 0
 
-    # --- Prime: 3日分割。本日の担当ブロックのページ範囲だけ取得して上書き ---
-    # ただし初回（既存Primeデータが空）は、まず前半（人気の新作が多い）から取得する
-    if len(services["prime"]) == 0:
-        print("  Primeの既存データが空のため、初回は前半(p1〜)から取得します。", file=sys.stderr)
-        start_page = 1
+    if phase == 3 or (nf_empty and not pr_empty):
+        # --- Netflix を取得する日 ---
+        nf_items = scrape_service("netflix", SERVICES["netflix"])
+        if nf_items:
+            services["netflix"] = {it["id"]: it for it in nf_items}
+            print(f"  Netflix を {len(nf_items)} 件で更新しました。", file=sys.stderr)
+        else:
+            print("  [warn] Netflix取得0件。既存データを維持します。", file=sys.stderr)
     else:
+        # --- Prime のいずれかのブロックを取得する日 ---
+        block = phase  # 0,1,2
+        if pr_empty:
+            print("  Primeの既存データが空のため、まず前半(p1〜)から取得します。", file=sys.stderr)
+            block = 0
         start_page = block * PRIME_PAGES_PER_RUN + 1
-    pr_items = scrape_service("prime", SERVICES["prime"],
-                              start_page=start_page, max_pages=PRIME_PAGES_PER_RUN)
-    # 取得できた分を既存に統合（同じIDは新情報で更新、未取得の作品は残る）
-    for it in pr_items:
-        services["prime"][it["id"]] = it
-
-    # サービス間の待機
-    print(f"\n(次のサービスまで {SLEEP_BETWEEN_SERVICES}秒 待機)", file=sys.stderr)
-    time.sleep(SLEEP_BETWEEN_SERVICES)
-
-    # --- Netflix: 毎日全件更新（作品数が少ないので分割不要）---
-    nf_items = scrape_service("netflix", SERVICES["netflix"])
-    if nf_items:
-        # 全件取得できたので、Netflixは丸ごと置き換え（配信終了作品も自動で消える）
-        services["netflix"] = {it["id"]: it for it in nf_items}
-    else:
-        print("  [warn] Netflix取得0件。既存データを維持します。", file=sys.stderr)
+        pr_items = scrape_service("prime", SERVICES["prime"],
+                                  start_page=start_page, max_pages=PRIME_PAGES_PER_RUN)
+        if pr_items:
+            for it in pr_items:
+                services["prime"][it["id"]] = it
+            print(f"  Prime ブロック{block} を {len(pr_items)} 件取得（統合後 計{len(services['prime'])}件）。",
+                  file=sys.stderr)
+        else:
+            print("  [warn] Prime取得0件。既存データを維持します。", file=sys.stderr)
 
     # 保存用に整形
     result = {
         "updated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "source": "MOVIE WALKER PRESS",
-        "prime_block_today": block,
+        "cycle_phase_today": phase,
         "services": {
             "netflix": list(services["netflix"].values()),
             "prime":   list(services["prime"].values()),
