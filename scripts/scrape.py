@@ -41,8 +41,10 @@ HEADERS = {
 
 # 待機・リトライ設定
 SLEEP_LIST = 1.5        # 一覧ページ間の待機（秒）。礼儀正しく巡回する
+SLEEP_BETWEEN_SERVICES = 8  # サービス切り替え時の待機（秒）。連続アクセスによるブロック回避
 TIMEOUT = 30
 MAX_RETRY = 2           # 一覧ページ取得のリトライ回数
+FIRST_PAGE_RETRY = 5    # 各サービス1ページ目は重要なので多めにリトライ
 STOP_AFTER_404 = 3      # 404 ページがこの回数連続したら巡回を打ち切る
 HARD_PAGE_CAP = 200     # 安全装置：最大ページ数の上限（暴走防止）
 
@@ -128,6 +130,7 @@ def parse_list_page(html, service_key):
             continue
         year = None
         genres = []
+        synopsis = ""
         if m["block"] is not None:
             btext = m["block"].get_text(" ", strip=True)
             ym = re.search(r"(\d{4})年(\d{1,2})月(\d{1,2})日", btext)
@@ -137,6 +140,9 @@ def parse_list_page(html, service_key):
                 if g in btext:
                     genres.append(g)
             genres = list(dict.fromkeys(genres))[:4]
+            # あらすじ抽出: 一覧ブロック内に紹介文が含まれる場合がある（特にPrime）
+            # 「配信中」の後ろに続く説明文を拾う。末尾の「もっと見る」は除去。
+            synopsis = extract_synopsis(m["block"], title)
         items.append({
             "id": mid,
             "title": title,
@@ -145,30 +151,68 @@ def parse_list_page(html, service_key):
             "year": year,
             "platform": service_key,
             "genres": genres,
-            "synopsis": "",   # 軽量版では取得しない（将来TMDb等で補完可能）
+            "synopsis": synopsis,
         })
     return items
 
 
-def scrape_service(service_key, slug):
-    print(f"\n=== {service_key} ({slug}) ===", file=sys.stderr)
-    first = get(f"{BASE}/list/vod/{slug}/")
+def extract_synopsis(block, title):
+    """一覧の作品ブロックから紹介文（あらすじ）を抽出する。無ければ空文字。"""
+    # ブロック内の各テキストノードを見て、説明文らしい長文を探す
+    candidates = []
+    for s in block.stripped_strings:
+        t = s.strip()
+        # 紹介文は通常そこそこ長い。メタ情報（年・分・ジャンル・配信中等）を除外
+        if len(t) < 25:
+            continue
+        if "配信中" in t or "公開" in t or "もっと見る" in t and len(t) < 30:
+            continue
+        if title and t == title:
+            continue
+        candidates.append(t)
+    if not candidates:
+        return ""
+    # 最も長いものを採用し、末尾の「···」「もっと見る」を除去
+    syn = max(candidates, key=len)
+    syn = re.sub(r"[･・]{2,}.*$", "", syn)   # 「···もっと見る」以降を切る
+    syn = re.sub(r"もっと見る\s*$", "", syn)
+    syn = re.sub(r"\s+", " ", syn).strip()
+    return syn[:300]
+
+
+def scrape_service(service_key, slug, start_page=1, max_pages=None):
+    """指定サービスを巡回する。
+    start_page: 開始ページ（1始まり）
+    max_pages : このサービスで取得する最大ページ数（None=末尾まで）
+    """
+    label = f"{service_key} ({slug})"
+    if start_page > 1 or max_pages:
+        label += f" [p{start_page}〜 最大{max_pages}ページ]"
+    print(f"\n=== {label} ===", file=sys.stderr)
+
+    # 1ページ目（実際の開始ページ）は重要なので多めにリトライ
+    first_url = f"{BASE}/list/vod/{slug}/" if start_page == 1 else f"{BASE}/list/vod/{slug}/p{start_page}/"
+    first = get(first_url, retry=FIRST_PAGE_RETRY)
     if not first or first == "404":
-        print("  [error] 一覧1ページ目を取得できませんでした", file=sys.stderr)
+        print("  [error] 開始ページを取得できませんでした", file=sys.stderr)
         return []
 
-    hint = parse_total_pages(first)
-    print(f"  総ページ数の参考値: {hint}", file=sys.stderr)
+    if start_page == 1:
+        hint = parse_total_pages(first)
+        print(f"  総ページ数の参考値: {hint}", file=sys.stderr)
 
     by_id = {}
-    # 1ページ目
     for it in parse_list_page(first, service_key):
         by_id[it["id"]] = it
-    print(f"  page 1: 計 {len(by_id)}", file=sys.stderr)
+    print(f"  page {start_page}: 計 {len(by_id)}", file=sys.stderr)
 
+    pages_done = 1
     consecutive_404 = 0
-    page = 2
+    page = start_page + 1
     while page <= HARD_PAGE_CAP:
+        if max_pages and pages_done >= max_pages:
+            print(f"  → 上限{max_pages}ページに到達。打ち切ります。", file=sys.stderr)
+            break
         html = get(f"{BASE}/list/vod/{slug}/p{page}/")
         if html == "404":
             consecutive_404 += 1
@@ -181,7 +225,6 @@ def scrape_service(service_key, slug):
             continue
 
         if html is None:
-            # 一時的なエラー。打ち切らず次へ
             print(f"  page {page}: 取得失敗（スキップ）", file=sys.stderr)
             page += 1
             time.sleep(SLEEP_LIST)
@@ -190,11 +233,11 @@ def scrape_service(service_key, slug):
         consecutive_404 = 0
         page_items = parse_list_page(html, service_key)
         if not page_items:
-            # 作品が0件なら、もう末尾とみなす
             print(f"  page {page}: 作品0件。末尾とみなして終了。", file=sys.stderr)
             break
         for it in page_items:
             by_id[it["id"]] = it
+        pages_done += 1
         print(f"  page {page}: +{len(page_items)} (計 {len(by_id)})", file=sys.stderr)
         page += 1
         time.sleep(SLEEP_LIST)
@@ -204,15 +247,72 @@ def scrape_service(service_key, slug):
     return items
 
 
+def load_existing():
+    """既存の movies.json を読み込む。無ければ空構造を返す。"""
+    try:
+        with open("data/movies.json", encoding="utf-8") as f:
+            data = json.load(f)
+        if "services" in data:
+            return data
+    except (FileNotFoundError, json.JSONDecodeError, KeyError):
+        pass
+    return {"services": {"netflix": [], "prime": []}}
+
+
+# Prime を何分割するか（3日で一巡）
+PRIME_SPLITS = 3
+# Prime の1回あたりの取得ページ数の上限（安全側。3分割×この数で十分カバー）
+PRIME_PAGES_PER_RUN = 240
+
+
 def main():
+    today = datetime.date.today()
+    # 通算日を基準に、その日に取得する Prime の担当ブロック（0,1,2）を決める
+    block = today.toordinal() % PRIME_SPLITS
+    print(f"本日 {today} / Prime 担当ブロック: {block} (0=前半,1=中間,2=後半)", file=sys.stderr)
+
+    # 既存データを土台にする（取得しなかった分は保持される）
+    existing = load_existing()
+    services = {
+        "netflix": {it["id"]: it for it in existing["services"].get("netflix", [])},
+        "prime":   {it["id"]: it for it in existing["services"].get("prime", [])},
+    }
+
+    # --- Netflix: 毎日全件更新（作品数が少ないので分割不要）---
+    nf_items = scrape_service("netflix", SERVICES["netflix"])
+    if nf_items:
+        # 全件取得できたので、Netflixは丸ごと置き換え（配信終了作品も自動で消える）
+        services["netflix"] = {it["id"]: it for it in nf_items}
+    else:
+        print("  [warn] Netflix取得0件。既存データを維持します。", file=sys.stderr)
+
+    # サービス間の待機
+    print(f"\n(次のサービスまで {SLEEP_BETWEEN_SERVICES}秒 待機)", file=sys.stderr)
+    time.sleep(SLEEP_BETWEEN_SERVICES)
+
+    # --- Prime: 3日分割。本日の担当ブロックのページ範囲だけ取得して上書き ---
+    # ただし初回（既存Primeデータが空）は、まず前半（人気の新作が多い）から取得する
+    if len(services["prime"]) == 0:
+        print("  Primeの既存データが空のため、初回は前半(p1〜)から取得します。", file=sys.stderr)
+        start_page = 1
+    else:
+        start_page = block * PRIME_PAGES_PER_RUN + 1
+    pr_items = scrape_service("prime", SERVICES["prime"],
+                              start_page=start_page, max_pages=PRIME_PAGES_PER_RUN)
+    # 取得できた分を既存に統合（同じIDは新情報で更新、未取得の作品は残る）
+    for it in pr_items:
+        services["prime"][it["id"]] = it
+
+    # 保存用に整形
     result = {
         "updated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "source": "MOVIE WALKER PRESS",
-        "services": {},
+        "prime_block_today": block,
+        "services": {
+            "netflix": list(services["netflix"].values()),
+            "prime":   list(services["prime"].values()),
+        },
     }
-
-    for key, slug in SERVICES.items():
-        result["services"][key] = scrape_service(key, slug)
 
     with open("data/movies.json", "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
