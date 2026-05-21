@@ -3,8 +3,8 @@ name: 配信リストを毎日更新
 # 実行タイミング
 on:
   schedule:
-    # UTC 21:00 = 日本時間 朝6:00 に毎日実行
-    - cron: '0 21 * * *'
+    - cron: '0 21 * * *'   # UTC 21:00 = JST 06:00（主）
+    - cron: '30 22 * * *'  # UTC 22:30 = JST 07:30（予備：主が発火しなかった場合）
   workflow_dispatch:   # 手動実行も可能にする（Actionsタブから「Run workflow」ボタン）
 
 permissions:
