@@ -5,7 +5,7 @@ on:
   schedule:
     # UTC 21:00 = 日本時間 朝6:00 に毎日実行
     - cron: '0 21 * * *'
-  workflow_dispatch:   # 手動実行も可能にする（Actionsタブから「Run workflow」）
+  workflow_dispatch:   # 手動実行も可能にする（Actionsタブから「Run workflow」ボタン）
 
 permissions:
   contents: write   # movies.json をコミットするために必要
