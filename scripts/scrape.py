@@ -15,6 +15,7 @@ GitHub Actions 上で毎日実行される想定。
 """
 
 import json
+import os
 import re
 import sys
 import time
@@ -238,10 +239,20 @@ def main():
     do_netflix = (phase % 2 == 0)
     target_service = "netflix" if do_netflix else "prime"
 
-    print(
-        f"本日 {today} / サイクル位相: {phase} → {target_service} を更新",
-        file=sys.stderr,
-    )
+    # FORCE_SERVICE 環境変数が指定されていればphaseを無視して上書き（手動実行用）
+    force = os.environ.get("FORCE_SERVICE", "").strip().lower()
+    if force in ("netflix", "prime"):
+        do_netflix = (force == "netflix")
+        target_service = force
+        print(
+            f"本日 {today} / サイクル位相: {phase} → FORCE_SERVICE={force} で上書き",
+            file=sys.stderr,
+        )
+    else:
+        print(
+            f"本日 {today} / サイクル位相: {phase} → {target_service} を更新",
+            file=sys.stderr,
+        )
 
     existing = load_existing()
     services = {

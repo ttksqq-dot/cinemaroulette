@@ -6,6 +6,16 @@ on:
     - cron: '0 21 * * *'   # UTC 21:00 = JST 06:00（主）
     - cron: '30 22 * * *'  # UTC 22:30 = JST 07:30（予備：主が発火しなかった場合）
   workflow_dispatch:   # 手動実行も可能にする（Actionsタブから「Run workflow」ボタン）
+    inputs:
+      force_service:
+        description: '強制取得サービス（空白=通常スケジュール通り）'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - netflix
+          - prime
 
 permissions:
   contents: write   # movies.json をコミットするために必要
@@ -26,6 +36,8 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: 配信リストを取得
+        env:
+          FORCE_SERVICE: ${{ inputs.force_service }}
         run: python scripts/scrape.py
 
       - name: 変更があればコミット
