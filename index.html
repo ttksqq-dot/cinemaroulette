@@ -27,7 +27,7 @@
 
   /* ── Auth bar ── */
   #auth-bar{position:fixed;top:16px;right:20px;z-index:200;display:flex;align-items:center;gap:8px}
-  .auth-user{font-size:11px;color:var(--muted);max-width:140px;overflow:hidden;
+  .auth-user{font-size:1.15rem;font-weight:500;color:var(--ink);max-width:180px;overflow:hidden;
     text-overflow:ellipsis;white-space:nowrap}
   .btn-auth{cursor:pointer;border:1px solid var(--line);background:rgba(10,10,12,.85);
     backdrop-filter:blur(8px);color:var(--muted);border-radius:999px;padding:6px 14px;
@@ -186,12 +186,24 @@
     font-family:"Noto Sans JP",sans-serif;white-space:nowrap;transition:.2s;flex-shrink:0}
   .btn-unwatch:hover{border-color:rgba(255,255,255,.3);color:var(--ink)}
   .mypage-empty{text-align:center;color:var(--muted);padding:36px 0;font-size:14px;line-height:2}
+
+  /* ── How-to modal ── */
+  .howto-steps{display:flex;flex-direction:column;gap:16px;margin-bottom:22px}
+  .howto-step{display:flex;gap:14px;align-items:flex-start}
+  .howto-step-num{font-family:"Bebas Neue",sans-serif;font-size:13px;letter-spacing:.12em;
+    color:var(--gold);white-space:nowrap;min-width:54px;padding-top:2px}
+  .howto-step-body b{display:block;font-size:14px;font-weight:700;margin-bottom:4px;color:var(--ink)}
+  .howto-step-body p{font-size:13px;color:var(--muted);line-height:1.7}
+  .howto-divider{height:1px;background:var(--line);margin:20px 0}
+  .howto-tip-title{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:8px}
+  .howto-tip p{font-size:13px;color:var(--muted);line-height:1.8}
 </style>
 </head>
 <body>
 
 <!-- ── Auth bar ─────────────────────────────────── -->
 <div id="auth-bar">
+  <button class="btn-auth" onclick="showHowTo()">使い方</button>
   <div id="auth-out">
     <button class="btn-auth gold" onclick="showLoginModal()">ログイン</button>
   </div>
@@ -297,6 +309,55 @@
     <input class="auth-input" type="password" id="auth-pass" placeholder="パスワード（6文字以上）" autocomplete="current-password">
     <p class="auth-err" id="auth-err"></p>
     <button class="btn-submit" id="auth-submit" onclick="submitAuth()">ログイン</button>
+  </div>
+</div>
+
+<!-- ── How-to Modal ─────────────────────────────── -->
+<div id="howto-modal" class="modal-overlay" style="display:none"
+     onclick="overlayClose(event,'howto-modal')">
+  <div class="modal" style="width:min(520px,100%)">
+    <button class="modal-close" onclick="hideHowTo()">×</button>
+    <h3>シネマガチャの使い方</h3>
+    <div class="howto-steps">
+      <div class="howto-step">
+        <div class="howto-step-num">STEP 1</div>
+        <div class="howto-step-body">
+          <b>配信サービスを選ぶ</b>
+          <p>Netflix か Prime Video、見たいサービスを選びます。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="howto-step-num">STEP 2</div>
+        <div class="howto-step-body">
+          <b>ジャンルを選ぶ or 完全ランダム</b>
+          <p>ジャンルを絞ってもいいし、「完全ランダム」におまかせしてもOK。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="howto-step-num">STEP 3</div>
+        <div class="howto-step-body">
+          <b>ガチャを引く</b>
+          <p>ボタンを押すと、今夜の一本がランダムで1本だけ表示されます。気に入らなければもう一度引けます。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="howto-step-num">STEP 4</div>
+        <div class="howto-step-body">
+          <b>見た映画は「見た」ボタンで記録</b>
+          <p>すでに見た作品は「見た ✓」を押すと記録され、次からガチャに出てこなくなります。</p>
+        </div>
+      </div>
+    </div>
+    <div class="howto-divider"></div>
+    <div class="howto-tip">
+      <div class="howto-tip-title">★ ログインすると便利</div>
+      <p>右上からログインすると、「見た映画」がスマホ・PCなど別の端末でも引き継がれます。<br>
+      ログインしなくてもガチャは使えますが、見た記録は保存されません。<br>
+      「マイページ」では、見た映画の一覧確認や、記録の解除ができます。</p>
+    </div>
+    <div style="text-align:center;margin-top:24px">
+      <button class="btn-submit" onclick="hideHowTo()" style="width:auto;padding:11px 40px">閉じる</button>
+    </div>
   </div>
 </div>
 
@@ -483,6 +544,12 @@ function showMypage() {
 }
 function hideMypage() {
   document.getElementById('mypage-modal').style.display = 'none';
+}
+function showHowTo() {
+  document.getElementById('howto-modal').style.display = 'flex';
+}
+function hideHowTo() {
+  document.getElementById('howto-modal').style.display = 'none';
 }
 function overlayClose(e, id) {
   if (e.target.id === id)
@@ -687,6 +754,7 @@ Object.assign(window, {
   toggleWatched, removeFromWatched,
   showLoginModal, hideLoginModal,
   showMypage, hideMypage,
+  showHowTo, hideHowTo,
   loginWithGoogle, submitAuth, logout, switchTab, overlayClose,
 });
 
