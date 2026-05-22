@@ -724,10 +724,11 @@ function buildGenres() {
   const base = moviesOf(state.platform);
   const avail = [...new Set(base.flatMap(m => m.genres||[]))].sort();
   list.innerHTML =
-    `<div class="chip random" onclick="selectGenre('__random__',this)">🎲 完全ランダム</div>` +
+    `<div class="chip random active" onclick="selectGenre('__random__',this)">🎲 完全ランダム</div>` +
     avail.map(g => `<div class="chip" onclick="selectGenre('${g}',this)">${g}</div>`).join('');
-  state.genre = null;
-  document.getElementById('spin-btn').disabled = true;
+  // デフォルトで「完全ランダム」を選択済みにする
+  state.genre = '__random__';
+  document.getElementById('spin-btn').disabled = false;
 }
 
 function selectGenre(g, el) {
