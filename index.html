@@ -121,6 +121,11 @@
   .again{margin-top:26px;text-align:center}
   .shuffling .poster img{filter:blur(6px) brightness(.6)}
   .footer-note{text-align:center;color:#55555c;font-size:12px;margin-top:48px;line-height:1.8}
+  .support-box{text-align:center;margin-top:56px;padding-top:36px;border-top:1px solid var(--line)}
+  .support-text{color:var(--muted);font-size:14px;margin-bottom:16px;letter-spacing:.04em}
+  /* Ko-fiが描画するボタンの軽い見た目調整（角丸・余白） */
+  #kofi-button img{display:inline-block}
+  #kofi-button a{display:inline-block;border-radius:999px;overflow:hidden}
 
   #loading{text-align:center;padding:60px 20px;color:var(--muted)}
   .spinner{width:42px;height:42px;border:3px solid var(--line);border-top-color:var(--gold);
@@ -273,6 +278,12 @@
         <button class="btn btn-ghost" onclick="resetAll()">条件を変える</button>
       </div>
     </section>
+  </div>
+
+  <!-- ── Ko-fi 支援ボタン ──────────────────────────── -->
+  <div class="support-box">
+    <p class="support-text">このサイトの運営を応援する 🍿</p>
+    <div id="kofi-button"></div>
   </div>
 
   <p class="footer-note">
@@ -759,6 +770,24 @@ Object.assign(window, {
 });
 
 loadData();
+</script>
+
+<!-- ── Ko-fi 支援ボタン（描画スクリプト）──────────────── -->
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+<script type='text/javascript'>
+  // Widget_2.js を使い、ボタンHTMLを #kofi-button 内に描画する
+  (function(){
+    function renderKofi(){
+      try{
+        kofiwidget2.init('ポップコーンを奢る', '#d4af37', 'O0O12003P3');
+        var html = kofiwidget2.getHTML();
+        var slot = document.getElementById('kofi-button');
+        if(slot && html){ slot.innerHTML = html; }
+      }catch(e){ /* 失敗時は何もしない（サイト本体に影響を与えない） */ }
+    }
+    if(typeof kofiwidget2 !== 'undefined'){ renderKofi(); }
+    else{ window.addEventListener('load', renderKofi); }
+  })();
 </script>
 </body>
 </html>
