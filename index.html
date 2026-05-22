@@ -629,8 +629,9 @@ function buildGenres() {
   list.innerHTML =
     `<div class="chip random" onclick="selectGenre('__random__',this)">🎲 完全ランダム</div>` +
     avail.map(g => `<div class="chip" onclick="selectGenre('${g}',this)">${g}</div>`).join('');
-  state.genre = null;
-  document.getElementById('spin-btn').disabled = true;
+  state.genre = '__random__';
+  list.querySelector('.chip.random').classList.add('active');
+  document.getElementById('spin-btn').disabled = false;
 }
 
 function selectGenre(g, el) {
