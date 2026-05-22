@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>シネマガチャ — 今夜の一本</title>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8972877686386494"
+     crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@600;700;800&display=swap" rel="stylesheet">
@@ -121,6 +124,20 @@
   .again{margin-top:26px;text-align:center}
   .shuffling .poster img{filter:blur(6px) brightness(.6)}
   .footer-note{text-align:center;color:#55555c;font-size:12px;margin-top:48px;line-height:1.8}
+  .footer-links{text-align:center;margin-top:18px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+  .footer-links button{background:none;border:none;color:#7a7a82;font-family:"Noto Sans JP",sans-serif;
+    font-size:12px;cursor:pointer;padding:4px 8px;transition:.2s;text-decoration:underline;text-underline-offset:3px}
+  .footer-links button:hover{color:var(--ink)}
+  .footer-links .sep{color:#3a3a40;font-size:12px;align-self:center}
+  /* ── Doc modal (privacy / about) ── */
+  .doc-body{font-size:13px;color:var(--muted);line-height:1.9;text-align:left}
+  .doc-body h4{font-size:14px;color:var(--ink);font-weight:700;margin:20px 0 8px}
+  .doc-body h4:first-child{margin-top:0}
+  .doc-body p{margin-bottom:10px}
+  .doc-body a{color:var(--gold);text-decoration:underline;text-underline-offset:2px}
+  .doc-body ul{margin:0 0 10px;padding-left:18px}
+  .doc-body li{margin-bottom:6px}
+  .doc-updated{font-size:11px;color:#55555c;margin-top:20px;text-align:right}
 
   #loading{text-align:center;padding:60px 20px;color:var(--muted)}
   .spinner{width:42px;height:42px;border:3px solid var(--line);border-top-color:var(--gold);
@@ -280,6 +297,11 @@
     見放題作品のみ掲載しています。配信状況は変動するため、視聴前に各サービスでご確認ください。<br>
     リストから外れた作品は自動的に表示対象から除外されます。
   </p>
+  <div class="footer-links">
+    <button onclick="showPrivacy()">プライバシーポリシー</button>
+    <span class="sep">·</span>
+    <button onclick="showAbout()">運営者情報・お問い合わせ</button>
+  </div>
 </div>
 
 <!-- ── Login Modal ──────────────────────────────── -->
@@ -357,6 +379,69 @@
     </div>
     <div style="text-align:center;margin-top:24px">
       <button class="btn-submit" onclick="hideHowTo()" style="width:auto;padding:11px 40px">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Privacy Policy Modal ─────────────────────── -->
+<div id="privacy-modal" class="modal-overlay" style="display:none"
+     onclick="overlayClose(event,'privacy-modal')">
+  <div class="modal" style="width:min(600px,100%)">
+    <button class="modal-close" onclick="hidePrivacy()">×</button>
+    <h3>プライバシーポリシー</h3>
+    <div class="doc-body">
+      <p>シネマガチャ（以下「当サイト」）は、利用者のプライバシーを尊重し、個人情報の保護に努めます。本ポリシーは、当サイトにおける情報の取り扱いについて定めるものです。</p>
+
+      <h4>広告の配信について</h4>
+      <p>当サイトは、第三者配信の広告サービス（Google AdSense 等）を利用する場合があります。このような広告配信事業者は、利用者の興味に応じた広告を表示するために Cookie を使用することがあります。</p>
+      <p>Cookie を使用することで、当サイトを含む過去のアクセス情報に基づいて広告が配信されます。Google が広告 Cookie を使用することにより、利用者が当サイトや他のサイトにアクセスした情報に基づいて広告を配信します。</p>
+      <p>利用者は、<a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">広告設定</a>でパーソナライズ広告を無効にできます。また、Cookie を無効にする方法については、お使いのブラウザの設定をご確認ください。第三者による Cookie の利用については、<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google の広告ポリシー</a>をご覧ください。</p>
+
+      <h4>アクセス解析について</h4>
+      <p>当サイトでは、サービス改善のためアクセス解析ツールを利用する場合があります。これらのツールはトラフィックデータ収集のために Cookie を使用することがありますが、このデータは匿名で収集されており、個人を特定するものではありません。</p>
+
+      <h4>会員機能（ログイン）について</h4>
+      <p>当サイトのログイン機能は Firebase Authentication（Google LLC 提供）を利用しています。ログインの際に取得したメールアドレス等の情報は、ログイン状態の維持、および「見た映画」の記録を端末間で同期する目的にのみ使用し、第三者へ販売・提供することはありません。</p>
+
+      <h4>免責事項</h4>
+      <p>当サイトに掲載する配信情報は、外部の情報源をもとに自動で取得・更新しています。配信状況は変動するため、情報の正確性・最新性を保証するものではありません。実際の配信状況は各配信サービスにてご確認ください。</p>
+      <p>当サイトの利用によって生じたいかなる損害についても、当サイトは責任を負いかねます。</p>
+
+      <h4>本ポリシーの変更</h4>
+      <p>当サイトは、必要に応じて本プライバシーポリシーを変更することがあります。変更後の内容は当ページに掲載した時点で効力を生じるものとします。</p>
+
+      <p class="doc-updated">制定日：2026年5月23日</p>
+    </div>
+    <div style="text-align:center;margin-top:24px">
+      <button class="btn-submit" onclick="hidePrivacy()" style="width:auto;padding:11px 40px">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── About / Contact Modal ────────────────────── -->
+<div id="about-modal" class="modal-overlay" style="display:none"
+     onclick="overlayClose(event,'about-modal')">
+  <div class="modal" style="width:min(560px,100%)">
+    <button class="modal-close" onclick="hideAbout()">×</button>
+    <h3>運営者情報・お問い合わせ</h3>
+    <div class="doc-body">
+      <h4>運営者</h4>
+      <p>シネマガチャ運営（<a href="https://x.com/cinema_gacha" target="_blank" rel="noopener noreferrer">@cinema_gacha</a>）</p>
+
+      <h4>当サイトについて</h4>
+      <p>シネマガチャは、「今夜どの映画を見るか迷っている」方のために、配信サービスとジャンルから映画を1本ランダムに提案する個人運営のWebサービスです。普段選ばないジャンルの作品との思わぬ出会いを楽しんでいただくことを目的としています。</p>
+
+      <h4>お問い合わせ</h4>
+      <p>当サイトに関するご意見・ご要望・不具合のご報告などは、以下のいずれかの方法でお気軽にご連絡ください。</p>
+      <ul>
+        <li>お問い合わせフォーム：<a href="https://docs.google.com/forms/d/e/1FAIpQLScL3zhTfpXONl9J-sGh_ucnReso80pqEfnKPO3hBs7hI61i3w/viewform" target="_blank" rel="noopener noreferrer">こちらのフォームから送信</a></li>
+        <li>X（旧Twitter）：<a href="https://x.com/cinema_gacha" target="_blank" rel="noopener noreferrer">@cinema_gacha</a></li>
+      </ul>
+
+      <p class="doc-updated">最終更新：2026年5月23日</p>
+    </div>
+    <div style="text-align:center;margin-top:24px">
+      <button class="btn-submit" onclick="hideAbout()" style="width:auto;padding:11px 40px">閉じる</button>
     </div>
   </div>
 </div>
@@ -551,6 +636,18 @@ function showHowTo() {
 function hideHowTo() {
   document.getElementById('howto-modal').style.display = 'none';
 }
+function showPrivacy() {
+  document.getElementById('privacy-modal').style.display = 'flex';
+}
+function hidePrivacy() {
+  document.getElementById('privacy-modal').style.display = 'none';
+}
+function showAbout() {
+  document.getElementById('about-modal').style.display = 'flex';
+}
+function hideAbout() {
+  document.getElementById('about-modal').style.display = 'none';
+}
 function overlayClose(e, id) {
   if (e.target.id === id)
     document.getElementById(id).style.display = 'none';
@@ -629,9 +726,8 @@ function buildGenres() {
   list.innerHTML =
     `<div class="chip random" onclick="selectGenre('__random__',this)">🎲 完全ランダム</div>` +
     avail.map(g => `<div class="chip" onclick="selectGenre('${g}',this)">${g}</div>`).join('');
-  state.genre = '__random__';
-  list.querySelector('.chip.random').classList.add('active');
-  document.getElementById('spin-btn').disabled = false;
+  state.genre = null;
+  document.getElementById('spin-btn').disabled = true;
 }
 
 function selectGenre(g, el) {
@@ -756,6 +852,7 @@ Object.assign(window, {
   showLoginModal, hideLoginModal,
   showMypage, hideMypage,
   showHowTo, hideHowTo,
+  showPrivacy, hidePrivacy, showAbout, hideAbout,
   loginWithGoogle, submitAuth, logout, switchTab, overlayClose,
 });
 
