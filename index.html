@@ -146,13 +146,19 @@
   #error{display:none;background:rgba(229,9,20,.08);border:1px solid rgba(229,9,20,.3);
     border-radius:14px;padding:20px;color:#f0b8bb;font-size:13.5px;line-height:1.7;margin-bottom:20px}
 
-  /* ── 見たボタン ── */
+  /* ── 見た・ブックマークボタン ── */
   .watched-btn{display:none;align-items:center;gap:8px;margin-top:14px;
     padding:9px 20px;border-radius:999px;border:1px solid var(--line);background:transparent;
-    color:var(--muted);font-family:"Noto Sans JP",sans-serif;font-size:13px;cursor:pointer;transition:.25s}
+    color:var(--muted);font-family:"Noto Sans JP",sans-serif;font-size:15px;cursor:pointer;transition:.25s}
   .watched-btn:hover{border-color:rgba(255,255,255,.35);color:var(--ink)}
   .watched-btn.is-watched{background:rgba(212,175,55,.15);border-color:var(--gold);color:var(--gold)}
-  @media(max-width:720px){.watched-btn{margin:14px auto 0}}
+  .watched-btn.is-bookmarked{background:rgba(212,175,55,.15);border-color:var(--gold);color:var(--gold)}
+  .watched-btn+.watched-btn{margin-left:8px;margin-top:14px}
+  @media(max-width:720px){.watched-btn{margin:14px auto 0}.watched-btn+.watched-btn{margin-left:0}}
+  /* ── Mypage sections ── */
+  .mypage-section{margin-bottom:24px}
+  .mypage-section-title{font-size:13px;font-weight:700;color:var(--gold);margin-bottom:10px;
+    padding-bottom:8px;border-bottom:1px solid var(--line)}
 
   /* ── Modals ── */
   .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(6px);
@@ -283,6 +289,7 @@
           <a class="detail-link" id="r-detail" href="#" target="_blank" rel="noopener noreferrer">作品情報を見る ↗</a>
           <br>
           <button class="watched-btn" id="watched-btn" onclick="toggleWatched()">☐ 見た</button>
+          <button class="watched-btn" id="bookmark-btn" onclick="toggleBookmark()">☆ あとで見る</button>
         </div>
       </div>
       <div class="again">
@@ -452,8 +459,7 @@
   <div class="modal" style="width:min(600px,100%)">
     <button class="modal-close" onclick="hideMypage()">×</button>
     <h3>マイページ</h3>
-    <p class="mypage-count" id="mypage-count"></p>
-    <div class="watched-list" id="watched-list"></div>
+    <div id="watched-list"></div>
   </div>
 </div>
 
@@ -484,6 +490,7 @@ const gProvider = new GoogleAuthProvider();
 let DATA        = null;
 let state       = { platform: null, genre: null };
 let watched     = new Set();   // Set<movieId>
+let bookmarks   = new Set();   // Set<movieId>
 let currentUser = null;
 let currentMovie= null;        // 現在カードに表示中の作品
 let authMode    = 'login';
@@ -492,13 +499,17 @@ let authMode    = 'login';
 onAuthStateChanged(auth, async user => {
   currentUser = user;
   if (user) {
-    await loadWatched(user.uid);
+    await loadUserData(user.uid);
     setAuthUI(user);
   } else {
-    watched = new Set();
+    watched   = new Set();
+    bookmarks = new Set();
     setAuthUI(null);
   }
-  if (currentMovie) updateWatchedBtn(currentMovie.id);
+  if (currentMovie) {
+    updateWatchedBtn(currentMovie.id);
+    updateBookmarkBtn(currentMovie.id);
+  }
 });
 
 function setAuthUI(user) {
@@ -516,13 +527,16 @@ function setAuthUI(user) {
 }
 
 // ── Firestore ────────────────────────────────────────
-async function loadWatched(uid) {
+async function loadUserData(uid) {
   try {
     const snap = await getDoc(doc(db, 'users', uid));
-    watched = new Set(snap.exists() ? (snap.data().watched || []) : []);
+    const d = snap.exists() ? snap.data() : {};
+    watched   = new Set(d.watched   || []);
+    bookmarks = new Set(d.bookmarks || []);
   } catch(e) {
-    console.warn('watched load error:', e);
-    watched = new Set();
+    console.warn('user data load error:', e);
+    watched   = new Set();
+    bookmarks = new Set();
   }
 }
 
@@ -564,6 +578,47 @@ function updateWatchedBtn(id) {
   const on = watched.has(id);
   btn.className = 'watched-btn' + (on ? ' is-watched' : '');
   btn.innerHTML = on ? '✓ 見た' : '☐ 見た';
+  btn.style.display = 'inline-flex';
+}
+
+async function toggleBookmark() {
+  if (!currentMovie) return;
+  if (!currentUser) { showLoginModal(); return; }
+  const id  = currentMovie.id;
+  const ref = doc(db, 'users', currentUser.uid);
+  try {
+    if (bookmarks.has(id)) {
+      bookmarks.delete(id);
+      await setDoc(ref,
+        { bookmarks: arrayRemove(id), updatedAt: new Date().toISOString() },
+        { merge: true });
+    } else {
+      bookmarks.add(id);
+      await setDoc(ref,
+        { bookmarks: arrayUnion(id), email: currentUser.email || '',
+          updatedAt: new Date().toISOString() },
+        { merge: true });
+    }
+    updateBookmarkBtn(id);
+  } catch(e) { console.error('toggle bookmark error:', e); }
+}
+
+async function removeFromBookmark(id) {
+  if (!currentUser) return;
+  bookmarks.delete(id);
+  await setDoc(doc(db, 'users', currentUser.uid),
+    { bookmarks: arrayRemove(id), updatedAt: new Date().toISOString() },
+    { merge: true });
+  if (currentMovie?.id === id) updateBookmarkBtn(id);
+  renderMypageList();
+}
+
+function updateBookmarkBtn(id) {
+  const btn = document.getElementById('bookmark-btn');
+  if (!btn) return;
+  const on = bookmarks.has(id);
+  btn.className = 'watched-btn' + (on ? ' is-bookmarked' : '');
+  btn.innerHTML = on ? '★ あとで見る' : '☆ あとで見る';
   btn.style.display = 'inline-flex';
 }
 
@@ -655,27 +710,38 @@ function overlayClose(e, id) {
 
 // ── Mypage list ──────────────────────────────────────
 function renderMypageList() {
-  const cnt = watched.size;
-  document.getElementById('mypage-count').textContent = `見た映画：${cnt}本`;
-  const el = document.getElementById('watched-list');
-  if (cnt === 0) {
-    el.innerHTML = '<p class="mypage-empty">まだ「見た」に登録した作品はありません。<br>ガチャで映画が出たら「見た」ボタンで記録できます。</p>';
-    return;
-  }
-  if (!DATA) { el.innerHTML = ''; return; }
-  const all = [...(DATA.services.netflix||[]), ...(DATA.services.prime||[])];
-  const items = [...watched].map(id => all.find(m => m.id === id)).filter(Boolean);
-  el.innerHTML = items.map(m => `
-    <div class="watched-item">
-      ${m.thumb
-        ? `<img class="wi-thumb" src="${esc(m.thumb)}" alt="${esc(m.title)}" onerror="this.style.display='none'">`
-        : `<div class="wi-thumb"></div>`}
-      <div class="wi-info">
-        <div class="wi-title">${esc(m.title)}</div>
-        <div class="wi-meta">${m.year ? m.year+'年　' : ''}${m.platform==='netflix'?'Netflix':'Prime Video'}</div>
-      </div>
-      <button class="btn-unwatch" onclick="removeFromWatched('${esc(m.id)}')">除外を解除</button>
-    </div>`).join('');
+  const el  = document.getElementById('watched-list');
+  const all = DATA ? [...(DATA.services.netflix||[]), ...(DATA.services.prime||[])] : [];
+
+  const buildItems = (ids, removeFn, emptyMsg) => {
+    const items = [...ids].map(id => all.find(m => m.id === id)).filter(Boolean);
+    if (items.length === 0)
+      return `<p class="mypage-empty" style="padding:16px 0">${emptyMsg}</p>`;
+    return `<div class="watched-list">${items.map(m => `
+      <div class="watched-item">
+        ${m.thumb
+          ? `<img class="wi-thumb" src="${esc(m.thumb)}" alt="${esc(m.title)}" onerror="this.style.display='none'">`
+          : `<div class="wi-thumb"></div>`}
+        <div class="wi-info">
+          <div class="wi-title">${esc(m.title)}</div>
+          <div class="wi-meta">${m.year ? m.year+'年　' : ''}${m.platform==='netflix'?'Netflix':'Prime Video'}</div>
+        </div>
+        <button class="btn-unwatch" onclick="${removeFn}('${esc(m.id)}')">解除</button>
+      </div>`).join('')}</div>`;
+  };
+
+  const bmCount = [...bookmarks].filter(id => all.find(m => m.id === id)).length;
+  const wCount  = [...watched].filter(id => all.find(m => m.id === id)).length;
+
+  el.innerHTML = `
+    <div class="mypage-section">
+      <div class="mypage-section-title">☆ あとで見る（${bmCount}本）</div>
+      ${buildItems(bookmarks, 'removeFromBookmark', 'ブックマークした作品はありません。')}
+    </div>
+    <div class="mypage-section">
+      <div class="mypage-section-title">✓ 見た映画（${wCount}本）</div>
+      ${buildItems(watched, 'removeFromWatched', 'まだ「見た」に登録した作品はありません。')}
+    </div>`;
 }
 
 // ── Core app ─────────────────────────────────────────
@@ -755,7 +821,8 @@ function spin() {
 
   const result = document.getElementById('result');
   result.style.display = 'block';
-  document.getElementById('watched-btn').style.display = 'none';
+  document.getElementById('watched-btn').style.display  = 'none';
+  document.getElementById('bookmark-btn').style.display = 'none';
 
   let ticks = 0;
   const total = 14;
@@ -793,11 +860,13 @@ function renderMovie(m, shuffling) {
   const watch = document.getElementById('r-watch');
   const detail= document.getElementById('r-detail');
   const wBtn  = document.getElementById('watched-btn');
+  const bBtn  = document.getElementById('bookmark-btn');
 
   if (shuffling) {
     watch.style.visibility = 'hidden';
     detail.style.visibility= 'hidden';
     wBtn.style.display = 'none';
+    bBtn.style.display = 'none';
   } else {
     watch.style.visibility = 'visible';
     detail.style.visibility= 'visible';
@@ -812,6 +881,7 @@ function renderMovie(m, shuffling) {
     }
     detail.href = m.url || '#';
     updateWatchedBtn(m.id);
+    updateBookmarkBtn(m.id);
   }
 }
 
@@ -826,7 +896,8 @@ function resetAll() {
   document.querySelectorAll('.plat').forEach(x => x.classList.remove('active'));
   document.getElementById('panel-genre').style.display = 'none';
   document.getElementById('result').style.display     = 'none';
-  document.getElementById('watched-btn').style.display= 'none';
+  document.getElementById('watched-btn').style.display  = 'none';
+  document.getElementById('bookmark-btn').style.display = 'none';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -850,6 +921,7 @@ const DEMO_DATA = { updated_at: null, services: {
 Object.assign(window, {
   selectPlatform, selectGenre, spin, resetAll,
   toggleWatched, removeFromWatched,
+  toggleBookmark, removeFromBookmark,
   showLoginModal, hideLoginModal,
   showMypage, hideMypage,
   showHowTo, hideHowTo,
