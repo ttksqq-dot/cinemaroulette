@@ -201,6 +201,9 @@
     border:1px solid var(--line);border-radius:12px;padding:12px 14px}
   .wi-thumb{width:40px;height:60px;border-radius:6px;object-fit:cover;
     background:#1a1a20;flex-shrink:0;display:block}
+  .wi-link{display:flex;align-items:center;gap:14px;flex:1;min-width:0;
+    color:inherit;text-decoration:none;cursor:pointer}
+  .wi-link:hover .wi-title{color:var(--gold)}
   .wi-info{flex:1;min-width:0}
   .wi-title{font-size:13px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .wi-meta{font-size:11px;color:var(--muted);margin-top:3px}
@@ -713,19 +716,27 @@ function renderMypageList() {
   const el  = document.getElementById('watched-list');
   const all = DATA ? [...(DATA.services.netflix||[]), ...(DATA.services.prime||[])] : [];
 
+  const watchHref = m =>
+    esc(m.watch_url ||
+      (m.platform === 'netflix'
+        ? 'https://www.netflix.com/search?q=' + encodeURIComponent(m.title)
+        : 'https://www.amazon.co.jp/s?k=' + encodeURIComponent(m.title) + '&i=instant-video'));
+
   const buildItems = (ids, removeFn, emptyMsg) => {
     const items = [...ids].map(id => all.find(m => m.id === id)).filter(Boolean);
     if (items.length === 0)
       return `<p class="mypage-empty" style="padding:16px 0">${emptyMsg}</p>`;
     return `<div class="watched-list">${items.map(m => `
       <div class="watched-item">
-        ${m.thumb
-          ? `<img class="wi-thumb" src="${esc(m.thumb)}" alt="${esc(m.title)}" onerror="this.style.display='none'">`
-          : `<div class="wi-thumb"></div>`}
-        <div class="wi-info">
-          <div class="wi-title">${esc(m.title)}</div>
-          <div class="wi-meta">${m.year ? m.year+'年　' : ''}${m.platform==='netflix'?'Netflix':'Prime Video'}</div>
-        </div>
+        <a class="wi-link" href="${watchHref(m)}" target="_blank" rel="noopener noreferrer">
+          ${m.thumb
+            ? `<img class="wi-thumb" src="${esc(m.thumb)}" alt="${esc(m.title)}" onerror="this.style.display='none'">`
+            : `<div class="wi-thumb"></div>`}
+          <div class="wi-info">
+            <div class="wi-title">${esc(m.title)}</div>
+            <div class="wi-meta">${m.year ? m.year+'年　' : ''}${m.platform==='netflix'?'Netflix':'Prime Video'}</div>
+          </div>
+        </a>
         <button class="btn-unwatch" onclick="${removeFn}('${esc(m.id)}')">解除</button>
       </div>`).join('')}</div>`;
   };
