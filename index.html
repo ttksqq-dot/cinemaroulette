@@ -505,6 +505,8 @@ let bookmarks   = new Set();   // Set<movieId>
 let currentUser = null;
 let currentMovie= null;        // 現在カードに表示中の作品
 let authMode    = 'login';
+let reelTimer   = null;        // ルーレット演出タイマー
+let spinning    = false;       // 演出中フラグ（連打防止）
 
 // ── Auth state listener ──────────────────────────────
 onAuthStateChanged(auth, async user => {
@@ -824,6 +826,8 @@ function selectGenre(g, el) {
 }
 
 function spin() {
+  if (spinning) return;
+
   let pool = moviesOf(state.platform);
   if (state.genre && state.genre !== '__random__')
     pool = pool.filter(m => (m.genres||[]).includes(state.genre));
@@ -838,23 +842,42 @@ function spin() {
   }
   pool = filtered;
 
-  const result = document.getElementById('result');
+  // 当選作品を演出開始前に確定
+  const chosen  = pool[Math.floor(Math.random() * pool.length)];
+  const result  = document.getElementById('result');
+  const spinBtn = document.getElementById('spin-btn');
+
+  spinning = true;
+  spinBtn.disabled = true;
   result.style.display = 'block';
   document.getElementById('watched-btn').style.display  = 'none';
   document.getElementById('bookmark-btn').style.display = 'none';
 
-  let ticks = 0;
-  const total = 14;
-  const reel = setInterval(() => {
-    renderMovie(pool[Math.floor(Math.random() * pool.length)], true);
-    if (++ticks >= total) {
-      clearInterval(reel);
-      const chosen = pool[Math.floor(Math.random() * pool.length)];
+  // イージング付きルーレット演出
+  // 18ステップ、40ms→160ms に減速、合計約1.45秒
+  const STEPS     = 18;
+  const MIN_DELAY = 40;
+  const EXTRA     = 120;  // 40 + 1^2 * 120 = 160ms（最終フレーム）
+  let step = 0;
+
+  function tick() {
+    if (step < STEPS) {
+      const t = step / (STEPS - 1);
+      renderMovie(pool[Math.floor(Math.random() * pool.length)], true);
+      reelTimer = setTimeout(tick, Math.round(MIN_DELAY + t * t * EXTRA));
+      step++;
+    } else {
+      reelTimer  = null;
+      spinning   = false;
+      spinBtn.disabled = false;
       currentMovie = chosen;
       renderMovie(chosen, false);
       result.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }, 70);
+  }
+
+  if (reelTimer) { clearTimeout(reelTimer); reelTimer = null; }
+  tick();
 }
 
 function renderMovie(m, shuffling) {
@@ -910,6 +933,8 @@ function esc(s) {
 }
 
 function resetAll() {
+  if (reelTimer) { clearTimeout(reelTimer); reelTimer = null; }
+  spinning = false;
   state = { platform: null, genre: null };
   currentMovie = null;
   document.querySelectorAll('.plat').forEach(x => x.classList.remove('active'));
