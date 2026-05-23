@@ -99,6 +99,10 @@
   .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}
   .btn-ghost:hover{color:var(--ink);border-color:rgba(255,255,255,.4)}
   .hint{color:var(--muted);font-size:12.5px;margin-top:16px;line-height:1.7}
+  .filter-label{font-size:12px;letter-spacing:.1em;color:var(--muted);margin:22px 0 10px;
+    font-family:"Noto Sans JP",sans-serif;font-weight:700}
+  #no-results{text-align:center;padding:48px 20px;color:var(--muted);font-size:15px;
+    line-height:2.2;border-radius:22px;border:1px solid var(--line)}
 
   #result{display:none;animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
   .result-card{display:grid;grid-template-columns:300px 1fr;gap:36px;
@@ -279,6 +283,8 @@
     <section class="panel" id="panel-genre" style="display:none">
       <div class="step-tag"><span class="num">2</span> ジャンルを選ぶ</div>
       <div class="genres" id="genre-list"></div>
+      <div class="filter-label">年代で絞り込む</div>
+      <div class="genres" id="era-list"></div>
       <div class="actions">
         <button class="btn btn-primary" id="spin-btn" disabled onclick="spin()">▶ 映画をまわす</button>
         <button class="btn btn-ghost" onclick="resetAll()">最初に戻る</button>
@@ -288,6 +294,7 @@
 
     <section id="result">
       <div class="step-tag"><span class="num">★</span> 今夜のあなたの一本</div>
+      <div id="no-results" style="display:none">🎬 この条件に合う作品が見つかりませんでした。<br>ジャンルや年代の条件を変えてお試しください。</div>
       <div class="result-card">
         <div class="poster" id="poster"></div>
         <div>
@@ -499,7 +506,7 @@ const gProvider = new GoogleAuthProvider();
 
 // ── App state ────────────────────────────────────────
 let DATA        = null;
-let state       = { platform: null, genre: null };
+let state       = { platform: null, genre: null, era: '__all__' };
 let watched     = new Set();   // Set<movieId>
 let bookmarks   = new Set();   // Set<movieId>
 let currentUser = null;
@@ -813,38 +820,85 @@ function buildGenres() {
   list.innerHTML =
     `<div class="chip random active" onclick="selectGenre('__random__',this)">🎲 完全ランダム</div>` +
     avail.map(g => `<div class="chip" onclick="selectGenre('${g}',this)">${g}</div>`).join('');
-  // デフォルトで「完全ランダム」を選択済みにする
   state.genre = '__random__';
+  buildEraChips();
   document.getElementById('spin-btn').disabled = false;
+}
+
+function buildEraChips() {
+  const eras = [
+    { key: '__all__', label: 'すべての年代' },
+    { key: 'pre1990', label: '1990年以前'   },
+    { key: '1990s',   label: '1990年代'     },
+    { key: '2000s',   label: '2000年代'     },
+    { key: '2010s',   label: '2010年代'     },
+    { key: '2020s',   label: '2020年代'     },
+  ];
+  document.getElementById('era-list').innerHTML = eras.map(e =>
+    `<div class="chip${e.key === '__all__' ? ' active' : ''}" onclick="selectEra('${e.key}',this)">${e.label}</div>`
+  ).join('');
+  state.era = '__all__';
 }
 
 function selectGenre(g, el) {
   state.genre = g;
-  document.querySelectorAll('.chip').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('#genre-list .chip').forEach(x => x.classList.remove('active'));
   el.classList.add('active');
   document.getElementById('spin-btn').disabled = false;
+}
+
+function selectEra(eraKey, el) {
+  state.era = eraKey;
+  document.querySelectorAll('#era-list .chip').forEach(x => x.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function eraFilter(m) {
+  if (state.era === '__all__') return true;
+  if (!m.year) return false;
+  const y = m.year;
+  switch (state.era) {
+    case 'pre1990': return y <= 1989;
+    case '1990s':   return y >= 1990 && y <= 1999;
+    case '2000s':   return y >= 2000 && y <= 2009;
+    case '2010s':   return y >= 2010 && y <= 2019;
+    case '2020s':   return y >= 2020;
+    default:        return true;
+  }
 }
 
 function spin() {
   if (spinning) return;
 
   let pool = moviesOf(state.platform);
+
+  // ジャンルフィルター
   if (state.genre && state.genre !== '__random__')
     pool = pool.filter(m => (m.genres||[]).includes(state.genre));
 
+  // 年代フィルター
+  pool = pool.filter(eraFilter);
+
   // watched 除外
-  const filtered = pool.filter(m => !watched.has(m.id));
-  if (filtered.length === 0) {
-    alert(pool.length === 0
-      ? '該当する作品がありませんでした'
-      : '見た映画を除いた候補がありません。\n絞り込みを変えるか、マイページで見た記録を見直してください。');
+  pool = pool.filter(m => !watched.has(m.id));
+
+  const result    = document.getElementById('result');
+  const noResults = document.getElementById('no-results');
+  const card      = document.querySelector('.result-card');
+
+  if (pool.length === 0) {
+    noResults.style.display = 'block';
+    card.style.display      = 'none';
+    result.style.display    = 'block';
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
     return;
   }
-  pool = filtered;
+
+  noResults.style.display = 'none';
+  card.style.display      = '';
 
   // 当選作品を演出開始前に確定
   const chosen  = pool[Math.floor(Math.random() * pool.length)];
-  const result  = document.getElementById('result');
   const spinBtn = document.getElementById('spin-btn');
 
   spinning = true;
@@ -935,7 +989,7 @@ function esc(s) {
 function resetAll() {
   if (reelTimer) { clearTimeout(reelTimer); reelTimer = null; }
   spinning = false;
-  state = { platform: null, genre: null };
+  state = { platform: null, genre: null, era: '__all__' };
   currentMovie = null;
   document.querySelectorAll('.plat').forEach(x => x.classList.remove('active'));
   document.getElementById('panel-genre').style.display = 'none';
@@ -963,7 +1017,7 @@ const DEMO_DATA = { updated_at: null, services: {
 
 // ── Expose to window (inline onclick 対応) ────────────
 Object.assign(window, {
-  selectPlatform, selectGenre, spin, resetAll,
+  selectPlatform, selectGenre, selectEra, spin, resetAll,
   toggleWatched, removeFromWatched,
   toggleBookmark, removeFromBookmark,
   showLoginModal, hideLoginModal,
