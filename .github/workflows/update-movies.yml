@@ -54,6 +54,7 @@ jobs:
           else
             git commit -m "chore: 配信リストを自動更新 ($(date -u +%Y-%m-%d))"
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
-            git pull --rebase origin main
+            git fetch origin main
+            git merge -X ours origin/main --no-edit
             git push
           fi
