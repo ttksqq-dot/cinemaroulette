@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28T11:10:30.814107+00:00",
+  "updated_at": "2026-05-28T12:00:31.597212+00:00",
   "source": "Filmarks",
   "cycle_phase_today": 0,
   "services": {
@@ -25855,17 +25855,6 @@
         "watch_url": "https://www.netflix.com/jp/title/70189334"
       },
       {
-        "id": "71737",
-        "title": "ディア・ライフ",
-        "url": "https://filmarks.com/movies/71737",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/kr8qw6g1zzw5cys069bg5t73j26y/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/80158042"
-      },
-      {
         "id": "69507",
         "title": "XOXO",
         "url": "https://filmarks.com/movies/69507",
@@ -25878,6 +25867,17 @@
         ],
         "synopsis": "駆け出しDJとその親友。ロマンチックな恋に憧れる乙女、落ちぶれた元DJ、そして不安を抱えたカップル…。6つの人生が交差するEDMフェスが今、幕を開ける。",
         "watch_url": "https://www.netflix.com/jp/title/80057691"
+      },
+      {
+        "id": "71737",
+        "title": "ディア・ライフ",
+        "url": "https://filmarks.com/movies/71737",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/kr8qw6g1zzw5cys069bg5t73j26y/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/80158042"
       },
       {
         "id": "95791",
@@ -34714,6 +34714,20 @@
         "watch_url": "https://www.netflix.com/jp/title/81784470"
       },
       {
+        "id": "127119",
+        "title": "犯罪捜査ファイル: ルーシー・レトビー新生児殺害事件",
+        "url": "https://filmarks.com/movies/127119",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/le9p60heno37joor5n5zzsm8o55l/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "クライム",
+          "ドキュメンタリー"
+        ],
+        "synopsis": "新生児病棟の看護師ルーシー・レトビーが複数の新生児を殺害した事件。未公開映像と関係者による未公表の証言を交え、論議を呼んだこの恐ろしい事件の真相に迫る。\nNetflixで2026年2月4日",
+        "watch_url": "https://www.netflix.com/jp/title/81719673"
+      },
+      {
         "id": "98241",
         "title": "トロールハンターズ: ライジング・タイタンズ",
         "url": "https://filmarks.com/movies/98241",
@@ -34754,20 +34768,6 @@
         ],
         "synopsis": "精神科の施設で出会い、食によってつながった2人。あふれだす創造性から生まれた架空のレストランが現実となった今、必要なのは心を癒やすレシピ。\nNetflix映画『マリリンの瞳は黒かった』3月",
         "watch_url": "https://www.netflix.com/jp/title/81521943"
-      },
-      {
-        "id": "127119",
-        "title": "犯罪捜査ファイル: ルーシー・レトビー新生児殺害事件",
-        "url": "https://filmarks.com/movies/127119",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/le9p60heno37joor5n5zzsm8o55l/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "クライム",
-          "ドキュメンタリー"
-        ],
-        "synopsis": "新生児病棟の看護師ルーシー・レトビーが複数の新生児を殺害した事件。未公開映像と関係者による未公表の証言を交え、論議を呼んだこの恐ろしい事件の真相に迫る。\nNetflixで2026年2月4日",
-        "watch_url": "https://www.netflix.com/jp/title/81719673"
       },
       {
         "id": "30559",
@@ -43044,6 +43044,19 @@
         "watch_url": "https://www.netflix.com/jp/title/81742901"
       },
       {
+        "id": "128236",
+        "title": "ああ、義息",
+        "url": "https://filmarks.com/movies/128236",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/0ys4ook4q2lhgrvlol2ypc3vd733/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "コメディ"
+        ],
+        "synopsis": "困難な時期を経て、街の政界で大きな権力を手に入れたホセ・サンチェス。人々に恐れられる彼が行き着いたのは、自慢の口ひげも毒舌も通用しない窮地だった...。\nNetflixで2026年5月1日",
+        "watch_url": "https://www.netflix.com/jp/title/81677240"
+      },
+      {
         "id": "102665",
         "title": "キャラクター",
         "url": "https://filmarks.com/movies/102665",
@@ -43124,19 +43137,6 @@
         ],
         "synopsis": "穏やかな生活を送るアメリカの国民的詩人ヘンリー･ワズワース･ロングフェロー。彼の世界はある悲劇によって粉々に打ち砕かれる。 南北戦争で国が分裂し家族が引き裂かれる中、ヘンリーは悲しみに暮れ",
         "watch_url": "https://www.netflix.com/jp/title/82032479"
-      },
-      {
-        "id": "128236",
-        "title": "ああ、義息",
-        "url": "https://filmarks.com/movies/128236",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/0ys4ook4q2lhgrvlol2ypc3vd733/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "コメディ"
-        ],
-        "synopsis": "困難な時期を経て、街の政界で大きな権力を手に入れたホセ・サンチェス。人々に恐れられる彼が行き着いたのは、自慢の口ひげも毒舌も通用しない窮地だった...。\nNetflixで2026年5月1日",
-        "watch_url": "https://www.netflix.com/jp/title/81677240"
       },
       {
         "id": "94090",
