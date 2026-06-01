@@ -298,7 +298,7 @@
       <div class="search-wrap">
         <span class="search-icon">🔍</span>
         <input class="search-input" id="search-input" type="text"
-          placeholder="タイトルやあらすじで検索（例：ジブリ、宇宙、コメディ）"
+          placeholder="映画のタイトルで検索（例：君の名は、コメディ）"
           oninput="onSearchInput(this.value)" autocomplete="off">
       </div>
       <div id="search-results"></div>
@@ -1068,7 +1068,7 @@ function _doSearch(q) {
     ...(DATA?.services?.prime   || []),
   ];
   const hits = all
-    .filter(m => normalize(m.title).includes(nq) || normalize(m.synopsis).includes(nq))
+    .filter(m => normalize(m.title).includes(nq))
     .sort((a, b) => (a.title || '').localeCompare(b.title || '', 'ja'));
 
   el.style.display = 'block';
