@@ -81,6 +81,7 @@
   .plat[data-p="netflix"] .plat-name{color:var(--netflix)}
   .plat[data-p="prime"] .plat-name{color:var(--prime)}
   .plat-desc{position:relative;margin-top:8px;color:var(--muted);font-size:13px}
+  .plat-count{position:relative;margin-top:10px;color:var(--gold);font-size:16px;letter-spacing:.04em;font-feature-settings:"tnum"}
 
   .genres{display:flex;flex-wrap:wrap;gap:12px}
   .chip{cursor:pointer;border:1px solid var(--line);background:var(--bg-2);color:var(--ink);
@@ -271,11 +272,13 @@
           <div class="glow"></div>
           <div class="plat-name">NETFLIX</div>
           <div class="plat-desc">ネットフリックス配信中の作品から</div>
+          <div class="plat-count" id="count-netflix"></div>
         </div>
         <div class="plat" data-p="prime" onclick="selectPlatform('prime',this)">
           <div class="glow"></div>
           <div class="plat-name">prime video</div>
           <div class="plat-desc">プライムビデオ配信中の作品から</div>
+          <div class="plat-count" id="count-prime"></div>
         </div>
       </div>
     </section>
@@ -799,6 +802,10 @@ function initApp() {
       document.getElementById('updated').textContent =
         '配信リスト更新: ' + d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate();
   }
+  const nc = (DATA.services.netflix || []).length;
+  const pc = (DATA.services.prime   || []).length;
+  document.getElementById('count-netflix').textContent = nc.toLocaleString() + '本';
+  document.getElementById('count-prime').textContent   = pc.toLocaleString() + '本';
 }
 
 function moviesOf(p) { return DATA.services[p] || []; }
