@@ -236,6 +236,35 @@
   .howto-divider{height:1px;background:var(--line);margin:20px 0}
   .howto-tip-title{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:8px}
   .howto-tip p{font-size:13px;color:var(--muted);line-height:1.8}
+
+  /* ── Search ── */
+  #search-section{margin-bottom:24px}
+  .search-wrap{position:relative}
+  .search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);
+    color:var(--muted);font-size:16px;pointer-events:none;line-height:1}
+  .search-input{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);
+    border-radius:14px;padding:13px 18px 13px 46px;color:var(--ink);
+    font-family:"Noto Sans JP",sans-serif;font-size:15px;outline:none;transition:.25s}
+  .search-input:focus{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.07)}
+  .search-input::placeholder{color:var(--muted)}
+  #search-results{display:none;margin-top:12px;border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;background:rgba(255,255,255,.025)}
+  .si-empty{text-align:center;padding:28px;color:var(--muted);font-size:14px}
+  .si-more{text-align:center;padding:11px 16px;font-size:12.5px;color:var(--muted);
+    border-top:1px solid var(--line)}
+  .si-item{display:flex;align-items:center;gap:14px;padding:11px 16px;
+    border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:.18s}
+  .si-item:last-of-type{border-bottom:none}
+  .si-item:hover{background:rgba(255,255,255,.05)}
+  .si-thumb{width:36px;height:54px;border-radius:5px;object-fit:cover;
+    background:#1a1a22;flex-shrink:0;display:block}
+  .si-info{flex:1;min-width:0}
+  .si-title{font-size:13.5px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .si-meta{font-size:11.5px;color:var(--muted);margin-top:3px}
+  .si-badge{display:inline-block;font-family:"Bebas Neue",sans-serif;font-size:10px;
+    padding:2px 7px;border-radius:4px;margin-right:5px;vertical-align:middle}
+  .si-badge.netflix{background:var(--netflix);color:#fff}
+  .si-badge.prime{background:var(--prime);color:#04222e}
 </style>
 </head>
 <body>
@@ -265,6 +294,16 @@
   <div id="error"></div>
 
   <div id="app" style="display:none">
+    <div id="search-section">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input class="search-input" id="search-input" type="text"
+          placeholder="タイトルやあらすじで検索（例：ジブリ、宇宙、コメディ）"
+          oninput="onSearchInput(this.value)" autocomplete="off">
+      </div>
+      <div id="search-results"></div>
+    </div>
+
     <section class="panel" id="panel-platform">
       <div class="step-tag"><span class="num">1</span> 配信サービスを選ぶ</div>
       <div class="platforms">
@@ -1006,6 +1045,60 @@ function resetAll() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// ── Search ────────────────────────────────────────────
+let _searchTimer = null;
+
+function onSearchInput(val) {
+  clearTimeout(_searchTimer);
+  _searchTimer = setTimeout(() => _doSearch(val.trim()), 200);
+}
+
+function _doSearch(q) {
+  const el = document.getElementById('search-results');
+  if (!q) { el.style.display = 'none'; el.innerHTML = ''; return; }
+
+  function normalize(s) {
+    return (s || '').replace(/[Ａ-Ｚａ-ｚ０-９]/g,
+      c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0)).toLowerCase();
+  }
+
+  const nq  = normalize(q);
+  const all = [
+    ...(DATA?.services?.netflix || []),
+    ...(DATA?.services?.prime   || []),
+  ];
+  const hits = all
+    .filter(m => normalize(m.title).includes(nq) || normalize(m.synopsis).includes(nq))
+    .sort((a, b) => (a.title || '').localeCompare(b.title || '', 'ja'));
+
+  el.style.display = 'block';
+
+  if (!hits.length) {
+    el.innerHTML = '<div class="si-empty">該当する作品はありません</div>';
+    return;
+  }
+
+  const MAX = 50, rest = hits.length - MAX;
+  el.innerHTML = hits.slice(0, MAX).map(m => {
+    const url = m.watch_url ||
+      (m.platform === 'netflix'
+        ? 'https://www.netflix.com/search?q=' + encodeURIComponent(m.title)
+        : 'https://www.amazon.co.jp/s?k=' + encodeURIComponent(m.title) + '&i=instant-video');
+    const badge = m.platform === 'netflix'
+      ? '<span class="si-badge netflix">NETFLIX</span>'
+      : '<span class="si-badge prime">PRIME</span>';
+    const thumb = m.thumb
+      ? `<img class="si-thumb" src="${esc(m.thumb)}" alt="" loading="lazy">`
+      : `<div class="si-thumb"></div>`;
+    return `<a class="si-item" href="${esc(url)}" target="_blank" rel="noopener noreferrer">`
+      + `${thumb}<div class="si-info"><div class="si-title">${esc(m.title)}</div>`
+      + `<div class="si-meta">${badge}${m.year ? m.year + '年' : ''}</div></div></a>`;
+  }).join('')
+    + (rest > 0
+      ? `<div class="si-more">他に ${rest.toLocaleString()} 件あります。検索語を絞ってください</div>`
+      : '');
+}
+
 // ── Demo fallback ─────────────────────────────────────
 const DEMO_DATA = { updated_at: null, services: {
   netflix: [
@@ -1024,6 +1117,7 @@ const DEMO_DATA = { updated_at: null, services: {
 
 // ── Expose to window (inline onclick 対応) ────────────
 Object.assign(window, {
+  onSearchInput,
   selectPlatform, selectGenre, selectEra, spin, resetAll,
   toggleWatched, removeFromWatched,
   toggleBookmark, removeFromBookmark,
