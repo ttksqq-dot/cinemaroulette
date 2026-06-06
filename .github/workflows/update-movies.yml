@@ -41,14 +41,15 @@ jobs:
         env:
           FORCE_SERVICE: ${{ inputs.force_service }}
         run: python scripts/scrape.py
-
+      - name: 一覧ページを生成
+        run: python3 scripts/build_lists.py
       - name: 変更があればコミット
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/movies.json
+          git add data/movies.json netflix.html prime.html
           if git diff --staged --quiet; then
             echo "変更なし。コミットをスキップします。"
           else
