@@ -3,4 +3,7 @@
   <url><loc>https://cinemagacha.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://cinemagacha.com/netflix.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://cinemagacha.com/prime.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cinemagacha.com/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://cinemagacha.com/privacy.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://cinemagacha.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
