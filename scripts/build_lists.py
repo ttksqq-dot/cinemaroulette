@@ -197,6 +197,11 @@ def build_page(service_key, movies, updated_at_txt):
   .filter-label{{font-size:11.5px;letter-spacing:.1em;color:var(--muted);margin:0 0 10px}}
   .filter-row{{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}}
   .filter-row:last-child{{margin-bottom:0}}
+  .title-search{{width:100%;box-sizing:border-box;background:var(--bg-2);border:1px solid var(--line);
+    color:var(--ink);padding:10px 16px;border-radius:10px;font-size:13px;
+    font-family:"Noto Sans JP",sans-serif;margin-bottom:16px;transition:.2s}}
+  .title-search::placeholder{{color:var(--muted)}}
+  .title-search:focus{{outline:none;border-color:var(--gold)}}
   .lc-chip{{cursor:pointer;border:1px solid var(--line);background:var(--bg-2);color:var(--ink);
     padding:7px 14px;border-radius:999px;font-size:12.5px;transition:.2s;
     font-family:"Noto Sans JP",sans-serif;display:inline-flex;align-items:center;gap:6px}}
@@ -237,7 +242,7 @@ def build_page(service_key, movies, updated_at_txt):
 <body>
 
 <nav class="topnav">
-  <a class="navbtn home" href="/">🎬 ガチャを回す</a>
+  <a class="navbtn home" href="/">TOP</a>
   <a class="navbtn active" href="/{meta['out']}">{meta['label']} 作品一覧</a>
   <a class="navbtn" href="/{other_meta['out']}">{other_meta['label']} 作品一覧</a>
 </nav>
@@ -252,6 +257,7 @@ def build_page(service_key, movies, updated_at_txt):
   </header>
 
   <div class="filters">
+    <input type="text" class="title-search" id="title-search" placeholder="タイトルで検索" autocomplete="off">
     <p class="filter-label">年代で絞り込む</p>
     <div class="filter-row" id="era-filters">{era_chips}</div>
     <p class="filter-label">ジャンルで絞り込む</p>
@@ -280,11 +286,13 @@ def build_page(service_key, movies, updated_at_txt):
   var eraBtns = Array.prototype.slice.call(document.querySelectorAll('[data-filter-era]'));
   var genreBtns = Array.prototype.slice.call(document.querySelectorAll('[data-filter-genre]'));
   var clearBtn = document.getElementById('clear-btn');
+  var titleSearch = document.getElementById('title-search');
   var noMatch = document.getElementById('no-match');
   var resultCount = document.getElementById('result-count');
   var total = cards.length;
   var activeEra = null;
   var activeGenre = null;
+  var activeQuery = '';
 
   function apply(){{
     var shown = 0;
@@ -292,10 +300,11 @@ def build_page(service_key, movies, updated_at_txt):
       var okEra = !activeEra || c.getAttribute('data-era') === activeEra;
       var g = c.getAttribute('data-genres') || '';
       var okGenre = !activeGenre || (',' + g + ',').indexOf(',' + activeGenre + ',') !== -1;
-      if (okEra && okGenre){{ c.classList.remove('hidden'); shown++; }}
+      var okTitle = !activeQuery || (c.getAttribute('data-title') || '').toLowerCase().indexOf(activeQuery) !== -1;
+      if (okEra && okGenre && okTitle){{ c.classList.remove('hidden'); shown++; }}
       else {{ c.classList.add('hidden'); }}
     }});
-    var filtering = activeEra || activeGenre;
+    var filtering = activeEra || activeGenre || activeQuery;
     clearBtn.style.display = filtering ? '' : 'none';
     if (filtering){{
       resultCount.style.display = '';
@@ -328,8 +337,13 @@ def build_page(service_key, movies, updated_at_txt):
       apply();
     }});
   }});
+  titleSearch.addEventListener('input', function(){{
+    activeQuery = titleSearch.value.trim().toLowerCase();
+    apply();
+  }});
   clearBtn.addEventListener('click', function(){{
-    activeEra = null; activeGenre = null;
+    activeEra = null; activeGenre = null; activeQuery = '';
+    titleSearch.value = '';
     eraBtns.concat(genreBtns).forEach(function(x){{ x.classList.remove('active'); }});
     apply();
   }});
