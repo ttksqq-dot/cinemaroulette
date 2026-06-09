@@ -72,6 +72,16 @@
     backdrop-filter:blur(8px);margin-bottom:30px;animation:rise .55s cubic-bezier(.2,.7,.2,1) both}
   @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
+  .kinro-banner{display:flex;align-items:center;justify-content:center;gap:8px;
+    max-width:720px;margin:6px auto 26px;padding:0 18px;min-height:46px;
+    background:var(--bg-2);border:1px solid var(--line);border-radius:12px;
+    color:var(--muted);text-decoration:none;line-height:1.4;text-align:center;
+    font-size:clamp(12px,3.4vw,14px);letter-spacing:.02em;
+    transition:background .2s,border-color .2s,color .2s}
+  .kinro-banner:hover{background:rgba(255,255,255,.06);border-color:rgba(212,175,55,.5);color:var(--ink)}
+  .kinro-banner .kb-icon{font-size:1.15em;flex:none}
+  .kinro-banner .kb-accent{color:var(--gold);font-weight:700}
+  .kinro-banner .kb-arrow{color:var(--gold);flex:none}
   .platforms{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   @media(max-width:560px){.platforms{grid-template-columns:1fr}}
   .plat{position:relative;cursor:pointer;border-radius:16px;overflow:hidden;
@@ -299,6 +309,14 @@
     <p class="sub">迷ったら、運命にまかせよう。— 今夜の一本をランダムに。</p>
     <p class="updated" id="updated"></p>
   </header>
+
+  <!-- 金曜ロードショー公式サイトへのリンクバナー(画像・ロゴ不使用) -->
+  <a class="kinro-banner" href="https://kinro.ntv.co.jp/lineup"
+     target="_blank" rel="noopener noreferrer">
+    <span class="kb-icon">📺</span>
+    <span>今週の<span class="kb-accent">金曜ロードショー</span>は？ 公式サイトへ</span>
+    <span class="kb-arrow">→</span>
+  </a>
 
   <div id="loading"><div class="spinner"></div>配信リストを読み込んでいます…</div>
   <div id="error"></div>
