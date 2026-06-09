@@ -90,6 +90,28 @@
   .kinro-banner .kb-icon{font-size:1.15em;flex:none}
   .kinro-banner .kb-accent{color:var(--gold);font-weight:700}
   .kinro-banner .kb-arrow{color:var(--gold);flex:none}
+  /* ── 最近ガチャから出た作品 ── */
+  .recent-gacha-panel{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;margin:22px 0;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .recent-gacha-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+  .recent-gacha-icon{font-size:16px;margin-left:2px}
+  .recent-gacha-title{font-size:14px;font-weight:700;color:var(--ink)}
+  .recent-gacha-list{list-style:none;margin:0;padding:0}
+  .recent-gacha-item{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .recent-gacha-item:last-child{border-bottom:none}
+  .recent-gacha-time{font-size:12px;color:var(--muted);font-feature-settings:"tnum";flex:none}
+  .recent-gacha-sep{font-size:12px;color:var(--muted);opacity:.5;flex:none}
+  .recent-gacha-name{font-size:13.5px;color:var(--ink);font-weight:600;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+  .recent-gacha-platform{font-size:11px;color:var(--muted);background:rgba(0,0,0,.04);
+    padding:2px 8px;border-radius:999px;flex:none}
+  .recent-gacha-empty{font-size:13px;color:var(--muted);padding:8px 0;list-style:none}
+  @media(max-width:560px){
+    .recent-gacha-title{font-size:13px}
+    .recent-gacha-name{font-size:12.5px}
+    .recent-gacha-time,.recent-gacha-sep{font-size:11px}
+    .recent-gacha-platform{font-size:10px}
+  }
   .platforms{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   @media(max-width:560px){.platforms{grid-template-columns:1fr}}
   .plat{position:relative;cursor:pointer;border-radius:16px;overflow:hidden;
@@ -360,6 +382,17 @@
       </div>
     </section>
 
+    <!-- 最近ガチャから出た作品(匿名・直近5件/24h以内) -->
+    <div class="recent-gacha-panel" id="recent-gacha">
+      <div class="recent-gacha-head">
+        <span class="recent-gacha-icon">🎰</span>
+        <span class="recent-gacha-title">最近ガチャから出た作品</span>
+      </div>
+      <ul class="recent-gacha-list" id="recent-gacha-list">
+        <li class="recent-gacha-empty">読み込み中…</li>
+      </ul>
+    </div>
+
     <section class="panel" id="panel-genre" style="display:none">
       <div class="step-tag"><span class="num">2</span> ジャンルを選ぶ</div>
       <div class="genres" id="genre-list"></div>
@@ -605,7 +638,8 @@ import { getAuth, GoogleAuthProvider, signInWithPopup,
          createUserWithEmailAndPassword, signInWithEmailAndPassword,
          signOut, onAuthStateChanged }
   from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
-import { getFirestore, doc, getDoc, setDoc, arrayUnion, arrayRemove }
+import { getFirestore, doc, getDoc, setDoc, arrayUnion, arrayRemove,
+         collection, addDoc, query, orderBy, limit, getDocs, serverTimestamp }
   from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 
 // ── Firebase init ────────────────────────────────────
@@ -1254,6 +1288,71 @@ const DEMO_DATA = { updated_at: null, services: {
       else if (shareBtn) { shareBtn.style.display = 'none'; }
     } catch(e){ console.error('share hook error', e); }
   };
+})();
+
+/* ===== 最近ガチャから出た作品(匿名・直近5件/24h)。本体は不変、renderMovieを再ラップ ===== */
+(function(){
+  const listEl = document.getElementById('recent-gacha-list');
+  if (!listEl) return;
+  const DAY = 24 * 60 * 60 * 1000;
+  function escx(s){
+    return String(s).replace(/[&<>"']/g,
+      c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function elapsed(ms){
+    const diff = Date.now() - ms;
+    if (diff < 60000)   return 'たった今';
+    if (diff < 3600000) return Math.floor(diff / 60000) + '分前';
+    return Math.floor(diff / 3600000) + '時間前';
+  }
+  function platLabel(p){ return p === 'prime' ? 'Prime Video' : 'Netflix'; }
+  function render(items){
+    if (!items.length){
+      listEl.innerHTML = '<li class="recent-gacha-empty">まだガチャ結果がありません</li>';
+      return;
+    }
+    listEl.innerHTML = items.map(it =>
+      '<li class="recent-gacha-item">'
+      + '<span class="recent-gacha-time">' + elapsed(it.ms) + '</span>'
+      + '<span class="recent-gacha-sep">·</span>'
+      + '<span class="recent-gacha-name">『' + escx(it.title) + '』</span>'
+      + '<span class="recent-gacha-platform">' + escx(platLabel(it.platform)) + '</span>'
+      + '</li>').join('');
+  }
+  async function loadRecent(){
+    try {
+      const q = query(collection(db, 'gacha_history'), orderBy('timestamp', 'desc'), limit(5));
+      const snap = await getDocs(q);
+      const now = Date.now(); const items = [];
+      snap.forEach(d => {
+        const x = d.data();
+        const t = (x.timestamp && x.timestamp.toMillis) ? x.timestamp.toMillis() : null;
+        if (t == null) return;          // serverTimestamp未確定はスキップ
+        if (now - t > DAY) return;      // 24時間超は除外
+        items.push({ ms: t, title: x.movie_title || '(無題)', platform: x.platform });
+      });
+      render(items);
+    } catch(e){ console.error('recent gacha load error', e); }
+  }
+  async function record(m){
+    try {
+      await addDoc(collection(db, 'gacha_history'), {
+        movie_id:    String(m.id || ''),
+        movie_title: m.title || '',
+        platform:    m.platform || '',
+        year:        (m.year != null ? m.year : null),
+        timestamp:   serverTimestamp(),
+      });
+      setTimeout(loadRecent, 1200);     // 自分の結果を反映(サーバー時刻確定後)
+    } catch(e){ console.error('gacha history write error', e); }
+  }
+  // renderMovie を再ラップ(ガチャ本体・結果表示には手を入れず、確定時に匿名記録)
+  const prevRender = renderMovie;
+  renderMovie = function(m, shuffling){
+    prevRender(m, shuffling);
+    if (!shuffling && m) record(m);
+  };
+  loadRecent();
 })();
 
 Object.assign(window, {
