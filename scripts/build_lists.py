@@ -158,8 +158,8 @@ def build_page(service_key, movies, updated_at_txt):
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{{
-    --bg:#0a0a0c; --bg-2:#121216; --ink:#f5f3ee; --muted:#8a8a92;
-    --line:rgba(255,255,255,.08); --netflix:#e50914; --prime:#00a8e1; --gold:#d4af37;
+    --bg:#fafaf7; --bg-2:#ffffff; --ink:#1a1a20; --muted:#6b6b73;
+    --line:rgba(0,0,0,.08); --netflix:#e50914; --prime:#00a8e1; --gold:#b8860b;
   }}
   *{{margin:0;padding:0;box-sizing:border-box}}
   html,body{{min-height:100%}}
@@ -167,20 +167,21 @@ def build_page(service_key, movies, updated_at_txt):
     min-height:100vh;overflow-x:hidden;position:relative}}
   body::before{{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
     background:
-      radial-gradient(900px 600px at 15% -10%, rgba(229,9,20,.18), transparent 60%),
-      radial-gradient(900px 600px at 110% 20%, rgba(0,168,225,.16), transparent 60%),
-      radial-gradient(700px 700px at 50% 120%, rgba(212,175,55,.07), transparent 60%);}}
+      radial-gradient(900px 600px at 15% -10%, rgba(229,9,20,.06), transparent 60%),
+      radial-gradient(900px 600px at 110% 20%, rgba(0,168,225,.06), transparent 60%),
+      radial-gradient(700px 700px at 50% 120%, rgba(184,134,11,.05), transparent 60%);}}
   .wrap{{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:40px 24px 90px}}
 
   /* ── ナビバー ── */
   .topnav{{position:relative;z-index:3;display:flex;align-items:center;justify-content:center;
     gap:10px;flex-wrap:wrap;padding:18px 24px 0}}
   .navbtn{{cursor:pointer;text-decoration:none;border:1px solid var(--line);
-    background:rgba(10,10,12,.85);color:var(--ink);border-radius:999px;
-    padding:8px 18px;font-size:14px;font-weight:500;transition:.2s;white-space:nowrap}}
-  .navbtn:hover{{color:var(--ink);border-color:rgba(255,255,255,.35)}}
-  .navbtn.active{{color:var(--ink);border-color:rgba(255,255,255,.5);font-weight:700}}
-  .navbtn.home{{background:var(--gold);border-color:var(--gold);color:#1a1505;font-weight:700}}
+    background:rgba(0,0,0,.04);color:var(--ink);border-radius:999px;
+    padding:8px 18px;font-size:14px;font-weight:500;transition:.2s;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,.04)}}
+  .navbtn:hover{{color:var(--ink);background:rgba(0,0,0,.08);border-color:rgba(0,0,0,.15)}}
+  .navbtn.active{{color:var(--ink);background:rgba(0,0,0,.06);border-color:rgba(0,0,0,.25);font-weight:700}}
+  .navbtn.home{{background:linear-gradient(#e3bd55,#b8860b);border-color:#b8860b;color:#1a1505;font-weight:700;box-shadow:0 2px 6px rgba(184,134,11,.25)}}
+  .navbtn.home:hover{{filter:brightness(1.05);box-shadow:0 4px 12px rgba(184,134,11,.35)}}
 
   header{{text-align:center;margin:30px 0 28px}}
   .kicker{{letter-spacing:.2em;font-size:12px;color:var(--muted);margin-bottom:8px}}
@@ -192,7 +193,7 @@ def build_page(service_key, movies, updated_at_txt):
   .updated{{margin-top:6px;color:#55555c;font-size:11.5px}}
 
   /* ── 絞り込み ── */
-  .filters{{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
+  .filters{{background:var(--bg-2);box-shadow:0 2px 8px rgba(0,0,0,.04);
     border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:26px}}
   .filter-label{{font-size:11.5px;letter-spacing:.1em;color:var(--muted);margin:0 0 10px}}
   .filter-row{{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}}
@@ -202,10 +203,10 @@ def build_page(service_key, movies, updated_at_txt):
     font-family:"Noto Sans JP",sans-serif;margin-bottom:16px;transition:.2s}}
   .title-search::placeholder{{color:var(--muted)}}
   .title-search:focus{{outline:none;border-color:var(--gold)}}
-  .lc-chip{{cursor:pointer;border:1px solid var(--line);background:var(--bg-2);color:var(--ink);
+  .lc-chip{{cursor:pointer;border:1px solid var(--line);background:rgba(0,0,0,.04);color:var(--ink);
     padding:7px 14px;border-radius:999px;font-size:12.5px;transition:.2s;
     font-family:"Noto Sans JP",sans-serif;display:inline-flex;align-items:center;gap:6px}}
-  .lc-chip:hover{{border-color:rgba(255,255,255,.4)}}
+  .lc-chip:hover{{border-color:rgba(0,0,0,.25)}}
   .lc-chip.active{{background:var(--gold);color:#1a1505;border-color:var(--gold);font-weight:700}}
   .lc-chip-n{{font-size:10.5px;opacity:.6;font-feature-settings:"tnum"}}
   .clear-btn{{cursor:pointer;background:none;border:none;color:var(--muted);
@@ -218,25 +219,25 @@ def build_page(service_key, movies, updated_at_txt):
   .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:18px}}
   @media(max-width:560px){{.grid{{grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:12px}}}}
   .lc{{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;overflow:hidden;
-    display:flex;flex-direction:column;transition:.2s}}
-  .lc:hover{{transform:translateY(-3px);border-color:rgba(255,255,255,.22)}}
+    display:flex;flex-direction:column;transition:.2s;box-shadow:0 2px 8px rgba(0,0,0,.04)}}
+  .lc:hover{{transform:translateY(-3px);border-color:rgba(0,0,0,.18);box-shadow:0 4px 16px rgba(0,0,0,.08)}}
   .lc.hidden{{display:none}}
-  .lc-poster{{display:block;aspect-ratio:2/3;background:#1a1a20;overflow:hidden;text-decoration:none}}
+  .lc-poster{{display:block;aspect-ratio:2/3;background:#f0f0eb;overflow:hidden;text-decoration:none}}
   .lc-poster img{{width:100%;height:100%;object-fit:cover;display:block}}
-  .lc-fallback{{width:100%;height:100%;display:grid;place-content:center;text-align:center;
+  .lc-fallback{{width:100%;height:100%;display:grid;place-content:center;text-align:center;background:#f5f5f0;
     padding:14px;font-family:"Shippori Mincho",serif;font-size:14px;line-height:1.4;color:var(--muted)}}
   .lc-body{{padding:11px 12px 14px;display:flex;flex-direction:column;gap:6px;flex:1}}
   .lc-title{{font-size:13.5px;font-weight:700;line-height:1.4;color:var(--ink)}}
   .lc-meta{{font-size:11.5px;color:var(--muted);font-feature-settings:"tnum"}}
   .lc-genres{{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}}
-  .lc-genre{{font-size:10.5px;border:1px solid var(--line);padding:2px 8px;border-radius:999px;color:var(--muted)}}
+  .lc-genre{{font-size:10.5px;border:1px solid var(--line);background:rgba(0,0,0,.04);padding:2px 8px;border-radius:999px;color:var(--muted)}}
   .lc-watch{{margin-top:auto;text-decoration:none;font-family:"Bebas Neue",sans-serif;
     font-size:14px;letter-spacing:.06em;color:{meta['color']};padding-top:8px}}
   .lc-watch:hover{{filter:brightness(1.2)}}
   .no-match{{text-align:center;color:var(--muted);padding:60px 20px;display:none}}
 
-  .footer-note{{text-align:center;color:#55555c;font-size:12px;margin-top:48px;line-height:1.8}}
-  .footer-note a{{color:#7a7a82}}
+  .footer-note{{text-align:center;color:var(--muted);font-size:12px;margin-top:48px;line-height:1.8}}
+  .footer-note a{{color:#4a4a52}}
 </style>
 </head>
 <body>
