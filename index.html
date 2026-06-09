@@ -99,8 +99,18 @@
   .recent-gacha-title{font-size:14px;font-weight:700;color:var(--ink)}
   .recent-gacha-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:0;padding:0;list-style:none}
   .recent-card{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;overflow:hidden;
-    box-shadow:0 2px 8px rgba(0,0,0,.04);display:flex;flex-direction:column;transition:.2s}
+    box-shadow:0 2px 8px rgba(0,0,0,.04);display:flex;flex-direction:column;transition:.2s;
+    position:relative;cursor:pointer}
   .recent-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
+  .recent-card.no-link{cursor:default}
+  .recent-card.no-link:hover{transform:none;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .recent-card-bookmark{position:absolute;top:6px;right:6px;width:32px;height:32px;border-radius:50%;
+    background:rgba(255,255,255,.85);border:none;cursor:pointer;display:flex;align-items:center;
+    justify-content:center;font-size:18px;line-height:1;color:var(--muted);transition:.2s;z-index:2;
+    box-shadow:0 1px 4px rgba(0,0,0,.08);padding:0}
+  .recent-card-bookmark:hover{background:#fff;transform:scale(1.05);color:var(--ink)}
+  .recent-card-bookmark.bookmarked{color:var(--gold)}
+  .recent-card-bookmark.bookmarked:hover{color:var(--gold)}
   .recent-card-poster{position:relative;aspect-ratio:2/3;background:#f0f0eb;overflow:hidden}
   .recent-card-poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
   .recent-card-fallback{position:absolute;inset:0;display:grid;place-content:center;text-align:center;
@@ -1319,18 +1329,26 @@ const DEMO_DATA = { updated_at: null, services: {
     return Math.floor(diff / 3600000) + '時間前';
   }
   function platLabel(p){ return p === 'prime' ? 'Prime Video' : 'Netflix'; }
-  function render(items){
-    if (!items.length){
+  let lastItems = [];
+  function bmBtn(it){
+    const saved = !!(currentUser && bookmarks.has(it.id));
+    return '<button class="recent-card-bookmark' + (saved ? ' bookmarked' : '') + '" type="button" '
+      + 'data-id="' + escx(it.id) + '" aria-label="あとで見る" '
+      + 'aria-pressed="' + (saved ? 'true' : 'false') + '">' + (saved ? '★' : '☆') + '</button>';
+  }
+  function paint(){
+    if (!lastItems.length){
       listEl.innerHTML = '<li class="recent-gacha-empty">まだガチャ結果がありません</li>';
       return;
     }
-    listEl.innerHTML = items.map(it => {
+    listEl.innerHTML = lastItems.map(it => {
       // フォールバック(タイトル)を背面に常設し、画像はその上に。読込失敗時はimgを除去して背面を表示
       const img = it.thumb
-        ? '<img src="' + escx(it.thumb) + '" alt="" loading="lazy" '
-          + 'referrerpolicy="no-referrer" onerror="this.remove()">'
+        ? '<img src="' + escx(it.thumb) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'
         : '';
-      return '<li class="recent-card">'
+      const linkable = !!it.watch_url;
+      return '<li class="recent-card' + (linkable ? '' : ' no-link') + '" data-url="' + escx(it.watch_url || '') + '">'
+        + bmBtn(it)
         + '<div class="recent-card-poster">'
         +   '<div class="recent-card-fallback">' + escx(it.title) + '</div>'
         +   img
@@ -1345,6 +1363,36 @@ const DEMO_DATA = { updated_at: null, services: {
         + '</li>';
     }).join('');
   }
+  // 既存の「あとで見る」と同じデータ構造(users/{uid}.bookmarks)でトグル
+  async function toggleCardBookmark(id, btn){
+    if (!id) return;
+    if (!currentUser){ showLoginModal(); return; }   // 既存のログインモーダルを利用
+    const ref = doc(db, 'users', currentUser.uid);
+    try {
+      if (bookmarks.has(id)){
+        bookmarks.delete(id);
+        await setDoc(ref, { bookmarks: arrayRemove(id), updatedAt: new Date().toISOString() }, { merge: true });
+      } else {
+        bookmarks.add(id);
+        await setDoc(ref, { bookmarks: arrayUnion(id), email: currentUser.email || '',
+                            updatedAt: new Date().toISOString() }, { merge: true });
+      }
+      const on = bookmarks.has(id);
+      btn.classList.toggle('bookmarked', on);
+      btn.textContent = on ? '★' : '☆';
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      try { updateBookmarkBtn(id); } catch(_){}   // 結果カードのボタンも同期(あれば)
+    } catch(e){ console.error('card bookmark error', e); }
+  }
+  // クリック委譲: 星=ブックマークのトグル / それ以外=配信ページを新規タブ
+  listEl.addEventListener('click', (e) => {
+    const bm = e.target.closest('.recent-card-bookmark');
+    if (bm){ e.preventDefault(); toggleCardBookmark(bm.dataset.id, bm); return; }
+    const card = e.target.closest('.recent-card');
+    if (card && card.dataset.url){
+      window.open(card.dataset.url, '_blank', 'noopener,noreferrer');
+    }
+  });
   async function loadRecent(){
     try {
       const q = query(collection(db, 'gacha_history'), orderBy('timestamp', 'desc'), limit(5));
@@ -1355,9 +1403,10 @@ const DEMO_DATA = { updated_at: null, services: {
         const t = (x.timestamp && x.timestamp.toMillis) ? x.timestamp.toMillis() : null;
         if (t == null) return;          // serverTimestamp未確定はスキップ
         if (now - t > DAY) return;      // 24時間超は除外
-        items.push({ ms: t, title: x.movie_title || '(無題)', platform: x.platform, thumb: x.thumb || '' });
+        items.push({ ms: t, id: x.movie_id || '', title: x.movie_title || '(無題)',
+                     platform: x.platform, thumb: x.thumb || '', watch_url: x.watch_url || '' });
       });
-      render(items);
+      lastItems = items; paint();
     } catch(e){ console.error('recent gacha load error', e); }
   }
   async function record(m){
@@ -1366,6 +1415,7 @@ const DEMO_DATA = { updated_at: null, services: {
         movie_id:    String(m.id || ''),
         movie_title: m.title || '',
         thumb:       m.thumb || '',
+        watch_url:   m.watch_url || '',
         platform:    m.platform || '',
         year:        (m.year != null ? m.year : null),
         timestamp:   serverTimestamp(),
@@ -1379,6 +1429,10 @@ const DEMO_DATA = { updated_at: null, services: {
     prevRender(m, shuffling);
     if (!shuffling && m) record(m);
   };
+  // ログイン状態が変わったら星を塗り直す(既存handlerが bookmarks を更新するのを待つ)
+  onAuthStateChanged(auth, () => {
+    if (lastItems.length){ paint(); setTimeout(() => { if (lastItems.length) paint(); }, 800); }
+  });
   loadRecent();
 })();
 
