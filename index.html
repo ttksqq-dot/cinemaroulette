@@ -90,27 +90,40 @@
   .kinro-banner .kb-icon{font-size:1.15em;flex:none}
   .kinro-banner .kb-accent{color:var(--gold);font-weight:700}
   .kinro-banner .kb-arrow{color:var(--gold);flex:none}
-  /* ── 最近ガチャから出た作品 ── */
+  /* ── 最近ガチャから出た作品(カード型) ── */
   .recent-gacha-panel{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;
-    padding:18px 20px;margin:22px 0;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-  .recent-gacha-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+    padding:20px 22px;margin:24px 0;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .recent-gacha-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;
+    padding-bottom:10px;border-bottom:1px solid var(--line)}
   .recent-gacha-icon{font-size:16px;margin-left:2px}
   .recent-gacha-title{font-size:14px;font-weight:700;color:var(--ink)}
-  .recent-gacha-list{list-style:none;margin:0;padding:0}
-  .recent-gacha-item{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
-  .recent-gacha-item:last-child{border-bottom:none}
-  .recent-gacha-time{font-size:12px;color:var(--muted);font-feature-settings:"tnum";flex:none}
-  .recent-gacha-sep{font-size:12px;color:var(--muted);opacity:.5;flex:none}
-  .recent-gacha-name{font-size:13.5px;color:var(--ink);font-weight:600;
-    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
-  .recent-gacha-platform{font-size:11px;color:var(--muted);background:rgba(0,0,0,.04);
-    padding:2px 8px;border-radius:999px;flex:none}
-  .recent-gacha-empty{font-size:13px;color:var(--muted);padding:8px 0;list-style:none}
-  @media(max-width:560px){
+  .recent-gacha-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:0;padding:0;list-style:none}
+  .recent-card{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.04);display:flex;flex-direction:column;transition:.2s}
+  .recent-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
+  .recent-card-poster{position:relative;aspect-ratio:2/3;background:#f0f0eb;overflow:hidden}
+  .recent-card-poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .recent-card-fallback{position:absolute;inset:0;display:grid;place-content:center;text-align:center;
+    padding:8px;font-size:11px;color:var(--muted);font-family:"Shippori Mincho",serif;line-height:1.35}
+  .recent-card-body{padding:8px 10px 10px;display:flex;flex-direction:column;gap:4px}
+  .recent-card-title{font-size:12.5px;font-weight:600;color:var(--ink);line-height:1.35;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .recent-card-meta{display:flex;align-items:center;gap:6px;margin-top:2px;font-size:10.5px;color:var(--muted)}
+  .recent-card-time{font-feature-settings:"tnum"}
+  .recent-card-platform{font-size:9.5px;padding:1px 6px;border-radius:999px;background:rgba(0,0,0,.04);
+    color:var(--muted);white-space:nowrap}
+  .recent-gacha-empty{font-size:13px;color:var(--muted);padding:8px 0;list-style:none;grid-column:1/-1}
+  /* タブレット: 4列 */
+  @media(max-width:800px){ .recent-gacha-grid{grid-template-columns:repeat(4,1fr)} }
+  /* スマホ: 横スクロールで5件一列(細いスクロールバー) */
+  @media(max-width:480px){
+    .recent-gacha-panel{padding:16px 14px}
+    .recent-gacha-grid{display:flex;overflow-x:auto;gap:10px;padding-bottom:6px;
+      scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+    .recent-gacha-grid::-webkit-scrollbar{height:5px}
+    .recent-gacha-grid::-webkit-scrollbar-thumb{background:rgba(0,0,0,.18);border-radius:999px}
+    .recent-card{flex:0 0 120px;scroll-snap-align:start}
     .recent-gacha-title{font-size:13px}
-    .recent-gacha-name{font-size:12.5px}
-    .recent-gacha-time,.recent-gacha-sep{font-size:11px}
-    .recent-gacha-platform{font-size:10px}
   }
   .platforms{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   @media(max-width:560px){.platforms{grid-template-columns:1fr}}
@@ -388,7 +401,7 @@
         <span class="recent-gacha-icon">🎰</span>
         <span class="recent-gacha-title">最近ガチャから出た作品</span>
       </div>
-      <ul class="recent-gacha-list" id="recent-gacha-list">
+      <ul class="recent-gacha-grid" id="recent-gacha-list">
         <li class="recent-gacha-empty">読み込み中…</li>
       </ul>
     </div>
@@ -1311,13 +1324,26 @@ const DEMO_DATA = { updated_at: null, services: {
       listEl.innerHTML = '<li class="recent-gacha-empty">まだガチャ結果がありません</li>';
       return;
     }
-    listEl.innerHTML = items.map(it =>
-      '<li class="recent-gacha-item">'
-      + '<span class="recent-gacha-time">' + elapsed(it.ms) + '</span>'
-      + '<span class="recent-gacha-sep">·</span>'
-      + '<span class="recent-gacha-name">『' + escx(it.title) + '』</span>'
-      + '<span class="recent-gacha-platform">' + escx(platLabel(it.platform)) + '</span>'
-      + '</li>').join('');
+    listEl.innerHTML = items.map(it => {
+      // フォールバック(タイトル)を背面に常設し、画像はその上に。読込失敗時はimgを除去して背面を表示
+      const img = it.thumb
+        ? '<img src="' + escx(it.thumb) + '" alt="" loading="lazy" '
+          + 'referrerpolicy="no-referrer" onerror="this.remove()">'
+        : '';
+      return '<li class="recent-card">'
+        + '<div class="recent-card-poster">'
+        +   '<div class="recent-card-fallback">' + escx(it.title) + '</div>'
+        +   img
+        + '</div>'
+        + '<div class="recent-card-body">'
+        +   '<div class="recent-card-title">' + escx(it.title) + '</div>'
+        +   '<div class="recent-card-meta">'
+        +     '<span class="recent-card-time">' + elapsed(it.ms) + '</span>'
+        +     '<span class="recent-card-platform">' + escx(platLabel(it.platform)) + '</span>'
+        +   '</div>'
+        + '</div>'
+        + '</li>';
+    }).join('');
   }
   async function loadRecent(){
     try {
@@ -1329,7 +1355,7 @@ const DEMO_DATA = { updated_at: null, services: {
         const t = (x.timestamp && x.timestamp.toMillis) ? x.timestamp.toMillis() : null;
         if (t == null) return;          // serverTimestamp未確定はスキップ
         if (now - t > DAY) return;      // 24時間超は除外
-        items.push({ ms: t, title: x.movie_title || '(無題)', platform: x.platform });
+        items.push({ ms: t, title: x.movie_title || '(無題)', platform: x.platform, thumb: x.thumb || '' });
       });
       render(items);
     } catch(e){ console.error('recent gacha load error', e); }
@@ -1339,6 +1365,7 @@ const DEMO_DATA = { updated_at: null, services: {
       await addDoc(collection(db, 'gacha_history'), {
         movie_id:    String(m.id || ''),
         movie_title: m.title || '',
+        thumb:       m.thumb || '',
         platform:    m.platform || '',
         year:        (m.year != null ? m.year : null),
         timestamp:   serverTimestamp(),
