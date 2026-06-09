@@ -547,7 +547,8 @@
   .share-x-btn:hover{background:#1a1a1a;border-color:#333;color:#fff}
   #share-modal .smx-opt{display:block;width:100%;text-align:left;background:var(--bg-2);
     border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:13px 15px;
-    margin-bottom:10px;cursor:pointer;font-size:13px;line-height:1.6;font-family:inherit;transition:.15s}
+    margin-bottom:10px;cursor:pointer;font-size:13px;line-height:1.6;font-family:inherit;transition:.15s;
+    white-space:pre-wrap;word-break:break-word}
   #share-modal .smx-opt:hover{border-color:var(--gold)}
   #share-modal textarea{width:100%;box-sizing:border-box;background:var(--bg-2);border:1px solid var(--line);
     color:var(--ink);border-radius:12px;padding:12px 14px;font-size:14px;font-family:inherit;min-height:100px}
@@ -1174,9 +1175,9 @@ const DEMO_DATA = { updated_at: null, services: {
   function templates(m){
     const T = m.title, Y = yearPart(m), U = 'https://cinemagacha.com';
     return [
-      `今夜はこれ観る!🎬『${T}』${Y}  #シネマガチャ で出会いました  ${U}`,
-      `観た!🎬『${T}』${Y}  #シネマガチャ から選ばれた一本  ${U}`,
-      `シネマガチャで引いた今夜の一本🎰『${T}』${Y}  #シネマガチャ  ${U}`,
+      `今夜はこれ観る!🎬\n\n『${T}』${Y}\n\n#シネマガチャ で出会いました\n${U}`,
+      `観た!🎬\n\n『${T}』${Y}\n\n#シネマガチャ から選ばれた一本\n${U}`,
+      `シネマガチャで引いた今夜の一本🎰\n\n『${T}』${Y}\n\n#シネマガチャ\n${U}`,
     ];
   }
 
