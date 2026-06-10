@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-10T09:36:35+09:00",
+  "updated_at": "2026-06-10T09:53:33+09:00",
   "week_label": "2026-06-07",
   "source": "Netflix Tudum",
   "source_url": "https://www.netflix.com/tudum/top10",
@@ -7,25 +7,31 @@
     {
       "rank": 1,
       "title_en": "Office Romance",
-      "jp_title": "Office Romance",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "オフィス・ロマンス",
+      "year": 1977,
+      "genres": [
+        "恋愛",
+        "コメディ"
+      ],
+      "summary": "1970年代のソ連を舞台に、地味で冴えない中年男性と、冷徹で仕事一筋の女性上司の間に芽生える不器用な恋を描くロマンティック・コメディ。出世のために上司を誘惑しようと試みる主人公と、愛想のない上司が、交流を通じてお互いの知られざる一面を発見していく様がユーモラスに展開されます。心温まる展開とソ連の日常が垣間見える、隠れた名作です。",
       "runtime_minutes": 115,
       "views_this_week": 20900000,
       "weeks_in_top10": 1,
-      "poster_url": "",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/jhpelw9r4klf1pk57ulkyxykc8d9/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81939823",
+      "available_in_japan": true,
+      "filmarks_id": "128706"
     },
     {
       "rank": 2,
       "title_en": "Creed III",
-      "jp_title": "Creed III",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "クリード 過去の逆襲",
+      "year": 2023,
+      "genres": [
+        "ドラマ",
+        "スポーツ"
+      ],
+      "summary": "アドニス・クリードはボクシング界を引退し、家族との穏やかな日々を送っていた。しかし、過去に因縁を持つ幼なじみのデイムが突如現れ、彼の人生は大きく揺さぶられる。かつての親友とのリング内外での避けられない衝突を通し、友情、家族、そして自己との闘いを描く、マイケル・B・ジョーダン監督・主演の感動スポーツドラマ。",
       "runtime_minutes": 117,
       "views_this_week": 7900000,
       "weeks_in_top10": 1,
@@ -37,10 +43,14 @@
     {
       "rank": 3,
       "title_en": "Swapped",
-      "jp_title": "Swapped",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "スイッチング・プリンセス",
+      "year": 2019,
+      "genres": [
+        "ファンタジー",
+        "コメディ",
+        "ファミリー"
+      ],
+      "summary": "人気ブロガーと王女が、SNSを通じて互いの生活に憧れを抱き、入れ替わることを決意するティーン向けファンタジーコメディ。華やかなプリンセスライフと憧れのインフルエンサー生活、それぞれが夢見た世界は本当に輝いているのか？新たな友情と自己発見が織りなす物語は、きっとあなたを笑顔にしてくれるでしょう。",
       "runtime_minutes": 102,
       "views_this_week": 7500000,
       "weeks_in_top10": 6,
@@ -52,10 +62,14 @@
     {
       "rank": 4,
       "title_en": "David",
-      "jp_title": "David",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "デヴィッド",
+      "year": 2013,
+      "genres": [
+        "ドラマ",
+        "アクション",
+        "犯罪"
+      ],
+      "summary": "異なる時代と場所で生きる二人の「デイヴィッド」の人生が交錯するドラマ。2010年のロンドンで夢を追うギタリストと、1999年のゴアで穏やかに暮らす漁師。ある出来事をきっかけに、彼らの運命は予期せぬ方向へと導かれていく。スタイリッシュな映像美と予測不能な展開が織りなす、重厚なヒューマンドラマに引き込まれるだろう。",
       "runtime_minutes": 109,
       "views_this_week": 6200000,
       "weeks_in_top10": 1,
@@ -67,10 +81,13 @@
     {
       "rank": 5,
       "title_en": "The Murder of Rachel Nickell",
-      "jp_title": "The Murder of Rachel Nickell",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "ザ・マーダー・オブ・レイチェル・ニッケル",
+      "year": 2021,
+      "genres": [
+        "ドキュメンタリー",
+        "クライム"
+      ],
+      "summary": "1992年、ロンドンの公園で幼い息子が見守る中、若い母親レイチェル・ニッケルが殺害された。この衝撃的な事件は、警察のずさんな捜査と誤認逮捕へと繋がり、イギリス社会に大きな波紋を広げた。迷宮入りかと思われたが、科学捜査の進化と執念の再捜査によって、20年後に遂に真犯人が特定される。正義は果たされたのか、そして犠牲になった人々の心の傷は癒えるのか。実際の事件を克明に追う、緊迫のドキュメンタリー。",
       "runtime_minutes": 96,
       "views_this_week": 6100000,
       "weeks_in_top10": 1,
@@ -82,10 +99,13 @@
     {
       "rank": 6,
       "title_en": "The Crash",
-      "jp_title": "The Crash",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "クラッシュ",
+      "year": 2017,
+      "genres": [
+        "スリラー",
+        "犯罪"
+      ],
+      "summary": "ウォール街の金融システムを標的とした大規模なサイバーテロが発生。世界経済の崩壊が避けられない状況に陥る中、政府は元犯罪者たちで構成されたハッカーチームに白羽の矢を立てる。彼らは謎に包まれた犯人の目的を探り、世界を救うことができるのか？ 一触即発の状況で繰り広げられる、知能と技術を駆使した緊迫のサイバースリラー。",
       "runtime_minutes": 95,
       "views_this_week": 5700000,
       "weeks_in_top10": 4,
@@ -112,10 +132,12 @@
     {
       "rank": 8,
       "title_en": "Goat",
-      "jp_title": "Goat",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "Goat／ゴート",
+      "year": 2016,
+      "genres": [
+        "ドラマ"
+      ],
+      "summary": "大学に入学したばかりのブラッドは、兄ブレットが所属するフラタニティ（友愛会）への入会を決意する。しかし、彼らを待ち受けていたのは、極限の肉体的・精神的試練を伴う「ヘルウィーク」と呼ばれる壮絶な通過儀礼だった。兄弟の絆、男らしさの定義、そして集団心理がもたらす暴力と狂気が交錯する中で、青春の残酷な現実をえぐり出す衝撃作。",
       "runtime_minutes": 100,
       "views_this_week": 5200000,
       "weeks_in_top10": 4,
@@ -127,10 +149,13 @@
     {
       "rank": 9,
       "title_en": "Creed",
-      "jp_title": "Creed",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "クリード チャンプを継ぐ男",
+      "year": 2015,
+      "genres": [
+        "ドラマ",
+        "スポーツ"
+      ],
+      "summary": "伝説のボクサー、アポロ・クリードの息子アドニスは、偉大な父の影に葛藤しながらもボクシングの世界に足を踏み入れます。引退したロッキー・バルボアに指導を請い、己の力で新たな伝説を築こうとする彼の戦いは、単なるリング上の闘いにとどまりません。栄光と苦悩が交錯する中で成長していく青年の姿を描いた、感動のスポーツヒューマンドラマです。",
       "runtime_minutes": 134,
       "views_this_week": 4500000,
       "weeks_in_top10": 1,
@@ -142,10 +167,14 @@
     {
       "rank": 10,
       "title_en": "KPop Demon Hunters",
-      "jp_title": "KPop Demon Hunters",
+      "jp_title": "Kポップ・デーモン・ハンターズ",
       "year": null,
-      "genres": [],
-      "summary": "",
+      "genres": [
+        "アクション",
+        "ホラー",
+        "コメディ"
+      ],
+      "summary": "絶大な人気を誇るK-POPアイドルグループが、じつは悪魔を狩る秘密の組織の一員だった！華やかなステージの裏側で、彼らは世界の平和を守るため、恐ろしい悪魔たちと激しい戦いを繰り広げる。歌とダンス、そして悪魔退治という異色の組み合わせが織りなす、新感覚のアクションホラーコメディに注目。",
       "runtime_minutes": 100,
       "views_this_week": 3700000,
       "weeks_in_top10": 51,
@@ -159,10 +188,14 @@
     {
       "rank": 1,
       "title_en": "Jujutsu Kaisen: Hidden Inventory / Premature Death – the Movie",
-      "jp_title": "Jujutsu Kaisen: Hidden Inventory / Premature Death – the Movie",
+      "jp_title": "ジュジュツ カイセン: ヒドゥン インベントリー / プリマチュア デス",
       "year": null,
-      "genres": [],
-      "summary": "",
+      "genres": [
+        "ダークファンタジー",
+        "アクション",
+        "学園"
+      ],
+      "summary": "呪術高専時代の五条悟と夏油傑を主軸に、彼らの秘められた過去を描く物語。最強の二人と称された彼らが、なぜ袂を分かつことになったのか。運命を決定づけた悲劇的な夏、友情と信念が揺さぶられる青春が、後の世界に大きな影響を与える激動の原点を描きます。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 2,
@@ -174,10 +207,14 @@
     {
       "rank": 2,
       "title_en": "Milky☆Subway: The Galactic Limited Express – the Movie",
-      "jp_title": "Milky☆Subway: The Galactic Limited Express – the Movie",
+      "jp_title": "ミルキー☆サブウェイ：ザ・ギャラクティック・リミテッド・エクスプレス – ザ・ムービー",
       "year": null,
-      "genres": [],
-      "summary": "",
+      "genres": [
+        "アニメーション",
+        "SF",
+        "ファンタジー"
+      ],
+      "summary": "煌めく星々を縫って走る、銀河を横断する夢のような鉄道「ミルキー☆サブウェイ」。そこは、様々な物語を運び、旅人たちに忘れられない出会いを提供する場所です。孤独な少年が運命的な出会いを果たした少女と共に、この壮大な旅路で何を見つけ、どんな成長を遂げるのか。息をのむほど美しい宇宙の描写と、心揺さぶる冒険が、観る者を遥かなる星の彼方へと誘います。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
@@ -189,10 +226,13 @@
     {
       "rank": 3,
       "title_en": "SUZUKI=BAKUDAN",
-      "jp_title": "SUZUKI=BAKUDAN",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "スズキ＝バクダン",
+      "year": 1999,
+      "genres": [
+        "アニメーション",
+        "実験映画"
+      ],
+      "summary": "奇才・鈴木卓爾監督が手掛けた、実験的でシュールな短編アニメーション。意味深な記号と抽象的な描写が織りなす映像世界は、観る者の固定観念を揺さぶり、深い考察へと誘います。一度見たら忘れられない独特のアートスタイルと不条理な物語が展開され、短時間で強烈なインパクトを残すカルト的な一本です。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 10,
@@ -204,47 +244,55 @@
     {
       "rank": 4,
       "title_en": "Venom: The Last Dance",
-      "jp_title": "Venom: The Last Dance",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "ヴェノム：ザ・ラストダンス",
+      "year": 2024,
+      "genres": [
+        "アクション"
+      ],
+      "summary": "共生体ヴェノムとエディ・ブロックの予測不能な関係は、ついにクライマックスを迎える。シリーズ最終章となる本作では、二人の前にこれまでで最も危険な脅威が立ちはだかり、彼らの運命を大きく揺るがす。地球の未来をかけた壮絶な戦いと、ヴェノムの知られざる過去が明かされるとき、彼らが選択する“最後のダンス”とは一体何なのか。壮大なスケールで描かれるダークヒーローの物語を見届けよう。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/ua2yhg9r7ule793rgo1wcky9h0fh/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81680567",
+      "available_in_japan": true,
+      "filmarks_id": "106266"
     },
     {
       "rank": 5,
       "title_en": "From Today, It's My Turn!!: The Movie",
-      "jp_title": "From Today, It's My Turn!!: The Movie",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "今日から俺は!! 劇場版",
+      "year": 2020,
+      "genres": [
+        "ドラマ",
+        "コメディ"
+      ],
+      "summary": "伝説のツッパリコンビ、三橋と伊藤がスクリーンに帰ってきた！1980年代を舞台に、卑怯者の三橋と相棒の伊藤が、次々と巻き起こる騒動に持ち前の拳と知恵で立ち向かう抱腹絶倒の学園コメディ。劇場版では、シリーズ史上最強の敵を迎え、前代未聞の大乱闘が勃発。笑いと友情、そして胸アツのバトルが詰め込まれた、スカッと痛快な青春エンターテインメントをお見逃しなく！",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 6,
-      "poster_url": "",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/syu1buix3sww0do6mjjgefzo2oe0/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81710304",
+      "available_in_japan": true,
+      "filmarks_id": "83742"
     },
     {
       "rank": 6,
       "title_en": "Despicable Me 4",
-      "jp_title": "Despicable Me 4",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "怪盗グルーのミニオン超変身",
+      "year": 2024,
+      "genres": [
+        "アニメ",
+        "ファミリー"
+      ],
+      "summary": "大人気「怪盗グルー」シリーズの最新作は、グルーの家族に待望の息子グルーJr.が加わり、さらに賑やかに！しかし、脱獄した宿敵マキシム・ルマルから命を狙われ、グルー一家は潜伏生活を余儀なくされます。\n一方、ひょんなことから最強のメガミニオンへと超変身を遂げたミニオンたちが大暴れ。果たして、グルーは家族を守り、新たな敵に立ち向かえるのか？爆笑と感動、そして予測不能なアドベンチャーが幕を開けます！",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 4,
-      "poster_url": "",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/fk6j75wsgpise7h9wy7kv8l1yv60/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81776693",
+      "available_in_japan": true,
+      "filmarks_id": "114753"
     },
     {
       "rank": 7,
