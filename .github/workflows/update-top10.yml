@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4 google-generativeai python-dotenv
+        run: pip install requests urllib3 beautifulsoup4 google-generativeai python-dotenv
 
       - name: Scrape Tudum
         run: python scripts/scrape_top10.py > data/top10_raw.json

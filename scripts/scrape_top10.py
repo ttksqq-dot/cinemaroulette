@@ -18,7 +18,13 @@ SPA を解析するより遥かに堅牢。地域指定もこのTSVの country_i
 映画のみ・最新週のみを抽出して JSON を標準出力に出す。
 (workflow では `python scripts/scrape_top10.py > data/top10_raw.json`)
 """
-import sys, json, csv, io, time, datetime, urllib.request, html as _htmllib
+import sys, json, csv, io, time, datetime, html as _htmllib
+import requests
+from requests.adapters import HTTPAdapter
+try:
+    from urllib3.util.retry import Retry
+except Exception:  # 念のため
+    from requests.packages.urllib3.util.retry import Retry
 
 # Windowsコンソール(cp932)対策: 出力をUTF-8に固定(Linux CIでは無害)
 try:
@@ -32,21 +38,50 @@ GLOBAL_TSV = "https://www.netflix.com/tudum/top10/data/all-weeks-global.tsv"
 COUNTRIES_TSV = "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv"
 TUDUM_HTML = "https://www.netflix.com/tudum/top10"
 TUDUM_HTML_JP = "https://www.netflix.com/tudum/top10/japan"
-UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+HEADERS = {
+    "User-Agent": ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                   "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"),
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+
+def _make_session():
+    s = requests.Session()
+    retry = Retry(
+        total=5,
+        backoff_factor=2,                      # 指数バックオフ(0,2,4,8,16秒)
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["GET"],
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    s.mount("https://", adapter)
+    s.mount("http://", adapter)
+    s.headers.update(HEADERS)
+    return s
+
+
+_SESSION = _make_session()
 
 
 def fetch(url, tries=3):
+    """requests.Session(keep-alive)+ストリーミングで取得。
+    CloudFrontのIncompleteRead対策に、チャンク読み込み+リトライを行う。"""
     last = None
     for i in range(tries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=90) as r:
-                return r.read().decode("utf-8", "replace")
+            with _SESSION.get(url, stream=True, timeout=(10, 60)) as r:
+                r.raise_for_status()
+                content = b""
+                for chunk in r.iter_content(chunk_size=8192):
+                    if chunk:
+                        content += chunk
+                return content.decode("utf-8", errors="replace")
         except Exception as e:
             last = e
             sys.stderr.write(f"[warn] fetch失敗({i+1}/{tries}) {url}: {e}\n")
-            time.sleep(3)
+            time.sleep(3)                       # マナー: 最低3秒
     raise last
 
 
