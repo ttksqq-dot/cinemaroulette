@@ -26,6 +26,9 @@ OUT_HTML = os.path.join(ROOT, "top10.html")
 SITEMAP = os.path.join(ROOT, "sitemap.xml")
 CACHE_PATH = os.path.join(ROOT, "data", "top10_cache.json")   # 邦題・メタの永続キャッシュ
 GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_BUDGET = 20            # 無料枠: 1日20リクエスト(叩いた数でカウント)
+QUOTA_EXHAUSTED = False       # 429を一度でも踏んだら以降のGemini呼び出しは全スキップ
+GEMINI_CALLS_MADE = 0         # 実際にAPIを叩いた回数
 
 # .env(ローカル)読み込み(任意)
 try:
@@ -88,8 +91,10 @@ def _retry_delay_seconds(msg):
 
 
 def gemini_meta(client, title_en, year, runtime):
-    """邦題等のdict、失敗時 None。Groundingは使わずプロンプトで精度確保。"""
-    if client is None:
+    """邦題等のdict、失敗時 None。Groundingは使わずプロンプトで精度確保。
+    429(クォータ超過)はリトライせず即ギブアップし、以降は全スキップ(無駄打ちゼロ)。"""
+    global QUOTA_EXHAUSTED, GEMINI_CALLS_MADE
+    if client is None or QUOTA_EXHAUSTED:
         return None
     prompt = f"""あなたは映画情報の専門家です。以下の映画について「日本での実際の公開タイトル」をJSONで答えてください。
 
@@ -119,7 +124,9 @@ def gemini_meta(client, title_en, year, runtime):
 }}
 
 カタカナ転写ではなく、日本での実際の公開タイトルを答えてください。検索結果や記憶に基づき、不明な場合のみカタカナ転写で良いです。"""
-    for attempt in range(3):
+    server_retries = 0
+    while True:
+        GEMINI_CALLS_MADE += 1
         try:
             resp = client.models.generate_content(model=GEMINI_MODEL, contents=prompt)
             text = (resp.text or "").strip()
@@ -129,18 +136,27 @@ def gemini_meta(client, title_en, year, runtime):
             if m:
                 text = m.group(0)
             obj = json.loads(text)
-            time.sleep(4)                      # 15RPM(毎分制限)対策
+            time.sleep(4)                      # 15RPM対策(成功時のみ枠を消費)
             return obj
         except Exception as e:
             msg = str(e)
-            if "429" in msg or "RESOURCE_EXHAUSTED" in msg or "quota" in msg.lower():
-                delay = _retry_delay_seconds(msg)
-                sys.stderr.write(f"[warn] Gemini 429({attempt+1}/3) {title_en}: retry_delay={delay}s\n")
-                time.sleep(delay)               # 指数バックオフではなく応答のretry_delayを尊重
-            else:
-                sys.stderr.write(f"[warn] Gemini失敗({attempt+1}/3) {title_en}: {e}\n")
-                time.sleep(4)
-    return None
+            code = getattr(e, "code", None) or getattr(e, "status_code", None)
+            is_quota = (code == 429) or "429" in msg or "RESOURCE_EXHAUSTED" in msg or "quota" in msg.lower()
+            is_server = (code in (500, 503)) or "500" in msg or "503" in msg or "INTERNAL" in msg or "UNAVAILABLE" in msg
+            if is_quota:
+                # 429はリトライしない(リトライするほど枠を浪費して悪化する)
+                QUOTA_EXHAUSTED = True
+                sys.stderr.write(f'[info] quota_exceeded for "{title_en}" - using fallback\n')
+                return None
+            if is_server and server_retries < 2:
+                # サーバー側一時障害(500/503)は枠を消費しない種類 → 短いリトライのみ許可
+                server_retries += 1
+                sys.stderr.write(f'[warn] server error({server_retries}/2) "{title_en}": {e} → 5秒後再試行\n')
+                time.sleep(5)
+                continue
+            # その他(認証エラー等)はリトライせず即ギブアップ
+            sys.stderr.write(f'[warn] Geminiエラー(リトライせず) "{title_en}": {e}\n')
+            return None
 
 
 # ───────── SVGプレースホルダー ─────────
@@ -169,7 +185,7 @@ def svg_placeholder(title):
 
 # ───────── 診断 ─────────
 WARNINGS = []          # 邦題/メタの要確認リスト
-STATS = {"cache": 0, "gemini": 0, "failed": 0, "no_key": 0, "total": 0}
+STATS = {"cache": 0, "gemini": 0, "quota": 0, "budget": 0, "failed": 0, "no_key": 0, "total": 0}
 
 
 def cache_key_for(entry, title_en):
@@ -199,24 +215,33 @@ def enrich(entry, lookup, client, region, cache, cache_new):
         g = cache[ckey]
         source = "cache"
         STATS["cache"] += 1
-    elif client is not None:
-        g = gemini_meta(client, title_en, year, runtime)
-        if g is not None:
+    elif client is not None and not QUOTA_EXHAUSTED and GEMINI_CALLS_MADE < GEMINI_BUDGET:
+        res = gemini_meta(client, title_en, year, runtime)
+        if res is not None:
             g = {
-                "jp_title": (g.get("jp_title") or "").strip(),
-                "year": g.get("year"),
-                "genres": g.get("genres") or [],
-                "summary": (g.get("summary") or "").strip(),
+                "jp_title": (res.get("jp_title") or "").strip(),
+                "year": res.get("year"),
+                "genres": res.get("genres") or [],
+                "summary": (res.get("summary") or "").strip(),
                 "cached_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             }
             cache[ckey] = g
             cache_new.append(ckey)
             source = "gemini"
             STATS["gemini"] += 1
+        elif QUOTA_EXHAUSTED:                 # この呼び出しで429を踏んだ
+            g = {}
+            source = "quota"
+            STATS["quota"] += 1
         else:
             g = {}
-            source = "failed"     # キャッシュ保存しない(次回再試行)
+            source = "failed"                 # サーバー/その他エラー。キャッシュ保存せず次回再試行
             STATS["failed"] += 1
+    elif client is not None:
+        # 既にクォータ枯渇 or 予算(20件)超過 → API を叩かず即フォールバック
+        g = {}
+        source = "quota" if QUOTA_EXHAUSTED else "budget"
+        STATS[source] += 1
     else:
         g = {}
         source = "no_key"
@@ -624,6 +649,15 @@ def main():
     g_src = raw.get("global", {}).get("movies_english", [])
     j_src = raw.get("japan", {}).get("movies_english", [])
     sys.stderr.write(f"[info] enrich global={len(g_src)} japan={len(j_src)} (cache既存={cache_before}件)\n")
+
+    # 予算意識: 未キャッシュ件数を把握(上位=global rank順→japan rank順 で優先消費)
+    if client is not None:
+        uncached = sum(1 for e in (g_src + j_src)
+                       if cache_key_for(e, e.get("title_en", "")) not in cache)
+        sys.stderr.write(f"[info] Gemini呼び出し予算: 最大{GEMINI_BUDGET}件(無料枠)。未キャッシュ={uncached}件\n")
+        if uncached > GEMINI_BUDGET:
+            sys.stderr.write(f"[warn] 未キャッシュ{uncached}件 > 予算{GEMINI_BUDGET}件 → 上位{GEMINI_BUDGET}件のみGemini、残りは英題流用\n")
+
     global_movies = [enrich(e, lookup, client, "global", cache, cache_new) for e in g_src]
     japan_movies = [enrich(e, lookup, client, "japan", cache, cache_new) for e in j_src]
 
@@ -641,8 +675,9 @@ def main():
     # ── 診断サマリ ──
     sys.stderr.write(
         f"[info] === 邦題ソース診断: total={STATS['total']} cache={STATS['cache']} "
-        f"gemini新規={STATS['gemini']} failed={STATS['failed']} no_key={STATS['no_key']} "
-        f"(今回Gemini呼び出し={STATS['gemini']+STATS['failed']}件) ===\n"
+        f"gemini新規={STATS['gemini']} quota={STATS['quota']} budget={STATS['budget']} "
+        f"failed={STATS['failed']} no_key={STATS['no_key']} "
+        f"(実API呼び出し={GEMINI_CALLS_MADE}件 / 予算{GEMINI_BUDGET}, quota_exhausted={QUOTA_EXHAUSTED}) ===\n"
     )
     g_avail = sum(x["available_in_japan"] for x in global_movies)
     j_avail = sum(x["available_in_japan"] for x in japan_movies)
