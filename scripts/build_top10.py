@@ -10,7 +10,7 @@ data/top10.json と top10.html を生成する。
   GEMINI_API_KEY が無い or 失敗時はフォールバック(英題流用・紹介文空)で続行
 - sitemap.xml の top10.html 行も更新
 """
-import os, re, sys, json, time, html, datetime, unicodedata
+import os, re, sys, json, time, html, datetime, unicodedata, urllib.parse
 
 try:
     sys.stdout.reconfigure(encoding="utf-8")
@@ -71,7 +71,14 @@ def gemini_model():
     try:
         import google.generativeai as genai
         genai.configure(api_key=GEMINI_API_KEY)
-        return genai.GenerativeModel("gemini-2.5-flash")
+        # google_search grounding を有効化(邦題を検索で正確に特定するため)
+        try:
+            m = genai.GenerativeModel("gemini-2.5-flash", tools=[{"google_search": {}}])
+            sys.stderr.write("[info] Gemini grounding(google_search)有効\n")
+            return m
+        except Exception as e:
+            sys.stderr.write(f"[warn] grounding初期化失敗→検索なしで継続: {e}\n")
+            return genai.GenerativeModel("gemini-2.5-flash")
     except Exception as e:
         sys.stderr.write(f"[warn] Gemini初期化失敗: {e}\n")
         return None
@@ -81,23 +88,28 @@ def gemini_meta(model, title_en, year, runtime):
     """{jp_title, year, genres, summary} を返す。失敗時 None。"""
     if model is None:
         return None
-    prompt = f"""あなたは映画情報の専門家です。以下の映画について、JSON形式で回答してください。
+    prompt = f"""あなたは映画情報の専門家です。Google検索を使い、以下の映画の「日本での公式タイトル」を必ず調べて特定してください。
 
 映画タイトル(英語): {title_en}
 公開年(参考): {year if year else "不明"}
 上映時間: {runtime if runtime else "不明"}分
 
-以下のJSONを返してください。説明文やマークダウンは不要、JSONのみ:
+邦題の決め方(重要):
+- アニメ・日本映画は元の日本語タイトル(例: Jujutsu Kaisen → 呪術廻戦、Demon Slayer → 鬼滅の刃)
+- 海外作品は日本配給・配信時の正式な邦題(例: 日本公開名やNetflixでの邦題)
+- カタカナ転写は、検索しても日本での該当タイトルが本当に見つからない時だけの最終手段
+
+以下のJSONのみを返してください(説明文やマークダウン不要):
 
 {{
-  "jp_title": "日本での正式公開タイトル。劇場未公開ならNetflixでの邦題、それも無ければカタカナ表記の英題",
+  "jp_title": "上記ルールで特定した日本での公式タイトル",
   "year": 公開年の整数(不明ならnull),
   "genres": ["ジャンル1","ジャンル2"],
   "summary": "2-3文の日本語紹介文。ネタバレなし。観たくなる導入。150〜200字程度"
 }}
 
 注意:
-- 邦題は推測ではなく確実な情報のみ。不明ならカタカナ表記でOK
+- jp_title は検索で裏取りした確実なものを優先。安易なカタカナ直訳は避ける
 - summaryは独自の言い回しで。あらすじの転載ではなく視聴を促す紹介文"""
     for attempt in range(3):
         try:
@@ -115,6 +127,30 @@ def gemini_meta(model, title_en, year, runtime):
             sys.stderr.write(f"[warn] Gemini失敗({attempt+1}/3) {title_en}: {e}\n")
             time.sleep(3)
     return None
+
+
+# ───────── SVGプレースホルダー ─────────
+def svg_placeholder(title):
+    """ポスターが取得できない時の、タイトル文字入りSVG(data URI)。"""
+    t = (title or "").strip()
+    # ざっくり10文字ごとに折り返し(最大3行)
+    lines = [t[i:i + 10] for i in range(0, len(t), 10)][:3] or ["No Image"]
+    tspans = "".join(
+        f'<tspan x="150" dy="{30 if i else 0}">{html.escape(ln)}</tspan>'
+        for i, ln in enumerate(lines)
+    )
+    svg = (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="300" height="450" viewBox="0 0 300 450">'
+        '<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">'
+        '<stop offset="0" stop-color="#2a2a32"/><stop offset="1" stop-color="#0f0f14"/>'
+        '</linearGradient></defs>'
+        '<rect width="300" height="450" fill="url(#g)"/>'
+        '<text x="150" y="165" text-anchor="middle" font-size="44">🎬</text>'
+        f'<text x="150" y="235" text-anchor="middle" fill="#e8e6df" '
+        f'font-family="sans-serif" font-size="18" font-weight="700">{tspans}</text>'
+        '</svg>'
+    )
+    return "data:image/svg+xml;charset=utf-8," + urllib.parse.quote(svg)
 
 
 # ───────── エントリ処理 ─────────
@@ -143,6 +179,10 @@ def enrich(entry, lookup, model):
         watch_url = rec.get("watch_url") or ""
         poster_url = rec.get("thumb") or poster_url
         filmarks_id = rec.get("id")
+
+    # ポスター最終フォールバック: movies.json も Tudum も無ければ SVG プレースホルダー
+    if not poster_url:
+        poster_url = svg_placeholder(jp_title)
 
     return {
         "rank": entry.get("rank"),
