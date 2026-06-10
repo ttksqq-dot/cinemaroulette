@@ -182,6 +182,8 @@ def build_page(service_key, movies, updated_at_txt):
   .navbtn.active{{color:var(--ink);background:rgba(0,0,0,.06);border-color:rgba(0,0,0,.25);font-weight:700}}
   .navbtn.home{{background:linear-gradient(#e3bd55,#b8860b);border-color:#b8860b;color:#1a1505;font-weight:700;box-shadow:0 2px 6px rgba(184,134,11,.25)}}
   .navbtn.home:hover{{filter:brightness(1.05);box-shadow:0 4px 12px rgba(184,134,11,.35)}}
+  .navbtn.top10{{border-color:#b8860b;color:#8a6608;background:rgba(184,134,11,.10)}}
+  .navbtn.top10:hover{{background:rgba(184,134,11,.18);border-color:#b8860b}}
 
   header{{text-align:center;margin:30px 0 28px}}
   .kicker{{letter-spacing:.2em;font-size:12px;color:var(--muted);margin-bottom:8px}}
@@ -246,6 +248,7 @@ def build_page(service_key, movies, updated_at_txt):
   <a class="navbtn home" href="/">TOP</a>
   <a class="navbtn active" href="/{meta['out']}">{meta['label']} 作品一覧</a>
   <a class="navbtn" href="/{other_meta['out']}">{other_meta['label']} 作品一覧</a>
+  <a class="navbtn top10" href="/top10.html">🏆 今週のTop10</a>
 </nav>
 
 <div class="wrap">

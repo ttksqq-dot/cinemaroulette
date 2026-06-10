@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今週のNetflix人気映画Top10(グローバル/日本) | シネマガチャ</title>
+<meta name="description" content="Netflix Tudum発表の週次人気映画ランキング。2026-06-07のグローバルTop10と日本Top10を日本語で紹介。">
+<link rel="canonical" href="https://cinemagacha.com/top10.html">
+<meta property="og:title" content="今週のNetflix人気映画Top10(グローバル/日本) | シネマガチャ">
+<meta property="og:description" content="Netflix Tudum発表の週次人気映画ランキング。2026-06-07のグローバルTop10と日本Top10を日本語で紹介。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cinemagacha.com/top10.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8972877686386494" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XCVTZSESV5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XCVTZSESV5');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fafaf7; --bg-2:#ffffff; --ink:#1a1a20; --muted:#6b6b73;
+    --line:rgba(0,0,0,.08); --netflix:#e50914; --prime:#00a8e1; --gold:#b8860b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{min-height:100%}
+  body{font-family:"Noto Sans JP",sans-serif;background:var(--bg);color:var(--ink);
+    min-height:100vh;overflow-x:hidden;position:relative}
+  body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(900px 600px at 15% -10%, rgba(229,9,20,.06), transparent 60%),
+      radial-gradient(900px 600px at 110% 20%, rgba(0,168,225,.06), transparent 60%),
+      radial-gradient(700px 700px at 50% 120%, rgba(184,134,11,.05), transparent 60%);}
+  .wrap{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:40px 24px 90px}
+  .topnav{position:relative;z-index:3;display:flex;align-items:center;justify-content:center;
+    gap:10px;flex-wrap:wrap;padding:18px 24px 0}
+  .navbtn{cursor:pointer;text-decoration:none;border:1px solid var(--line);
+    background:rgba(0,0,0,.04);color:var(--ink);border-radius:999px;
+    padding:8px 18px;font-size:14px;font-weight:500;transition:.2s;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .navbtn:hover{color:var(--ink);background:rgba(0,0,0,.08);border-color:rgba(0,0,0,.15)}
+  .navbtn.home{background:linear-gradient(#e3bd55,#b8860b);border-color:#b8860b;color:#1a1505;font-weight:700;box-shadow:0 2px 6px rgba(184,134,11,.25)}
+  .navbtn.home:hover{filter:brightness(1.05);box-shadow:0 4px 12px rgba(184,134,11,.35)}
+  .navbtn.top10{border-color:#b8860b;color:#8a6608;background:rgba(184,134,11,.10)}
+  .navbtn.top10.active,.navbtn.top10:hover{background:rgba(184,134,11,.18);border-color:#b8860b}
+  header{text-align:center;margin:30px 0 22px}
+  .kicker{letter-spacing:.2em;font-size:12px;color:var(--muted);margin-bottom:8px}
+  h1{font-family:"Shippori Mincho",serif;font-weight:800;font-size:clamp(26px,5.5vw,44px);line-height:1.2}
+  .sub{margin-top:12px;color:var(--muted);font-size:13.5px;line-height:1.8}
+  .updated{margin-top:6px;color:#55555c;font-size:11.5px}
+  .top10-tabs{display:flex;justify-content:center;gap:10px;margin:6px 0 28px}
+  .top10-tabs a{text-decoration:none;border:1px solid var(--line);background:var(--bg-2);
+    color:var(--ink);border-radius:999px;padding:8px 20px;font-size:14px;font-weight:600;
+    box-shadow:0 1px 3px rgba(0,0,0,.04);transition:.2s}
+  .top10-tabs a:hover{border-color:var(--gold);color:var(--gold)}
+  .top10-sec{margin-bottom:44px;scroll-margin-top:20px}
+  .top10-sec h2{font-family:"Shippori Mincho",serif;font-size:22px;margin-bottom:16px;
+    padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .top10-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:800px){.top10-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.top10-grid{grid-template-columns:1fr}}
+  .t10-card{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.04);display:flex;flex-direction:column;transition:.2s}
+  .t10-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
+  .t10-rankbar{display:flex;align-items:center;justify-content:space-between;gap:8px;
+    padding:9px 12px;background:linear-gradient(90deg,rgba(184,134,11,.14),rgba(184,134,11,.04))}
+  .t10-rank{font-family:"Bebas Neue",sans-serif;font-size:20px;letter-spacing:.05em;color:#8a6608}
+  .t10-stat{font-size:11px;color:var(--muted);font-feature-settings:"tnum"}
+  .t10-poster{position:relative;aspect-ratio:2/3;background:#f0f0eb;overflow:hidden}
+  .t10-poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .t10-fallback{position:absolute;inset:0;display:grid;place-content:center;text-align:center;
+    padding:14px;font-family:"Shippori Mincho",serif;font-size:15px;line-height:1.4;color:var(--muted)}
+  .t10-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:5px;flex:1}
+  .t10-jp{font-size:16px;font-weight:700;line-height:1.35;color:var(--ink)}
+  .t10-en{font-size:11.5px;color:var(--muted)}
+  .t10-meta{font-size:11.5px;color:var(--muted);font-feature-settings:"tnum"}
+  .t10-summary{font-size:12.5px;line-height:1.7;color:#33333b;margin:4px 0 8px}
+  .t10-actions{display:flex;align-items:center;gap:8px;margin-top:auto}
+  .t10-watch{flex:1;text-align:center;text-decoration:none;background:var(--netflix);color:#fff;
+    border-radius:999px;padding:9px 12px;font-size:13px;font-weight:700;transition:.2s}
+  .t10-watch:hover{filter:brightness(1.08)}
+  .t10-watch.disabled{background:rgba(0,0,0,.06);color:var(--muted);font-weight:500;cursor:default}
+  .t10-bm{width:38px;height:38px;flex:none;border-radius:50%;border:1px solid var(--line);
+    background:rgba(0,0,0,.04);cursor:pointer;font-size:18px;line-height:1;color:var(--muted);transition:.2s}
+  .t10-bm:hover{background:#fff;color:var(--ink)}
+  .t10-bm.bookmarked{color:var(--gold);border-color:var(--gold)}
+  .t10-avail{font-size:11.5px;margin-top:8px}
+  .t10-avail.ok{color:#1f7a4d}
+  .t10-avail.ng{color:var(--muted)}
+  .attribution{text-align:center;color:var(--muted);font-size:12px;margin:10px 0 24px;line-height:1.8}
+  .attribution a{color:#4a4a52}
+  .footer-note{text-align:center;color:var(--muted);font-size:12px;margin-top:24px;line-height:1.8}
+  .footer-note a{color:#4a4a52}
+  #t10-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);
+    background:#1a1a20;color:#fff;padding:11px 18px;border-radius:999px;font-size:13px;
+    opacity:0;pointer-events:none;transition:.25s;z-index:999;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+  #t10-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="navbtn home" href="/">TOP</a>
+  <a class="navbtn" href="/netflix.html">NETFLIX 作品一覧</a>
+  <a class="navbtn" href="/prime.html">PRIME VIDEO 作品一覧</a>
+  <a class="navbtn top10 active" href="/top10.html">🏆 今週のTop10</a>
+</nav>
+
+<div class="wrap">
+  <header>
+    <div class="kicker">シネマガチャ</div>
+    <h1>今週のNetflix人気映画Top10</h1>
+    <p class="sub">2026-06-07 のランキング(出典: Netflix Tudum)<br>グローバルと日本、それぞれの人気映画をまとめました。</p>
+    <p class="updated">最終更新: 2026年06月10日 09:36</p>
+  </header>
+
+  <nav class="top10-tabs">
+    <a href="#global">🌍 グローバル</a>
+    <a href="#japan">🇯🇵 日本</a>
+  </nav>
+
+  <section class="top10-sec" id="global">
+    <h2>🌍 グローバル 映画 Top10</h2>
+    <div class="top10-grid">
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #1</span><span class="t10-stat">約2,090万回再生</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Office Romance</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Office Romance</h3>
+    <div class="t10-en">Office Romance</div>
+    <div class="t10-meta">1時間55分</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #2</span><span class="t10-stat">約790万回再生</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Creed III</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Creed III</h3>
+    <div class="t10-en">Creed III</div>
+    <div class="t10-meta">1時間57分</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #3</span><span class="t10-stat">約750万回再生</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Swapped</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Swapped</h3>
+    <div class="t10-en">Swapped</div>
+    <div class="t10-meta">1時間42分</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #4</span><span class="t10-stat">約620万回再生</span></div>
+  <div class="t10-poster"><div class="t10-fallback">David</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">David</h3>
+    <div class="t10-en">David</div>
+    <div class="t10-meta">1時間49分</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #5</span><span class="t10-stat">約610万回再生</span></div>
+  <div class="t10-poster"><div class="t10-fallback">The Murder of Rachel Nickell</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">The Murder of Rachel Nickell</h3>
+    <div class="t10-en">The Murder of Rachel Nickell</div>
+    <div class="t10-meta">1時間36分</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #6</span><span class="t10-stat">約570万回再生</span></div>
+  <div class="t10-poster"><div class="t10-fallback">The Crash</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">The Crash</h3>
+    <div class="t10-en">The Crash</div>
+    <div class="t10-meta">1時間35分</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #7</span><span class="t10-stat">約530万回再生</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Ladies First</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Ladies First</h3>
+    <div class="t10-en">Ladies First</div>
+    <div class="t10-meta">1時間33分</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #8</span><span class="t10-stat">約520万回再生</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Goat</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Goat</h3>
+    <div class="t10-en">Goat</div>
+    <div class="t10-meta">1時間40分</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #9</span><span class="t10-stat">約450万回再生</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Creed</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Creed</h3>
+    <div class="t10-en">Creed</div>
+    <div class="t10-meta">2時間14分</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #10</span><span class="t10-stat">約370万回再生</span></div>
+  <div class="t10-poster"><div class="t10-fallback">KPop Demon Hunters</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">KPop Demon Hunters</h3>
+    <div class="t10-en">KPop Demon Hunters</div>
+    <div class="t10-meta">1時間40分</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+    </div>
+  </section>
+
+  <section class="top10-sec" id="japan">
+    <h2>🇯🇵 日本 映画 Top10</h2>
+    <div class="top10-grid">
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #1</span><span class="t10-stat">Top10入り2週目</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Jujutsu Kaisen: Hidden Inventory / Premature Death – the Movie</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Jujutsu Kaisen: Hidden Inventory / Premature Death – the Movie</h3>
+    <div class="t10-en">Jujutsu Kaisen: Hidden Inventory / Premature Death – the Movie</div>
+    <div class="t10-meta"></div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #2</span><span class="t10-stat">Top10入り1週目</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Milky☆Subway: The Galactic Limited Express – the Movie</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Milky☆Subway: The Galactic Limited Express – the Movie</h3>
+    <div class="t10-en">Milky☆Subway: The Galactic Limited Express – the Movie</div>
+    <div class="t10-meta"></div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #3</span><span class="t10-stat">Top10入り10週目</span></div>
+  <div class="t10-poster"><div class="t10-fallback">SUZUKI=BAKUDAN</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">SUZUKI=BAKUDAN</h3>
+    <div class="t10-en">SUZUKI=BAKUDAN</div>
+    <div class="t10-meta"></div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #4</span><span class="t10-stat">Top10入り1週目</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Venom: The Last Dance</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Venom: The Last Dance</h3>
+    <div class="t10-en">Venom: The Last Dance</div>
+    <div class="t10-meta"></div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #5</span><span class="t10-stat">Top10入り6週目</span></div>
+  <div class="t10-poster"><div class="t10-fallback">From Today, It&#x27;s My Turn!!: The Movie</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">From Today, It&#x27;s My Turn!!: The Movie</h3>
+    <div class="t10-en">From Today, It&#x27;s My Turn!!: The Movie</div>
+    <div class="t10-meta"></div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #6</span><span class="t10-stat">Top10入り4週目</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Despicable Me 4</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Despicable Me 4</h3>
+    <div class="t10-en">Despicable Me 4</div>
+    <div class="t10-meta"></div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #7</span><span class="t10-stat">Top10入り1週目</span></div>
+  <div class="t10-poster"><div class="t10-fallback">The Retirement Plan</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">The Retirement Plan</h3>
+    <div class="t10-en">The Retirement Plan</div>
+    <div class="t10-meta"></div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #8</span><span class="t10-stat">Top10入り2週目</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Best Wishes to All</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Best Wishes to All</h3>
+    <div class="t10-en">Best Wishes to All</div>
+    <div class="t10-meta"></div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #9</span><span class="t10-stat">Top10入り1週目</span></div>
+  <div class="t10-poster"><div class="t10-fallback">THE MOON</div><img src="https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/wosim7n9qv9qlqrt20hck64l0ib9/_.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">THE MOON</h3>
+    <div class="t10-en">The Moon</div>
+    <div class="t10-meta">2024 / ドラマ、SF、アクション</div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><a class="t10-watch" href="https://www.netflix.com/jp/title/81730159" target="_blank" rel="noopener noreferrer">▶ Netflixで観る</a><button class="t10-bm" type="button" data-fid="111752" aria-label="あとで見る" aria-pressed="false">☆</button></div>
+    <div class="t10-avail ok">✅ 日本でも配信中</div>
+  </div>
+</article>
+<article class="t10-card">
+  <div class="t10-rankbar"><span class="t10-rank">🏆 #10</span><span class="t10-stat">Top10入り16週目</span></div>
+  <div class="t10-poster"><div class="t10-fallback">Cosmic Princess Kaguya!</div></div>
+  <div class="t10-body">
+    <h3 class="t10-jp">Cosmic Princess Kaguya!</h3>
+    <div class="t10-en">Cosmic Princess Kaguya!</div>
+    <div class="t10-meta"></div>
+    <p class="t10-summary"></p>
+    <div class="t10-actions"><span class="t10-watch disabled">日本未配信</span></div>
+    <div class="t10-avail ng">⚠️ 日本未配信</div>
+  </div>
+</article>
+    </div>
+  </section>
+
+  <div class="attribution">
+    <p>データ出典: <a href="https://www.netflix.com/tudum/top10" target="_blank" rel="noopener noreferrer">Netflix Tudum</a>(毎週更新)</p>
+    <p>邦題・紹介文の一部はAIにより生成しています。配信状況は変動するため各サービスでご確認ください。</p>
+  </div>
+
+  <p class="footer-note">
+    <a href="/">トップ</a>　<a href="/about.html">このサイトについて</a>　<a href="/privacy.html">プライバシーポリシー</a>　<a href="/contact.html">お問い合わせ</a>
+  </p>
+</div>
+
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+import { getFirestore, doc, getDoc, setDoc, arrayUnion, arrayRemove }
+  from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+const app = initializeApp({
+  apiKey: "AIzaSyDlct7SsQ6B5h6W0KOzSP_aPghv1sATBk8",
+  authDomain: "cinemagacha-9ad75.firebaseapp.com",
+  projectId: "cinemagacha-9ad75",
+  storageBucket: "cinemagacha-9ad75.firebasestorage.app",
+  messagingSenderId: "483844268792",
+  appId: "1:483844268792:web:0b2a9c345c9aaa45f3510d",
+});
+const auth = getAuth(app);
+const db = getFirestore(app);
+let currentUser = null;
+let bookmarks = new Set();
+function paintStars(){
+  document.querySelectorAll('.t10-bm').forEach(b => {
+    const on = !!(currentUser && bookmarks.has(b.dataset.fid));
+    b.classList.toggle('bookmarked', on);
+    b.textContent = on ? '★' : '☆';
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+}
+onAuthStateChanged(auth, async (u) => {
+  currentUser = u; bookmarks = new Set();
+  if (u) {
+    try { const s = await getDoc(doc(db,'users',u.uid)); if (s.exists()) bookmarks = new Set(s.data().bookmarks || []); }
+    catch(e){ console.error('load bookmarks', e); }
+  }
+  paintStars();
+});
+function toast(msg){
+  let t = document.getElementById('t10-toast');
+  if (!t){ t = document.createElement('div'); t.id = 't10-toast'; document.body.appendChild(t); }
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('show'), 2800);
+}
+document.addEventListener('click', async (e) => {
+  const b = e.target.closest('.t10-bm');
+  if (!b) return;
+  e.preventDefault();
+  const id = b.dataset.fid;
+  if (!id) return;
+  if (!currentUser){ toast('ログインするとあとで見るに保存できます(トップページからログイン)'); return; }
+  const ref = doc(db, 'users', currentUser.uid);
+  try {
+    if (bookmarks.has(id)){
+      bookmarks.delete(id);
+      await setDoc(ref, { bookmarks: arrayRemove(id), updatedAt: new Date().toISOString() }, { merge: true });
+    } else {
+      bookmarks.add(id);
+      await setDoc(ref, { bookmarks: arrayUnion(id), email: currentUser.email || '',
+                          updatedAt: new Date().toISOString() }, { merge: true });
+    }
+    const on = bookmarks.has(id);
+    b.classList.toggle('bookmarked', on);
+    b.textContent = on ? '★' : '☆';
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  } catch(err){ console.error('bookmark error', err); }
+});
+</script>
+</body>
+</html>
