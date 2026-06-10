@@ -24,6 +24,8 @@ MOVIES_PATH = os.path.join(ROOT, "data", "movies.json")
 OUT_JSON = os.path.join(ROOT, "data", "top10.json")
 OUT_HTML = os.path.join(ROOT, "top10.html")
 SITEMAP = os.path.join(ROOT, "sitemap.xml")
+CACHE_PATH = os.path.join(ROOT, "data", "top10_cache.json")   # 邦題・メタの永続キャッシュ
+GEMINI_MODEL = "gemini-2.5-flash"
 
 # .env(ローカル)読み込み(任意)
 try:
@@ -64,73 +66,62 @@ def load_movies():
     return lookup
 
 
-# ───────── Gemini ─────────
-def gemini_model():
+# ───────── Gemini (google-genai 新SDK) ─────────
+def gemini_client():
+    """google-genai の Client を返す。鍵/SDKが無ければ None。"""
     if not GEMINI_API_KEY:
         return None
     try:
-        import google.generativeai as genai
-        genai.configure(api_key=GEMINI_API_KEY)
-        # google_search grounding を有効化(邦題を検索で正確に特定するため)
-        try:
-            m = genai.GenerativeModel("gemini-2.5-flash", tools=[{"google_search": {}}])
-            sys.stderr.write("[info] Gemini grounding(google_search)有効\n")
-            return m
-        except Exception as e:
-            sys.stderr.write(f"[warn] grounding初期化失敗→検索なしで継続: {e}\n")
-            return genai.GenerativeModel("gemini-2.5-flash")
+        from google import genai  # 新SDK(google-genai)
+        return genai.Client(api_key=GEMINI_API_KEY)
     except Exception as e:
-        sys.stderr.write(f"[warn] Gemini初期化失敗: {e}\n")
+        sys.stderr.write(f"[warn] Gemini(google-genai)初期化失敗: {e}\n")
         return None
 
 
-def gemini_meta(model, title_en, year, runtime):
-    """(obj or None, used_search:bool) を返す。"""
-    if model is None:
-        return None, False
-    prompt = f"""あなたは映画情報の専門家です。Google検索を必ず使い、以下の映画の「日本での公式タイトル」を調べて特定してください。
+def _retry_delay_seconds(msg):
+    """429エラーメッセージから retryDelay 秒を抽出。無ければ 30。"""
+    m = re.search(r"retry[_-]?delay['\"]?\s*[:=]\s*['\"]?(\d+)", msg, re.I)
+    if not m:
+        m = re.search(r"'(\d+)s'", msg) or re.search(r"(\d+)\s*seconds", msg, re.I)
+    return int(m.group(1)) if m else 30
+
+
+def gemini_meta(client, title_en, year, runtime):
+    """邦題等のdict、失敗時 None。Groundingは使わずプロンプトで精度確保。"""
+    if client is None:
+        return None
+    prompt = f"""あなたは映画情報の専門家です。以下の映画について「日本での実際の公開タイトル」をJSONで答えてください。
 
 映画タイトル(英語): {title_en}
 公開年(参考): {year if year else "不明"}
 上映時間: {runtime if runtime else "不明"}分
 
-邦題の決め方(重要):
-- アニメ・日本映画は元の日本語タイトル(検索で正式名を確認)
-- 海外作品は日本配給・配信時の正式な邦題
-- カタカナ転写は、検索しても日本での該当タイトルが本当に見つからない時だけの最終手段
-
-具体例(この精度・粒度で特定すること):
+邦題の具体例(この精度で。カタカナ直訳は禁止):
 - "Creed III" → "クリード 過去の逆襲"
+- "Demon Slayer" → "鬼滅の刃"
 - "Jujutsu Kaisen 0" → "劇場版 呪術廻戦 0"
 - "Detective Conan: Black Iron Submarine" → "名探偵コナン 黒鉄の魚影"
-- "Demon Slayer" → "鬼滅の刃"
+- "The Adam Project" → "アダム&アダム"
+- "Don't Look Up" → "ドント・ルック・アップ"
+- "Wind Breaker" → "WIND BREAKER"
+- "Spy x Family Code: White" → "劇場版 SPY×FAMILY CODE: White"
+- "The Gray Man" → "グレイマン"
+- "Roommates" → "ルームメイツ"
 
 以下のJSONのみを返してください(説明文やマークダウン不要):
 
 {{
-  "jp_title": "上記ルールで特定した日本での公式タイトル",
+  "jp_title": "日本での実際の公開タイトル",
   "year": 公開年の整数(不明ならnull),
   "genres": ["ジャンル1","ジャンル2"],
   "summary": "2-3文の日本語紹介文。ネタバレなし。観たくなる導入。150〜200字程度"
 }}
 
-注意:
-- jp_title は検索で裏取りした確実なものを最優先。安易なカタカナ直訳(例: Jujutsu Kaisen→ジュジュツカイセン)は禁止
-- summaryは独自の言い回しで。あらすじの転載ではなく視聴を促す紹介文"""
+カタカナ転写ではなく、日本での実際の公開タイトルを答えてください。検索結果や記憶に基づき、不明な場合のみカタカナ転写で良いです。"""
     for attempt in range(3):
         try:
-            resp = model.generate_content(prompt)
-            # grounding metadata で google_search が実際に使われたか確認
-            used_search = False
-            try:
-                cand = resp.candidates[0]
-                gm = getattr(cand, "grounding_metadata", None)
-                if gm and (getattr(gm, "web_search_queries", None)
-                           or getattr(gm, "grounding_chunks", None)
-                           or getattr(gm, "search_entry_point", None)):
-                    used_search = True
-            except Exception:
-                pass
+            resp = client.models.generate_content(model=GEMINI_MODEL, contents=prompt)
             text = (resp.text or "").strip()
             text = re.sub(r"^```(json)?", "", text).strip()
             text = re.sub(r"```$", "", text).strip()
@@ -138,12 +129,18 @@ def gemini_meta(model, title_en, year, runtime):
             if m:
                 text = m.group(0)
             obj = json.loads(text)
-            time.sleep(3)
-            return obj, used_search
+            time.sleep(4)                      # 15RPM(毎分制限)対策
+            return obj
         except Exception as e:
-            sys.stderr.write(f"[warn] Gemini失敗({attempt+1}/3) {title_en}: {e}\n")
-            time.sleep(3)
-    return None, False
+            msg = str(e)
+            if "429" in msg or "RESOURCE_EXHAUSTED" in msg or "quota" in msg.lower():
+                delay = _retry_delay_seconds(msg)
+                sys.stderr.write(f"[warn] Gemini 429({attempt+1}/3) {title_en}: retry_delay={delay}s\n")
+                time.sleep(delay)               # 指数バックオフではなく応答のretry_delayを尊重
+            else:
+                sys.stderr.write(f"[warn] Gemini失敗({attempt+1}/3) {title_en}: {e}\n")
+                time.sleep(4)
+    return None
 
 
 # ───────── SVGプレースホルダー ─────────
@@ -172,7 +169,14 @@ def svg_placeholder(title):
 
 # ───────── 診断 ─────────
 WARNINGS = []          # 邦題/メタの要確認リスト
-STATS = {"success": 0, "failed": 0, "no_key": 0, "grounded": 0, "total": 0}
+STATS = {"cache": 0, "gemini": 0, "failed": 0, "no_key": 0, "total": 0}
+
+
+def cache_key_for(entry, title_en):
+    """キャッシュキー: Netflix watch/title URL の末尾ID。無ければ正規化英題。"""
+    u = entry.get("netflix_watch_url") or ""
+    m = re.search(r"/(?:watch|title)/(\d+)", u)
+    return m.group(1) if m else ("t:" + norm(title_en))
 
 
 def _is_katakana_translit(jp, en):
@@ -183,31 +187,53 @@ def _is_katakana_translit(jp, en):
 
 
 # ───────── エントリ処理 ─────────
-def enrich(entry, lookup, model, region="global"):
+def enrich(entry, lookup, client, region, cache, cache_new):
     title_en = entry.get("title_en", "")
     year = entry.get("year")
     runtime = entry.get("runtime_minutes")
     rank = entry.get("rank")
+    ckey = cache_key_for(entry, title_en)
 
-    g, used_search = gemini_meta(model, title_en, year, runtime)
-    status = "success" if g is not None else ("no_key" if model is None else "failed")
-    g = g or {}
+    # 1) キャッシュ最優先 → 2) Gemini → 3) フォールバック(英題流用・キャッシュ保存しない)
+    if ckey in cache:
+        g = cache[ckey]
+        source = "cache"
+        STATS["cache"] += 1
+    elif client is not None:
+        g = gemini_meta(client, title_en, year, runtime)
+        if g is not None:
+            g = {
+                "jp_title": (g.get("jp_title") or "").strip(),
+                "year": g.get("year"),
+                "genres": g.get("genres") or [],
+                "summary": (g.get("summary") or "").strip(),
+                "cached_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            }
+            cache[ckey] = g
+            cache_new.append(ckey)
+            source = "gemini"
+            STATS["gemini"] += 1
+        else:
+            g = {}
+            source = "failed"     # キャッシュ保存しない(次回再試行)
+            STATS["failed"] += 1
+    else:
+        g = {}
+        source = "no_key"
+        STATS["no_key"] += 1
+    STATS["total"] += 1
+
     jp_title = (g.get("jp_title") or "").strip() or title_en
     gen_year = g.get("year")
     genres = g.get("genres") or []
     summary = (g.get("summary") or "").strip()
 
-    # 診断ログ(a/b)
-    STATS["total"] += 1
-    STATS[status] = STATS.get(status, 0) + 1
-    if used_search:
-        STATS["grounded"] += 1
     sys.stderr.write(
-        f'[info] Gemini call for "{title_en}" (rank {rank}, {region}): '
-        f'status={status}, used_search={"true" if used_search else "false"}, jp_title="{jp_title}"\n'
+        f'[info] entry "{title_en}" (rank {rank}, {region}): '
+        f'source={source}, key={ckey}, jp_title="{jp_title}"\n'
     )
-    # バリデーション(d/e)
-    if status == "success":
+    # バリデーション(メタを得られた時のみ)
+    if source in ("cache", "gemini"):
         miss = []
         if not summary:
             miss.append("summary")
@@ -580,21 +606,43 @@ def main():
         raw = json.load(sys.stdin)
 
     lookup = load_movies()
-    model = gemini_model()
-    if model is None:
-        sys.stderr.write("[info] GEMINI_API_KEY 未設定/初期化失敗 → フォールバック(英題流用・紹介文空)で生成\n")
+    client = gemini_client()
+    if client is None:
+        sys.stderr.write("[info] GEMINI_API_KEY 未設定/SDK無し → キャッシュのみ使用(更新なし)、未キャッシュは英題流用\n")
+
+    # 永続キャッシュ読み込み(無ければ空)
+    cache = {}
+    if os.path.exists(CACHE_PATH):
+        try:
+            with open(CACHE_PATH, encoding="utf-8") as f:
+                cache = json.load(f) or {}
+        except Exception as e:
+            sys.stderr.write(f"[warn] キャッシュ読込失敗(空で継続): {e}\n")
+    cache_before = len(cache)
+    cache_new = []
 
     g_src = raw.get("global", {}).get("movies_english", [])
     j_src = raw.get("japan", {}).get("movies_english", [])
-    sys.stderr.write(f"[info] enrich global={len(g_src)} japan={len(j_src)}\n")
-    global_movies = [enrich(e, lookup, model, "global") for e in g_src]
-    japan_movies = [enrich(e, lookup, model, "japan") for e in j_src]
+    sys.stderr.write(f"[info] enrich global={len(g_src)} japan={len(j_src)} (cache既存={cache_before}件)\n")
+    global_movies = [enrich(e, lookup, client, "global", cache, cache_new) for e in g_src]
+    japan_movies = [enrich(e, lookup, client, "japan", cache, cache_new) for e in j_src]
+
+    # キャッシュ保存(新規がある時のみ=鍵なし運用では書き換えない)
+    if cache_new:
+        try:
+            with open(CACHE_PATH, "w", encoding="utf-8") as f:
+                json.dump(cache, f, ensure_ascii=False, indent=2)
+            sys.stderr.write(f"[info] キャッシュ保存: 既存{cache_before}件 + 新規{len(cache_new)}件 → 計{len(cache)}件\n")
+        except Exception as e:
+            sys.stderr.write(f"[warn] キャッシュ保存失敗: {e}\n")
+    else:
+        sys.stderr.write("[info] キャッシュ新規追加なし(保存スキップ)\n")
 
     # ── 診断サマリ ──
     sys.stderr.write(
-        f"[info] === Gemini診断: total={STATS['total']} success={STATS['success']} "
-        f"failed={STATS['failed']} no_key={STATS['no_key']} "
-        f"grounded(used_search)={STATS['grounded']}/{STATS['total']} ===\n"
+        f"[info] === 邦題ソース診断: total={STATS['total']} cache={STATS['cache']} "
+        f"gemini新規={STATS['gemini']} failed={STATS['failed']} no_key={STATS['no_key']} "
+        f"(今回Gemini呼び出し={STATS['gemini']+STATS['failed']}件) ===\n"
     )
     g_avail = sum(x["available_in_japan"] for x in global_movies)
     j_avail = sum(x["available_in_japan"] for x in japan_movies)

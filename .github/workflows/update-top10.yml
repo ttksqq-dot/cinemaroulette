@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests urllib3 beautifulsoup4 google-generativeai python-dotenv
+        run: pip install requests urllib3 beautifulsoup4 google-genai python-dotenv
 
       - name: Scrape Tudum
         run: python scripts/scrape_top10.py > data/top10_raw.json
@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/top10.json top10.html sitemap.xml
+          git add data/top10.json top10.html sitemap.xml data/top10_cache.json
           git diff --staged --quiet || git commit -m "chore: update top10 ($(date -u +%Y-%m-%d))"
           git push

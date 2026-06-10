@@ -1,15 +1,11 @@
 {
-  "updated_at": "2026-06-10T10:57:51+09:00",
+  "updated_at": "2026-06-10T11:10:32+09:00",
   "week_label": [
     "https://www.netflix.com/watch/81939823",
-    "https://www.netflix.com/watch/81603578",
     "https://www.netflix.com/watch/81749852",
-    "https://www.netflix.com/watch/82836255",
     "https://www.netflix.com/watch/81756346",
     "https://www.netflix.com/watch/81941710",
     "https://www.netflix.com/watch/81001524",
-    "https://www.netflix.com/watch/82710848",
-    "https://www.netflix.com/watch/80058397",
     "https://www.netflix.com/watch/81498621"
   ],
   "source": "Netflix Tudum",
@@ -18,20 +14,17 @@
     {
       "rank": 1,
       "title_en": "Office Romance",
-      "jp_title": "オフィス・ロマンス",
-      "year": 1977,
-      "genres": [
-        "恋愛",
-        "コメディ"
-      ],
-      "summary": "ソ連時代を代表するロマンティックコメディの傑作です。冷徹な女性部長と、彼女に振り回されがちな気弱な部下。最初は反発し合う二人が、予期せぬ出来事をきっかけに少しずつ互いへの感情を変化させていく様を、ユーモアと温かさで描きます。社会主義体制下の人間模様を背景に繰り広げられる、心温まるオフィスラブストーリーです。",
+      "jp_title": "Office Romance",
+      "year": null,
+      "genres": [],
+      "summary": "",
       "runtime_minutes": 115,
       "views_this_week": 20900000,
       "weeks_in_top10": 1,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/jhpelw9r4klf1pk57ulkyxykc8d9/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/81939823",
-      "available_in_japan": true,
-      "filmarks_id": "128706"
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQWN7o0f_Qz9B92AhOd2cH00QlE1Ha8i7eYMr0DzSwEPYfGnlsgCNxD6QQ8T68qmKZLDG6hSou_uUzC2TbZeuOTA-gv53OI3K9N156bTiY0.png?r=3d2",
+      "netflix_watch_url": "https://www.netflix.com/watch/81939823",
+      "available_in_japan": false,
+      "filmarks_id": null
     },
     {
       "rank": 2,
@@ -44,7 +37,7 @@
       "views_this_week": 7900000,
       "weeks_in_top10": 1,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABfA2XbJntraNTm7btOArkT0ABbQek7LwI3v5Dj_QAtBGUutxth3sxUTH6znrdGKlwhpVyOqioTvTKuzIZr7IsDtTGk5xpBtDkLYZ2wDssRI.png?r=b8d",
-      "netflix_watch_url": "https://www.netflix.com/watch/81603578",
+      "netflix_watch_url": "https://www.netflix.com/watch/81749852",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -59,7 +52,7 @@
       "views_this_week": 7500000,
       "weeks_in_top10": 6,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaFPtBiQgLMjEuqJJ0JGQWxoTef4EhAh0Nje2JRGirHoi-XAgFvPUrQkSLg3weg4HIpn4qNhDmras6v5Ki5BmQ2szW-DJ_RbJ4i-nbIThmU.png?r=b20",
-      "netflix_watch_url": "https://www.netflix.com/watch/81749852",
+      "netflix_watch_url": "https://www.netflix.com/watch/81756346",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -74,7 +67,7 @@
       "views_this_week": 6200000,
       "weeks_in_top10": 1,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQ4Ivk4yOYK1mXSEsiV30XSmq8td0MWQk2PnFpt3ueCLxfaja1cy_dit7DoELyIFc3VBrmH04hDgRtNHxb2o2vV8HfhYeM6DYI_4z3QFd-o.png?r=60c",
-      "netflix_watch_url": "https://www.netflix.com/watch/82836255",
+      "netflix_watch_url": "https://www.netflix.com/watch/81941710",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -89,7 +82,7 @@
       "views_this_week": 6100000,
       "weeks_in_top10": 1,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRyd1ChL0oFWIPlRTej2p3yEgl52AAJsEOY6WGMmYnku7h4RSxjz1nruL7qtqCqKBDX18GzWnUFcHBksGWNNlfK4pYxjPMFWE7xUl4_mboc.png?r=1e5",
-      "netflix_watch_url": "https://www.netflix.com/watch/81756346",
+      "netflix_watch_url": "https://www.netflix.com/watch/81001524",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -104,7 +97,7 @@
       "views_this_week": 5700000,
       "weeks_in_top10": 4,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABb4WuEhhpbL7OiigMIUsnaX-cp3EWsod6NdQ6cRjz2S1u6mAiPwE9Bo8XaWtnzZu4k8DVk-k5t7lBNPJuJku5OpjWscvfrX1a7s5f1Z8Ql8.png?r=c90",
-      "netflix_watch_url": "https://www.netflix.com/watch/81941710",
+      "netflix_watch_url": "https://www.netflix.com/watch/81498621",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -119,7 +112,7 @@
       "views_this_week": 5300000,
       "weeks_in_top10": 3,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABdVYPsqypR8NSNapV6qBwCB9VB8D0F7JfB3t3bvfXr4KU5J8ejyOXKxDCm3xPPV2GgKjZ32pNWUaZRJ2FX03mzz_BaPU40pVb0IagHFyeC0.png?r=e8b",
-      "netflix_watch_url": "https://www.netflix.com/watch/81001524",
+      "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -134,7 +127,7 @@
       "views_this_week": 5200000,
       "weeks_in_top10": 4,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABV1kWYPMd0YW9_AZacQmuJSnbVNhwat9M3Dv_kvHmAfolI4ZNMw_hnwdHi6W4dUOyVEYBvIi70fDwQnHDpPboGg6DDAbkw5Xmrbmf73XriM.png?r=635",
-      "netflix_watch_url": "https://www.netflix.com/watch/82710848",
+      "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -149,7 +142,7 @@
       "views_this_week": 4500000,
       "weeks_in_top10": 1,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABYOI8DIwaytiMa0jA5Qq0oc-LdzGJJNJ2ThqbHiZzQYpWleuBbLkDNF-JC-kgkQVzei-nSjthnswK6NQ50PDwmkm_bWB7w9SigCF8frxGsg.png?r=cb3",
-      "netflix_watch_url": "https://www.netflix.com/watch/80058397",
+      "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -164,7 +157,7 @@
       "views_this_week": 3700000,
       "weeks_in_top10": 51,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABdUijdogFyfTJxYB-gVvX20JWwwqxiMw4OlOBcpBk2p20dQvqGIkgG0s4BgtOaB0_wGPJ32prA5bZ2ogXRdgD7buzkv0hBl9rs0QRjUUS2E.png?r=02e",
-      "netflix_watch_url": "https://www.netflix.com/watch/81498621",
+      "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     }
@@ -181,7 +174,7 @@
       "views_this_week": null,
       "weeks_in_top10": 2,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaKcfL7bWpzlFcNxBOb5xGpusM2FcNwI1RxOjOcnITK70APBiSEz-HxPo58w50syqnW787c8HuvnoMJnjbNw7-C1zUL-qN_BMYm3n0s14N4.png?r=ab8",
-      "netflix_watch_url": "https://www.netflix.com/watch/82703490",
+      "netflix_watch_url": "https://www.netflix.com/watch/82849344",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -196,7 +189,7 @@
       "views_this_week": null,
       "weeks_in_top10": 1,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABceQZMAorve6RfZdRaG3LSiiOh2oSdBFlbtefciemVIDE__X-Mf6P3VkHWgMOePpFX8wfok7XuKXuEYBebWqIW9N60e5Dm7ylhorcc8myoM.png?r=d14",
-      "netflix_watch_url": "https://www.netflix.com/watch/81680567",
+      "netflix_watch_url": "https://www.netflix.com/watch/82703490",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -211,7 +204,7 @@
       "views_this_week": null,
       "weeks_in_top10": 10,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZTiOVe7r1GEVxOukAGVy9KPCikmS2SorsiUTkEl71G4RlEwTU2TlOjK2cFwg8XoZBAYo8AOZFNz0jA585WeMCbjxeTWbvjJsojSYup7GpI.png?r=0a8",
-      "netflix_watch_url": "https://www.netflix.com/watch/81756595",
+      "netflix_watch_url": "https://www.netflix.com/watch/82130725",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -226,7 +219,7 @@
       "views_this_week": null,
       "weeks_in_top10": 1,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQ3meWMQ92pGLBo5PtdZeO_g4OL6rn3P835YXcWJXbuZzTeREygxxUzlEUKxFj204YESyup5MRvl2Z1HZS39nMWVnLnaFl251M8DTJswiz4.png?r=4e0",
-      "netflix_watch_url": "https://www.netflix.com/search?q=Venom%3A%20The%20Last%20Dance",
+      "netflix_watch_url": "https://www.netflix.com/watch/81680567",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -241,7 +234,7 @@
       "views_this_week": null,
       "weeks_in_top10": 6,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRy5fq4L8yK2W6ficpMYkJbFYCX2j8_SZto-rmUZia4ozBqSshOUIfTw4Rj81l3ECHFR1MfvJGG6W8PJZsHeiamp1K6bkN6rfzb4PzhWfjw.png?r=29d",
-      "netflix_watch_url": "https://www.netflix.com/search?q=From%20Today%2C%20It%27s%20My%20Turn%21%21%3A%20The%20Movie",
+      "netflix_watch_url": "https://www.netflix.com/watch/81710304",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -256,7 +249,7 @@
       "views_this_week": null,
       "weeks_in_top10": 4,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABazHEgd5XZunJF6993i7NjdEujDnfpKWswj3dHZhYDHo29QlT6ItFS-pMF6UuI2QyMROiChiipnB1rYtIyeNINprpMEEWsEfl0VmG-7OmZc.png?r=f32",
-      "netflix_watch_url": "https://www.netflix.com/search?q=Despicable%20Me%204",
+      "netflix_watch_url": "https://www.netflix.com/watch/81776693",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -271,7 +264,7 @@
       "views_this_week": null,
       "weeks_in_top10": 1,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABbfZaUQZOE3Li-Kd9hAFpKkDmSSkKTqYzFR99kj4B5kBJTBf9dng1hmU_RLLrammwxqn1yzGc0Vfnr-_4Vkk1AHcN7B-zlxNZGqZ21dnxZM.png?r=738",
-      "netflix_watch_url": "https://www.netflix.com/search?q=The%20Retirement%20Plan",
+      "netflix_watch_url": "https://www.netflix.com/watch/81629248",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -286,7 +279,7 @@
       "views_this_week": null,
       "weeks_in_top10": 2,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVuERessV6P3yaagYmY6Fpcq6CYcbA1siov_FwCJllx4C4hTI67NBYUFWLt8HP6b5L5RsdYUWIIwG_7-tlbvuN6L9t3B53HhwWlcx8H2WEA.png?r=ef0",
-      "netflix_watch_url": "https://www.netflix.com/search?q=Best%20Wishes%20to%20All",
+      "netflix_watch_url": "https://www.netflix.com/watch/82800158",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -320,7 +313,7 @@
       "views_this_week": null,
       "weeks_in_top10": 16,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRLg7Jp6SmlBTBYJGXjJ8b5dgvZQWKQoJbsp5YViX9X44KlUqMC4slY0tb6SUjwNYCNbiCqP8Yx_QKWD5_D5AqiHmoMZ369HIORZ43L8aUc.png?r=1ca",
-      "netflix_watch_url": "https://www.netflix.com/search?q=Cosmic%20Princess%20Kaguya%21",
+      "netflix_watch_url": "https://www.netflix.com/watch/81756595",
       "available_in_japan": true,
       "filmarks_id": null
     }
