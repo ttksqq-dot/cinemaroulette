@@ -29,6 +29,7 @@ GEMINI_MODEL = "gemini-2.5-flash"
 GEMINI_BUDGET = 20            # 無料枠: 1日20リクエスト(叩いた数でカウント)
 QUOTA_EXHAUSTED = False       # 429を一度でも踏んだら以降のGemini呼び出しは全スキップ
 GEMINI_CALLS_MADE = 0         # 実際にAPIを叩いた回数
+MAINTENANCE_MODE = True        # True=準備中ページ / False=本番カード一覧。バックグラウンド更新は常に継続
 
 # .env(ローカル)読み込み(任意)
 try:
@@ -394,6 +395,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+%%ROBOTS%%
 <title>%%TITLE%%</title>
 <meta name="description" content="%%DESC%%">
 <link rel="canonical" href="https://cinemagacha.com/top10.html">
@@ -604,21 +606,46 @@ document.addEventListener('click', async (e) => {
 </html>"""
 
 
-def update_sitemap(updated_iso):
+# 準備中(Coming Soon)ページの本文。共通の head/style/topnav は TEMPLATE から流用する。
+MAINT_MAIN = r"""<div class="wrap" style="max-width:680px">
+  <div style="text-align:center;padding:64px 20px 36px">
+    <div style="font-size:74px;line-height:1;margin-bottom:6px">🏆</div>
+    <h1 style="font-family:'Shippori Mincho',serif;font-size:clamp(24px,5vw,34px);margin-bottom:18px">今週のTop10 — 準備中</h1>
+    <p class="sub" style="font-size:15px;line-height:2;color:var(--muted);max-width:560px;margin:0 auto 30px">
+      Netflix公式ランキング(Tudum)をもとに、毎週「グローバル」と「日本」の人気映画Top10を
+      日本語で紹介する新機能を開発中です。🎬<br>
+      邦題や紹介文をていねいに整えてから公開します。近日公開予定、どうぞお楽しみに。
+    </p>
+    <div class="top10-tabs" style="justify-content:center">
+      <a href="/">トップに戻る</a>
+      <a href="/netflix.html">NETFLIX 作品一覧</a>
+      <a href="/prime.html">PRIME VIDEO 作品一覧</a>
+    </div>
+  </div>
+  <p class="footer-note">
+    <a href="/">トップ</a>　<a href="/about.html">このサイトについて</a>　<a href="/privacy.html">プライバシーポリシー</a>　<a href="/contact.html">お問い合わせ</a>
+  </p>
+</div>"""
+
+
+def update_sitemap(updated_iso, present=True):
+    """present=True で top10.html を sitemap に登録/更新、False で除去(準備中)。"""
     try:
         with open(SITEMAP, encoding="utf-8") as f:
             xml = f.read()
-        line = (f'  <url><loc>https://cinemagacha.com/top10.html</loc>'
-                f'<lastmod>{updated_iso}</lastmod><changefreq>weekly</changefreq>'
-                f'<priority>0.8</priority></url>\n')
-        if "top10.html" in xml:
-            xml = re.sub(r'\s*<url><loc>https://cinemagacha\.com/top10\.html</loc>.*?</url>\n',
-                         "\n" + line, xml, flags=re.S)
-        else:
+        # 既存の top10 行を一旦除去
+        xml = re.sub(r'[ \t]*<url><loc>https://cinemagacha\.com/top10\.html</loc>.*?</url>\n',
+                     "", xml, flags=re.S)
+        if present:
+            line = (f'  <url><loc>https://cinemagacha.com/top10.html</loc>'
+                    f'<lastmod>{updated_iso}</lastmod><changefreq>weekly</changefreq>'
+                    f'<priority>0.8</priority></url>\n')
             xml = xml.replace("</urlset>", line + "</urlset>")
+            sys.stderr.write("[info] sitemap.xml に top10.html を登録\n")
+        else:
+            sys.stderr.write("[info] sitemap.xml から top10.html を除外(準備中)\n")
         with open(SITEMAP, "w", encoding="utf-8") as f:
             f.write(xml)
-        sys.stderr.write("[info] sitemap.xml 更新\n")
     except Exception as e:
         sys.stderr.write(f"[warn] sitemap更新失敗: {e}\n")
 
@@ -711,22 +738,36 @@ def main():
 
     week_disp = esc(week_label) or "最新週"
     updated_disp = now.strftime("%Y年%m月%d日 %H:%M")
-    title = "今週のNetflix人気映画Top10(グローバル/日本) | シネマガチャ"
-    desc = f"Netflix Tudum発表の週次人気映画ランキング。{week_disp}のグローバルTop10と日本Top10を日本語で紹介。"
 
-    htmlout = (TEMPLATE
-               .replace("%%TITLE%%", esc(title))
-               .replace("%%DESC%%", esc(desc))
-               .replace("%%WEEK%%", week_disp)
-               .replace("%%UPDATED%%", esc(updated_disp))
-               .replace("%%SOURCE_URL%%", esc(top10["source_url"]))
-               .replace("%%GLOBAL_CARDS%%", g_cards)
-               .replace("%%JAPAN_CARDS%%", j_cards))
+    if MAINTENANCE_MODE:
+        # 準備中ページ: 共通chrome(head/style/topnav)はTEMPLATEから流用、本文のみ差し替え
+        title = "今週のTop10 — 準備中 | シネマガチャ"
+        desc = "Netflixの週次ランキングをもとにした人気映画Top10紹介の新機能を準備中です。近日公開予定。"
+        chrome = TEMPLATE.split("</nav>", 1)[0] + "</nav>\n"   # head+style+topnav まで
+        chrome = (chrome
+                  .replace("%%TITLE%%", esc(title))
+                  .replace("%%DESC%%", esc(desc))
+                  .replace("%%ROBOTS%%", '<meta name="robots" content="noindex">'))
+        htmlout = chrome + MAINT_MAIN + "\n\n</body>\n</html>"
+        sys.stderr.write("[info] MAINTENANCE_MODE=True → 準備中ページを生成(noindex)\n")
+    else:
+        title = "今週のNetflix人気映画Top10(グローバル/日本) | シネマガチャ"
+        desc = f"Netflix Tudum発表の週次人気映画ランキング。{week_disp}のグローバルTop10と日本Top10を日本語で紹介。"
+        htmlout = (TEMPLATE
+                   .replace("%%TITLE%%", esc(title))
+                   .replace("%%DESC%%", esc(desc))
+                   .replace("%%ROBOTS%%", "")
+                   .replace("%%WEEK%%", week_disp)
+                   .replace("%%UPDATED%%", esc(updated_disp))
+                   .replace("%%SOURCE_URL%%", esc(top10["source_url"]))
+                   .replace("%%GLOBAL_CARDS%%", g_cards)
+                   .replace("%%JAPAN_CARDS%%", j_cards))
+        sys.stderr.write("[info] MAINTENANCE_MODE=False → 本番カード一覧ページを生成\n")
     with open(OUT_HTML, "w", encoding="utf-8") as f:
         f.write(htmlout)
     sys.stderr.write(f"[info] wrote {OUT_HTML}\n")
 
-    update_sitemap(now.strftime("%Y-%m-%d"))
+    update_sitemap(now.strftime("%Y-%m-%d"), present=not MAINTENANCE_MODE)
 
 
 if __name__ == "__main__":
