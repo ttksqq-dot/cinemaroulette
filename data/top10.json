@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-10T10:17:31+09:00",
+  "updated_at": "2026-06-10T10:29:25+09:00",
   "week_label": "2026-06-07",
   "source": "Netflix Tudum",
   "source_url": "https://www.netflix.com/tudum/top10",
@@ -7,17 +7,20 @@
     {
       "rank": 1,
       "title_en": "Office Romance",
-      "jp_title": "Office Romance",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "オフィス・ロマンス",
+      "year": 1977,
+      "genres": [
+        "恋愛",
+        "コメディ"
+      ],
+      "summary": "冷徹で仕事一筋な女性上司と、彼女の部署で働く冴えない男性部下。最初は互いに反発し合っていた二人が、とあるきっかけでお互いを深く知るようになり、やがて予期せぬロマンスが芽生えていきます。ソビエト映画を代表する名作ロマンティック・コメディで、ユーモアと人間味あふれる物語が観る者の心を温かく包み込みます。",
       "runtime_minutes": 115,
       "views_this_week": 20900000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQWN7o0f_Qz9B92AhOd2cH00QlE1Ha8i7eYMr0DzSwEPYfGnlsgCNxD6QQ8T68qmKZLDG6hSou_uUzC2TbZeuOTA-gv53OI3K9N156bTiY0.png?r=3d2",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/jhpelw9r4klf1pk57ulkyxykc8d9/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81939823",
+      "available_in_japan": true,
+      "filmarks_id": "128706"
     },
     {
       "rank": 2,
@@ -37,10 +40,12 @@
     {
       "rank": 3,
       "title_en": "Swapped",
-      "jp_title": "Swapped",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "スワップト",
+      "year": 2016,
+      "genres": [
+        "スリラー"
+      ],
+      "summary": "ある日突然、母と娘の人生が謎の組織によって入れ替えられてしまう。平穏な日常を奪われた二人は、互いの身体と人生を生きることを余儀なくされ、やがて恐ろしい陰謀に巻き込まれていく。果たして、彼女たちは元の生活を取り戻せるのか、そしてこの理不尽な状況から抜け出せるのか？ 予測不能な展開が待ち受けるスリラー。",
       "runtime_minutes": 102,
       "views_this_week": 7500000,
       "weeks_in_top10": 6,
