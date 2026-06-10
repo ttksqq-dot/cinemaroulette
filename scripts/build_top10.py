@@ -85,19 +85,25 @@ def gemini_model():
 
 
 def gemini_meta(model, title_en, year, runtime):
-    """{jp_title, year, genres, summary} を返す。失敗時 None。"""
+    """(obj or None, used_search:bool) を返す。"""
     if model is None:
-        return None
-    prompt = f"""あなたは映画情報の専門家です。Google検索を使い、以下の映画の「日本での公式タイトル」を必ず調べて特定してください。
+        return None, False
+    prompt = f"""あなたは映画情報の専門家です。Google検索を必ず使い、以下の映画の「日本での公式タイトル」を調べて特定してください。
 
 映画タイトル(英語): {title_en}
 公開年(参考): {year if year else "不明"}
 上映時間: {runtime if runtime else "不明"}分
 
 邦題の決め方(重要):
-- アニメ・日本映画は元の日本語タイトル(例: Jujutsu Kaisen → 呪術廻戦、Demon Slayer → 鬼滅の刃)
-- 海外作品は日本配給・配信時の正式な邦題(例: 日本公開名やNetflixでの邦題)
+- アニメ・日本映画は元の日本語タイトル(検索で正式名を確認)
+- 海外作品は日本配給・配信時の正式な邦題
 - カタカナ転写は、検索しても日本での該当タイトルが本当に見つからない時だけの最終手段
+
+具体例(この精度・粒度で特定すること):
+- "Creed III" → "クリード 過去の逆襲"
+- "Jujutsu Kaisen 0" → "劇場版 呪術廻戦 0"
+- "Detective Conan: Black Iron Submarine" → "名探偵コナン 黒鉄の魚影"
+- "Demon Slayer" → "鬼滅の刃"
 
 以下のJSONのみを返してください(説明文やマークダウン不要):
 
@@ -109,11 +115,22 @@ def gemini_meta(model, title_en, year, runtime):
 }}
 
 注意:
-- jp_title は検索で裏取りした確実なものを優先。安易なカタカナ直訳は避ける
+- jp_title は検索で裏取りした確実なものを最優先。安易なカタカナ直訳(例: Jujutsu Kaisen→ジュジュツカイセン)は禁止
 - summaryは独自の言い回しで。あらすじの転載ではなく視聴を促す紹介文"""
     for attempt in range(3):
         try:
             resp = model.generate_content(prompt)
+            # grounding metadata で google_search が実際に使われたか確認
+            used_search = False
+            try:
+                cand = resp.candidates[0]
+                gm = getattr(cand, "grounding_metadata", None)
+                if gm and (getattr(gm, "web_search_queries", None)
+                           or getattr(gm, "grounding_chunks", None)
+                           or getattr(gm, "search_entry_point", None)):
+                    used_search = True
+            except Exception:
+                pass
             text = (resp.text or "").strip()
             text = re.sub(r"^```(json)?", "", text).strip()
             text = re.sub(r"```$", "", text).strip()
@@ -122,11 +139,11 @@ def gemini_meta(model, title_en, year, runtime):
                 text = m.group(0)
             obj = json.loads(text)
             time.sleep(3)
-            return obj
+            return obj, used_search
         except Exception as e:
             sys.stderr.write(f"[warn] Gemini失敗({attempt+1}/3) {title_en}: {e}\n")
             time.sleep(3)
-    return None
+    return None, False
 
 
 # ───────── SVGプレースホルダー ─────────
@@ -153,21 +170,60 @@ def svg_placeholder(title):
     return "data:image/svg+xml;charset=utf-8," + urllib.parse.quote(svg)
 
 
+# ───────── 診断 ─────────
+WARNINGS = []          # 邦題/メタの要確認リスト
+STATS = {"success": 0, "failed": 0, "no_key": 0, "grounded": 0, "total": 0}
+
+
+def _is_katakana_translit(jp, en):
+    """jp が(ほぼ)カタカナのみ かつ en がラテン文字 → 単純なカタカナ転写の疑い。"""
+    if not jp or not en or not re.search(r"[A-Za-z]", en):
+        return False
+    return bool(re.fullmatch(r"[゠-ヿー・＝=\s]+", jp))
+
+
 # ───────── エントリ処理 ─────────
-def enrich(entry, lookup, model):
+def enrich(entry, lookup, model, region="global"):
     title_en = entry.get("title_en", "")
     year = entry.get("year")
     runtime = entry.get("runtime_minutes")
+    rank = entry.get("rank")
 
-    g = gemini_meta(model, title_en, year, runtime) or {}
+    g, used_search = gemini_meta(model, title_en, year, runtime)
+    status = "success" if g is not None else ("no_key" if model is None else "failed")
+    g = g or {}
     jp_title = (g.get("jp_title") or "").strip() or title_en
     gen_year = g.get("year")
     genres = g.get("genres") or []
     summary = (g.get("summary") or "").strip()
 
+    # 診断ログ(a/b)
+    STATS["total"] += 1
+    STATS[status] = STATS.get(status, 0) + 1
+    if used_search:
+        STATS["grounded"] += 1
+    sys.stderr.write(
+        f'[info] Gemini call for "{title_en}" (rank {rank}, {region}): '
+        f'status={status}, used_search={"true" if used_search else "false"}, jp_title="{jp_title}"\n'
+    )
+    # バリデーション(d/e)
+    if status == "success":
+        miss = []
+        if not summary:
+            miss.append("summary")
+        if not gen_year:
+            miss.append("year")
+        if not genres:
+            miss.append("genres")
+        if miss:
+            WARNINGS.append(f'{region} #{rank} "{title_en}": 欠落フィールド {miss}')
+        if norm(jp_title) == norm(title_en):
+            WARNINGS.append(f'{region} #{rank} "{title_en}": jp_titleが英題と一致(検索失敗の疑い)')
+        elif _is_katakana_translit(jp_title, title_en):
+            WARNINGS.append(f'{region} #{rank} "{title_en}": カタカナ転写の疑い -> "{jp_title}"')
+
     # movies.json 突き合わせ(邦題優先→英題)
     rec = lookup.get(norm(jp_title)) or lookup.get(norm(title_en))
-    available = bool(rec)
     watch_url = ""
     poster_url = entry.get("poster_url") or ""
     filmarks_id = None
@@ -180,12 +236,20 @@ def enrich(entry, lookup, model):
         poster_url = rec.get("thumb") or poster_url
         filmarks_id = rec.get("id")
 
-    # ポスター最終フォールバック: movies.json も Tudum も無ければ SVG プレースホルダー
+    # 問題1: 日本Top10は定義上 Japan Netflix で配信中 → 強制 true
+    available = True if region == "japan" else bool(rec)
+
+    # Netflix視聴URL: movies.json優先 → Tudumのwatch URL → (日本のみ)検索URLで保険
+    final_watch = watch_url or entry.get("netflix_watch_url") or ""
+    if region == "japan" and not final_watch:
+        final_watch = "https://www.netflix.com/search?q=" + urllib.parse.quote(jp_title)
+
+    # ポスター最終フォールバック
     if not poster_url:
         poster_url = svg_placeholder(jp_title)
 
     return {
-        "rank": entry.get("rank"),
+        "rank": rank,
         "title_en": title_en,
         "jp_title": jp_title,
         "year": gen_year if gen_year else (year if year else None),
@@ -195,7 +259,7 @@ def enrich(entry, lookup, model):
         "views_this_week": entry.get("views_this_week"),
         "weeks_in_top10": entry.get("weeks_in_top10"),
         "poster_url": poster_url,
-        "netflix_watch_url": watch_url or entry.get("netflix_watch_url") or "",
+        "netflix_watch_url": final_watch,
         "available_in_japan": available,
         "filmarks_id": filmarks_id,
     }
@@ -523,8 +587,25 @@ def main():
     g_src = raw.get("global", {}).get("movies_english", [])
     j_src = raw.get("japan", {}).get("movies_english", [])
     sys.stderr.write(f"[info] enrich global={len(g_src)} japan={len(j_src)}\n")
-    global_movies = [enrich(e, lookup, model) for e in g_src]
-    japan_movies = [enrich(e, lookup, model) for e in j_src]
+    global_movies = [enrich(e, lookup, model, "global") for e in g_src]
+    japan_movies = [enrich(e, lookup, model, "japan") for e in j_src]
+
+    # ── 診断サマリ ──
+    sys.stderr.write(
+        f"[info] === Gemini診断: total={STATS['total']} success={STATS['success']} "
+        f"failed={STATS['failed']} no_key={STATS['no_key']} "
+        f"grounded(used_search)={STATS['grounded']}/{STATS['total']} ===\n"
+    )
+    g_avail = sum(x["available_in_japan"] for x in global_movies)
+    j_avail = sum(x["available_in_japan"] for x in japan_movies)
+    sys.stderr.write(f"[info] available_in_japan: global={g_avail}/{len(global_movies)} "
+                     f"japan={j_avail}/{len(japan_movies)} (日本は全件true想定)\n")
+    if WARNINGS:
+        sys.stderr.write(f"[warn] 邦題/メタ 要確認 {len(WARNINGS)}件:\n")
+        for w in WARNINGS:
+            sys.stderr.write(f"   - {w}\n")
+    else:
+        sys.stderr.write("[info] 邦題/メタ 警告なし\n")
 
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
     updated_at = now.strftime("%Y-%m-%dT%H:%M:%S+09:00")

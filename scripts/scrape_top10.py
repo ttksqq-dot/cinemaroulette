@@ -116,15 +116,24 @@ def _norm_title(s):
     return re.sub(r"[^0-9a-z぀-ヿ一-鿿]", "", s)
 
 
-def poster_map(url):
-    """指定Tudum HTMLの <img alt="タイトル" src="...nflximg..."> から
-    {正規化タイトル: poster_url} を作る。地域別URL(グローバル/日本)で別々に呼ぶ。"""
+def parse_tudum(url):
+    """指定Tudum HTMLから (poster_map, watch_urls) を返す。
+    - poster_map: {正規化タイトル: ポスターURL}
+    - watch_urls: ページ内の /watch/ID をDOM順(=ランク順)に並べたリスト
+    地域別URL(グローバル/日本)で別々に呼ぶ。"""
     try:
         doc = fetch(url)
     except Exception as e:
         sys.stderr.write(f"[warn] Tudum HTML取得失敗(ポスター無しで継続) {url}: {e}\n")
-        return {}
+        return {}, []
     pmap = {}
+    watch = []
+    seen = set()
+    for m in re.finditer(r'netflix\.com/(?:[a-z]{2}/)?watch/(\d+)', doc):
+        u = "https://www.netflix.com/watch/" + m.group(1)
+        if u not in seen:
+            seen.add(u)
+            watch.append(u)
     try:
         from bs4 import BeautifulSoup
         soup = BeautifulSoup(doc, "html.parser")
@@ -139,8 +148,8 @@ def poster_map(url):
     for src, alt in imgs:
         if "nflximg.net" in src and alt:
             pmap.setdefault(_norm_title(_htmllib.unescape(alt)), src)  # &#x27; 等を復元して照合
-    sys.stderr.write(f"[info] ポスター {len(pmap)}件マップ <- {url}\n")
-    return pmap
+    sys.stderr.write(f"[info] ポスター {len(pmap)}件 / watch {len(watch)}件マップ <- {url}\n")
+    return pmap, watch
 
 
 def main():
@@ -192,24 +201,33 @@ def main():
         })
     j_movies = sorted([m for m in j_movies if m["rank"]], key=lambda m: m["rank"])[:10]
 
-    # ── ポスター画像URLを地域別 Tudum HTML から付与 ──
+    # ── ポスター画像URL + Netflix視聴URLを地域別 Tudum HTML から付与 ──
     time.sleep(3)
-    sys.stderr.write("[info] Tudum グローバルHTML(ポスター)取得中…\n")
-    gpm = poster_map(TUDUM_HTML)
+    sys.stderr.write("[info] Tudum グローバルHTML取得中…\n")
+    gpm, gw = parse_tudum(TUDUM_HTML)
     time.sleep(3)
-    sys.stderr.write("[info] Tudum 日本HTML(ポスター)取得中…\n")
-    jpm = poster_map(TUDUM_HTML_JP)
+    sys.stderr.write("[info] Tudum 日本HTML取得中…\n")
+    jpm, jw = parse_tudum(TUDUM_HTML_JP)
+
     for mv in g_movies:
         p = gpm.get(_norm_title(mv.get("title_en", "")))
         if p:
             mv["poster_url"] = p
+        r = mv.get("rank")
+        if r and len(gw) >= r:                 # ランク順に Netflix視聴URLを付与
+            mv["netflix_watch_url"] = gw[r - 1]
     for mv in j_movies:
         key = _norm_title(mv.get("title_en", ""))
-        p = jpm.get(key) or gpm.get(key)        # 日本ページ優先、無ければグローバルで補完
+        p = jpm.get(key) or gpm.get(key)       # 日本ページ優先、無ければグローバルで補完
         if p:
             mv["poster_url"] = p
-    sys.stderr.write(f"[info] ポスター付与 global={sum(1 for m in g_movies if m['poster_url'])}/{len(g_movies)} "
-                     f"japan={sum(1 for m in j_movies if m['poster_url'])}/{len(j_movies)}\n")
+        r = mv.get("rank")
+        if r and len(jw) >= r:
+            mv["netflix_watch_url"] = jw[r - 1]
+    sys.stderr.write(f"[info] 付与 global poster={sum(1 for m in g_movies if m['poster_url'])}/{len(g_movies)} "
+                     f"watch={sum(1 for m in g_movies if m['netflix_watch_url'])} | "
+                     f"japan poster={sum(1 for m in j_movies if m['poster_url'])}/{len(j_movies)} "
+                     f"watch={sum(1 for m in j_movies if m['netflix_watch_url'])}\n")
 
     if not g_movies:
         sys.stderr.write("[warn] グローバル映画が0件。TSVの構造が変わった可能性があります。\n")
