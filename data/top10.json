@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-10T10:11:56+09:00",
+  "updated_at": "2026-06-10T10:17:31+09:00",
   "week_label": "2026-06-07",
   "source": "Netflix Tudum",
   "source_url": "https://www.netflix.com/tudum/top10",
@@ -166,7 +166,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 2,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3EJujutsu%20Ka%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3Eisen%3A%20Hidd%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3Een%20Invento%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaKcfL7bWpzlFcNxBOb5xGpusM2FcNwI1RxOjOcnITK70APBiSEz-HxPo58w50syqnW787c8HuvnoMJnjbNw7-C1zUL-qN_BMYm3n0s14N4.png?r=ab8",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -181,7 +181,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3EMilky%E2%98%86Subw%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3Eay%3A%20The%20Ga%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3Elactic%20Lim%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABceQZMAorve6RfZdRaG3LSiiOh2oSdBFlbtefciemVIDE__X-Mf6P3VkHWgMOePpFX8wfok7XuKXuEYBebWqIW9N60e5Dm7ylhorcc8myoM.png?r=d14",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -196,7 +196,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 10,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3ESUZUKI%3DBAK%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3EUDAN%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZTiOVe7r1GEVxOukAGVy9KPCikmS2SorsiUTkEl71G4RlEwTU2TlOjK2cFwg8XoZBAYo8AOZFNz0jA585WeMCbjxeTWbvjJsojSYup7GpI.png?r=0a8",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -211,7 +211,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3EVenom%3A%20The%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%20Last%20Danc%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3Ee%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQ3meWMQ92pGLBo5PtdZeO_g4OL6rn3P835YXcWJXbuZzTeREygxxUzlEUKxFj204YESyup5MRvl2Z1HZS39nMWVnLnaFl251M8DTJswiz4.png?r=4e0",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -226,7 +226,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 6,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3EFrom%20Today%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%2C%20It%26%23x27%3Bs%20My%20%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3ETurn%21%21%3A%20Th%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRy5fq4L8yK2W6ficpMYkJbFYCX2j8_SZto-rmUZia4ozBqSshOUIfTw4Rj81l3ECHFR1MfvJGG6W8PJZsHeiamp1K6bkN6rfzb4PzhWfjw.png?r=29d",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -241,7 +241,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 4,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3EDespicable%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%20Me%204%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABazHEgd5XZunJF6993i7NjdEujDnfpKWswj3dHZhYDHo29QlT6ItFS-pMF6UuI2QyMROiChiipnB1rYtIyeNINprpMEEWsEfl0VmG-7OmZc.png?r=f32",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -256,7 +256,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3EThe%20Retire%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3Ement%20Plan%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABbfZaUQZOE3Li-Kd9hAFpKkDmSSkKTqYzFR99kj4B5kBJTBf9dng1hmU_RLLrammwxqn1yzGc0Vfnr-_4Vkk1AHcN7B-zlxNZGqZ21dnxZM.png?r=738",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -271,7 +271,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 2,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3EBest%20Wishe%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3Es%20to%20All%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVuERessV6P3yaagYmY6Fpcq6CYcbA1siov_FwCJllx4C4hTI67NBYUFWLt8HP6b5L5RsdYUWIIwG_7-tlbvuN6L9t3B53HhwWlcx8H2WEA.png?r=ef0",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -305,7 +305,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 16,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3ECosmic%20Pri%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3Encess%20Kagu%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3Eya%21%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRLg7Jp6SmlBTBYJGXjJ8b5dgvZQWKQoJbsp5YViX9X44KlUqMC4slY0tb6SUjwNYCNbiCqP8Yx_QKWD5_D5AqiHmoMZ369HIORZ43L8aUc.png?r=1ca",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null

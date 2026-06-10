@@ -18,7 +18,7 @@ SPA を解析するより遥かに堅牢。地域指定もこのTSVの country_i
 映画のみ・最新週のみを抽出して JSON を標準出力に出す。
 (workflow では `python scripts/scrape_top10.py > data/top10_raw.json`)
 """
-import sys, json, csv, io, time, datetime, urllib.request
+import sys, json, csv, io, time, datetime, urllib.request, html as _htmllib
 
 # Windowsコンソール(cp932)対策: 出力をUTF-8に固定(Linux CIでは無害)
 try:
@@ -31,6 +31,7 @@ import re
 GLOBAL_TSV = "https://www.netflix.com/tudum/top10/data/all-weeks-global.tsv"
 COUNTRIES_TSV = "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv"
 TUDUM_HTML = "https://www.netflix.com/tudum/top10"
+TUDUM_HTML_JP = "https://www.netflix.com/tudum/top10/japan"
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
@@ -80,32 +81,30 @@ def _norm_title(s):
     return re.sub(r"[^0-9a-z぀-ヿ一-鿿]", "", s)
 
 
-def poster_map():
-    """Tudum HTML の <img alt="タイトル" src="...nflximg..."> から
-    タイトル→ポスターURL の辞書を作る。地域別HTMLは静的には差分が無いため
-    主にグローバル(英題)の作品に効く。"""
+def poster_map(url):
+    """指定Tudum HTMLの <img alt="タイトル" src="...nflximg..."> から
+    {正規化タイトル: poster_url} を作る。地域別URL(グローバル/日本)で別々に呼ぶ。"""
     try:
-        html = fetch(TUDUM_HTML)
+        doc = fetch(url)
     except Exception as e:
-        sys.stderr.write(f"[warn] Tudum HTML取得失敗(ポスター無しで継続): {e}\n")
+        sys.stderr.write(f"[warn] Tudum HTML取得失敗(ポスター無しで継続) {url}: {e}\n")
         return {}
     pmap = {}
     try:
         from bs4 import BeautifulSoup
-        soup = BeautifulSoup(html, "html.parser")
+        soup = BeautifulSoup(doc, "html.parser")
         imgs = [(img.get("src") or "", (img.get("alt") or "").strip())
                 for img in soup.find_all("img")]
     except Exception:
-        # bs4が無い/失敗時は正規表現でフォールバック
         imgs = []
-        for tag in re.findall(r"<img[^>]+>", html):
+        for tag in re.findall(r"<img[^>]+>", doc):
             s = re.search(r'src="([^"]+)"', tag)
             a = re.search(r'alt="([^"]*)"', tag)
             imgs.append((s.group(1) if s else "", (a.group(1).strip() if a else "")))
     for src, alt in imgs:
         if "nflximg.net" in src and alt:
-            pmap.setdefault(_norm_title(alt), src)
-    sys.stderr.write(f"[info] Tudum ポスター {len(pmap)}件マップ\n")
+            pmap.setdefault(_norm_title(_htmllib.unescape(alt)), src)  # &#x27; 等を復元して照合
+    sys.stderr.write(f"[info] ポスター {len(pmap)}件マップ <- {url}\n")
     return pmap
 
 
@@ -158,14 +157,24 @@ def main():
         })
     j_movies = sorted([m for m in j_movies if m["rank"]], key=lambda m: m["rank"])[:10]
 
-    # ── ポスター画像URLを Tudum HTML から付与(主にグローバル英題に有効) ──
+    # ── ポスター画像URLを地域別 Tudum HTML から付与 ──
     time.sleep(3)
-    sys.stderr.write("[info] Tudum HTML(ポスター)取得中…\n")
-    pmap = poster_map()
-    for mv in g_movies + j_movies:
-        p = pmap.get(_norm_title(mv.get("title_en", "")))
+    sys.stderr.write("[info] Tudum グローバルHTML(ポスター)取得中…\n")
+    gpm = poster_map(TUDUM_HTML)
+    time.sleep(3)
+    sys.stderr.write("[info] Tudum 日本HTML(ポスター)取得中…\n")
+    jpm = poster_map(TUDUM_HTML_JP)
+    for mv in g_movies:
+        p = gpm.get(_norm_title(mv.get("title_en", "")))
         if p:
             mv["poster_url"] = p
+    for mv in j_movies:
+        key = _norm_title(mv.get("title_en", ""))
+        p = jpm.get(key) or gpm.get(key)        # 日本ページ優先、無ければグローバルで補完
+        if p:
+            mv["poster_url"] = p
+    sys.stderr.write(f"[info] ポスター付与 global={sum(1 for m in g_movies if m['poster_url'])}/{len(g_movies)} "
+                     f"japan={sum(1 for m in j_movies if m['poster_url'])}/{len(j_movies)}\n")
 
     if not g_movies:
         sys.stderr.write("[warn] グローバル映画が0件。TSVの構造が変わった可能性があります。\n")
