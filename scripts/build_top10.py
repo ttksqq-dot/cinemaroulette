@@ -29,7 +29,7 @@ GEMINI_MODEL = "gemini-2.5-flash"
 GEMINI_BUDGET = 20            # 無料枠: 1日20リクエスト(叩いた数でカウント)
 QUOTA_EXHAUSTED = False       # 429を一度でも踏んだら以降のGemini呼び出しは全スキップ
 GEMINI_CALLS_MADE = 0         # 実際にAPIを叩いた回数
-MAINTENANCE_MODE = True        # True=準備中ページ / False=本番カード一覧。バックグラウンド更新は常に継続
+MAINTENANCE_MODE = False       # True=準備中ページ / False=本番カード一覧。バックグラウンド更新は常に継続
 
 # .env(ローカル)読み込み(任意)
 try:
