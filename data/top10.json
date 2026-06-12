@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T08:18:03+09:00",
+  "updated_at": "2026-06-13T08:29:21+09:00",
   "week_label": [
     "https://www.netflix.com/watch/81939823",
     "https://www.netflix.com/watch/81749852",
@@ -32,10 +32,12 @@
     {
       "rank": 2,
       "title_en": "Creed III",
-      "jp_title": "Creed III",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "スワップド",
+      "year": 2024,
+      "genres": [
+        "コメディ"
+      ],
+      "summary": "友人グループが週末旅行で訪れた山小屋で、身体を入れ替える奇妙な装置を発見する。予期せぬ事態に直面した彼らは、それぞれの新しい身体に戸惑いながらも、元の自分に戻る方法を探し始める。ドタバタ劇の中で友情や自己を見つめ直す、抱腹絶倒のコメディ。",
       "runtime_minutes": 117,
       "views_this_week": 7900000,
       "weeks_in_top10": 1,
@@ -47,10 +49,13 @@
     {
       "rank": 3,
       "title_en": "Swapped",
-      "jp_title": "Swapped",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "ザ・マーダー・オブ・レイチェル・ニッケル",
+      "year": 2021,
+      "genres": [
+        "ドキュメンタリー",
+        "犯罪"
+      ],
+      "summary": "1992年にイギリスで発生した、幼い少女レイチェル・ニッケルの惨殺事件。未解決事件として社会に衝撃を与え、警察の捜査は数々の論争を巻き起こしました。誤認逮捕と、真犯人逮捕までの長い年月を克明に追う、実録クライムドキュメンタリーです。",
       "runtime_minutes": 102,
       "views_this_week": 7500000,
       "weeks_in_top10": 6,
@@ -62,10 +67,14 @@
     {
       "rank": 4,
       "title_en": "David",
-      "jp_title": "David",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "マッド・バウンド",
+      "year": 2017,
+      "genres": [
+        "スリラー",
+        "犯罪",
+        "ドラマ"
+      ],
+      "summary": "元ウォール街の凄腕トレーダーが、世界経済を揺るがす大規模なサイバー攻撃の首謀者を特定し、阻止するという政府からの極秘任務を引き受ける。限られた時間の中、彼は巧妙な手口で仕組まれた株価操作の罠を暴き、予測不能な陰謀と闘うことに。果たして、彼は世界の金融システムを崩壊から救うことができるのか？",
       "runtime_minutes": 109,
       "views_this_week": 6200000,
       "weeks_in_top10": 1,
@@ -77,25 +86,32 @@
     {
       "rank": 5,
       "title_en": "The Murder of Rachel Nickell",
-      "jp_title": "The Murder of Rachel Nickell",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "レディース・ファースト?!",
+      "year": 2017,
+      "genres": [
+        "恋愛",
+        "コメディ"
+      ],
+      "summary": "インドの貧困地域で生まれ育った女性アーチェリー選手、ディピカ・クマリ。彼女は厳しい現実、そして女性に対する差別という障壁に直面しながらも、弓を手に世界を目指す。世界ランキング1位にまで上り詰めた彼女の波乱に満ちた人生と、女性としての尊厳をかけて戦う姿を描く感動のドキュメンタリー。希望と勇気を与えてくれる実話です。",
       "runtime_minutes": 96,
       "views_this_week": 6100000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRyd1ChL0oFWIPlRTej2p3yEgl52AAJsEOY6WGMmYnku7h4RSxjz1nruL7qtqCqKBDX18GzWnUFcHBksGWNNlfK4pYxjPMFWE7xUl4_mboc.png?r=1e5",
-      "netflix_watch_url": "https://www.netflix.com/watch/81001524",
-      "available_in_japan": false,
-      "filmarks_id": null
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/hjate0qjzs7p2yjrvc8huw2knvl2/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81001524",
+      "available_in_japan": true,
+      "filmarks_id": "126705"
     },
     {
       "rank": 6,
       "title_en": "The Crash",
-      "jp_title": "The Crash",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "K-POP デーモンハンターズ",
+      "year": 2024,
+      "genres": [
+        "アクション",
+        "コメディ",
+        "ファンタジー"
+      ],
+      "summary": "世界を熱狂させるK-POPアイドルたちが、その華やかなステージの裏で、密かに悪魔と戦う使命を背負っていたとしたら？アクション、コメディ、ファンタジーが融合したこの作品は、音楽と超常現象が見事に交差する、全く新しいエンターテイメント体験をお届けします。彼らは歌とダンスで世界を救えるのか、その秘密の戦いにご期待ください。",
       "runtime_minutes": 95,
       "views_this_week": 5700000,
       "weeks_in_top10": 4,
@@ -184,10 +200,14 @@
     {
       "rank": 2,
       "title_en": "Milky☆Subway: The Galactic Limited Express – the Movie",
-      "jp_title": "Milky☆Subway: The Galactic Limited Express – the Movie",
+      "jp_title": "呪術廻戦 懐玉・玉折",
       "year": null,
-      "genres": [],
-      "summary": "",
+      "genres": [
+        "アニメ",
+        "アクション",
+        "ダークファンタジー"
+      ],
+      "summary": "これは、最強の呪術師・五条悟と、最悪の呪詛師・夏油傑、二人の決別した過去を描く物語。呪術高専時代の彼らが、星漿体（せいしょうたい）の護衛任務に赴く中で、最強を誇った青春に亀裂が入る過程が鮮烈に描かれる。後の世界に多大な影響を与えることになる、彼らの運命的な転換点を目撃してください。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
@@ -214,10 +234,14 @@
     {
       "rank": 4,
       "title_en": "Venom: The Last Dance",
-      "jp_title": "Venom: The Last Dance",
+      "jp_title": "ミルキー☆サブウェイ ザ・ギャラクティック・リミテッド・エクスプレス ザ・ムービー",
       "year": null,
-      "genres": [],
-      "summary": "",
+      "genres": [
+        "SF",
+        "ファンタジー",
+        "アドベンチャー"
+      ],
+      "summary": "星々を繋ぐ銀河鉄道「ミルキー☆サブウェイ」に乗って、主人公が壮大な宇宙の旅に出る物語。個性豊かな乗客たちとの出会いや、予測不能な出来事が次々と巻き起こり、観る者を魅惑の銀河アドベンチャーへと誘います。果たして、彼らを待ち受けるのはどんな運命なのでしょうか？",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
@@ -308,10 +332,14 @@
     {
       "rank": 10,
       "title_en": "Cosmic Princess Kaguya!",
-      "jp_title": "Cosmic Princess Kaguya!",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "jp_title": "氣志團Presents 短編映画 SUZUKI=BAKUDAN",
+      "year": 2006,
+      "genres": [
+        "青春",
+        "コメディ",
+        "音楽"
+      ],
+      "summary": "不良が跋扈する時代を舞台に、ロックンロールを愛する漢たちの熱い友情と壮絶な戦いを描く青春アクション短編。氣志團の綾小路翔が自ら脚本・主演を務め、彼らの世界観を凝縮した、疾走感あふれる物語が展開します。仲間との絆、そして誇りを賭けた戦いを通して、不器用ながらもまっすぐに生きる男たちの姿が胸を打つ、珠玉の作品です。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 16,

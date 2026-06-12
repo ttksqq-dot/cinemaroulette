@@ -98,6 +98,24 @@ cinema-roulette/
 
 ---
 
+## 🏆 今週のTop10 機能のステータス（現在: 非公開）
+
+Netflix Tudum の週次ランキングを日本語化して紹介する Top10 機能は、**現在ユーザーには非公開**です。
+
+- **フロント**: 全ページのヘッダーから「🏆 今週のTop10」ナビリンクを削除済み。`top10.html` に直接アクセスした場合は「ページが見つかりません（ご利用いただけません）」表示（`noindex, nofollow`）。`sitemap.xml` からも除外済み。
+- **バックエンドは稼働継続**: `.github/workflows/update-top10.yml`（毎週水曜）は **停止していません**。`scripts/scrape_top10.py` と `scripts/build_top10.py` が毎週実行され、`data/top10_cache.json`（邦題・メタの永続キャッシュ）と `data/top10.json` は裏で更新され続けます。復活時にキャッシュ済みデータをすぐ使えるようにするためです。
+- 非公開／公開の切り替えは `scripts/build_top10.py` 冒頭の `MAINTENANCE_MODE` で制御します（`True`=非公開 / `False`=本番カード一覧）。
+
+### 復活手順（再公開する場合）
+
+1. `scripts/build_top10.py` の `MAINTENANCE_MODE = True` を **`False`** に変更。
+2. 各ページヘッダーにナビリンクを再追加：`scripts/build_lists.py`（netflix/prime 用テンプレート）と `index.html` / `about.html` / `privacy.html` / `contact.html` の `<nav class="topnav">` 内に
+   `<a class="navbtn top10" href="/top10.html">🏆 今週のTop10</a>` を追加（必要なら `.navbtn.top10` のCSSも復元）。
+3. `python scripts/build_lists.py` と `python scripts/build_top10.py` を実行して再生成（`top10.html` がカード一覧に戻り、`sitemap.xml` にも自動再登録される）。
+4. コミット & push。
+
+---
+
 ## 注意・免責
 
 - 配信データの出典は MOVIE WALKER PRESS です。配信状況は時期により変動します。

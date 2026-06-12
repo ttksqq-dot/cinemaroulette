@@ -29,7 +29,7 @@ GEMINI_MODEL = "gemini-2.5-flash"
 GEMINI_BUDGET = 20            # 無料枠: 1日20リクエスト(叩いた数でカウント)
 QUOTA_EXHAUSTED = False       # 429を一度でも踏んだら以降のGemini呼び出しは全スキップ
 GEMINI_CALLS_MADE = 0         # 実際にAPIを叩いた回数
-MAINTENANCE_MODE = False       # True=準備中ページ / False=本番カード一覧。バックグラウンド更新は常に継続
+MAINTENANCE_MODE = True        # True=非公開(ご利用不可ページ) / False=本番カード一覧。バックグラウンド更新は常に継続
 
 # .env(ローカル)読み込み(任意)
 try:
@@ -437,8 +437,6 @@ TEMPLATE = r"""<!DOCTYPE html>
   .navbtn:hover{color:var(--ink);background:rgba(0,0,0,.08);border-color:rgba(0,0,0,.15)}
   .navbtn.home{background:linear-gradient(#e3bd55,#b8860b);border-color:#b8860b;color:#1a1505;font-weight:700;box-shadow:0 2px 6px rgba(184,134,11,.25)}
   .navbtn.home:hover{filter:brightness(1.05);box-shadow:0 4px 12px rgba(184,134,11,.35)}
-  .navbtn.top10{border-color:#b8860b;color:#8a6608;background:rgba(184,134,11,.10)}
-  .navbtn.top10.active,.navbtn.top10:hover{background:rgba(184,134,11,.18);border-color:#b8860b}
   header{text-align:center;margin:30px 0 22px}
   .kicker{letter-spacing:.2em;font-size:12px;color:var(--muted);margin-bottom:8px}
   h1{font-family:"Shippori Mincho",serif;font-weight:800;font-size:clamp(26px,5.5vw,44px);line-height:1.2}
@@ -499,7 +497,6 @@ TEMPLATE = r"""<!DOCTYPE html>
   <a class="navbtn home" href="/">TOP</a>
   <a class="navbtn" href="/netflix.html">NETFLIX 作品一覧</a>
   <a class="navbtn" href="/prime.html">PRIME VIDEO 作品一覧</a>
-  <a class="navbtn top10 active" href="/top10.html">🏆 今週のTop10</a>
 </nav>
 
 <div class="wrap">
@@ -607,19 +604,15 @@ document.addEventListener('click', async (e) => {
 
 
 # 準備中(Coming Soon)ページの本文。共通の head/style/topnav は TEMPLATE から流用する。
-MAINT_MAIN = r"""<div class="wrap" style="max-width:680px">
-  <div style="text-align:center;padding:64px 20px 36px">
-    <div style="font-size:74px;line-height:1;margin-bottom:6px">🏆</div>
-    <h1 style="font-family:'Shippori Mincho',serif;font-size:clamp(24px,5vw,34px);margin-bottom:18px">今週のTop10 — 準備中</h1>
-    <p class="sub" style="font-size:15px;line-height:2;color:var(--muted);max-width:560px;margin:0 auto 30px">
-      Netflix公式ランキング(Tudum)をもとに、毎週「グローバル」と「日本」の人気映画Top10を
-      日本語で紹介する新機能を開発中です。🎬<br>
-      邦題や紹介文をていねいに整えてから公開します。近日公開予定、どうぞお楽しみに。
+MAINT_MAIN = r"""<div class="wrap" style="max-width:620px">
+  <div style="text-align:center;padding:120px 20px 90px">
+    <div style="font-size:60px;line-height:1;margin-bottom:14px">🎬</div>
+    <h1 style="font-family:'Shippori Mincho',serif;font-size:clamp(22px,5vw,30px);margin-bottom:16px">ページが見つかりません</h1>
+    <p class="sub" style="font-size:15px;line-height:2;color:var(--muted);max-width:460px;margin:0 auto 30px">
+      このページは現在ご利用いただけません。
     </p>
     <div class="top10-tabs" style="justify-content:center">
       <a href="/">トップに戻る</a>
-      <a href="/netflix.html">NETFLIX 作品一覧</a>
-      <a href="/prime.html">PRIME VIDEO 作品一覧</a>
     </div>
   </div>
   <p class="footer-note">
@@ -740,16 +733,16 @@ def main():
     updated_disp = now.strftime("%Y年%m月%d日 %H:%M")
 
     if MAINTENANCE_MODE:
-        # 準備中ページ: 共通chrome(head/style/topnav)はTEMPLATEから流用、本文のみ差し替え
-        title = "今週のTop10 — 準備中 | シネマガチャ"
-        desc = "Netflixの週次ランキングをもとにした人気映画Top10紹介の新機能を準備中です。近日公開予定。"
+        # 非公開ページ: 共通chrome(head/style/topnav)はTEMPLATEから流用、本文のみ差し替え
+        title = "ページが見つかりません | シネマガチャ"
+        desc = "このページは現在ご利用いただけません。"
         chrome = TEMPLATE.split("</nav>", 1)[0] + "</nav>\n"   # head+style+topnav まで
         chrome = (chrome
                   .replace("%%TITLE%%", esc(title))
                   .replace("%%DESC%%", esc(desc))
-                  .replace("%%ROBOTS%%", '<meta name="robots" content="noindex">'))
+                  .replace("%%ROBOTS%%", '<meta name="robots" content="noindex, nofollow">'))
         htmlout = chrome + MAINT_MAIN + "\n\n</body>\n</html>"
-        sys.stderr.write("[info] MAINTENANCE_MODE=True → 準備中ページを生成(noindex)\n")
+        sys.stderr.write("[info] MAINTENANCE_MODE=True → 非公開ページを生成(noindex,nofollow)\n")
     else:
         title = "今週のNetflix人気映画Top10(グローバル/日本) | シネマガチャ"
         desc = f"Netflix Tudum発表の週次人気映画ランキング。{week_disp}のグローバルTop10と日本Top10を日本語で紹介。"
