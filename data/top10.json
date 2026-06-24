@@ -1,22 +1,55 @@
 {
-  "updated_at": "2026-06-17T15:06:00+09:00",
+  "updated_at": "2026-06-24T14:00:34+09:00",
   "week_label": [
-    "https://www.netflix.com/watch/81939823",
     "https://www.netflix.com/watch/81766093",
+    "https://www.netflix.com/watch/81716219",
+    "https://www.netflix.com/watch/81939823",
     "https://www.netflix.com/watch/81749852",
-    "https://www.netflix.com/watch/81756346",
-    "https://www.netflix.com/watch/81696533",
     "https://www.netflix.com/watch/81498621",
-    "https://www.netflix.com/watch/82836255",
-    "https://www.netflix.com/watch/82710848",
-    "https://www.netflix.com/watch/81598180",
-    "https://www.netflix.com/watch/70060010"
+    "https://www.netflix.com/watch/70298117",
+    "https://www.netflix.com/watch/70120525",
+    "https://www.netflix.com/watch/82710848"
   ],
   "source": "Netflix Tudum",
   "source_url": "https://www.netflix.com/tudum/top10",
   "global_movies": [
     {
       "rank": 1,
+      "title_en": "Maternal Instinct",
+      "jp_title": "マターナル・インスティンクツ",
+      "year": 1996,
+      "genres": [
+        "ドラマ"
+      ],
+      "summary": "夫の母親との関係に悩む妻が主人公の人間ドラマです。完璧な嫁を演じようと奮闘する中で、秘められた感情が徐々に露わになっていきます。愛と嫉妬、そして家族の絆が複雑に絡み合う心理劇をお楽しみください。",
+      "runtime_minutes": 97,
+      "views_this_week": 25500000,
+      "weeks_in_top10": 2,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABXVM3TzN0VAuAlKX8GIxbPWsWN7Ms8_g32yKr5QWq1_1gKqPUbDIWWsEz_1xLFyMcvv6d2RrAv8fsstqplm9eDpNrA4ZCv8XlDlteo3F8hQ.png?r=ab7",
+      "netflix_watch_url": "https://www.netflix.com/watch/81766093",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 2,
+      "title_en": "Voicemails for Isabelle",
+      "jp_title": "ボイスメールズ・フォー・イザベル",
+      "year": null,
+      "genres": [
+        "ドラマ",
+        "ミステリー"
+      ],
+      "summary": "この短編映画は、孤独な女性イザベルの元に届く、過去からの謎めいたボイスメールを中心に展開されます。現実と幻覚が入り混じる心理的な旅を描き、観る者を魅惑的な視覚世界へと誘います。不穏で詩的な雰囲気の中で、現代社会に潜む不安や疎外感が美しく表現された、記憶に残る作品です。",
+      "runtime_minutes": 118,
+      "views_this_week": 17500000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRkY6lPAa_jiuGm5Q8yjevHfkscz6ohyw5k65vg2opu2Kp7uHzEBa7L0m2mcBGi9LvcA_BLj5bx0vnxt1B15jlW2NLBsOpYXKqZCBGIeI6Q.png?r=577",
+      "netflix_watch_url": "https://www.netflix.com/watch/81716219",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 3,
       "title_en": "Office Romance",
       "jp_title": "愛と職場のロマンス",
       "year": 1977,
@@ -26,87 +59,33 @@
       ],
       "summary": "1977年のソ連を舞台に、シャイで不器用な独身男性ノヴォセリツェフと、冷酷で意地悪と評判の女性局長カリギナが織りなすオフィス・ロマンス。昇進を企むノヴォセリツェフがカリギナに近づいたことから、予想外の化学反応が起こり、二人の関係は変化していく。立場の違いを超え、互いの魅力に気づく過程を温かく描いた、ソ連を代表する名作ロマンティック・コメディ。",
       "runtime_minutes": 115,
-      "views_this_week": 24600000,
-      "weeks_in_top10": 2,
+      "views_this_week": 7800000,
+      "weeks_in_top10": 3,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQWN7o0f_Qz9B92AhOd2cH00QlE1Ha8i7eYMr0DzSwEPYfGnlsgCNxD6QQ8T68qmKZLDG6hSou_uUzC2TbZeuOTA-gv53OI3K9N156bTiY0.png?r=3d2",
       "netflix_watch_url": "https://www.netflix.com/watch/81939823",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 2,
-      "title_en": "Maternal Instinct",
-      "jp_title": "マターナル・インスティンクツ",
-      "year": 1996,
-      "genres": [
-        "ドラマ"
-      ],
-      "summary": "夫の母親との関係に悩む妻が主人公の人間ドラマです。完璧な嫁を演じようと奮闘する中で、秘められた感情が徐々に露わになっていきます。愛と嫉妬、そして家族の絆が複雑に絡み合う心理劇をお楽しみください。",
-      "runtime_minutes": 97,
-      "views_this_week": 15000000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABXVM3TzN0VAuAlKX8GIxbPWsWN7Ms8_g32yKr5QWq1_1gKqPUbDIWWsEz_1xLFyMcvv6d2RrAv8fsstqplm9eDpNrA4ZCv8XlDlteo3F8hQ.png?r=ab7",
-      "netflix_watch_url": "https://www.netflix.com/watch/81766093",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 3,
-      "title_en": "Swapped",
+      "rank": 4,
+      "title_en": "Street Kings",
       "jp_title": "スワップド",
       "year": 2024,
       "genres": [
         "コメディ"
       ],
       "summary": "友人グループが週末旅行で訪れた山小屋で、身体を入れ替える奇妙な装置を発見する。予期せぬ事態に直面した彼らは、それぞれの新しい身体に戸惑いながらも、元の自分に戻る方法を探し始める。ドタバタ劇の中で友情や自己を見つめ直す、抱腹絶倒のコメディ。",
-      "runtime_minutes": 102,
-      "views_this_week": 5700000,
-      "weeks_in_top10": 7,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaFPtBiQgLMjEuqJJ0JGQWxoTef4EhAh0Nje2JRGirHoi-XAgFvPUrQkSLg3weg4HIpn4qNhDmras6v5Ki5BmQ2szW-DJ_RbJ4i-nbIThmU.png?r=b20",
+      "runtime_minutes": 109,
+      "views_this_week": 6200000,
+      "weeks_in_top10": 3,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVnmA-capkxlv0qaVq_V9P3-HkR4A7mndkKVfnt0sV1iRyJ-1E3RkH69p2YOZycUBBXBiogM28i2G3YqFAe89cmswAUzWs0pK8U3_lpXiZQ.png?r=cfb",
       "netflix_watch_url": "https://www.netflix.com/watch/81749852",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 4,
-      "title_en": "The Murder of Rachel Nickell",
-      "jp_title": "ザ・マーダー・オブ・レイチェル・ニッケル",
-      "year": 2021,
-      "genres": [
-        "ドキュメンタリー",
-        "犯罪"
-      ],
-      "summary": "1992年にイギリスで発生した、幼い少女レイチェル・ニッケルの惨殺事件。未解決事件として社会に衝撃を与え、警察の捜査は数々の論争を巻き起こしました。誤認逮捕と、真犯人逮捕までの長い年月を克明に追う、実録クライムドキュメンタリーです。",
-      "runtime_minutes": 96,
-      "views_this_week": 5400000,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRyd1ChL0oFWIPlRTej2p3yEgl52AAJsEOY6WGMmYnku7h4RSxjz1nruL7qtqCqKBDX18GzWnUFcHBksGWNNlfK4pYxjPMFWE7xUl4_mboc.png?r=1e5",
-      "netflix_watch_url": "https://www.netflix.com/watch/81756346",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
       "rank": 5,
-      "title_en": "Fast Charlie",
-      "jp_title": "ファスト・チャーリー",
-      "year": null,
-      "genres": [
-        "アクション",
-        "クライム",
-        "スリラー"
-      ],
-      "summary": "長年にわたり裏社会で活躍してきた伝説のヒットマン、チャーリー。しかし、ある任務で彼の雇い主が襲撃され、チャーリー自身も標的となってしまう。裏切りと復讐が渦巻く中、彼はかつての仲間だった女性と手を組み、壮絶なサバイバルを繰り広げる。ピアース・ブロスナン主演で贈る、スリリングなクライムアクション。",
-      "runtime_minutes": 90,
-      "views_this_week": 3900000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABYYgM7wRqQUy7A0Hq11IL6bUdFvynwmfClS7wj4Eig4-24Hx0QRfWdkVWIrSVjxwEdsX8tf5hfy7cuWA7devmjTNeyklfzGHq6P7T0FhOY0.png?r=04f",
-      "netflix_watch_url": "https://www.netflix.com/watch/81696533",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 6,
-      "title_en": "KPop Demon Hunters",
+      "title_en": "Swapped",
       "jp_title": "K-POP デーモンハンターズ",
       "year": 2024,
       "genres": [
@@ -115,36 +94,55 @@
         "ファンタジー"
       ],
       "summary": "世界を熱狂させるK-POPアイドルたちが、その華やかなステージの裏で、密かに悪魔と戦う使命を背負っていたとしたら？アクション、コメディ、ファンタジーが融合したこの作品は、音楽と超常現象が見事に交差する、全く新しいエンターテイメント体験をお届けします。彼らは歌とダンスで世界を救えるのか、その秘密の戦いにご期待ください。",
-      "runtime_minutes": 100,
-      "views_this_week": 3600000,
-      "weeks_in_top10": 52,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABdUijdogFyfTJxYB-gVvX20JWwwqxiMw4OlOBcpBk2p20dQvqGIkgG0s4BgtOaB0_wGPJ32prA5bZ2ogXRdgD7buzkv0hBl9rs0QRjUUS2E.png?r=02e",
+      "runtime_minutes": 102,
+      "views_this_week": 4900000,
+      "weeks_in_top10": 8,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaFPtBiQgLMjEuqJJ0JGQWxoTef4EhAh0Nje2JRGirHoi-XAgFvPUrQkSLg3weg4HIpn4qNhDmras6v5Ki5BmQ2szW-DJ_RbJ4i-nbIThmU.png?r=b20",
       "netflix_watch_url": "https://www.netflix.com/watch/81498621",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 7,
-      "title_en": "David",
-      "jp_title": "デビッド",
-      "year": 2013,
+      "rank": 6,
+      "title_en": "KPop Demon Hunters",
+      "jp_title": "K-POP デーモンハンターズ",
+      "year": null,
       "genres": [
         "アクション",
-        "犯罪",
-        "ドラマ"
+        "コメディ",
+        "ホラー"
       ],
-      "summary": "異なる時代と場所で生きる二人の「デビッド」という名の男たち。1999年のデリーでは政治家殺しの罪を背負うヒットマンが、2010年のムンバイでは結婚を控えた漁師が、それぞれの運命と葛藤に直面する。時を超えて交錯する彼らの人生が、予期せぬ衝撃的な結末へと観客を誘う。",
-      "runtime_minutes": 109,
-      "views_this_week": 3200000,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQ4Ivk4yOYK1mXSEsiV30XSmq8td0MWQk2PnFpt3ueCLxfaja1cy_dit7DoELyIFc3VBrmH04hDgRtNHxb2o2vV8HfhYeM6DYI_4z3QFd-o.png?r=60c",
-      "netflix_watch_url": "https://www.netflix.com/watch/82836255",
+      "summary": "世界中を熱狂させるK-POPスターたちが、実は秘密裏に悪魔と戦う“デーモンハンター”だった！華やかなステージの裏で、彼らが直面する予想外の脅威とは？歌とダンス、そしてアクションが融合した、前代未聞のコメディホラーアクションが幕を開ける！",
+      "runtime_minutes": 100,
+      "views_this_week": 3600000,
+      "weeks_in_top10": 53,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABdUijdogFyfTJxYB-gVvX20JWwwqxiMw4OlOBcpBk2p20dQvqGIkgG0s4BgtOaB0_wGPJ32prA5bZ2ogXRdgD7buzkv0hBl9rs0QRjUUS2E.png?r=02e",
+      "netflix_watch_url": "https://www.netflix.com/watch/70298117",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 7,
+      "title_en": "Flowers in the Attic",
+      "jp_title": "屋根裏の悪魔たち",
+      "year": 1987,
+      "genres": [
+        "ドラマ",
+        "ホラー",
+        "スリラー"
+      ],
+      "summary": "父の死後、4人の子供たちは母とともに、裕福だが厳格な祖父母の屋敷へ。しかし、莫大な遺産を巡る思惑から、彼らは屋根裏部屋に監禁されてしまう。外界から完全に隔離され、孤独と絶望の中で成長していく子供たち。自由を求め、過酷な運命に立ち向かう彼らの悲劇と、次第に歪んでいく家族の秘密が明かされる戦慄の人間ドラマ。",
+      "runtime_minutes": 85,
+      "views_this_week": 3400000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABcSN9MjDziFbdV9gySOdhty8wG8JlDR0gkqTvv9lB7qg0ZHCGGYxanZEVrmxThGhdGjp6-aoqsyG-qXCnTJpWVbCUOHOb8wjbgyP2RlkOu4.png?r=2b8",
+      "netflix_watch_url": "https://www.netflix.com/watch/70120525",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 8,
-      "title_en": "Goat",
+      "title_en": "Percy Jackson & the Olympians: The Lightning Thief",
       "jp_title": "ゴート",
       "year": 2016,
       "genres": [
@@ -152,48 +150,47 @@
         "青春"
       ],
       "summary": "大学生のブラッドは、兄が所属する男子学生社交クラブ（フラタニティ）への入会を希望する。しかし、そこでは常軌を逸した「新人いじめ」の儀式が待ち受けていた。集団の狂気がエスカレートする中、ブラッドは兄との絆と自身の尊厳の間で葛藤を深めていく。若者たちの残酷な世界と、社会に潜む闇を鋭く描いた衝撃作。",
-      "runtime_minutes": 100,
+      "runtime_minutes": 119,
       "views_this_week": 3200000,
-      "weeks_in_top10": 5,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABV1kWYPMd0YW9_AZacQmuJSnbVNhwat9M3Dv_kvHmAfolI4ZNMw_hnwdHi6W4dUOyVEYBvIi70fDwQnHDpPboGg6DDAbkw5Xmrbmf73XriM.png?r=635",
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABfEaqRvx0XTk5qVfHC56jqWR89ZJhAwdtDErhI7JKzyEIZWbxZajyBVQGATHco-H85iTPbBqY6cFxExMhnnY0mwoZHmO3zpgZvwpHg3mqqw.png?r=6de",
       "netflix_watch_url": "https://www.netflix.com/watch/82710848",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 9,
-      "title_en": "Ticket to Paradise",
-      "jp_title": "チケット・トゥ・パラダイス",
-      "year": 2022,
+      "title_en": "No Time to Die",
+      "jp_title": "007／ノー・タイム・トゥ・ダイ",
+      "year": 2021,
       "genres": [
-        "ロマンティックコメディ",
-        "コメディ"
+        "アクション",
+        "スリラー",
+        "スパイ"
       ],
-      "summary": "かつて愛し合い、今は犬猿の仲の元夫婦が、電撃結婚をしようとする一人娘を止めるため、はるかバリ島へと向かう。ジュリア・ロバーツとジョージ・クルーニーというハリウッドを代表するスターが繰り広げる、大人のためのロマンティックコメディ。美しい南国の景色を舞台に、二人の過去と現在が交錯する中で、娘の結婚を巡る騒動と、彼ら自身の新たな関係がユーモラスに描かれる。",
-      "runtime_minutes": 104,
-      "views_this_week": 2600000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABUC1xMvefJ2A_qqSTmpMRL4tYnkEI4JFvJvCK4GAX85zi1kRlNLjaVVjccaH05OBQlv4QF3a3oD_SVRoBGA4GL-TFS0MD-Go6aRMAfyZklU.png?r=115",
-      "netflix_watch_url": "https://www.netflix.com/watch/81598180",
+      "summary": "現役を退きジャマイカで穏やかな日々を過ごしていたジェームズ・ボンドは、旧友のCIAエージェントの助けを求める声を受け、再び危険な任務へと舞い戻る。最新技術を駆使した凶悪なテロリストを追ううちに、ボンドは恐るべき陰謀と、自身の過去にまつわる因縁に直面することになる。ダニエル・クレイグが有終の美を飾る、シリーズ25作目の壮大なスパイアクション。",
+      "runtime_minutes": 164,
+      "views_this_week": 3100000,
+      "weeks_in_top10": 3,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVaJ8_ZE5Lxn-bLo-1tuAbnYDxMncDnnzoXmX1oULkVGOsNS3YR07wESBzQnHCKjC6LII6lmvHJt55cLlYPMd8uLSPfkwpI-e7311hWFAZE.png?r=e9c",
+      "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 10,
-      "title_en": "Bee Movie",
-      "jp_title": "ビー・ムービー",
-      "year": 2007,
+      "title_en": "Goat",
+      "jp_title": "ゴート",
+      "year": 2016,
       "genres": [
-        "アニメーション",
-        "コメディ",
-        "ファミリー"
+        "ドラマ"
       ],
-      "summary": "巣の生活に疑問を抱いた一匹のハチ、バリーが、禁断の人間社会へと足を踏み入れることから始まる愉快なアニメーション。彼はそこで偶然出会った人間のフローリストと心を通わせ、ハチたちが人間によって蜂蜜を搾取されている現状を知り、驚くべき訴訟を起こすことに。ユーモアと感動が詰まった、常識を覆す冒険があなたを待っています。",
-      "runtime_minutes": 92,
-      "views_this_week": 2500000,
-      "weeks_in_top10": 4,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABdKCqgkZcsVlW427af_0_SWH2LkuMbF46tcWBYdu8fv9Zk_2EjU922ND9yJYspUCiX4RBs7jefKit1azC_bK_pAORtTS91jxdBJqNG85z5A.png?r=ef3",
-      "netflix_watch_url": "https://www.netflix.com/watch/70060010",
+      "summary": "大学に進学した弟と、先にその大学のフラタニティ（男子学生社交クラブ）に入っていた兄。弟も同じフラタニティに入会しようとするが、過酷な新人いじめ（ヘイジング）が彼らの絆を試す。クラブの狂気と友情の間で揺れ動く兄弟の葛藤を描いた青春ドラマ。",
+      "runtime_minutes": 100,
+      "views_this_week": 2600000,
+      "weeks_in_top10": 6,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABV1kWYPMd0YW9_AZacQmuJSnbVNhwat9M3Dv_kvHmAfolI4ZNMw_hnwdHi6W4dUOyVEYBvIi70fDwQnHDpPboGg6DDAbkw5Xmrbmf73XriM.png?r=635",
+      "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     }
@@ -201,79 +198,109 @@
   "japan_movies": [
     {
       "rank": 1,
-      "title_en": "The Beekeeper",
-      "jp_title": "ミルキー☆サブウェイ ザ・ギャラクティック・リミテッド・エクスプレス ザ・ムービー",
+      "title_en": "Blank Canvas: My So-Called Artist's Journey",
+      "jp_title": "ブランク・キャンバス: マイ・ソー・コールド・アーティスツ・ジャーニー",
       "year": null,
       "genres": [
-        "SF",
-        "ファンタジー",
-        "アドベンチャー"
+        "ドラマ",
+        "コメディ"
       ],
-      "summary": "星々を繋ぐ銀河鉄道「ミルキー☆サブウェイ」に乗って、主人公が壮大な宇宙の旅に出る物語。個性豊かな乗客たちとの出会いや、予測不能な出来事が次々と巻き起こり、観る者を魅惑の銀河アドベンチャーへと誘います。果たして、彼らを待ち受けるのはどんな運命なのでしょうか？",
+      "summary": "真っ白なキャンバスを前に、自分自身の表現とは何かを模索する若きアーティストの物語。世間の期待や内なる葛藤に揺れ動きながらも、独自のスタイルを追い求める彼の旅路は、時に滑稽で、時に感動的だ。アート界の厳しい現実と向き合いながら、真の自己を見出すことができるのか。夢と現実の狭間で奮闘するすべての人に贈る、共感と希望のドラマ。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABc33JIl8r5izu0ve7IIx4ln00fSZYcIa36s28Su2VEjkeQ5pHhwXIwW3ANEaCBd0BV72IcoDAUtIRrgs0qgdskTFwzkocm5fOvZULLIKFR8.png?r=143",
-      "netflix_watch_url": "https://www.netflix.com/watch/81680567",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaYwykR6o1W4y3pv8MZiCtBQBUAOPGKmvgd4UAoOZcRjB1RNHqS1lV1OWOkWVB-_Hbez14v07UJtq5oURcrWFyLaTeAnS0GLWRZrH0TdNCI.png?r=578",
+      "netflix_watch_url": "https://www.netflix.com/watch/82025112",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 2,
-      "title_en": "The Retirement Plan",
-      "jp_title": "呪術廻戦 懐玉・玉折",
-      "year": null,
+      "title_en": "The Beekeeper",
+      "jp_title": "ビーキーパー",
+      "year": 2025,
       "genres": [
-        "アニメ",
         "アクション",
-        "ダークファンタジー"
+        "スリラー"
       ],
-      "summary": "これは、最強の呪術師・五条悟と、最悪の呪詛師・夏油傑、二人の決別した過去を描く物語。呪術高専時代の彼らが、星漿体（せいしょうたい）の護衛任務に赴く中で、最強を誇った青春に亀裂が入る過程が鮮烈に描かれる。後の世界に多大な影響を与えることになる、彼らの運命的な転換点を目撃してください。",
+      "summary": "元特殊工作員「ビーキーパー」のクレイは、唯一の理解者であった老婦人が詐欺によって全財産を失い、自ら命を絶ったことに怒りを覚える。彼女の死の裏に隠された巨大な陰謀を暴き、復讐を遂げるため、彼は再び闇の世界へと足を踏み入れる。壮絶な戦いの幕が今、開く。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABbfZaUQZOE3Li-Kd9hAFpKkDmSSkKTqYzFR99kj4B5kBJTBf9dng1hmU_RLLrammwxqn1yzGc0Vfnr-_4Vkk1AHcN7B-zlxNZGqZ21dnxZM.png?r=738",
-      "netflix_watch_url": "https://www.netflix.com/watch/82703490",
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/sf8b0u2x5g0fhpq6i97qk49wmtyi/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81696513",
+      "available_in_japan": true,
+      "filmarks_id": "113065"
+    },
+    {
+      "rank": 3,
+      "title_en": "Gladiator II",
+      "jp_title": "グラディエーターII",
+      "year": 2024,
+      "genres": [
+        "歴史ドラマ",
+        "アクション"
+      ],
+      "summary": "古代ローマの壮大な物語が、再びスクリーンに蘇る。前作の衝撃から数十年後、成長したルキウス・ウェルスを主人公に、新たなグラディエーターの戦いが幕を開ける。運命に翻弄されながらも、彼は何と戦い、何を守るのか。リドリー・スコット監督が手掛ける、剣と栄光に彩られた歴史アクション超大作が、観る者を再び熱狂の渦へと誘う。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABTeAU5YvXzVWbFq8qq68yXd9zKZ-Pfc9g5-6DDiAP-GR7qORXPM_CFDbL_VXhVO7nabQw2fQGKSNewHQwFgyAz1yaJJl3gTSnAzWnml2JyE.png?r=489",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%B0%E3%83%A9%E3%83%87%E3%82%A3%E3%82%A8%E3%83%BC%E3%82%BF%E3%83%BCII",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
-      "rank": 3,
-      "title_en": "Venom: The Last Dance",
-      "jp_title": "ヴェノム：ザ・ラストダンス",
-      "year": 2024,
-      "genres": [
-        "アクション"
-      ],
-      "summary": "地球外生命体シンビオート「ヴェノム」とジャーナリストのエディ・ブロックの奇妙な共生関係を描く大ヒットシリーズの最終章。世界を揺るがす壮大な危機が迫る中、ヴェノムとエディの「ラストダンス」が始まる。彼らの運命と、その絆の行方が試される究極の戦いに注目です。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 2,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/ua2yhg9r7ule793rgo1wcky9h0fh/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/81680567",
-      "available_in_japan": true,
-      "filmarks_id": "106266"
-    },
-    {
       "rank": 4,
-      "title_en": "SUZUKI=BAKUDAN",
-      "jp_title": "愛と職場のロマンス",
-      "year": 1977,
-      "genres": [
-        "ロマンティック・コメディ",
-        "ドラマ"
-      ],
-      "summary": "1977年のソ連を舞台に、シャイで不器用な独身男性ノヴォセリツェフと、冷酷で意地悪と評判の女性局長カリギナが織りなすオフィス・ロマンス。昇進を企むノヴォセリツェフがカリギナに近づいたことから、予想外の化学反応が起こり、二人の関係は変化していく。立場の違いを超え、互いの魅力に気づく過程を温かく描いた、ソ連を代表する名作ロマンティック・コメディ。",
+      "title_en": "Husbands in Action",
+      "jp_title": "Husbands in Action",
+      "year": null,
+      "genres": [],
+      "summary": "",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 11,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZTiOVe7r1GEVxOukAGVy9KPCikmS2SorsiUTkEl71G4RlEwTU2TlOjK2cFwg8XoZBAYo8AOZFNz0jA585WeMCbjxeTWbvjJsojSYup7GpI.png?r=0a8",
-      "netflix_watch_url": "https://www.netflix.com/watch/81939823",
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSJsJcU2OdmjBAAtSzOxxYGVtKZLZzzHyrEy9b31iWEKkd3t17MDMzwrEnXKiGobZaSIsw_CFZBA9-bM0QzgtyjzcKryQf5bK2SqYHZSMQA.png?r=352",
+      "netflix_watch_url": "https://www.netflix.com/search?q=Husbands%20in%20Action",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 5,
+      "title_en": "No Time to Die",
+      "jp_title": "007／ノー・タイム・トゥ・ダイ",
+      "year": 2021,
+      "genres": [
+        "アクション",
+        "スリラー",
+        "スパイ"
+      ],
+      "summary": "現役を退きジャマイカで穏やかな日々を過ごしていたジェームズ・ボンドは、旧友のCIAエージェントの助けを求める声を受け、再び危険な任務へと舞い戻る。最新技術を駆使した凶悪なテロリストを追ううちに、ボンドは恐るべき陰謀と、自身の過去にまつわる因縁に直面することになる。ダニエル・クレイグが有終の美を飾る、シリーズ25作目の壮大なスパイアクション。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVaJ8_ZE5Lxn-bLo-1tuAbnYDxMncDnnzoXmX1oULkVGOsNS3YR07wESBzQnHCKjC6LII6lmvHJt55cLlYPMd8uLSPfkwpI-e7311hWFAZE.png?r=e9c",
+      "netflix_watch_url": "https://www.netflix.com/search?q=007%EF%BC%8F%E3%83%8E%E3%83%BC%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%BB%E3%83%88%E3%82%A5%E3%83%BB%E3%83%80%E3%82%A4",
+      "available_in_japan": true,
+      "filmarks_id": null
+    },
+    {
+      "rank": 6,
+      "title_en": "SUZUKI=BAKUDAN",
+      "jp_title": "SUZUKI=BAKUDAN",
+      "year": null,
+      "genres": [],
+      "summary": "",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 12,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZTiOVe7r1GEVxOukAGVy9KPCikmS2SorsiUTkEl71G4RlEwTU2TlOjK2cFwg8XoZBAYo8AOZFNz0jA585WeMCbjxeTWbvjJsojSYup7GpI.png?r=0a8",
+      "netflix_watch_url": "https://www.netflix.com/search?q=SUZUKI%3DBAKUDAN",
+      "available_in_japan": true,
+      "filmarks_id": null
+    },
+    {
+      "rank": 7,
       "title_en": "52-Hertz Whales",
       "jp_title": "52ヘルツ・ホエールズ",
       "year": null,
@@ -281,97 +308,57 @@
       "summary": "「52ヘルツのクジラ」とは、他のクジラとは異なる周波数で鳴くため、仲間とコミュニケーションが取れない「世界で最も孤独なクジラ」として知られています。このタイトルを持つ映画作品は複数存在しますが、多くは孤独や隔絶、他者との関係性をテーマにしています。声が届かない悲しみや、理解されない存在の葛藤、それでも前に進もうとする心の機微が描かれており、観る者に深い共感を誘うことでしょう。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 1,
+      "weeks_in_top10": 2,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQtAjAgxryWv-G-T8khbfAFuzUkTsdpEjEE0HK_6iNybH48ut8HQpaCIP9ebheoGg_-A7qyouSEJVpNwNSOjkUJPgdSMPNYngHm94Bf5BLA.png?r=7b0",
       "netflix_watch_url": "https://www.netflix.com/search?q=52%E3%83%98%E3%83%AB%E3%83%84%E3%83%BB%E3%83%9B%E3%82%A8%E3%83%BC%E3%83%AB%E3%82%BA",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
-      "rank": 6,
-      "title_en": "Milky☆Subway: The Galactic Limited Express – the Movie",
-      "jp_title": "ミルキー☆サブウェイ：ザ・ギャラクティック・リミテッド・エクスプレス – ザ・ムービー",
-      "year": null,
+      "rank": 8,
+      "title_en": "The Retirement Plan",
+      "jp_title": "リタイアメント・プラン",
+      "year": 2024,
       "genres": [
-        "SF",
-        "アドベンチャー",
-        "アニメーション"
+        "アクション",
+        "コメディ"
       ],
-      "summary": "煌めく星々の間を縫って走る、夢の超特急「銀河急行」。個性豊かな乗客たちを乗せ、宇宙の果てまで届ける壮大な旅が始まる。予測不能な冒険と心温まる出会いが織りなす、星と星を繋ぐ感動のスペースファンタジーです。",
+      "summary": "かつて裏社会で恐れられた男が、今は穏やかな生活を送っていた。しかし、娘と孫娘が危険に巻き込まれたことをきっかけに、彼は再び隠されたスキルを解き放つことに。次々と現れる敵から家族を守るため、老練な元殺し屋が繰り広げる、予測不能なアクションとユーモアが満載の痛快エンターテイメントです。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABceQZMAorve6RfZdRaG3LSiiOh2oSdBFlbtefciemVIDE__X-Mf6P3VkHWgMOePpFX8wfok7XuKXuEYBebWqIW9N60e5Dm7ylhorcc8myoM.png?r=d14",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%9F%E3%83%AB%E3%82%AD%E3%83%BC%E2%98%86%E3%82%B5%E3%83%96%E3%82%A6%E3%82%A7%E3%82%A4%EF%BC%9A%E3%82%B6%E3%83%BB%E3%82%AE%E3%83%A3%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%83%AA%E3%83%9F%E3%83%86%E3%83%83%E3%83%89%E3%83%BB%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AC%E3%82%B9%20%E2%80%93%20%E3%82%B6%E3%83%BB%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC",
+      "weeks_in_top10": 3,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABbfZaUQZOE3Li-Kd9hAFpKkDmSSkKTqYzFR99kj4B5kBJTBf9dng1hmU_RLLrammwxqn1yzGc0Vfnr-_4Vkk1AHcN7B-zlxNZGqZ21dnxZM.png?r=738",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%AA%E3%82%BF%E3%82%A4%E3%82%A2%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BB%E3%83%97%E3%83%A9%E3%83%B3",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
-      "rank": 7,
-      "title_en": "The Marked Woman",
-      "jp_title": "The Marked Woman",
+      "rank": 9,
+      "title_en": "The Contractor",
+      "jp_title": "The Contractor",
       "year": null,
       "genres": [],
       "summary": "",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZVZY7kTGntkRdh3zIBv0u2t3XdUtqn-VHR7tnpn1p4IXe3EJ1iAwQJTQm9R_CaulQbQ7f_q9tiwDfmBTSIgrrbxvErj-_j__Eh78-_pZsQ.png?r=ef7",
-      "netflix_watch_url": "https://www.netflix.com/search?q=The%20Marked%20Woman",
-      "available_in_japan": true,
-      "filmarks_id": null
-    },
-    {
-      "rank": 8,
-      "title_en": "Office Romance",
-      "jp_title": "お熱い社内恋愛",
-      "year": 1977,
-      "genres": [
-        "ロマンチック・コメディ",
-        "ドラマ"
-      ],
-      "summary": "冷徹な独身の女性局長と、彼女に昇進を期待する気弱な部下。最初は策略から始まった関係だったが、やがて二人の間には予想もしなかった温かい感情が芽生え始める。ソビエト時代を背景に、オフィスで繰り広げられる人間模様と、不器用ながらも心温まる恋の行方を描いたロマンティック・コメディです。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQWN7o0f_Qz9B92AhOd2cH00QlE1Ha8i7eYMr0DzSwEPYfGnlsgCNxD6QQ8T68qmKZLDG6hSou_uUzC2TbZeuOTA-gv53OI3K9N156bTiY0.png?r=3d2",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%81%8A%E7%86%B1%E3%81%84%E7%A4%BE%E5%86%85%E6%81%8B%E6%84%9B",
-      "available_in_japan": true,
-      "filmarks_id": null
-    },
-    {
-      "rank": 9,
-      "title_en": "Jujutsu Kaisen: Hidden Inventory / Premature Death – the Movie",
-      "jp_title": "呪術廻戦 懐玉・玉折",
-      "year": 2023,
-      "genres": [
-        "ダークファンタジー",
-        "アクション",
-        "青春"
-      ],
-      "summary": "五条悟と夏油傑、後に道を違える二人の呪術師が輝いていた高専時代の物語。最強だった彼らが、ある任務をきっかけにそれぞれの信念を深く問い直し、運命を決定づける悲劇に直面します。現在の「呪術廻戦」に繋がる、知られざる過去と深い因縁の原点がここに。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 3,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaKcfL7bWpzlFcNxBOb5xGpusM2FcNwI1RxOjOcnITK70APBiSEz-HxPo58w50syqnW787c8HuvnoMJnjbNw7-C1zUL-qN_BMYm3n0s14N4.png?r=ab8",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%20%E6%87%90%E7%8E%89%E3%83%BB%E7%8E%89%E6%8A%98",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSSW2HqBtEOFq9hxY7bkISVSBHMjQFzW2pO9RbuEEK_f2BEnuMFxWKloVgpxRn7hyDPZzCCduWjGPTJxXg-pGYZh7H_5rXrBSlFKNgXJdM4.png?r=11a",
+      "netflix_watch_url": "https://www.netflix.com/search?q=The%20Contractor",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 10,
-      "title_en": "Fiamma",
-      "jp_title": "フィアンマ",
+      "title_en": "Casino Royale",
+      "jp_title": "Casino Royale",
       "year": null,
-      "genres": [
-        "ドラマ"
-      ],
-      "summary": "「フィアンマ」というタイトルは、イタリア語で「炎」や「情熱」を意味します。この作品は、その名の通り、主人公が内なる情熱や複雑な感情と向き合い、人生の岐路に立つ様を描く物語かもしれません。激しい心の揺れ動きや、秘められた真実が明らかになる中で、登場人物たちが織りなす人間ドラマに引き込まれることでしょう。",
+      "genres": [],
+      "summary": "",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABTNL9FgW9_Vwyavug4Kktkhv5Hxyh0eVDOtR_DW92Z7-4X0fDxLGKyKStmrr3fIO7JTGUwiooaZpQsOp2hSJEWyVkD7sDh97wE5skAPhTbw.png?r=89b",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%95%E3%82%A3%E3%82%A2%E3%83%B3%E3%83%9E",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABUUWxl7L44EYvcMWZWlR2oIuCQ9z5tvf7tywgNE8HcCAJa2UFivSkPZB3fFMTyxkY1RFDmEEkZsC2IK60zJWL3hx70SMOuaS957PGWM7KIo.png?r=1df",
+      "netflix_watch_url": "https://www.netflix.com/search?q=Casino%20Royale",
       "available_in_japan": true,
       "filmarks_id": null
     }
