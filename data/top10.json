@@ -1,21 +1,20 @@
 {
-  "updated_at": "2026-07-08T13:11:42+09:00",
+  "updated_at": "2026-07-15T12:55:43+09:00",
   "week_label": [
     "https://www.netflix.com/watch/81605886",
+    "https://www.netflix.com/watch/81757898",
     "https://www.netflix.com/watch/81716219",
     "https://www.netflix.com/watch/81521988",
-    "https://www.netflix.com/watch/81749852",
-    "https://www.netflix.com/watch/81498621",
-    "https://www.netflix.com/watch/81766093",
-    "https://www.netflix.com/watch/80166369",
-    "https://www.netflix.com/watch/80146758"
+    "https://www.netflix.com/watch/81498755",
+    "https://www.netflix.com/watch/80146758",
+    "https://www.netflix.com/watch/81498621"
   ],
   "source": "Netflix Tudum",
   "source_url": "https://www.netflix.com/tudum/top10",
   "global_movies": [
     {
       "rank": 1,
-      "title_en": "Voicemails for Isabelle",
+      "title_en": "Enola Holmes 3",
       "jp_title": "ボイスメールズ・フォー・イザベル",
       "year": 2024,
       "genres": [
@@ -24,17 +23,35 @@
         "スリラー"
       ],
       "summary": "数週間前に行方不明になった女性イザベルの人生を、彼女が残したボイスメールを辿ることで追体験するミステリードラマです。主人公は、断片的な音声メッセージの向こうに潜む真実と、イザベルの複雑な人間関係に引き込まれていきます。予測不能な展開が、観る者に深い問いを投げかけます。",
-      "runtime_minutes": 118,
-      "views_this_week": 31000000,
+      "runtime_minutes": 108,
+      "views_this_week": 12000000,
       "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRkY6lPAa_jiuGm5Q8yjevHfkscz6ohyw5k65vg2opu2Kp7uHzEBa7L0m2mcBGi9LvcA_BLj5bx0vnxt1B15jlW2NLBsOpYXKqZCBGIeI6Q.png?r=577",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABcWlvhxJy-vOtk_ZXKogaIq8BVal0oaLRPAfjsA790Iq79Tf2LhG8NuPfWGr9KTsXYKKG25xVQezjae8EPIu02-pjxEXUbcyuXNkAgstMm8.png?r=c9b",
       "netflix_watch_url": "https://www.netflix.com/watch/81605886",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 2,
-      "title_en": "Little Brother",
+      "title_en": "Shipwrecked: Nightmare at Sea",
+      "jp_title": "シップレック 悪夢の漂流",
+      "year": 2007,
+      "genres": [
+        "ホラー",
+        "スリラー"
+      ],
+      "summary": "友人とクルーズ旅行を楽しんでいた若者たちが、突然の嵐に見舞われ無人島に漂着。救助を待つ彼らを待ち受けていたのは、島に潜む残忍な人食い部族の影だった。外界から完全に隔絶された絶海の孤島で、生き残りをかけた想像を絶する悪夢が幕を開ける。",
+      "runtime_minutes": 90,
+      "views_this_week": 9000000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABYpIQiwkV2Z_vNkLtEhLRCmXLczWtbSJnHPdI-_8ixUsdYcdbldXGf6l40s3R44Meu_-td6EsMgWYOEcDNlx9VVmYMIGv2rk5UjxCf8OF54.png?r=d76",
+      "netflix_watch_url": "https://www.netflix.com/watch/81757898",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 3,
+      "title_en": "Voicemails for Isabelle",
       "jp_title": "ボイスメールズ・フォー・イザベル",
       "year": null,
       "genres": [
@@ -42,17 +59,17 @@
         "ミステリー"
       ],
       "summary": "この短編映画は、孤独な女性イザベルの元に届く、過去からの謎めいたボイスメールを中心に展開されます。現実と幻覚が入り混じる心理的な旅を描き、観る者を魅惑的な視覚世界へと誘います。不穏で詩的な雰囲気の中で、現代社会に潜む不安や疎外感が美しく表現された、記憶に残る作品です。",
-      "runtime_minutes": 100,
-      "views_this_week": 14000000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRxQ6pKSlByg_JmnqQ--NT1SqF61yy1WAt7G4bdtTvXWB2Qcst9idrv86GCiqZSMcI6fqTdQ8HyMJRfp3Nb5r2n6XyH6UnZx1erKr13T3Lk.png?r=486",
+      "runtime_minutes": 118,
+      "views_this_week": 8600000,
+      "weeks_in_top10": 4,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRkY6lPAa_jiuGm5Q8yjevHfkscz6ohyw5k65vg2opu2Kp7uHzEBa7L0m2mcBGi9LvcA_BLj5bx0vnxt1B15jlW2NLBsOpYXKqZCBGIeI6Q.png?r=577",
       "netflix_watch_url": "https://www.netflix.com/watch/81716219",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 3,
-      "title_en": "Maternal Instinct",
+      "rank": 4,
+      "title_en": "The Doorman",
       "jp_title": "リトル・ブラザー",
       "year": null,
       "genres": [
@@ -60,7 +77,24 @@
       ],
       "summary": "若き兄と弟の間に芽生える特別な絆と、成長の中で直面する葛藤を描いたヒューマンドラマ。それぞれが抱える悩みや夢、そして家族の温かさが繊細に綴られ、観る者の心に深く響く。人生の様々な局面で支え合う兄弟の姿を通して、本当の強さと愛の意味を問いかける感動作です。",
       "runtime_minutes": 97,
-      "views_this_week": 8500000,
+      "views_this_week": 4700000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/5tq2l41dy2tnuaj7ja4eecyx8z2a/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81521988",
+      "available_in_japan": true,
+      "filmarks_id": "126722"
+    },
+    {
+      "rank": 5,
+      "title_en": "Little Brother",
+      "jp_title": "リトル・ブラザー",
+      "year": 2017,
+      "genres": [
+        "コメディ"
+      ],
+      "summary": "精神的な病を抱える弟が忽然と姿を消し、残された姉は彼の行方を追うことに。深い愛情と葛藤が交錯する中で、彼女は人生で最も困難な選択を迫られます。衝撃的な事実が明らかになる時、姉弟の絆の真価が問われるヒューマンドラマです。",
+      "runtime_minutes": 100,
+      "views_this_week": 4300000,
       "weeks_in_top10": 3,
       "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/5tq2l41dy2tnuaj7ja4eecyx8z2a/_.jpg",
       "netflix_watch_url": "https://www.netflix.com/jp/title/81521988",
@@ -68,25 +102,25 @@
       "filmarks_id": "126722"
     },
     {
-      "rank": 4,
-      "title_en": "Swapped",
-      "jp_title": "スワップド",
-      "year": 2024,
+      "rank": 6,
+      "title_en": "Rust Creek",
+      "jp_title": "ターボ",
+      "year": 2013,
       "genres": [
-        "コメディ"
+        "アニメ"
       ],
-      "summary": "友人グループが週末旅行で訪れた山小屋で、身体を入れ替える奇妙な装置を発見する。予期せぬ事態に直面した彼らは、それぞれの新しい身体に戸惑いながらも、元の自分に戻る方法を探し始める。ドタバタ劇の中で友情や自己を見つめ直す、抱腹絶倒のコメディ。",
-      "runtime_minutes": 102,
-      "views_this_week": 4600000,
-      "weeks_in_top10": 9,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaFPtBiQgLMjEuqJJ0JGQWxoTef4EhAh0Nje2JRGirHoi-XAgFvPUrQkSLg3weg4HIpn4qNhDmras6v5Ki5BmQ2szW-DJ_RbJ4i-nbIThmU.png?r=b20",
-      "netflix_watch_url": "https://www.netflix.com/watch/81749852",
-      "available_in_japan": false,
-      "filmarks_id": null
+      "summary": "スピードに憧れるカタツムリ、ターボ。ある日、彼は偶然の事故で信じられないほどの超高速能力を手に入れます。仲間たちの支えを受け、ターボは世界最大のレース「インディ500」への出場という途方もない夢に向かって突き進むことに。勇気と友情、そして夢を追いかけることの素晴らしさを描いた、心躍るアニメーションアドベンチャーです。",
+      "runtime_minutes": 108,
+      "views_this_week": 4200000,
+      "weeks_in_top10": 2,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/8ufcqlr0eenyahsr2gvwz85f7x8w/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/70267728",
+      "available_in_japan": true,
+      "filmarks_id": "56874"
     },
     {
-      "rank": 5,
-      "title_en": "Office Romance",
+      "rank": 7,
+      "title_en": "F9: The Fast Saga",
       "jp_title": "K-POP デーモンハンターズ",
       "year": 2024,
       "genres": [
@@ -95,99 +129,67 @@
         "ファンタジー"
       ],
       "summary": "世界を熱狂させるK-POPアイドルたちが、その華やかなステージの裏で、密かに悪魔と戦う使命を背負っていたとしたら？アクション、コメディ、ファンタジーが融合したこの作品は、音楽と超常現象が見事に交差する、全く新しいエンターテイメント体験をお届けします。彼らは歌とダンスで世界を救えるのか、その秘密の戦いにご期待ください。",
-      "runtime_minutes": 115,
-      "views_this_week": 4300000,
-      "weeks_in_top10": 4,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3EK-POP%20%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%BA%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "runtime_minutes": 143,
+      "views_this_week": 3900000,
+      "weeks_in_top10": 5,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABTEcAh8HVLVIFg1diPTg3HVcIWVSoEpj9Z2JIb8ARcxS9iK094bOQy12TKU2rzAuaoy3df8oXgczMaBnjLkl6ZK3sUAEBGSJcuh88DfCllc.png?r=a52",
       "netflix_watch_url": "https://www.netflix.com/watch/81498621",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 6,
-      "title_en": "KPop Demon Hunters",
-      "jp_title": "マターナル・インスティンクツ",
-      "year": 1996,
-      "genres": [
-        "ドラマ"
-      ],
-      "summary": "夫の母親との関係に悩む妻が主人公の人間ドラマです。完璧な嫁を演じようと奮闘する中で、秘められた感情が徐々に露わになっていきます。愛と嫉妬、そして家族の絆が複雑に絡み合う心理劇をお楽しみください。",
-      "runtime_minutes": 100,
-      "views_this_week": 3800000,
-      "weeks_in_top10": 54,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZWSzsAkjgBk9AaFX808aLhPEYmACvc9wolKMtxdad5NB39oDTNbkMmC_aoLEGN0zIFTtlPkr0dVgpJUU22VoG72CK0F8y8F2anweqRDN8k.png?r=77d",
-      "netflix_watch_url": "https://www.netflix.com/watch/81766093",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 7,
-      "title_en": "The Contractor",
-      "jp_title": "ザ・コントラクター",
-      "year": 2022,
-      "genres": [
-        "アクション",
-        "スリラー"
-      ],
-      "summary": "元特殊部隊員のジェームス・リードは、軍を不名誉除隊となり、家族のため高額な民間軍事会社の任務を引き受ける。しかし、ドイツでの極秘作戦は予期せぬ事態に発展し、彼は裏切りと陰謀の渦中に放り込まれる。見知らぬ地で命を狙われる身となったジェームスは、自身のスキルと経験を駆使し、すべてを失う前に真実を暴き、家族の元へ生きて帰るため、絶望的な戦いを始める。果たして彼は、無事に生き延びることができるのか。",
-      "runtime_minutes": 99,
-      "views_this_week": 3600000,
-      "weeks_in_top10": 1,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%82%B6%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-      "netflix_watch_url": "https://www.netflix.com/watch/80166369",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
       "rank": 8,
-      "title_en": "Turbo",
-      "jp_title": "ターボ",
-      "year": 2013,
+      "title_en": "Old Henry",
+      "jp_title": "オールド・ヘンリー 狙われた男",
+      "year": 2021,
       "genres": [
-        "アニメ"
-      ],
-      "summary": "スピードに憧れるカタツムリ、ターボ。ある日、彼は偶然の事故で信じられないほどの超高速能力を手に入れます。仲間たちの支えを受け、ターボは世界最大のレース「インディ500」への出場という途方もない夢に向かって突き進むことに。勇気と友情、そして夢を追いかけることの素晴らしさを描いた、心躍るアニメーションアドベンチャーです。",
-      "runtime_minutes": 96,
-      "views_this_week": 3400000,
-      "weeks_in_top10": 5,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/8ufcqlr0eenyahsr2gvwz85f7x8w/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/70267728",
-      "available_in_japan": true,
-      "filmarks_id": "56874"
-    },
-    {
-      "rank": 9,
-      "title_en": "The Creator",
-      "jp_title": "ザ・クリエイター",
-      "year": 2023,
-      "genres": [
-        "SF",
+        "西部劇",
+        "スリラー",
         "アクション"
       ],
-      "summary": "人類とAIの終わりなき戦争が続く近未来。元特殊部隊の兵士ジョシュアは、姿を消した妻の手がかりを追う中で、AIが開発した人類を滅ぼす究極兵器が幼い少女の姿をしていることを知る。彼はその少女を破壊する任務を負うが、彼女との出会いが彼の世界観を大きく揺るがし、想像を絶する運命へと導いていく。壮大なスケールで描かれるSFアクション超大作。",
-      "runtime_minutes": 134,
-      "views_this_week": 3200000,
-      "weeks_in_top10": 1,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%82%B6%E3%83%BB%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%82%BF%E3%83%BC%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "summary": "孤独に農場で暮らすヘンリーは、負傷した男と大金を発見する。助けを求める男と財宝を狙う追っ手たちに囲まれ、ヘンリーは自分と息子を守るため、封じ込めていた過去の顔を再び現すことに。彼の正体とは一体何なのか、そしてこの絶体絶命の状況をどう切り抜けるのか、息詰まる展開から目が離せない西部劇スリラー。",
+      "runtime_minutes": 99,
+      "views_this_week": 3900000,
+      "weeks_in_top10": 2,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABTEAUyc05Nw3uJapJMqZBPM2hIHS8rrKTXad3NCKRawLwlBlRy-Evo9IDur-96q7iAx4kAwwwFA7CJ6ZsIHz2CPH2vnnusZz0COZzhw-coY.png?r=1b7",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 10,
-      "title_en": "5lbs of Pressure",
-      "jp_title": "ファイブ・ポンド・オブ・プレッシャー",
-      "year": 2024,
+      "rank": 9,
+      "title_en": "The Boss Baby",
+      "jp_title": "ボス・ベイビー",
+      "year": 2018,
       "genres": [
-        "スリラー",
-        "アクション",
-        "ドラマ"
+        "アニメ",
+        "コメディ",
+        "ファミリー"
       ],
-      "summary": "18年間の刑期を終え故郷に戻った男が、過去の因縁と向き合い新たな人生を歩もうとする。しかし、かつての悪友や犯罪組織の影が彼を追いつめ、失った時間を取り戻すためには再び危険な世界へ足を踏み入れる必要に迫られる。復讐と贖罪が交錯する、緊迫のクライムスリラー。",
-      "runtime_minutes": 110,
-      "views_this_week": 2700000,
-      "weeks_in_top10": 1,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%83%95%E3%82%A1%E3%82%A4%E3%83%96%E3%83%BB%E3%83%9D%E3%83%B3%E3%83%89%E3%83%BB%E3%82%AA%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%83%96%E3%83%BB%E3%83%97%E3%83%AC%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "summary": "7歳のティムは、ある日突然現れたスーツを着てブリーフケースを持った赤ちゃんに、家族の愛情と注目を全て奪われてしまう。しかし、その赤ちゃんはただの幼児ではなく、とある秘密組織のスパイ「ボス・ベイビー」だった！彼らは反発し合いながらも、世界を救うための壮大なミッションに巻き込まれ、次第に兄弟の絆を深めていく。笑いと感動がいっぱいの、ユニークなファミリーアドベンチャー。",
+      "runtime_minutes": 98,
+      "views_this_week": 3800000,
+      "weeks_in_top10": 26,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/fb6gnp6ksurrn0xk3m365jy1rai0/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/80146758",
+      "available_in_japan": true,
+      "filmarks_id": "59878"
+    },
+    {
+      "rank": 10,
+      "title_en": "KPop Demon Hunters",
+      "jp_title": "Kポップ・デーモンハンターズ",
+      "year": null,
+      "genres": [
+        "アニメ",
+        "アクション",
+        "コメディ"
+      ],
+      "summary": "人気絶頂のK-POPアイドルグループが、実は夜な夜な悪魔と戦う「デーモンハンター」だった！ 華やかなパフォーマンスの裏で、彼らは歌とダンスで鍛え上げた身体能力を駆使し、秘密の武器と共に悪魔を狩る。アイドルとしての輝きと、世界の命運をかけた戦いの間で揺れ動く彼らの、スタイリッシュでコミカルな活躍が描かれる、新感覚のアクションアドベンチャー。",
+      "runtime_minutes": 100,
+      "views_this_week": 3500000,
+      "weeks_in_top10": 56,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZWSzsAkjgBk9AaFX808aLhPEYmACvc9wolKMtxdad5NB39oDTNbkMmC_aoLEGN0zIFTtlPkr0dVgpJUU22VoG72CK0F8y8F2anweqRDN8k.png?r=77d",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -196,7 +198,7 @@
   "japan_movies": [
     {
       "rank": 1,
-      "title_en": "Kaede: Our Echoing Stars",
+      "title_en": "True Beauty: The Movie Part 1",
       "jp_title": "ボイスメールズ・フォー・イザベル",
       "year": 2024,
       "genres": [
@@ -208,66 +210,49 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQnyvyRrRW2R7ycOkGF9YECqqSvs_W_j0Ng8mWvogXbkypn3qzYPAgSfQCQh5yijK7sRiI_6wibno-mYD5WPNuddThZJcDTLNbKKR3dnB04.png?r=793",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQ_eiCIBY3R5-4IUyASPh49kYZ4UWrKGeRMyZ_FYD4rp09HsP1KDpo0JoP_4Uhovx7PCAOaLf6rwFXwtysZsokmA_dvHRwSOvGmdm7Gg4Uc.png?r=63e",
       "netflix_watch_url": "https://www.netflix.com/watch/81605886",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 2,
-      "title_en": "Husbands in Action",
-      "jp_title": "ブランク・キャンバス: マイ・ソー・コールド・アーティスツ・ジャーニー",
+      "title_en": "True Beauty: The Movie Part 2",
+      "jp_title": "トゥルー・ビューティー：ザ・ムービー パート2",
       "year": null,
       "genres": [
-        "ドラマ",
+        "青春",
+        "ロマンス",
         "コメディ"
       ],
-      "summary": "真っ白なキャンバスを前に、自分自身の表現とは何かを模索する若きアーティストの物語。世間の期待や内なる葛藤に揺れ動きながらも、独自のスタイルを追い求める彼の旅路は、時に滑稽で、時に感動的だ。アート界の厳しい現実と向き合いながら、真の自己を見出すことができるのか。夢と現実の狭間で奮闘するすべての人に贈る、共感と希望のドラマ。",
+      "summary": "外見に悩む高校生ジュギョンがメイクで変身し、学園の人気者に。しかし、素顔を知るイケメンたちとの間で、複雑な恋模様と友情が交錯する。Part 2では、さらに深まる人間関係の中で、彼女がメイクの魔法を超えた「本当の自分」の美しさと向き合い、成長していく姿を描く青春ロマンス。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSJsJcU2OdmjBAAtSzOxxYGVtKZLZzzHyrEy9b31iWEKkd3t17MDMzwrEnXKiGobZaSIsw_CFZBA9-bM0QzgtyjzcKryQf5bK2SqYHZSMQA.png?r=352",
-      "netflix_watch_url": "https://www.netflix.com/watch/82025112",
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABdtrQqRIaCEJZkfD64kOXFa6jXRU2u8MVKjKE6yApYYc5Zvo6zkHFYDHBNNbnTOI1aCw3HKlMZDLvgh3jxgqxSw8X41Y1gdhtSr_qTs52jQ.png?r=c04",
+      "netflix_watch_url": "https://www.netflix.com/watch/81631722",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 3,
-      "title_en": "Blank Canvas: My So-Called Artist's Journey",
-      "jp_title": "ブランク・キャンバス：マイ・ソー・コールド・アーティストズ・ジャーニー",
-      "year": null,
+      "title_en": "The Hustle",
+      "jp_title": "ザ・ハッスル",
+      "year": 2019,
       "genres": [
-        "ドラマ",
         "コメディ"
       ],
-      "summary": "芸術家としての成功を夢見ながらも、自身の才能に疑問を抱く主人公。空白のキャンバスを前に創作への苦悩と葛藤を抱え、真の自己表現とは何かを求めて旅に出る。様々な出会いや経験を通して、”いわゆるアーティスト”としてのアイデンティティを確立していく、笑いと感動に満ちたヒューマンドラマ。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaYwykR6o1W4y3pv8MZiCtBQBUAOPGKmvgd4UAoOZcRjB1RNHqS1lV1OWOkWVB-_Hbez14v07UJtq5oURcrWFyLaTeAnS0GLWRZrH0TdNCI.png?r=578",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%96%E3%83%A9%E3%83%B3%E3%82%AF%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%90%E3%82%B9%EF%BC%9A%E3%83%9E%E3%82%A4%E3%83%BB%E3%82%BD%E3%83%BC%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%89%E3%83%BB%E3%82%A2%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B9%E3%83%88%E3%82%BA%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%8B%E3%83%BC",
-      "available_in_japan": true,
-      "filmarks_id": null
-    },
-    {
-      "rank": 4,
-      "title_en": "April Come She Will",
-      "jp_title": "四月になれば彼女は",
-      "year": 2024,
-      "genres": [
-        "恋愛"
-      ],
-      "summary": "婚約を控えた精神科医・藤代のもとに、かつての恋人から手紙が届く。時を同じくして、彼は婚約者・弥生からの突然の失踪に直面する。手紙と失踪、二つの出来事が交錯する中で、藤代は愛の真実と、向き合うべき自分自身の姿を模索していく。鮮やかな映像美と共に、観る者の心に深く問いかける感動のラブストーリー。",
+      "summary": "豪華女優アン・ハサウェイとローズ・バーンが贈る、痛快コメディ。とある豪華リゾート地を舞台に、真逆のタイプの女性詐欺師二人が、莫大な財産を持つIT富豪を巡り、あの手この手で騙し合いを繰り広げます。どちらが本物の詐欺師か？スリルと笑いに満ちた予測不能な展開に最後まで目が離せません。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/jojkd0w9jf1fkkyqwm57nm7zpsk4/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/81777548",
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/r61ufal3d5lr3v6j4fnggomysivh/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81209142",
       "available_in_japan": true,
-      "filmarks_id": "109650"
+      "filmarks_id": "77972"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "title_en": "SUZUKI=BAKUDAN",
       "jp_title": "スズキ＝バクダン",
       "year": null,
@@ -278,100 +263,114 @@
       "summary": "人類の命運をかけた壮絶な戦いが、今、幕を開ける！常識を打ち破る肉体改造によって、文字通り\"爆弾\"と化した男が、巨大な悪に立ち向かう。想像を絶するパワーと情熱がスクリーンを突き破る、ド迫力のアクションエンターテイメント。果たして彼は、自らの肉体を犠牲にして世界を救えるのか！？",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 13,
+      "weeks_in_top10": 15,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZTiOVe7r1GEVxOukAGVy9KPCikmS2SorsiUTkEl71G4RlEwTU2TlOjK2cFwg8XoZBAYo8AOZFNz0jA585WeMCbjxeTWbvjJsojSYup7GpI.png?r=0a8",
       "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%B9%E3%82%BA%E3%82%AD%EF%BC%9D%E3%83%90%E3%82%AF%E3%83%80%E3%83%B3",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
-      "rank": 6,
-      "title_en": "The Beekeeper",
-      "jp_title": "ビーキーパー",
-      "year": 2025,
+      "rank": 5,
+      "title_en": "Admiral Yamamoto",
+      "jp_title": "聯合艦隊司令長官 山本五十六 -太平洋戦争70年目の真実-",
+      "year": 2011,
       "genres": [
-        "アクション",
-        "スリラー"
+        "ドラマ",
+        "戦争"
       ],
-      "summary": "元特殊工作員「ビーキーパー」のクレイは、唯一の理解者であった老婦人が詐欺によって全財産を失い、自ら命を絶ったことに怒りを覚える。彼女の死の裏に隠された巨大な陰謀を暴き、復讐を遂げるため、彼は再び闇の世界へと足を踏み入れる。壮絶な戦いの幕が今、開く。",
+      "summary": "太平洋戦争開戦前夜、アメリカとの国力差を理解し戦争回避を訴えるも、開戦の決定に翻弄される連合艦隊司令長官・山本五十六の苦悩を描く。真珠湾攻撃からミッドウェー海戦まで、激動の時代を生きた男の視点を通して、戦争の悲劇と平和への願いを深く問いかける歴史ドラマ。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 3,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/sf8b0u2x5g0fhpq6i97qk49wmtyi/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/81696513",
+      "weeks_in_top10": 2,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/mlr1mln4m8dpbnmqpde1k1l4qugg/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/80067910",
       "available_in_japan": true,
-      "filmarks_id": "113065"
+      "filmarks_id": "16270"
     },
     {
-      "rank": 7,
-      "title_en": "RADWIMPS 20th Anniversary Live Tour",
-      "jp_title": "RADWIMPS 20th Anniversary Live Tour",
+      "rank": 6,
+      "title_en": "The 35-Year Promise",
+      "jp_title": "ザ・35イヤー・プロミス",
       "year": null,
       "genres": [
-        "音楽",
-        "ドキュメンタリー"
+        "ドラマ"
       ],
-      "summary": "日本を代表するロックバンドRADWIMPSが、結成20周年を記念して開催したスペシャルライブツアーを映像化。彼らの20年の軌跡を辿る名曲の数々から最新曲まで、圧巻のパフォーマンスと熱狂的なステージが展開される。感動と興奮に満ちた一夜が、今スクリーンで蘇る。ファン必見のRADWIMPSの集大成を体感せよ。",
+      "summary": "人生の重要な節目で交わされた、35年という長い歳月に関わる約束。その約束が、登場人物たちの現在、そして未来にどのような影を落とし、あるいは希望をもたらすのか。人間の絆と時間の重みを深く問いかける物語です。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3ERADWIMPS%202%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E0th%20Annive%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3Ersary%20Live%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-      "netflix_watch_url": "https://www.netflix.com/search?q=RADWIMPS%2020th%20Anniversary%20Live%20Tour",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABce8HeojhGg2eFLXiX3ih8nF4t5x8JUXrBVBtiICDOkSsUi5VlMgGa0G9WKog1X4Nwa8o3DrpxUVbfzTEOh75Xb4eWuMLyAtuHqeNgDuSPE.png?r=c35",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%B6%E3%83%BB35%E3%82%A4%E3%83%A4%E3%83%BC%E3%83%BB%E3%83%97%E3%83%AD%E3%83%9F%E3%82%B9",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
-      "rank": 8,
-      "title_en": "The Contractor",
-      "jp_title": "ザ・コントラクター",
-      "year": 2022,
+      "rank": 7,
+      "title_en": "Enola Holmes 3",
+      "jp_title": "エノーラ・ホームズの事件簿3",
+      "year": null,
       "genres": [
         "アクション",
-        "スリラー"
+        "アドベンチャー・冒険",
+        "クライム"
       ],
-      "summary": "家族のために民間の軍事請負会社と契約した元特殊部隊員ジェームス。しかし、初めての海外任務で裏切りに遭い、命を狙われる身となってしまう。見知らぬ地で孤立無援となった彼は、敵の追跡を逃れながら、一体誰が自分を陥れたのか、そしてなぜ狙われているのかを探る。クリス・パイン主演で贈る、息詰まるアクションスリラー。",
+      "summary": "型破りな名探偵シャーロック・ホームズの妹、エノーラ・ホームズが主人公の人気ミステリー・アドベンチャーシリーズの第3弾。兄に劣らぬ明晰な頭脳と行動力を持ち合わせたエノーラが、様々な難事件に挑みながら、ヴィクトリア朝時代の閉鎖的な社会で自分らしく生きる道を模索していきます。女性の権利がまだ限られていた時代に、自身の信念を貫くエノーラの新たな活躍に期待が高まります。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 2,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%82%B6%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%B6%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC",
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/rlf50x6zz6ommyay22rs76smlmmr/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81605886",
+      "available_in_japan": true,
+      "filmarks_id": "126709"
+    },
+    {
+      "rank": 8,
+      "title_en": "Missing Child Videotape",
+      "jp_title": "こどもがこわい",
+      "year": 2022,
+      "genres": [
+        "ホラー",
+        "モキュメンタリー"
+      ],
+      "summary": "YouTubeにアップロードされた一本の動画を巡るモキュメンタリーホラー。映し出されていたのは、子供が行方不明になる瞬間の映像だった。この衝撃的な動画を深掘りするうち、調査班は恐るべき現象と不可解な謎に直面する。日常に潜む純粋な恐怖と狂気が、あなたをじわじわと侵食していく。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABcvcqtEpE64XfuFVbRBF6i-8YWpGA34KpyrIzzgxbgc3aJko_Q-1uuEkwchiIzw2z4MlPSEu2vVS_0mzvqYlWJTM4Mar6soF8QbkK4sOR2w.png?r=c61",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%81%93%E3%81%A9%E3%82%82%E3%81%8C%E3%81%93%E3%82%8F%E3%81%84",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 9,
-      "title_en": "Voicemails for Isabelle",
-      "jp_title": "ボイスメールズ・フォー・イザベル",
-      "year": 2023,
-      "genres": [
-        "ドラマ",
-        "短編"
-      ],
-      "summary": "親友のガールフレンドへの募る想いに戸惑う青年。しかし、思いがけず彼女から秘密めいたボイスメールが届き始め、彼の心はさらに深く惑わされていく。友情と愛情の狭間で揺れる若者たちの切なくも複雑な人間模様を繊細に描いた、珠玉のドラマ。",
+      "title_en": "Kingdom2: Far and Away",
+      "jp_title": "キングダム2：ファー・アンド・アウェイ",
+      "year": null,
+      "genres": [],
+      "summary": "広大な王国を舞台に、若き主人公が新たな脅威に立ち向かう歴史スペクタクル大作の続編。前作から時を経て、故郷を離れた地で繰り広げられる壮絶な戦いと、友情、そして試練の物語が描かれます。はるか遠い地平線の向こうで待ち受ける運命とは一体――。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRkY6lPAa_jiuGm5Q8yjevHfkscz6ohyw5k65vg2opu2Kp7uHzEBa7L0m2mcBGi9LvcA_BLj5bx0vnxt1B15jlW2NLBsOpYXKqZCBGIeI6Q.png?r=577",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%9C%E3%82%A4%E3%82%B9%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%BA%E3%83%BB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%BB%E3%82%A4%E3%82%B6%E3%83%99%E3%83%AB",
+      "weeks_in_top10": 15,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaGJDfT3hYXRTB8gxYhPGJ4zfgaIzX2hLCDSsFosxkqmAQCFHoP-_nllys7TZk9o9QHOSrT-qvgGDIqLKlPiTCvSPr4c1Cl9-1tYM-X3XTA.png?r=93a",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A02%EF%BC%9A%E3%83%95%E3%82%A1%E3%83%BC%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%89%E3%83%BB%E3%82%A2%E3%82%A6%E3%82%A7%E3%82%A4",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 10,
-      "title_en": "No Time to Die",
-      "jp_title": "007／ノー・タイム・トゥ・ダイ",
-      "year": 2021,
+      "title_en": "The Creator",
+      "jp_title": "ザ・クリエイター",
+      "year": 2023,
       "genres": [
-        "アクション",
-        "スリラー",
-        "スパイ"
+        "SF",
+        "アクション"
       ],
-      "summary": "現役を退きジャマイカで穏やかな日々を過ごしていたジェームズ・ボンドは、旧友のCIAエージェントの助けを求める声を受け、再び危険な任務へと舞い戻る。最新技術を駆使した凶悪なテロリストを追ううちに、ボンドは恐るべき陰謀と、自身の過去にまつわる因縁に直面することになる。ダニエル・クレイグが有終の美を飾る、シリーズ25作目の壮大なスパイアクション。",
+      "summary": "人類とAIの終わりなき戦争が続く近未来。元特殊部隊の兵士ジョシュアは、姿を消した妻の手がかりを追う中で、AIが開発した人類を滅ぼす究極兵器が幼い少女の姿をしていることを知る。彼はその少女を破壊する任務を負うが、彼女との出会いが彼の世界観を大きく揺るがし、想像を絶する運命へと導いていく。壮大なスケールで描かれるSFアクション超大作。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 2,
-      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E007%EF%BC%8F%E3%83%8E%E3%83%BC%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%A0%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%83%BB%E3%83%88%E3%82%A5%E3%83%BB%E3%83%80%E3%82%A4%3C/tspan%3E%3C/text%3E%3C/svg%3E",
-      "netflix_watch_url": "https://www.netflix.com/search?q=007%EF%BC%8F%E3%83%8E%E3%83%BC%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%BB%E3%83%88%E3%82%A5%E3%83%BB%E3%83%80%E3%82%A4",
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVJjQh24vkPgWfs3t7zr3BU682-LYTs95m9JmM11_5Hu32AjoZ0yjsSQcr2u4v01EH6l0SQ_Acl2YYJYP3QPbqwW5QFD4HMGY9y44-hwXGg.png?r=800",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%B6%E3%83%BB%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%82%BF%E3%83%BC",
       "available_in_japan": true,
       "filmarks_id": null
     }
