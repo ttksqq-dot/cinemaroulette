@@ -1,9 +1,10 @@
 {
-  "updated_at": "2026-08-26T11:21:27+09:00",
+  "updated_at": "2026-09-02T14:17:17+09:00",
   "week_label": [
-    "https://www.netflix.com/watch/81975622",
+    "https://www.netflix.com/watch/83035795",
+    "https://www.netflix.com/watch/81278442",
     "https://www.netflix.com/watch/81914143",
-    "https://www.netflix.com/watch/81780118",
+    "https://www.netflix.com/watch/81975622",
     "https://www.netflix.com/watch/81498621"
   ],
   "source": "Netflix Tudum",
@@ -12,21 +13,42 @@
     {
       "rank": 1,
       "title_en": "Don't Say Good Luck",
-      "jp_title": "ドント・セイ・グッド・ラック",
+      "jp_title": "ドント・セイ・グッドラック",
       "year": null,
-      "genres": [],
-      "summary": "現在、ご指定の「Don't Say Good Luck」というタイトルと上映時間95分の組み合わせに該当する日本公開映画の公式情報を見つけることが困難です。そのため、映画の具体的なジャンルやあらすじに基づく紹介文を作成することができませんでした。",
+      "genres": [
+        "ドラマ",
+        "スリラー"
+      ],
+      "summary": "「幸運を祈るな」という挑発的なタイトルが示す通り、人生の瀬戸際に立たされた登場人物たちが、運命の皮肉と向き合う姿を描くヒューマンドラマ。希望と絶望が交錯する中で、彼らは何を求め、どのような選択をするのか。観る者の胸に深く響く、予測不能な展開と感動の結末が待っています。",
       "runtime_minutes": 95,
       "views_this_week": 12800000,
       "weeks_in_top10": 2,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABURap7HZKpj0d_Rx-rJPwnFZHzWb7T35f3NZLkw0-6uJJwzBicu598g0HiSby444ybc4cEjA0vD-5zuJGxobHHqzoHXwPzKsDyumqM4XUDI.png?r=7e9",
-      "netflix_watch_url": "https://www.netflix.com/watch/81975622",
+      "netflix_watch_url": "https://www.netflix.com/watch/83035795",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 2,
       "title_en": "The Last House",
+      "jp_title": "ラスト・ハウス",
+      "year": 2019,
+      "genres": [
+        "ホラー",
+        "スリラー"
+      ],
+      "summary": "祖父の死後、若い女性が相続した古い家には、想像を絶する秘密と邪悪な過去が眠っていた。引っ越してきた彼女は、家の中で次々と奇妙な現象に遭遇し、やがて命を脅かす恐怖に巻き込まれていく。果たして彼女はこの呪われた家から逃れることができるのか、そして隠された真実とは一体何か。",
+      "runtime_minutes": 112,
+      "views_this_week": 12000000,
+      "weeks_in_top10": 3,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABenkxBnRw2LEy8eBb74C0cGzzwfggXAyo7JLluvfP6HghnZho7L7Sa9Vg7M_lntchGgnvGsGjqKg2HaE6wWLalnewcq7in4TGImfXs9iVPQ.png?r=867",
+      "netflix_watch_url": "https://www.netflix.com/watch/81278442",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 3,
+      "title_en": "Freefall: A Reckoning for Boeing",
       "jp_title": "鮮血の美学",
       "year": 2009,
       "genres": [
@@ -34,35 +56,32 @@
         "スリラー"
       ],
       "summary": "静かな湖畔の別荘で休暇を過ごす若いカップル。しかし、偶然出くわした脱獄犯グループによって、彼らの平和な日々は悪夢へと変わる。命からがらの状況で彼らがたどり着いた家は、なんとその犯罪者たちの隠れ家だった。愛する娘を奪われた両親は、この状況を打開するため、想像を絶する復讐計画を企てる。極限状態での人間の本性と、暴力の連鎖を描く、衝撃的なサイコスリラー。",
-      "runtime_minutes": 112,
-      "views_this_week": 12000000,
-      "weeks_in_top10": 3,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABenkxBnRw2LEy8eBb74C0cGzzwfggXAyo7JLluvfP6HghnZho7L7Sa9Vg7M_lntchGgnvGsGjqKg2HaE6wWLalnewcq7in4TGImfXs9iVPQ.png?r=867",
-      "netflix_watch_url": "https://www.netflix.com/watch/81914143",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 3,
-      "title_en": "Freefall: A Reckoning for Boeing",
-      "jp_title": "ボーイング 不時着の真実",
-      "year": 2024,
-      "genres": [
-        "ドキュメンタリー",
-        "調査報道"
-      ],
-      "summary": "航空史上最悪の事故の一つ、ボーイング737 MAXの連続墜落事故。なぜ二度も悲劇は繰り返されたのか。徹底的な調査報道と犠牲者家族の証言を通じて、企業の利益優先主義や隠蔽体質、そして航空機システムの安全性を巡る闇を浮き彫りにする。航空業界の裏側に迫り、真実と正義を求める衝撃のドキュメンタリー。",
       "runtime_minutes": 95,
       "views_this_week": 4700000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABTsRCaeFpuGM2UJR9ZpDLrAeJz87JJWy7M_kXqhj_-wcO8togzhPZF963judJlVsUST1aSL7IB8S_Nbh8liM7hDFP1r_e2wwpLsPS_A3i6s.png?r=98a",
-      "netflix_watch_url": "https://www.netflix.com/watch/81780118",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E9%AE%AE%E8%A1%80%E3%81%AE%E7%BE%8E%E5%AD%A6%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "netflix_watch_url": "https://www.netflix.com/watch/81914143",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 4,
       "title_en": "72 HOURS",
+      "jp_title": "ドント・セイ・グッド・ラック",
+      "year": null,
+      "genres": [],
+      "summary": "現在、ご指定の「Don't Say Good Luck」というタイトルと上映時間95分の組み合わせに該当する日本公開映画の公式情報を見つけることが困難です。そのため、映画の具体的なジャンルやあらすじに基づく紹介文を作成することができませんでした。",
+      "runtime_minutes": 105,
+      "views_this_week": 4000000,
+      "weeks_in_top10": 5,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABeRsOO58jAw1qF-0TK0eEtqoufb075gOXLrXVNcskF5E9r8l99rhzlFsRTZjbo_EHSXvQI504IQNx9gh6ltbfyUGC_qg78SFWx79yL4lYG4.png?r=a10",
+      "netflix_watch_url": "https://www.netflix.com/watch/81975622",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 5,
+      "title_en": "The Dating App Killer: The Monica White Story",
       "jp_title": "K-POP デーモンハンターズ",
       "year": 2024,
       "genres": [
@@ -71,29 +90,11 @@
         "ファンタジー"
       ],
       "summary": "世界を熱狂させるK-POPアイドルたちが、その華やかなステージの裏で、密かに悪魔と戦う使命を背負っていたとしたら？アクション、コメディ、ファンタジーが融合したこの作品は、音楽と超常現象が見事に交差する、全く新しいエンターテイメント体験をお届けします。彼らは歌とダンスで世界を救えるのか、その秘密の戦いにご期待ください。",
-      "runtime_minutes": 105,
-      "views_this_week": 4000000,
-      "weeks_in_top10": 5,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABeRsOO58jAw1qF-0TK0eEtqoufb075gOXLrXVNcskF5E9r8l99rhzlFsRTZjbo_EHSXvQI504IQNx9gh6ltbfyUGC_qg78SFWx79yL4lYG4.png?r=a10",
-      "netflix_watch_url": "https://www.netflix.com/watch/81498621",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 5,
-      "title_en": "The Dating App Killer: The Monica White Story",
-      "jp_title": "マッチングアプリ・キラー",
-      "year": 2023,
-      "genres": [
-        "犯罪",
-        "スリラー"
-      ],
-      "summary": "マッチングアプリを通じて新たな出会いを求める人々を狙う連続殺人鬼が引き起こす衝撃の事件を描く。幸せなはずの出会いが一転、命を脅かす恐怖へと変わる時、被害者たちはどう立ち向かうのか。実話を基にしたとされる物語が、現代社会に潜む危険と人間の心理の闇を浮き彫りにする、息をのむスリラー。",
       "runtime_minutes": 87,
       "views_this_week": 3400000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABY-cdibWIzLEVVZdagKZNHZJM6i9G3Vj51YFDsJb-QBIxF9cIFzbxeMFeJFf8D0VeBkW7ijrUDeRkgRgKBPKqbG0sjDgl0V5O-bPJva5Au8.png?r=bfd",
-      "netflix_watch_url": "",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3EK-POP%20%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%BA%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "netflix_watch_url": "https://www.netflix.com/watch/81498621",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -129,7 +130,7 @@
       "runtime_minutes": 88,
       "views_this_week": 3100000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABeVIZ06ovsxmfJlB0QO1IdusG1d4edUWyoPxk0x01KqWioj0IrNFFlA10Ewy8VA88pwZTueeGpj9QjhxXo99ww32Vk7YzdvI07lPhP0WMFg.png?r=161",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E5%BE%A9%E8%AE%90%E3%81%AE%E9%8A%83%E5%BC%BE%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -147,7 +148,7 @@
       "runtime_minutes": 87,
       "views_this_week": 3000000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABXzANaRdBqvEzaNzC9kk_-D5qlTlB0E73Og_q1Jh0ZYbzzyEHqnHg8NeL0UXUK1lST4LU9FD5AJu3HXvioRUht_cFyhxbKm54-ZXqTPupMM.png?r=1ee",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E6%B5%AE%E6%B0%97%E8%AA%BF%E6%9F%BB%E5%9B%A3%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -164,7 +165,7 @@
       "runtime_minutes": 102,
       "views_this_week": 2400000,
       "weeks_in_top10": 13,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaFPtBiQgLMjEuqJJ0JGQWxoTef4EhAh0Nje2JRGirHoi-XAgFvPUrQkSLg3weg4HIpn4qNhDmras6v5Ki5BmQ2szW-DJ_RbJ4i-nbIThmU.png?r=b20",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%82%B9%E3%83%AF%E3%83%83%E3%83%97%E3%83%89%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -183,7 +184,7 @@
       "runtime_minutes": 115,
       "views_this_week": 2300000,
       "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSc4iKXHQVEF0cBCXF4p5IpE-l27o23lASc2Kaj0KCWJgwFD-iIj2GLHPBFk7XHaONPCYaq60KWpdFO4t3Obph6Fv60mtRAKcXB2X9dxNG4.png?r=662",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AA%E3%83%BC%E3%81%A8%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%83%BC%E3%83%88%E5%B7%A5%E5%A0%B4%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -193,18 +194,18 @@
     {
       "rank": 1,
       "title_en": "Sai: Disaster",
-      "jp_title": "鮮血の美学",
-      "year": 2009,
+      "jp_title": "ドント・セイ・グッドラック",
+      "year": null,
       "genres": [
-        "ホラー",
+        "ドラマ",
         "スリラー"
       ],
-      "summary": "静かな湖畔の別荘で休暇を過ごす若いカップル。しかし、偶然出くわした脱獄犯グループによって、彼らの平和な日々は悪夢へと変わる。命からがらの状況で彼らがたどり着いた家は、なんとその犯罪者たちの隠れ家だった。愛する娘を奪われた両親は、この状況を打開するため、想像を絶する復讐計画を企てる。極限状態での人間の本性と、暴力の連鎖を描く、衝撃的なサイコスリラー。",
+      "summary": "「幸運を祈るな」という挑発的なタイトルが示す通り、人生の瀬戸際に立たされた登場人物たちが、運命の皮肉と向き合う姿を描くヒューマンドラマ。希望と絶望が交錯する中で、彼らは何を求め、どのような選択をするのか。観る者の胸に深く響く、予測不能な展開と感動の結末が待っています。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABfKw9ycTwaUi9kAUMp1cEQHqUdi4bOUt4Q5tcVgfv1E1sxxYdEZ1znE9pccBd4fza6JzoTTRYrGRquJaTtUVehcVLEbKuc6DL-OUisi_Vq0.png?r=f9f",
-      "netflix_watch_url": "https://www.netflix.com/watch/81914143",
+      "netflix_watch_url": "https://www.netflix.com/watch/83035795",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -222,7 +223,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZj0WEWXSwLGnddhwk3vpcS3dGzjneR5gN8P0FehOj_369lqd98I6ObYzwfArK6IQLoeHXu9CcS3mq_1VJMWRS-QyXwTj7zUYQfG5qSeSok.png?r=526",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%83%9A%E3%82%BF%E3%83%AB%E3%82%BA%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%89%E3%83%BB%E3%83%A1%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%83%A2%E3%83%AA%E3%83%BC%E3%82%BA%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "https://www.netflix.com/watch/82048151",
       "available_in_japan": true,
       "filmarks_id": null
@@ -230,38 +231,36 @@
     {
       "rank": 3,
       "title_en": "The Last House",
-      "jp_title": "鮮血の美学",
-      "year": 1972,
+      "jp_title": "ラスト・ハウス",
+      "year": 2019,
       "genres": [
         "ホラー",
-        "スリラー",
-        "復讐劇"
+        "スリラー"
       ],
-      "summary": "平和な休暇を過ごすはずだった二人の少女が、凶悪な犯罪者グループに惨たらしく蹂躙される。逃亡した犯人たちが、偶然にも被害者の一人の家に救いを求めて現れた時、愛する娘への復讐を決意した両親は、常軌を逸した行動に出る。ホラー映画界の巨匠ウェス・クレイブンが放つ、暴力の連鎖と人間の狂気を描いた衝撃作。",
+      "summary": "祖父の死後、若い女性が相続した古い家には、想像を絶する秘密と邪悪な過去が眠っていた。引っ越してきた彼女は、家の中で次々と奇妙な現象に遭遇し、やがて命を脅かす恐怖に巻き込まれていく。果たして彼女はこの呪われた家から逃れることができるのか、そして隠された真実とは一体何か。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 3,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABenkxBnRw2LEy8eBb74C0cGzzwfggXAyo7JLluvfP6HghnZho7L7Sa9Vg7M_lntchGgnvGsGjqKg2HaE6wWLalnewcq7in4TGImfXs9iVPQ.png?r=867",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E9%AE%AE%E8%A1%80%E3%81%AE%E7%BE%8E%E5%AD%A6",
+      "netflix_watch_url": "https://www.netflix.com/watch/81278442",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 4,
       "title_en": "Anpanman: Chapon's Hero!",
-      "jp_title": "それいけ！アンパンマン ばいきんまんとえほんのくに",
-      "year": 2024,
+      "jp_title": "鮮血の美学",
+      "year": 2009,
       "genres": [
-        "アニメ",
-        "ファミリー",
-        "ファンタジー"
+        "ホラー",
+        "スリラー"
       ],
-      "summary": "アンパンマンたちが、絵本の世界で大冒険を繰り広げる劇場版最新作。絵本から飛び出した悪役とばいきんまんが手を組み、アンパンマンワールドを巻き込む大事件が発生！アンパンマンたちは、絵本のキャラクターたちと力を合わせ、世界の平和を取り戻せるのか？ハラハラドキドキの冒険と友情の物語が、色鮮やかなアニメーションで描かれる、親子で楽しめる作品です。",
+      "summary": "静かな湖畔の別荘で休暇を過ごす若いカップル。しかし、偶然出くわした脱獄犯グループによって、彼らの平和な日々は悪夢へと変わる。命からがらの状況で彼らがたどり着いた家は、なんとその犯罪者たちの隠れ家だった。愛する娘を奪われた両親は、この状況を打開するため、想像を絶する復讐計画を企てる。極限状態での人間の本性と、暴力の連鎖を描く、衝撃的なサイコスリラー。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABWXwo-SnLwS0cEwLvSrYAfgKbG2UGDBH5zcsGFuswQ4Nc20YA8Nj0RS44qeeG1pZP1zVYlAaIh-loZXQq7BMA5v2DlMEzsulAuMmTWEKNM8.png?r=a0d",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%81%9D%E3%82%8C%E3%81%84%E3%81%91%EF%BC%81%E3%82%A2%E3%83%B3%E3%83%91%E3%83%B3%E3%83%9E%E3%83%B3%20%E3%81%B0%E3%81%84%E3%81%8D%E3%82%93%E3%81%BE%E3%82%93%E3%81%A8%E3%81%88%E3%81%BB%E3%82%93%E3%81%AE%E3%81%8F%E3%81%AB",
+      "netflix_watch_url": "https://www.netflix.com/watch/81914143",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -316,7 +315,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 3,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABUmzuL8_QU6G7_v7qPb2R1LLlrOvjwisRMoHn_JmejO7b7XAKgC2AFxn8E0eQpWkX--lcGj72YENij3z60iVp0ngRL5f946AAXblK6cEy1k.png?r=94c",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%83%9E%E3%83%AA%E3%82%A2%E6%A7%98%E3%81%8C%E3%81%BF%E3%81%A6%E3%82%8B%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%9E%E3%83%AA%E3%82%A2%E6%A7%98%E3%81%8C%E3%81%BF%E3%81%A6%E3%82%8B",
       "available_in_japan": true,
       "filmarks_id": null
@@ -334,7 +333,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 20,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZTiOVe7r1GEVxOukAGVy9KPCikmS2SorsiUTkEl71G4RlEwTU2TlOjK2cFwg8XoZBAYo8AOZFNz0jA585WeMCbjxeTWbvjJsojSYup7GpI.png?r=0a8",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%82%B9%E3%82%BA%E3%82%AD%EF%BC%9D%E3%83%90%E3%82%AF%E3%83%80%E3%83%B3%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%B9%E3%82%BA%E3%82%AD%EF%BC%9D%E3%83%90%E3%82%AF%E3%83%80%E3%83%B3",
       "available_in_japan": true,
       "filmarks_id": null
@@ -352,7 +351,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABeVIZ06ovsxmfJlB0QO1IdusG1d4edUWyoPxk0x01KqWioj0IrNFFlA10Ewy8VA88pwZTueeGpj9QjhxXo99ww32Vk7YzdvI07lPhP0WMFg.png?r=161",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E5%BE%A9%E8%AE%90%E3%81%AE%E9%8A%83%E5%BC%BE%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "https://www.netflix.com/search?q=%E5%BE%A9%E8%AE%90%E3%81%AE%E9%8A%83%E5%BC%BE",
       "available_in_japan": true,
       "filmarks_id": null
