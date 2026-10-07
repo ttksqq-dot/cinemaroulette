@@ -1,10 +1,12 @@
 {
-  "updated_at": "2026-09-30T15:14:30+09:00",
+  "updated_at": "2026-10-07T15:46:03+09:00",
   "week_label": [
     "https://www.netflix.com/watch/82010386",
-    "https://www.netflix.com/watch/81776971",
+    "https://www.netflix.com/watch/81673050",
+    "https://www.netflix.com/watch/82023496",
+    "https://www.netflix.com/watch/82713538",
     "https://www.netflix.com/watch/81278442",
-    "https://www.netflix.com/watch/82130500",
+    "https://www.netflix.com/watch/70144645",
     "https://www.netflix.com/watch/81498621"
   ],
   "source": "Netflix Tudum",
@@ -22,8 +24,8 @@
       ],
       "summary": "大学教授としての輝かしい経歴を捨て、モンタナの森に隠棲した男、テッド・カジンスキー。彼が社会に向けて送り続けた爆弾と、執拗な捜査の果てに明かされる衝撃の真実を描く。アメリカを震撼させた連続爆弾魔「ユナボマー」の正体とその内面に迫る、実話に基づいたサスペンスドラマ。彼の動機とは何だったのか？",
       "runtime_minutes": 100,
-      "views_this_week": 16400000,
-      "weeks_in_top10": 1,
+      "views_this_week": 24900000,
+      "weeks_in_top10": 2,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVarJDrzS43TVAJGCbVvjbrCUfKm1irPWaOO3veM0k4cxAyyvRvJAr3DwKL1KV4IyA5lISY0nKw1LKmLB0hScya1EycTHN83XNOZ8kJ__V4.png?r=c2d",
       "netflix_watch_url": "https://www.netflix.com/watch/82010386",
       "available_in_japan": false,
@@ -31,25 +33,61 @@
     },
     {
       "rank": 2,
-      "title_en": "Best of the Best",
-      "jp_title": "ライオット・シティ",
-      "year": 2015,
+      "title_en": "The Widower: 'Til Death Do Us Part",
+      "jp_title": "ウィドウズ・ヴェンジェンス",
+      "year": 2022,
       "genres": [
-        "アクション",
-        "スリラー"
+        "スリラー",
+        "サスペンス"
       ],
-      "summary": "元警察官の主人公が、妻を殺した犯人への復讐を果たすため、自ら刑務所に収監される。しかし、そこはドルフ・ラングレン演じる凶悪なギャングのボスが支配する無法地帯だった。脱走計画に巻き込まれながらも、真犯人を見つけ出すために命を懸けて戦う、骨太な監獄アクションスリラー。",
-      "runtime_minutes": 112,
-      "views_this_week": 7300000,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABcR2NA732Ku5wPcJO2HqdssFMAmwlHtLr8IHETswNaUuN2jHW_62NbG7J3P42rla9cD3p8ItJVzLuBO47eGEo-sE-45evvtDA862YFToasM.png?r=0d2",
-      "netflix_watch_url": "https://www.netflix.com/watch/81776971",
+      "summary": "愛する夫を突然の事故で亡くしたローリー。悲しみに暮れる彼女のもとに、夫の親友を名乗る謎の男が現れる。男はローリーの財産を狙い、亡き夫との間に子供がいるとまで主張し始める。果たして彼の真の目的とは？亡き夫の影に隠された秘密が、ローリーを危険な陰謀へと引きずり込むスリラー。",
+      "runtime_minutes": 92,
+      "views_this_week": 11600000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABX7pOVPllxSIxtEYKxFmzb-OA7hBC4RnJ7OIgQOlY9ZzDWnBSg7qIHiVk3yshl-cdgTzbdCz2VguX0GGid5roeAmAWVr1vxT8kYnEyNToQ0.png?r=9ac",
+      "netflix_watch_url": "https://www.netflix.com/watch/81673050",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 3,
-      "title_en": "A Minecraft Movie",
+      "title_en": "Doing Life",
+      "jp_title": "ドゥーイング・ライフ",
+      "year": 2009,
+      "genres": [
+        "ドキュメンタリー"
+      ],
+      "summary": "長年の刑務所暮らしを経て、仮釈放された元受刑者の壮絶な人生を追うドキュメンタリー。社会復帰の困難さ、家族との絆、そして過去の罪と向き合う苦悩を、リアルな映像で描き出します。塀の中で過ごした時間と、自由を手にした後の厳しい現実を通して、司法制度や人間の本質について深く問いかける作品です。",
+      "runtime_minutes": 108,
+      "views_this_week": 9300000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRu5F0JbQl_7_l_TGevzm6-eyvjeQbUknkPetdElHJdg5UEYKrP7Z_DVlzz42-_VjIgOXuapQP9Qx-vZOWjFg-Rlp5oY_6_rEAm5AU4kl2o.png?r=fc2",
+      "netflix_watch_url": "https://www.netflix.com/watch/82023496",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 4,
+      "title_en": "The Breadwinner",
+      "jp_title": "生きのびるために",
+      "year": 2018,
+      "genres": [
+        "アニメーション",
+        "ドラマ",
+        "戦争"
+      ],
+      "summary": "タリバン支配下のアフガニスタン、カブール。父親が不当に投獄され、食べるものにも困窮した一家を救うため、11歳の少女パヴァーナは髪を切り、男装して外の世界へ出ることを決意する。厳しい現実と向き合いながら、家族への深い愛と強い意志で困難を乗り越えようとする彼女の姿を描く、感動的なアニメーション。",
+      "runtime_minutes": 99,
+      "views_this_week": 5300000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABeKYJfrdg76U_s7POw3F53tZ1Bc066ou_poXos3kpLNZySG02yshRYm0hjo0BuR-Thq1IETH3UrovDzIcqZh6Hl2WageQ1rgTwpl9HKu_uw.png?r=0f7",
+      "netflix_watch_url": "https://www.netflix.com/watch/82713538",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 5,
+      "title_en": "The Equalizer 3",
       "jp_title": "ラスト・ハウス",
       "year": 2019,
       "genres": [
@@ -57,34 +95,35 @@
         "スリラー"
       ],
       "summary": "祖父の死後、若い女性が相続した古い家には、想像を絶する秘密と邪悪な過去が眠っていた。引っ越してきた彼女は、家の中で次々と奇妙な現象に遭遇し、やがて命を脅かす恐怖に巻き込まれていく。果たして彼女はこの呪われた家から逃れることができるのか、そして隠された真実とは一体何か。",
-      "runtime_minutes": 101,
-      "views_this_week": 7000000,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRmSW77FUfuasFu2YEYwnUq5UK_glPiPiGIkgSgchbxPMcL-SqOqC5eSMnBcmDHVXQ86m-m7c9fFQgUNuKYsoATRh2rfoFlx9JeXS-9x2GI.png?r=3ad",
+      "runtime_minutes": 109,
+      "views_this_week": 5000000,
+      "weeks_in_top10": 5,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABf6awRGnRRfZIKz9Du20pWrz0jXdCx8w_8Nwgtj8qQSvoxg0lxQqcxvic677NfK_5_YIQDIyOxjVmbW_nAofUt0C3v_cnstXgrZ1DpOFIFc.png?r=144",
       "netflix_watch_url": "https://www.netflix.com/watch/81278442",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 4,
-      "title_en": "Riot",
-      "jp_title": "Why Did I Get Married Too?",
-      "year": 2010,
+      "rank": 6,
+      "title_en": "The Mummy",
+      "jp_title": "ハムナプトラ/失われた砂漠の都",
+      "year": 1999,
       "genres": [
-        "コメディ",
-        "ドラマ"
+        "アクション",
+        "アドベンチャー",
+        "ファンタジー"
       ],
-      "summary": "結婚生活の悩みを抱える友人夫婦たちが、毎年恒例のバケーションで再会。美しいバハマの地で、彼らはお互いの結婚生活を振り返り、それぞれの関係性や秘めた問題が浮き彫りになっていく。愛、信頼、そして裏切りが交錯する中で、彼らは再び本当の幸せを見つけられるのか？結婚の真実を描く、心揺さぶるドラマ。",
-      "runtime_minutes": 87,
-      "views_this_week": 4400000,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSoNgZjjScJcTH8_6zREq2_JsjIr-SVE0MUVYDTMzvt8YoSOKQ5Dnz4fRaSmLQL5IB5yaW2qUDP8eike-lOJnPRpR805RDlx3fBSuAtS8F0.png?r=49f",
-      "netflix_watch_url": "https://www.netflix.com/watch/82130500",
+      "summary": "古代エジプトの秘宝を求め、冒険家と考古学者が砂漠の奥深くへ足を踏み入れる。そこで彼らは、3000年の時を超え封印から解き放たれた邪悪なミイラの呪いと対峙することになる。息をのむアクションと壮大なスケールで描かれる、究極のスペクタクル・アドベンチャー。",
+      "runtime_minutes": 125,
+      "views_this_week": 3100000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZYbI1yQBzXh_KlDsQeM0-cilPDyIvNHObVvJgw6IguE9yFHj55Kkh2Q7kIxrDnU3OvaPRHpSALSj_sGg8z-7CU58Z7chLg8tq_FuS3-fdE.png?r=a29",
+      "netflix_watch_url": "https://www.netflix.com/watch/70144645",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 5,
+      "rank": 7,
       "title_en": "The Whisper Man",
       "jp_title": "K-POP デーモンハンターズ",
       "year": 2024,
@@ -95,71 +134,51 @@
       ],
       "summary": "世界を熱狂させるK-POPアイドルたちが、その華やかなステージの裏で、密かに悪魔と戦う使命を背負っていたとしたら？アクション、コメディ、ファンタジーが融合したこの作品は、音楽と超常現象が見事に交差する、全く新しいエンターテイメント体験をお届けします。彼らは歌とダンスで世界を救えるのか、その秘密の戦いにご期待ください。",
       "runtime_minutes": 114,
-      "views_this_week": 4000000,
-      "weeks_in_top10": 5,
+      "views_this_week": 2700000,
+      "weeks_in_top10": 6,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZBegDAt5m9H4cxj9wRl7UKVq_-yAt_TdAtF3EcODep6m69jHcuitiOB5NHvL4Q_Q6UzepszMpgRfmjl1TocMMBQi6DcJT_pFN3wX0TXGXw.png?r=263",
       "netflix_watch_url": "https://www.netflix.com/watch/81498621",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 6,
-      "title_en": "Black Adam",
-      "jp_title": "ブラックアダム",
-      "year": 2022,
-      "genres": [
-        "アクション",
-        "SF",
-        "ファンタジー"
-      ],
-      "summary": "ドウェイン・ジョンソン主演で贈るDCユニバースの新たな物語。5000年の封印から解放された破壊神ブラックアダムは、圧倒的な力で世界に君臨する。彼を止めようとするジャスティス・ソサエティとの激しい衝突の中で、善悪の境界線が曖昧になる彼の正義が問われる。そのパワーと存在が世界をどう変えるのか、壮大なスケールで描かれるアンチヒーローアクション。",
-      "runtime_minutes": 125,
-      "views_this_week": 3500000,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABU0E6H0w4zLfK6v-qLlO74e4jjll-lEoQ9wEVqPHanO27IKdu4H5_piIbycKLNR-aobhH2hHm48VrqUQI0hG2Y2Arw0DHkp3JaMqUcJqkq4.png?r=2cb",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 7,
-      "title_en": "The Ministry of Ungentlemanly Warfare",
-      "jp_title": "コンカレント・エネミー",
-      "year": 2024,
-      "genres": [
-        "アクション",
-        "コメディ",
-        "戦争"
-      ],
-      "summary": "第二次世界大戦中の極秘作戦を描いた、実話に基づく痛快アクション・コメディ。ウィンストン・チャーチル直属の特殊部隊が、常識破りの戦略とユーモアを武器に、ナチス・ドイツの裏をかく危険な任務に挑む。予測不能な展開とスタイリッシュな映像で魅せる、ガイ・リッチー監督ならではのエンターテイメント超大作です。",
-      "runtime_minutes": 120,
-      "views_this_week": 3400000,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABcG04rdpfLm8Af4K2j5iLbLS4KSoaCLbIaB-dUkuRjL0gCagc1F6udUddlFGIV6lM3Z-AWPv31o2zqTjEBPZZzuwWu5quFBSKJTLcEBic_A.png?r=3dc",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
       "rank": 8,
-      "title_en": "Why Did I Get Married Again?",
-      "jp_title": "タイラー・ペリーのマデアの家族再結集",
-      "year": 2010,
+      "title_en": "What's Your Number?",
+      "jp_title": "運命の元カレ",
+      "year": 2011,
       "genres": [
-        "コメディ",
         "ドラマ"
       ],
-      "summary": "「愛とは何か？」という普遍的な問いに悩む4組の夫婦が、美しいバハマの豪華リゾートで再集結します。旧友たちとの再会は、それぞれの結婚生活に潜む問題や心の葛藤を浮き彫りにし、思いがけない展開へと導いていくことに。ユーモアと感動を交えながら、夫婦の関係性や人生における真の幸福を問いかける、心温まるドラマです。",
-      "runtime_minutes": 111,
-      "views_this_week": 3100000,
-      "weeks_in_top10": 3,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABeJjDogbJk_FtTOBgoUxjP-ZLibR7XUiQG6tw_jZVol3p1yUZTnf2q_tw4VZptlkJQIV2FAqNNzUdLU2mJNUTY3SDD3u8SBflb5AJhaFew0.png?r=108",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
+      "summary": "過去の恋人たちが20人を超えると一生独身というジンクスに悩むアリー。ある日、占いで運命の相手が元カレの中にいると告げられた彼女は、真実の愛を探して過去の恋人たちと再会していくことを決意します。そんなアリーに、隣人のチャーリーがなぜか協力することになり、奇妙でコミカルな元カレ探しが幕を開けます。",
+      "runtime_minutes": 106,
+      "views_this_week": 2600000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/oplfen5x0fq4w4yrf7wpoacuc7gf/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/70144645",
+      "available_in_japan": true,
+      "filmarks_id": "51370"
     },
     {
       "rank": 9,
+      "title_en": "A Minecraft Movie",
+      "jp_title": "ア・マインクラフト・ムービー",
+      "year": 2025,
+      "genres": [
+        "アドベンチャー",
+        "コメディ",
+        "ファンタジー"
+      ],
+      "summary": "世界中で絶大な人気を誇るサンドボックスゲーム『マインクラフト』が、待望の実写映画化！広大なブロックの世界で、想像力を掻き立てる壮大な冒険が繰り広げられます。邪悪なエンダードラゴンから世界を守るため、個性豊かなキャラクターたちが力を合わせ、困難に立ち向かう物語。ゲームの世界観を忠実に再現しつつ、新たな驚きと感動を届けるファンタジーアドベンチャーに、ゲームファンはもちろん、誰もが夢中になること間違いなし！",
+      "runtime_minutes": 101,
+      "views_this_week": 2500000,
+      "weeks_in_top10": 3,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRmSW77FUfuasFu2YEYwnUq5UK_glPiPiGIkgSgchbxPMcL-SqOqC5eSMnBcmDHVXQ86m-m7c9fFQgUNuKYsoATRh2rfoFlx9JeXS-9x2GI.png?r=3ad",
+      "netflix_watch_url": "",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 10,
       "title_en": "KPop Demon Hunters",
       "jp_title": "Kポップ・デーモンハンターズ",
       "year": null,
@@ -170,27 +189,9 @@
       ],
       "summary": "人気絶頂のK-POPアイドルグループが、実は夜な夜な悪魔と戦う「デーモンハンター」だった！ 華やかなパフォーマンスの裏で、彼らは歌とダンスで鍛え上げた身体能力を駆使し、秘密の武器と共に悪魔を狩る。アイドルとしての輝きと、世界の命運をかけた戦いの間で揺れ動く彼らの、スタイリッシュでコミカルな活躍が描かれる、新感覚のアクションアドベンチャー。",
       "runtime_minutes": 100,
-      "views_this_week": 2500000,
-      "weeks_in_top10": 66,
+      "views_this_week": 2400000,
+      "weeks_in_top10": 67,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZWSzsAkjgBk9AaFX808aLhPEYmACvc9wolKMtxdad5NB39oDTNbkMmC_aoLEGN0zIFTtlPkr0dVgpJUU22VoG72CK0F8y8F2anweqRDN8k.png?r=77d",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 10,
-      "title_en": "Top Gun: Maverick",
-      "jp_title": "トップガン マーヴェリック",
-      "year": 2022,
-      "genres": [
-        "アクション",
-        "ドラマ"
-      ],
-      "summary": "伝説のパイロット、マーヴェリックが、輝かしいキャリアを持つエリートパイロットたちを指導するためトップガンに帰還。危険すぎる極秘ミッションに挑む若きトップガンたちの育成を任された彼は、過去の因縁と向き合いながら、決死のミッションへ挑む彼らの運命を描く。ド迫力のスカイアクションと感動の人間ドラマが融合した、新たな傑作。",
-      "runtime_minutes": 130,
-      "views_this_week": 2500000,
-      "weeks_in_top10": 3,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABYulEv5DvL9jjMkIwMcujKalsSVg-h8D6FeCJLfbU1jYWMSwsDrnV_rPRpnRTNHOwUOmypwDGoTgOCN_1oV4DwGFOU9nAA98NYc5m5M-G2o.png?r=012",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -200,24 +201,79 @@
     {
       "rank": 1,
       "title_en": "Detective Conan the Counterfeit Case of Ultra 30",
-      "jp_title": "名探偵コナン ザ・カウンターフェイト・ケース・オブ・ウルトラ30",
-      "year": null,
+      "jp_title": "テッド・カジンスキー/星に囚われた男",
+      "year": 1996,
       "genres": [
-        "アニメ",
-        "ミステリー",
-        "サスペンス"
+        "伝記",
+        "犯罪",
+        "ドラマ"
       ],
-      "summary": "「Ultra 30」という謎のキーワードを巡り、大規模な偽造事件が発生。その陰には、世界を揺るがす恐るべき陰謀が隠されていた。コナンと少年探偵団は、巧妙に仕組まれた罠をかいくぐり、事件の真相と黒幕に迫ることができるのか？息をのむノンストップミステリーが幕を開ける。",
+      "summary": "大学教授としての輝かしい経歴を捨て、モンタナの森に隠棲した男、テッド・カジンスキー。彼が社会に向けて送り続けた爆弾と、執拗な捜査の果てに明かされる衝撃の真実を描く。アメリカを震撼させた連続爆弾魔「ユナボマー」の正体とその内面に迫る、実話に基づいたサスペンスドラマ。彼の動機とは何だったのか？",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 1,
+      "weeks_in_top10": 2,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABTGF6l3mkm1Wv1n-IhOblYUlLIezl3pQ1vuq1a53ru2rXdls-vFFg7JEnZ3nq6j1x1c_3N-i4yi2toGtrfwMmrLDD4LOWFxtTdWciZcOJhY.png?r=aae",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%20%E3%82%B6%E3%83%BB%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%83%88%E3%83%BB%E3%82%B1%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A930",
+      "netflix_watch_url": "https://www.netflix.com/watch/82010386",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 2,
+      "title_en": "Under the Open Sky",
+      "jp_title": "すばらしき世界",
+      "year": 2021,
+      "genres": [
+        "ドラマ"
+      ],
+      "summary": "殺人の罪で13年の刑期を終え出所した元ヤクザの男が、変化した社会の中で懸命に生きる姿を描く人間ドラマ。人生のほとんどを刑務所で過ごした男が、慣れない社会と向き合いながら、第二の人生を模索する中で、テレビ番組の制作陣と出会います。社会の不寛容さ、そして人間の尊厳を深く問いかける、役所広司主演の感動作です。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 2,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/vex4m5bnnv1vl6ridajytqb9m5qq/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81620219",
+      "available_in_japan": true,
+      "filmarks_id": "87364"
+    },
+    {
+      "rank": 3,
+      "title_en": "Angry Squad: Civil Servants & Seven Swindlers",
+      "jp_title": "アングリー・スクワッド ～公務員と七人の詐欺師～",
+      "year": 2024,
+      "genres": [
+        "アクション",
+        "コメディ",
+        "犯罪"
+      ],
+      "summary": "不正が蔓延するタイ社会で、裏社会の詐欺師集団と真面目な公務員がまさかのタッグを組む。彼らの標的は、腐敗した権力者たち。それぞれの思惑が交錯する中、悪を裁くため、型破りな計画が実行される痛快クライムコメディ。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABe2jxAAloxyALun4RqUbmC-1RpPODAN5Nt55PjUglRkW0yitqGtEB2dJRu3AHCdQYYEidwe25vYN3xMbYaTBMdWtHINJyy9EJMhNwGEpwOY.png?r=3b5",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%A2%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%B9%E3%82%AF%E3%83%AF%E3%83%83%E3%83%89%20%EF%BD%9E%E5%85%AC%E5%8B%99%E5%93%A1%E3%81%A8%E4%B8%83%E4%BA%BA%E3%81%AE%E8%A9%90%E6%AC%BA%E5%B8%AB%EF%BD%9E",
+      "available_in_japan": true,
+      "filmarks_id": null
+    },
+    {
+      "rank": 4,
+      "title_en": "UNABOMBER",
+      "jp_title": "ユナボマー：真実の物語",
+      "year": 1996,
+      "genres": [
+        "伝記",
+        "犯罪",
+        "ドラマ"
+      ],
+      "summary": "数学の天才が、大学や航空会社に爆発物を送りつけ、全米を震撼させた連続爆弾事件「ユナボマー事件」。FBIが総力を挙げて追い続けるも、痕跡を残さない犯人に苦戦を強いられる。天才的な頭脳を持つ犯人と、彼を追う捜査官たちの息詰まる攻防を描いた実録サスペンスです。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVarJDrzS43TVAJGCbVvjbrCUfKm1irPWaOO3veM0k4cxAyyvRvJAr3DwKL1KV4IyA5lISY0nKw1LKmLB0hScya1EycTHN83XNOZ8kJ__V4.png?r=c2d",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%A6%E3%83%8A%E3%83%9C%E3%83%9E%E3%83%BC%EF%BC%9A%E7%9C%9F%E5%AE%9F%E3%81%AE%E7%89%A9%E8%AA%9E",
+      "available_in_japan": true,
+      "filmarks_id": null
+    },
+    {
+      "rank": 5,
       "title_en": "Stella Next to Me",
       "jp_title": "獣たち",
       "year": 2019,
@@ -229,149 +285,104 @@
       "summary": "フランスの雪深い山間部で起きた女性失踪事件。やがて、その謎が全く異なる人物たちの視点から語られ始め、それぞれの人生が複雑に絡み合っていく。南仏の海岸、アビジャン、そしてパリへと舞台を変えながら、人間の多面性と裏の顔を暴き出す、衝撃的な心理スリラーです。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 1,
+      "weeks_in_top10": 2,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABdyPg-iTEwP_s5fwDUOcPsKrt0emx0EIxZToEJvM6fzhBdtkb3jJMDMPYSEPl4abvPJcEUS_ECjiCxp9iCwi0riBiF4mBlfu90LDhhtDeQA.png?r=722",
       "netflix_watch_url": "https://www.netflix.com/search?q=%E7%8D%A3%E3%81%9F%E3%81%A1",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
-      "rank": 3,
-      "title_en": "Under the Open Sky",
-      "jp_title": "すばらしき世界",
-      "year": 2021,
+      "rank": 6,
+      "title_en": "Iron Man",
+      "jp_title": "アイアンマン",
+      "year": 2008,
       "genres": [
-        "ドラマ"
-      ],
-      "summary": "長年の刑期を終え、出所した元殺人犯の男が、変化した社会と人々の視線に戸惑いながらも、真っ当な生活を送ろうと奮闘するヒューマンドラマ。出所者の厳しい現実と、彼を支えようとする温かい人々との交流が、観る者の心を揺さぶります。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/vex4m5bnnv1vl6ridajytqb9m5qq/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/81620219",
-      "available_in_japan": true,
-      "filmarks_id": "87364"
-    },
-    {
-      "rank": 4,
-      "title_en": "Golden Kamuy -The Abashiri Prison Raid-",
-      "jp_title": "ゴールデンカムイ",
-      "year": 2024,
-      "genres": [
+        "SF",
+        "アクション",
         "アドベンチャー・冒険"
       ],
-      "summary": "明治末期の北海道を舞台に、莫大な埋蔵金を探す不死身の元兵士・杉元佐一とアイヌの少女アシㇼパが繰り広げる、金塊争奪バトルエンターテインメント。一癖も二癖もあるキャラクターたちが織りなす、歴史、文化、グルメ要素も満載の壮大な冒険活劇は、見る者を虜にするだろう。",
+      "summary": "巨大軍事企業の社長であり天才発明家であるトニー・スタークは、新型兵器の実験中にテロ組織に捕らえられてしまう。脱出のため、彼は自作のパワードスーツを開発。奇跡的に生還したトニーは、自らの兵器が世界に与える影響を知り、そのスーツを改良してヒーロー『アイアンマン』として悪と戦うことを決意する。マーベル・シネマティック・ユニバースの記念すべき第1作であり、その後の壮大な物語の幕開けとなる、爽快なアクション超大作。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 3,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/75fv4g7s1lxwx2hivrgsw7lmuen2/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/81726698",
+      "weeks_in_top10": 2,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/lq7rqzx2zik5poqdu8m2do0z8i44/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/70080038",
       "available_in_japan": true,
-      "filmarks_id": "102817"
-    },
-    {
-      "rank": 5,
-      "title_en": "Anora",
-      "jp_title": "アノーラ",
-      "year": 2025,
-      "genres": [
-        "コメディ",
-        "スリラー",
-        "ドラマ"
-      ],
-      "summary": "ニューヨークのストリップクラブで働くアノーラは、ロシアの大富豪の御曹司イワンと出会い、電撃的に結婚。夢のような日々を送っていた。しかし、この結婚を認めないイワンの親族がロシアから現れ、事態は思わぬ方向へと転がり始める。果たしてアノーラの“おとぎ話”の結末は？ コメディとスリルが交錯する予測不能な展開に目が離せない。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABTfIjL88mCxcg4b4S9dW_hDNxNIW-pRNXKm3R9n-Stzy5yc5s0c003ewDWxowWPZYzNaxQWiUoJ3RzJfRq8cDBTE3hfRCofoYzTVFsdlIH8.png?r=f71",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%A2%E3%83%8E%E3%83%BC%E3%83%A9",
-      "available_in_japan": true,
-      "filmarks_id": null
-    },
-    {
-      "rank": 6,
-      "title_en": "Muroi Shinji: Stay Alive",
-      "jp_title": "容疑者 室井慎次",
-      "year": 2005,
-      "genres": [
-        "ドラマ",
-        "アクション",
-        "サスペンス"
-      ],
-      "summary": "大ヒットシリーズ『踊る大捜査線』に登場するカリスマ的なキャラクター、室井慎次を主人公にしたスピンオフ作品。警察庁長官狙撃事件の容疑者として逮捕された室井が、自らの正義を信じ、組織の深い闇と戦う姿を描いています。権力と正義の狭間で葛藤する男の人間ドラマは、スリリングな展開と共に観る者の心を揺さぶります。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 4,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/t8b21ydtuz2iqe87orzv4apms49m/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/80065838",
-      "available_in_japan": true,
-      "filmarks_id": "23697"
+      "filmarks_id": "24598"
     },
     {
       "rank": 7,
-      "title_en": "Muroi Shinji: Not Defeated",
-      "jp_title": "Muroi Shinji: Not Defeated",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "title_en": "366 Days",
+      "jp_title": "愛は、もうすぐ365日",
+      "year": 2022,
+      "genres": [
+        "ロマンス",
+        "ドラマ"
+      ],
+      "summary": "マッシモとローラ、互いの人生を激しく求め合う二人の関係は、再び試練の時を迎える。シチリアのマフィアボスである夫マッシモの危険な世界と、自分自身の自由の間で揺れ動くラウラ。激しい欲望と裏切りが交錯する中で、彼らの愛は果たしてどこへ向かうのか。Netflixで世界的に話題を呼んだシリーズの最終章となる官能ロマンスドラマです。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 7,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABfO7Hh7deF2D8sLNw6O9KmaEziZyiN4TTMzSGhN9qZfY0l6h-ONcLAOVFTILK3sv85cN1Izuh1Tt8xNaAz1a0o4HRP2Pgfe6eu7RXa0Q0a0.png?r=0a8",
-      "netflix_watch_url": "https://www.netflix.com/search?q=Muroi%20Shinji%3A%20Not%20Defeated",
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABW-o5mll9TMfsKxcQPVeBfIoXdMxIzvkkfX86DPhsD6pZ46Jt3BBy_vWihwmNA1M1GxcZH3h3q5jXDKdD6Wb5lmWnowjO1LK1JjkOomEsMA.png?r=419",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E6%84%9B%E3%81%AF%E3%80%81%E3%82%82%E3%81%86%E3%81%99%E3%81%90365%E6%97%A5",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 8,
-      "title_en": "Bayside Shakedown 4: The Final",
-      "jp_title": "踊る大捜査線 THE FINAL 新たなる希望",
-      "year": 2012,
+      "title_en": "Mononoke The Movie: Chapter Ⅲ - The Curse of the Serpent",
+      "jp_title": "モノノケ ザ・ムービー チャプターIII ザ・カース・オブ・ザ・サーペント",
+      "year": null,
       "genres": [
-        "サスペンス"
+        "アニメーション",
+        "ファンタジー",
+        "アドベンチャー"
       ],
-      "summary": "伝説の刑事ドラマシリーズ、ついに感動の完結編！青島刑事が定年退職を目前に控え、湾岸署で発生した不可解な殺人事件の捜査に挑みます。過去の因縁が絡み合う中、彼は警察組織の闇と最後の戦いを繰り広げることに。お馴染みのキャラクターたちが織りなす人間ドラマと、手に汗握るサスペンスが最高潮に達する、シリーズ集大成の物語です。",
+      "summary": "神秘的な森に古くから伝わる“もののけ”の伝説。本作では、恐ろしい蛇の呪いが世界を蝕み始める中、一人の若き勇者がその根源に立ち向かう壮大な冒険が描かれる。自然と人間の間に横たわる深い亀裂、そして太古からの呪縛を解き放つための過酷な旅路。果たして、彼は生命の均衡を取り戻し、世界を破滅から救うことができるのか。息をのむようなファンタジーの世界で繰り広げられる、感動と興奮の物語。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 2,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/5oa8fcvryy9eistqda2pg8peozoi/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/81438151",
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABfCVm1v8KtuhDEdHj0fbhKYMhpmjlCqo2CsrwD4PHAtFOk_RPqymHXyYVhozFG4FYj6t-euwa1S0MGAMTM5uRg9YEKFjJ0mNN8WZFo79UzA.png?r=793",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%A2%E3%83%8E%E3%83%8E%E3%82%B1%20%E3%82%B6%E3%83%BB%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%20%E3%83%81%E3%83%A3%E3%83%97%E3%82%BF%E3%83%BCIII%20%E3%82%B6%E3%83%BB%E3%82%AB%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%B6%E3%83%BB%E3%82%B5%E3%83%BC%E3%83%9A%E3%83%B3%E3%83%88",
       "available_in_japan": true,
-      "filmarks_id": "6049"
+      "filmarks_id": null
     },
     {
       "rank": 9,
-      "title_en": "Ichi the Killer 4K",
-      "jp_title": "殺し屋1",
-      "year": 2001,
+      "title_en": "Untraceable",
+      "jp_title": "運命の女",
+      "year": 2008,
       "genres": [
-        "バイオレンス",
+        "サスペンス",
         "スリラー",
-        "アクション"
+        "犯罪"
       ],
-      "summary": "新宿を牛耳るヤクザの組長が失踪した。その捜索を任されたサディストの組員・垣原は、組長の失踪に絡む謎の殺し屋・イチの存在を知る。内向的で臆病な青年でありながら、一度スイッチが入ると常軌を逸した残虐性で敵を抹殺するイチ。予測不能な展開と極限の暴力描写で描かれる、狂気とエロスが交錯する衝撃作。",
+      "summary": "インターネット上に開設されたウェブサイトで、ライブ中継される残虐な殺人事件。サイトへのアクセス数が増えるほど、被害者の死が早まるという前代未聞の猟奇的な犯行に、FBIの女性捜査官ジェニファーが挑みます。時間との戦いの中、巧妙に仕組まれた罠と、犯人の歪んだ動機を巡る息詰まる展開が繰り広げられる、サイバー・スリラーの傑作です。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVVRSBbMYNQCtDjLUuqMbHuLH7GSyXHo1ng_HU_dY9iICz5lmQDd8dyDNCl2r9qZUfzzVAWvTGInhuDINX_oEFbP144wknHNrvzOI-3BvzA.png?r=692",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E6%AE%BA%E3%81%97%E5%B1%8B1",
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSWbPYzdqBrCLxqlemRW10ACTbsfTynbD0Niwe5D5l_KC_6wrgxVUwqejCutMflZNDWyYjoIB7k8UVlTVVdowPMgRhhMd8gTk8oIsFCe0s4.png?r=6ef",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E9%81%8B%E5%91%BD%E3%81%AE%E5%A5%B3",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 10,
-      "title_en": "Bayside Shakedown",
-      "jp_title": "Bayside Shakedown",
-      "year": null,
-      "genres": [],
-      "summary": "",
+      "title_en": "The Silence of the Lambs",
+      "jp_title": "羊たちの沈黙",
+      "year": 1991,
+      "genres": [
+        "クライム",
+        "サスペンス"
+      ],
+      "summary": "FBI訓練生のクラリス・スターリングは、女性ばかりを狙う連続殺人事件の捜査に駆り出される。事件解決の鍵は、かつて高名な精神科医でありながら凶悪な殺人鬼となったDr.ハンニバル・レクターの助言。彼女はレクター博士の深遠な闇と知略に満ちた言葉に翻弄されながらも、事件の真相に迫っていく。息をのむ心理戦と予測不能な展開が観る者を魅了する、傑作サイコスリラーです。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSy4eZEhX9loCkHUWpxL77yp5BR-SU8axSD5kUgEyhudLuStYQB2bCyMRKrQViYn7PS6ItP3cEMP4Ud3A07OQQIFEg_FlUPjEnYScf-Go_4.png?r=f10",
-      "netflix_watch_url": "https://www.netflix.com/search?q=Bayside%20Shakedown",
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/nmrfnu27jthdp9q82npjn932i7ho/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/14546747",
       "available_in_japan": true,
-      "filmarks_id": null
+      "filmarks_id": "14421"
     }
   ]
 }
