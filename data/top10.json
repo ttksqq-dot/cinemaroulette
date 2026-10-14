@@ -1,13 +1,10 @@
 {
-  "updated_at": "2026-10-07T15:46:03+09:00",
+  "updated_at": "2026-10-14T14:39:22+09:00",
   "week_label": [
-    "https://www.netflix.com/watch/82010386",
-    "https://www.netflix.com/watch/81673050",
+    "https://www.netflix.com/watch/81757047",
     "https://www.netflix.com/watch/82023496",
-    "https://www.netflix.com/watch/82713538",
-    "https://www.netflix.com/watch/81278442",
-    "https://www.netflix.com/watch/70144645",
-    "https://www.netflix.com/watch/81498621"
+    "https://www.netflix.com/watch/82010386",
+    "https://www.netflix.com/watch/81673050"
   ],
   "source": "Netflix Tudum",
   "source_url": "https://www.netflix.com/tudum/top10",
@@ -15,6 +12,42 @@
     {
       "rank": 1,
       "title_en": "UNABOMBER",
+      "jp_title": "ユナボマー",
+      "year": 1996,
+      "genres": [
+        "ドラマ",
+        "クライム",
+        "スリラー"
+      ],
+      "summary": "1978年から1995年にかけ、全米を震撼させた連続爆弾事件「ユナボマー事件」。本作は、大学教授や航空会社に自作の爆弾を送りつけ、3人の死者と23人の負傷者を出した天才数学者テッド・カジンスキーと、彼を追うFBI捜査官たちの壮絶な頭脳戦を描く。科学技術の進歩に異議を唱え、社会に挑戦した彼の真の目的とは何か、そして逮捕への道のりに隠されたドラマが解き明かされる。",
+      "runtime_minutes": 100,
+      "views_this_week": 24900000,
+      "weeks_in_top10": 2,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/704oaq2p9n0wmdj65g5acew37ie5/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/82010386",
+      "available_in_japan": true,
+      "filmarks_id": "126725"
+    },
+    {
+      "rank": 2,
+      "title_en": "The Widower: 'Til Death Do Us Part",
+      "jp_title": "ドゥーイング・ライフ",
+      "year": 2009,
+      "genres": [
+        "ドキュメンタリー"
+      ],
+      "summary": "長年の刑務所暮らしを経て、仮釈放された元受刑者の壮絶な人生を追うドキュメンタリー。社会復帰の困難さ、家族との絆、そして過去の罪と向き合う苦悩を、リアルな映像で描き出します。塀の中で過ごした時間と、自由を手にした後の厳しい現実を通して、司法制度や人間の本質について深く問いかける作品です。",
+      "runtime_minutes": 92,
+      "views_this_week": 11600000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABX7pOVPllxSIxtEYKxFmzb-OA7hBC4RnJ7OIgQOlY9ZzDWnBSg7qIHiVk3yshl-cdgTzbdCz2VguX0GGid5roeAmAWVr1vxT8kYnEyNToQ0.png?r=9ac",
+      "netflix_watch_url": "https://www.netflix.com/watch/82023496",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 3,
+      "title_en": "Doing Life",
       "jp_title": "テッド・カジンスキー/星に囚われた男",
       "year": 1996,
       "genres": [
@@ -23,17 +56,17 @@
         "ドラマ"
       ],
       "summary": "大学教授としての輝かしい経歴を捨て、モンタナの森に隠棲した男、テッド・カジンスキー。彼が社会に向けて送り続けた爆弾と、執拗な捜査の果てに明かされる衝撃の真実を描く。アメリカを震撼させた連続爆弾魔「ユナボマー」の正体とその内面に迫る、実話に基づいたサスペンスドラマ。彼の動機とは何だったのか？",
-      "runtime_minutes": 100,
-      "views_this_week": 24900000,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVarJDrzS43TVAJGCbVvjbrCUfKm1irPWaOO3veM0k4cxAyyvRvJAr3DwKL1KV4IyA5lISY0nKw1LKmLB0hScya1EycTHN83XNOZ8kJ__V4.png?r=c2d",
+      "runtime_minutes": 108,
+      "views_this_week": 9300000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRu5F0JbQl_7_l_TGevzm6-eyvjeQbUknkPetdElHJdg5UEYKrP7Z_DVlzz42-_VjIgOXuapQP9Qx-vZOWjFg-Rlp5oY_6_rEAm5AU4kl2o.png?r=fc2",
       "netflix_watch_url": "https://www.netflix.com/watch/82010386",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 2,
-      "title_en": "The Widower: 'Til Death Do Us Part",
+      "rank": 4,
+      "title_en": "The Breadwinner",
       "jp_title": "ウィドウズ・ヴェンジェンス",
       "year": 2022,
       "genres": [
@@ -41,67 +74,32 @@
         "サスペンス"
       ],
       "summary": "愛する夫を突然の事故で亡くしたローリー。悲しみに暮れる彼女のもとに、夫の親友を名乗る謎の男が現れる。男はローリーの財産を狙い、亡き夫との間に子供がいるとまで主張し始める。果たして彼の真の目的とは？亡き夫の影に隠された秘密が、ローリーを危険な陰謀へと引きずり込むスリラー。",
-      "runtime_minutes": 92,
-      "views_this_week": 11600000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABX7pOVPllxSIxtEYKxFmzb-OA7hBC4RnJ7OIgQOlY9ZzDWnBSg7qIHiVk3yshl-cdgTzbdCz2VguX0GGid5roeAmAWVr1vxT8kYnEyNToQ0.png?r=9ac",
-      "netflix_watch_url": "https://www.netflix.com/watch/81673050",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 3,
-      "title_en": "Doing Life",
-      "jp_title": "ドゥーイング・ライフ",
-      "year": 2009,
-      "genres": [
-        "ドキュメンタリー"
-      ],
-      "summary": "長年の刑務所暮らしを経て、仮釈放された元受刑者の壮絶な人生を追うドキュメンタリー。社会復帰の困難さ、家族との絆、そして過去の罪と向き合う苦悩を、リアルな映像で描き出します。塀の中で過ごした時間と、自由を手にした後の厳しい現実を通して、司法制度や人間の本質について深く問いかける作品です。",
-      "runtime_minutes": 108,
-      "views_this_week": 9300000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRu5F0JbQl_7_l_TGevzm6-eyvjeQbUknkPetdElHJdg5UEYKrP7Z_DVlzz42-_VjIgOXuapQP9Qx-vZOWjFg-Rlp5oY_6_rEAm5AU4kl2o.png?r=fc2",
-      "netflix_watch_url": "https://www.netflix.com/watch/82023496",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 4,
-      "title_en": "The Breadwinner",
-      "jp_title": "生きのびるために",
-      "year": 2018,
-      "genres": [
-        "アニメーション",
-        "ドラマ",
-        "戦争"
-      ],
-      "summary": "タリバン支配下のアフガニスタン、カブール。父親が不当に投獄され、食べるものにも困窮した一家を救うため、11歳の少女パヴァーナは髪を切り、男装して外の世界へ出ることを決意する。厳しい現実と向き合いながら、家族への深い愛と強い意志で困難を乗り越えようとする彼女の姿を描く、感動的なアニメーション。",
       "runtime_minutes": 99,
       "views_this_week": 5300000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABeKYJfrdg76U_s7POw3F53tZ1Bc066ou_poXos3kpLNZySG02yshRYm0hjo0BuR-Thq1IETH3UrovDzIcqZh6Hl2WageQ1rgTwpl9HKu_uw.png?r=0f7",
-      "netflix_watch_url": "https://www.netflix.com/watch/82713538",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%82%A6%E3%82%A3%E3%83%89%E3%82%A6%E3%82%BA%E3%83%BB%E3%83%B4%E3%82%A7%E3%83%B3%E3%82%B8%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%82%A7%E3%83%B3%E3%82%B9%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "netflix_watch_url": "https://www.netflix.com/watch/81673050",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 5,
       "title_en": "The Equalizer 3",
-      "jp_title": "ラスト・ハウス",
-      "year": 2019,
+      "jp_title": "イコライザー THE FINAL",
+      "year": 2023,
       "genres": [
-        "ホラー",
+        "アクション",
+        "クライム",
         "スリラー"
       ],
-      "summary": "祖父の死後、若い女性が相続した古い家には、想像を絶する秘密と邪悪な過去が眠っていた。引っ越してきた彼女は、家の中で次々と奇妙な現象に遭遇し、やがて命を脅かす恐怖に巻き込まれていく。果たして彼女はこの呪われた家から逃れることができるのか、そして隠された真実とは一体何か。",
+      "summary": "元CIAトップエージェントのロバート・マッコールは、イタリア南部の美しい町で静かに暮らしていた。しかし、心を通わせた友人たちが現地のマフィアに支配されている現実を目の当たりにし、彼の心に再び正義の炎が燃え上がる。愛する人々を守るため、マッコールは最後の戦いに挑む。",
       "runtime_minutes": 109,
       "views_this_week": 5000000,
       "weeks_in_top10": 5,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABf6awRGnRRfZIKz9Du20pWrz0jXdCx8w_8Nwgtj8qQSvoxg0lxQqcxvic677NfK_5_YIQDIyOxjVmbW_nAofUt0C3v_cnstXgrZ1DpOFIFc.png?r=144",
-      "netflix_watch_url": "https://www.netflix.com/watch/81278442",
-      "available_in_japan": false,
-      "filmarks_id": null
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/ro0k3sk598rhn5jmb2kgfrxschz7/_.jpg",
+      "netflix_watch_url": "https://www.amazon.co.jp/dp/B0B6758DCQ",
+      "available_in_japan": true,
+      "filmarks_id": "103888"
     },
     {
       "rank": 6,
@@ -109,35 +107,34 @@
       "jp_title": "ハムナプトラ/失われた砂漠の都",
       "year": 1999,
       "genres": [
-        "アクション",
         "アドベンチャー",
-        "ファンタジー"
+        "アクション"
       ],
-      "summary": "古代エジプトの秘宝を求め、冒険家と考古学者が砂漠の奥深くへ足を踏み入れる。そこで彼らは、3000年の時を超え封印から解き放たれた邪悪なミイラの呪いと対峙することになる。息をのむアクションと壮大なスケールで描かれる、究極のスペクタクル・アドベンチャー。",
+      "summary": "紀元前1290年のエジプトを舞台に、禁断の恋と裏切りによって封印された高僧が、現代でその封印を解かれ、世界に混沌をもたらそうとする。砂漠の都ハムナプトラを舞台に、遺跡を荒らす探検家たちと、復活したミイラの壮絶な戦いが幕を開ける、手に汗握るアクションアドベンチャー超大作。",
       "runtime_minutes": 125,
       "views_this_week": 3100000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZYbI1yQBzXh_KlDsQeM0-cilPDyIvNHObVvJgw6IguE9yFHj55Kkh2Q7kIxrDnU3OvaPRHpSALSj_sGg8z-7CU58Z7chLg8tq_FuS3-fdE.png?r=a29",
-      "netflix_watch_url": "https://www.netflix.com/watch/70144645",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%83%8F%E3%83%A0%E3%83%8A%E3%83%97%E3%83%88%E3%83%A9/%E5%A4%B1%E3%82%8F%E3%82%8C%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%81%9F%E7%A0%82%E6%BC%A0%E3%81%AE%E9%83%BD%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 7,
       "title_en": "The Whisper Man",
-      "jp_title": "K-POP デーモンハンターズ",
-      "year": 2024,
+      "jp_title": "ささやき男",
+      "year": null,
       "genres": [
-        "アクション",
-        "コメディ",
-        "ファンタジー"
+        "スリラー",
+        "ミステリー",
+        "ホラー"
       ],
-      "summary": "世界を熱狂させるK-POPアイドルたちが、その華やかなステージの裏で、密かに悪魔と戦う使命を背負っていたとしたら？アクション、コメディ、ファンタジーが融合したこの作品は、音楽と超常現象が見事に交差する、全く新しいエンターテイメント体験をお届けします。彼らは歌とダンスで世界を救えるのか、その秘密の戦いにご期待ください。",
+      "summary": "妻を亡くし、幼い息子と新しい生活を始めるため郊外の古い家に引っ越してきたトム。しかし、その家は過去に未解決の連続誘拐殺人事件の容疑者が住んでいたという。息子が「ささやき男」の幻影を見たと言い出したことをきっかけに、トムは不気味な事件の渦中に引き込まれていく。過去の忌まわしい出来事と現在が交錯し、親子を襲う恐怖と謎が深く絡み合う心理スリラー。戦慄のミステリーが、観る者を惑わす。",
       "runtime_minutes": 114,
       "views_this_week": 2700000,
       "weeks_in_top10": 6,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZBegDAt5m9H4cxj9wRl7UKVq_-yAt_TdAtF3EcODep6m69jHcuitiOB5NHvL4Q_Q6UzepszMpgRfmjl1TocMMBQi6DcJT_pFN3wX0TXGXw.png?r=263",
-      "netflix_watch_url": "https://www.netflix.com/watch/81498621",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%81%95%E3%81%95%E3%82%84%E3%81%8D%E7%94%B7%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -172,7 +169,7 @@
       "runtime_minutes": 101,
       "views_this_week": 2500000,
       "weeks_in_top10": 3,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRmSW77FUfuasFu2YEYwnUq5UK_glPiPiGIkgSgchbxPMcL-SqOqC5eSMnBcmDHVXQ86m-m7c9fFQgUNuKYsoATRh2rfoFlx9JeXS-9x2GI.png?r=3ad",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%82%A2%E3%83%BB%E3%83%9E%E3%82%A4%E3%83%B3%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%E3%83%BB%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -191,7 +188,7 @@
       "runtime_minutes": 100,
       "views_this_week": 2400000,
       "weeks_in_top10": 67,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZWSzsAkjgBk9AaFX808aLhPEYmACvc9wolKMtxdad5NB39oDTNbkMmC_aoLEGN0zIFTtlPkr0dVgpJUU22VoG72CK0F8y8F2anweqRDN8k.png?r=77d",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3EK%E3%83%9D%E3%83%83%E3%83%97%E3%83%BB%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3%E3%83%8F%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%BA%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -201,19 +198,19 @@
     {
       "rank": 1,
       "title_en": "Detective Conan the Counterfeit Case of Ultra 30",
-      "jp_title": "テッド・カジンスキー/星に囚われた男",
-      "year": 1996,
+      "jp_title": "名探偵コナン ザ・カウンターフェイト・ケース・オブ・ウルトラ30",
+      "year": null,
       "genres": [
-        "伝記",
-        "犯罪",
-        "ドラマ"
+        "アニメ",
+        "ミステリー",
+        "サスペンス"
       ],
-      "summary": "大学教授としての輝かしい経歴を捨て、モンタナの森に隠棲した男、テッド・カジンスキー。彼が社会に向けて送り続けた爆弾と、執拗な捜査の果てに明かされる衝撃の真実を描く。アメリカを震撼させた連続爆弾魔「ユナボマー」の正体とその内面に迫る、実話に基づいたサスペンスドラマ。彼の動機とは何だったのか？",
+      "summary": "「Ultra 30」という謎のキーワードを巡り、大規模な偽造事件が発生。その陰には、世界を揺るがす恐るべき陰謀が隠されていた。コナンと少年探偵団は、巧妙に仕組まれた罠をかいくぐり、事件の真相と黒幕に迫ることができるのか？息をのむノンストップミステリーが幕を開ける。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 2,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABTGF6l3mkm1Wv1n-IhOblYUlLIezl3pQ1vuq1a53ru2rXdls-vFFg7JEnZ3nq6j1x1c_3N-i4yi2toGtrfwMmrLDD4LOWFxtTdWciZcOJhY.png?r=aae",
-      "netflix_watch_url": "https://www.netflix.com/watch/82010386",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%20%E3%82%B6%E3%83%BB%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%83%88%E3%83%BB%E3%82%B1%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A930",
       "available_in_japan": true,
       "filmarks_id": null
     },
@@ -225,7 +222,7 @@
       "genres": [
         "ドラマ"
       ],
-      "summary": "殺人の罪で13年の刑期を終え出所した元ヤクザの男が、変化した社会の中で懸命に生きる姿を描く人間ドラマ。人生のほとんどを刑務所で過ごした男が、慣れない社会と向き合いながら、第二の人生を模索する中で、テレビ番組の制作陣と出会います。社会の不寛容さ、そして人間の尊厳を深く問いかける、役所広司主演の感動作です。",
+      "summary": "長年の刑期を終え、出所した元殺人犯の男が、変化した社会と人々の視線に戸惑いながらも、真っ当な生活を送ろうと奮闘するヒューマンドラマ。出所者の厳しい現実と、彼を支えようとする温かい人々との交流が、観る者の心を揺さぶります。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 2,
@@ -323,7 +320,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABW-o5mll9TMfsKxcQPVeBfIoXdMxIzvkkfX86DPhsD6pZ46Jt3BBy_vWihwmNA1M1GxcZH3h3q5jXDKdD6Wb5lmWnowjO1LK1JjkOomEsMA.png?r=419",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E6%84%9B%E3%81%AF%E3%80%81%E3%82%82%E3%81%86%E3%81%99%E3%81%90365%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E6%97%A5%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "https://www.netflix.com/search?q=%E6%84%9B%E3%81%AF%E3%80%81%E3%82%82%E3%81%86%E3%81%99%E3%81%90365%E6%97%A5",
       "available_in_japan": true,
       "filmarks_id": null
@@ -342,7 +339,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABfCVm1v8KtuhDEdHj0fbhKYMhpmjlCqo2CsrwD4PHAtFOk_RPqymHXyYVhozFG4FYj6t-euwa1S0MGAMTM5uRg9YEKFjJ0mNN8WZFo79UzA.png?r=793",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%83%A2%E3%83%8E%E3%83%8E%E3%82%B1%20%E3%82%B6%E3%83%BB%E3%83%A0%E3%83%BC%E3%83%93%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%83%BC%20%E3%83%81%E3%83%A3%E3%83%97%E3%82%BF%E3%83%BCIII%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%20%E3%82%B6%E3%83%BB%E3%82%AB%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%A2%E3%83%8E%E3%83%8E%E3%82%B1%20%E3%82%B6%E3%83%BB%E3%83%A0%E3%83%BC%E3%83%93%E3%83%BC%20%E3%83%81%E3%83%A3%E3%83%97%E3%82%BF%E3%83%BCIII%20%E3%82%B6%E3%83%BB%E3%82%AB%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%B6%E3%83%BB%E3%82%B5%E3%83%BC%E3%83%9A%E3%83%B3%E3%83%88",
       "available_in_japan": true,
       "filmarks_id": null
@@ -361,7 +358,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSWbPYzdqBrCLxqlemRW10ACTbsfTynbD0Niwe5D5l_KC_6wrgxVUwqejCutMflZNDWyYjoIB7k8UVlTVVdowPMgRhhMd8gTk8oIsFCe0s4.png?r=6ef",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E9%81%8B%E5%91%BD%E3%81%AE%E5%A5%B3%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "https://www.netflix.com/search?q=%E9%81%8B%E5%91%BD%E3%81%AE%E5%A5%B3",
       "available_in_japan": true,
       "filmarks_id": null
