@@ -1,9 +1,14 @@
 {
-  "updated_at": "2026-10-21T14:36:37+09:00",
+  "updated_at": "2026-10-28T15:29:32+09:00",
   "week_label": [
     "https://www.netflix.com/watch/81757047",
+    "https://www.netflix.com/watch/82063750",
+    "https://www.netflix.com/watch/80096067",
+    "https://www.netflix.com/watch/70107121",
+    "https://www.netflix.com/watch/81564308",
     "https://www.netflix.com/watch/82023496",
-    "https://www.netflix.com/watch/82010386"
+    "https://www.netflix.com/watch/81902148",
+    "https://www.netflix.com/watch/60022702"
   ],
   "source": "Netflix Tudum",
   "source_url": "https://www.netflix.com/tudum/top10",
@@ -31,55 +36,52 @@
       "rank": 2,
       "title_en": "Doing Life",
       "jp_title": "ドゥーイング・ライフ",
-      "year": 2009,
-      "genres": [
-        "ドキュメンタリー"
-      ],
-      "summary": "長年の刑務所暮らしを経て、仮釈放された元受刑者の壮絶な人生を追うドキュメンタリー。社会復帰の困難さ、家族との絆、そして過去の罪と向き合う苦悩を、リアルな映像で描き出します。塀の中で過ごした時間と、自由を手にした後の厳しい現実を通して、司法制度や人間の本質について深く問いかける作品です。",
+      "year": null,
+      "genres": [],
+      "summary": "",
       "runtime_minutes": 108,
       "views_this_week": 7300000,
       "weeks_in_top10": 3,
       "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRu5F0JbQl_7_l_TGevzm6-eyvjeQbUknkPetdElHJdg5UEYKrP7Z_DVlzz42-_VjIgOXuapQP9Qx-vZOWjFg-Rlp5oY_6_rEAm5AU4kl2o.png?r=fc2",
-      "netflix_watch_url": "https://www.netflix.com/watch/82023496",
+      "netflix_watch_url": "https://www.netflix.com/watch/82063750",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 3,
       "title_en": "Ice Age: Collision Course",
-      "jp_title": "テッド・カジンスキー/星に囚われた男",
-      "year": 1996,
+      "jp_title": "アイス・エイジ5　止めろ！惑星大衝突",
+      "year": 2016,
       "genres": [
-        "伝記",
-        "犯罪",
-        "ドラマ"
+        "アニメ"
       ],
-      "summary": "大学教授としての輝かしい経歴を捨て、モンタナの森に隠棲した男、テッド・カジンスキー。彼が社会に向けて送り続けた爆弾と、執拗な捜査の果てに明かされる衝撃の真実を描く。アメリカを震撼させた連続爆弾魔「ユナボマー」の正体とその内面に迫る、実話に基づいたサスペンスドラマ。彼の動機とは何だったのか？",
+      "summary": "「アイス・エイジ」シリーズの第5作。今回は、宇宙から迫る巨大な隕石群の危機に、おなじみのマニーやシド、ディエゴたちが巻き起こすドタバタ劇が繰り広げられます。彼らは家族や種の未来を守るため、新たな冒険へと旅立ちます。笑いと感動が詰まった、壮大なスペクタクル・コメディです。",
       "runtime_minutes": 97,
       "views_this_week": 6300000,
       "weeks_in_top10": 5,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABXaAAQvXr52yR5qUF4AC0ayqXFtcgTxEHKvM147vYZydHu-P0yIZnPY7yPlv_b1F_cx2arWdOKdsKkP8jNBwl3dR0VjxLo3FtbXdWOr5TiI.png?r=a02",
-      "netflix_watch_url": "https://www.netflix.com/watch/82010386",
-      "available_in_japan": false,
-      "filmarks_id": null
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/w1p8oq2flc6ss2lfdk5x5u2d6eq6/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/80096067",
+      "available_in_japan": true,
+      "filmarks_id": "62635"
     },
     {
       "rank": 4,
       "title_en": "Ice Age: Dawn of the Dinosaurs",
-      "jp_title": "アイス・エイジ3 ティラノのおとしもの",
+      "jp_title": "アイス・エイジ3/ティラノのおとしもの",
       "year": 2009,
       "genres": [
-        "アニメ",
-        "ファミリー"
+        "アニメーション",
+        "アドベンチャー",
+        "コメディ"
       ],
-      "summary": "「アイス・エイジ」シリーズ第3弾！マンモスのマニーとエリーに赤ちゃんが誕生する中、仲間たちは誤って恐竜たちが生き残っていた広大な地下世界へ迷い込んでしまいます。未知の脅威と新しい出会いが織りなす、笑いと感動に満ちた大冒険が、今再び幕を開けます。",
+      "summary": "氷河期を生きる人気者たちが、今度は恐竜が住む神秘的な地下世界へ大冒険！マニーとエリーに赤ちゃんが生まれる中、シドが拾った謎の卵からまさかの恐竜が孵化します。行方不明になったシドを探すため、仲間たちは危険と驚きに満ちた新天地へと足を踏み入れ、新たな仲間とも出会うことに。笑いと感動、そしてスリリングな冒険が満載のファミリーアニメーションです。",
       "runtime_minutes": 95,
       "views_this_week": 4900000,
       "weeks_in_top10": 5,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/6ov0b94xfwck6odsgmyp3ngao5uz/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/70107121",
-      "available_in_japan": true,
-      "filmarks_id": "2038"
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABbcIeq_qeNvBKCesNr0BaPgm0XcnJ9m63XMkoxYjiRxwXE551RltTp3NuZHNACJCu-lbstZgWenrCcjGynrDwlHU7SgrvnKmApHw61bNiHs.png?r=3a9",
+      "netflix_watch_url": "https://www.netflix.com/watch/70107121",
+      "available_in_japan": false,
+      "filmarks_id": null
     },
     {
       "rank": 5,
@@ -89,7 +91,7 @@
       "genres": [
         "アニメ"
       ],
-      "summary": "氷河期に突入し、動物たちが南へ移動する中、はぐれてしまった人間の赤ちゃんを家族のもとへ送り届けるため、マンモス、ナマケモノ、サーベルタイガーの異色トリオが協力することに。厳しい自然の中、いがみ合いながらも次第に友情を育んでいく彼らの、笑いと感動に満ちた冒険を描いたCGアニメーションの傑作です。あの伝説のリス、スクラットの奮闘もお見逃しなく！",
+      "summary": "氷河期を舞台に、一匹狼のマンモス、お調子者のナマケモノ、そしてクールなサーベルタイガーが、迷子の人間の赤ちゃんを家族のもとへ送り届ける旅に出る物語。種族を超えた奇妙なトリオが繰り広げる、友情と絆が感動を呼ぶ傑作アニメーションです。コミカルな冒険と心温まるストーリーに引き込まれます。",
       "runtime_minutes": 83,
       "views_this_week": 4800000,
       "weeks_in_top10": 2,
@@ -101,19 +103,17 @@
     {
       "rank": 6,
       "title_en": "Corpse Bride",
-      "jp_title": "ティム・バートンのコープスブライド",
-      "year": 2005,
+      "jp_title": "ドゥーイング・ライフ",
+      "year": 2009,
       "genres": [
-        "アニメーション",
-        "ファンタジー",
-        "ミュージカル"
+        "ドキュメンタリー"
       ],
-      "summary": "婚約者との結婚を控える内気な青年ヴィクターは、森での結婚式の練習中、ひょんなことから死者の花嫁と誓いを交わしてしまう。生者の世界と死者の世界、二つの異なる世界で繰り広げられる奇妙で美しい愛の物語。ティム・バートンが贈る、ゴシックでロマンティックなストップモーションアニメーションの世界へようこそ。",
+      "summary": "長年の刑務所暮らしを経て、仮釈放された元受刑者の壮絶な人生を追うドキュメンタリー。社会復帰の困難さ、家族との絆、そして過去の罪と向き合う苦悩を、リアルな映像で描き出します。塀の中で過ごした時間と、自由を手にした後の厳しい現実を通して、司法制度や人間の本質について深く問いかける作品です。",
       "runtime_minutes": 77,
       "views_this_week": 4600000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSM2vK3GQBRPovoYFAGaCAUosUkCqBYOW4TqLspBEyRDt4quc4JA5hrNhypBUd4P2l9rf5uVC8J5bvJquaJKiSUR2qlbiMOp9xDIsze9Tng.png?r=d8b",
-      "netflix_watch_url": "",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%83%89%E3%82%A5%E3%83%BC%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%A9%E3%82%A4%E3%83%95%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "netflix_watch_url": "https://www.netflix.com/watch/82023496",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -126,7 +126,7 @@
         "恋愛",
         "コメディ"
       ],
-      "summary": "完璧なカップルに見えた大学時代の恋人同士が、あるすれ違いから破局。数年後、親友の結婚式のためにオーストラリアで再会した二人は、周囲の思惑やプライドが邪魔をして、互いを意識しながらも素直になれない。美しいロケーションを舞台に、予測不能な展開と軽快な会話で贈る、大人のロマンティックコメディ。",
+      "summary": "元恋人同士のベンとシアトルが、ある出来事から最悪の別れ方をした。しかし、友人の結婚式でオーストラリアへ向かう機内で偶然再会し、周囲の思惑から恋人のフリをすることに。果たして、この偽装関係の行方は？ 二人の駆け引きと胸キュンが止まらない、予測不能なラブコメディ！",
       "runtime_minutes": 104,
       "views_this_week": 4400000,
       "weeks_in_top10": 4,
@@ -138,19 +138,19 @@
     {
       "rank": 8,
       "title_en": "Ice Age: Continental Drift",
-      "jp_title": "アイス・エイジ4/パイレーツ大冒険！",
+      "jp_title": "アイス・エイジ4/パイレーツ大冒険",
       "year": 2012,
       "genres": [
         "アニメーション",
-        "コメディ",
-        "アドベンチャー"
+        "アドベンチャー",
+        "コメディ"
       ],
-      "summary": "大陸が分裂し、愛する家族と離れ離れになったマニーが、奇想天外な冒険のせいで発生した危機を乗り越えようと奮闘する。氷河期を舞台に、友情と家族の絆、そして新しい仲間との出会いを描いた壮大なアドベンチャーが、スクリーンいっぱいに繰り広げられる。予測不能な展開と魅力的なキャラクターたちが織りなす、笑いと感動の物語。",
+      "summary": "人気シリーズ第4弾！大陸がバラバラになり、愛する家族と離れ離れになってしまったマニー、シド、ディエゴたち。故郷を目指して危険な海へと旅立つ彼らを待ち受けるのは、恐ろしい海の生き物たちと凶悪な海賊たち。はたして、彼らは無事に家族と再会できるのか？友情と絆が試される大冒険が、いま始まる！",
       "runtime_minutes": 91,
       "views_this_week": 4300000,
       "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVPw3yLcIcltTnBzNiU_15Nc6hK1s33rXAVJUY6FjNIfUeRW-4ylebweGDZhDRDGazm4EIiFaHTNHjB14359qJ_YRsxYWFhaw0U09ETqJ-w.png?r=4a8",
-      "netflix_watch_url": "",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%82%A2%E3%82%A4%E3%82%B9%E3%83%BB%E3%82%A8%E3%82%A4%E3%82%B84/%E3%83%91%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%84%E5%A4%A7%E5%86%92%E9%99%BA%3C/tspan%3E%3C/text%3E%3C/svg%3E",
+      "netflix_watch_url": "https://www.netflix.com/watch/60022702",
       "available_in_japan": false,
       "filmarks_id": null
     },
@@ -168,7 +168,7 @@
       "runtime_minutes": 100,
       "views_this_week": 4200000,
       "weeks_in_top10": 4,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVarJDrzS43TVAJGCbVvjbrCUfKm1irPWaOO3veM0k4cxAyyvRvJAr3DwKL1KV4IyA5lISY0nKw1LKmLB0hScya1EycTHN83XNOZ8kJ__V4.png?r=c2d",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%83%A6%E3%83%8A%E3%83%9C%E3%83%9E%E3%83%BC%EF%BC%9A%E7%9C%9F%E5%AE%9F%E3%81%AE%E7%89%A9%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E8%AA%9E%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
@@ -195,21 +195,17 @@
     {
       "rank": 1,
       "title_en": "Black Showman",
-      "jp_title": "ユナボマー",
-      "year": 1996,
-      "genres": [
-        "ドラマ",
-        "クライム",
-        "スリラー"
-      ],
-      "summary": "1978年から1995年にかけ、全米を震撼させた連続爆弾事件「ユナボマー事件」。本作は、大学教授や航空会社に自作の爆弾を送りつけ、3人の死者と23人の負傷者を出した天才数学者テッド・カジンスキーと、彼を追うFBI捜査官たちの壮絶な頭脳戦を描く。科学技術の進歩に異議を唱え、社会に挑戦した彼の真の目的とは何か、そして逮捕への道のりに隠されたドラマが解き明かされる。",
+      "jp_title": "ドゥーイング・ライフ",
+      "year": null,
+      "genres": [],
+      "summary": "",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/704oaq2p9n0wmdj65g5acew37ie5/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/82010386",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABYi4qA5ZXXQPJKxH_6OWlsrX0Pv-8uuUOFpCMUU07ope_JQQ868cO2C8gR_nMLp8482wTokP5mVrhCI5o7v_wRe85xH0dKFkrfQ-8-ZG9jA.png?r=f90",
+      "netflix_watch_url": "https://www.netflix.com/watch/82063750",
       "available_in_japan": true,
-      "filmarks_id": "126725"
+      "filmarks_id": null
     },
     {
       "rank": 2,
@@ -316,7 +312,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABel9bnATy5bBlxIENr9B64PIxs277_z5Y5x9HKIvqx0_bBi4x35Y2VG_V6g2SHz9zd2SCQnM8DeRRWn_Q2Eb09ta6LvFsxYSQRXdYIUIXco.png?r=09f",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E5%8A%87%E5%A0%B4%E7%89%88%20%E4%B9%99%E5%A5%B3%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E7%A0%B4%E6%BB%85%E3%83%95%E3%83%A9%E3%82%B0%E3%81%97%E3%81%8B%E3%81%AA%E3%81%84%E6%82%AA%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E5%BD%B9%E4%BB%A4%E5%AC%A2%E3%81%AB%E8%BB%A2%E7%94%9F%E3%81%97%E3%81%A6%E3%81%97%E3%81%BE%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "https://www.netflix.com/search?q=%E5%8A%87%E5%A0%B4%E7%89%88%20%E4%B9%99%E5%A5%B3%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E7%A0%B4%E6%BB%85%E3%83%95%E3%83%A9%E3%82%B0%E3%81%97%E3%81%8B%E3%81%AA%E3%81%84%E6%82%AA%E5%BD%B9%E4%BB%A4%E5%AC%A2%E3%81%AB%E8%BB%A2%E7%94%9F%E3%81%97%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E2%80%A6",
       "available_in_japan": true,
       "filmarks_id": null
@@ -369,7 +365,7 @@
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABU4Kay9-Uve4MHXHwI2vnwRgLHNCDI4f4VH_lDa1bXUGWfygpwiHHww4hAa5_075-BrUc03j6cd-d4JVkDKv7M1DBGZewKtIOI7D3R8lf7c.png?r=569",
+      "poster_url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22450%22%20viewBox%3D%220%200%20300%20450%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%232a2a32%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230f0f14%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22300%22%20height%3D%22450%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22150%22%20y%3D%22165%22%20text-anchor%3D%22middle%22%20font-size%3D%2244%22%3E%F0%9F%8E%AC%3C/text%3E%3Ctext%20x%3D%22150%22%20y%3D%22235%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e8e6df%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22700%22%3E%3Ctspan%20x%3D%22150%22%20dy%3D%220%22%3E%E3%82%A2%E3%83%B3%E3%83%87%E3%82%A3%E3%83%BB%E3%83%A9%E3%82%A6%E3%81%AE%E7%A5%9E%E9%B3%A5%3C/tspan%3E%3Ctspan%20x%3D%22150%22%20dy%3D%2230%22%3E%E4%BC%9D%E8%AA%AC%3C/tspan%3E%3C/text%3E%3C/svg%3E",
       "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%A2%E3%83%B3%E3%83%87%E3%82%A3%E3%83%BB%E3%83%A9%E3%82%A6%E3%81%AE%E7%A5%9E%E9%B3%A5%E4%BC%9D%E8%AA%AC",
       "available_in_japan": true,
       "filmarks_id": null
