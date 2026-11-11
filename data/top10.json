@@ -1,35 +1,34 @@
 {
-  "updated_at": "2026-11-04T16:09:08+09:00",
+  "updated_at": "2026-11-11T16:26:01+09:00",
   "week_label": [
-    "https://www.netflix.com/watch/81757047",
-    "https://www.netflix.com/watch/81498621",
-    "https://www.netflix.com/watch/82063750"
+    "https://www.netflix.com/watch/82090597",
+    "https://www.netflix.com/watch/81498621"
   ],
   "source": "Netflix Tudum",
   "source_url": "https://www.netflix.com/tudum/top10",
   "global_movies": [
     {
       "rank": 1,
-      "title_en": "Animals",
-      "jp_title": "ユナボマー",
-      "year": 1996,
+      "title_en": "A Dog's Perfect Christmas",
+      "jp_title": "クリスマス・ワンダーランド",
+      "year": 2021,
       "genres": [
+        "ファミリー",
         "ドラマ",
-        "クライム",
-        "スリラー"
+        "クリスマス"
       ],
-      "summary": "1978年から1995年にかけ、全米を震撼させた連続爆弾事件「ユナボマー事件」。本作は、大学教授や航空会社に自作の爆弾を送りつけ、3人の死者と23人の負傷者を出した天才数学者テッド・カジンスキーと、彼を追うFBI捜査官たちの壮絶な頭脳戦を描く。科学技術の進歩に異議を唱え、社会に挑戦した彼の真の目的とは何か、そして逮捕への道のりに隠されたドラマが解き明かされる。",
-      "runtime_minutes": 108,
-      "views_this_week": 4700000,
-      "weeks_in_top10": 4,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/704oaq2p9n0wmdj65g5acew37ie5/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/82010386",
-      "available_in_japan": true,
-      "filmarks_id": "126725"
+      "summary": "クリスマスを目前に、孤独な少女ホープは、迷子のワンちゃんと出会う。彼女は犬を家族に内緒で飼い始めるが、その存在はホープの家庭に予期せぬ変化をもたらす。ワンちゃんとの出会いが、冷え切っていた家族の絆を再び温め、心に残るクリスマスの奇跡を呼び起こす感動のファミリードラマ。",
+      "runtime_minutes": 101,
+      "views_this_week": 8600000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABdZ-Aym4vS917I00pm4ZYsrQUFPlU2frV2ixHNZtm9O-8yOASEZCIjxbT04L1H6hgyuQux8xVjUfGlSmwqLs7M0zwtaKPPi7AG6iB3jhVPQ.png?r=6d1",
+      "netflix_watch_url": "https://www.netflix.com/watch/82090597",
+      "available_in_japan": false,
+      "filmarks_id": null
     },
     {
       "rank": 2,
-      "title_en": "Return to Sender",
+      "title_en": "Heist",
       "jp_title": "K-POP デーモンハンターズ",
       "year": 2024,
       "genres": [
@@ -38,265 +37,222 @@
         "ファンタジー"
       ],
       "summary": "世界を熱狂させるK-POPアイドルたちが、その華やかなステージの裏で、密かに悪魔と戦う使命を背負っていたとしたら？アクション、コメディ、ファンタジーが融合したこの作品は、音楽と超常現象が見事に交差する、全く新しいエンターテイメント体験をお届けします。彼らは歌とダンスで世界を救えるのか、その秘密の戦いにご期待ください。",
-      "runtime_minutes": 95,
-      "views_this_week": 3600000,
+      "runtime_minutes": 109,
+      "views_this_week": 6300000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRyp_HD8wJ_PFMw6r1HkBFzbPyDILkH5hRRaonUhfu4TglzSAl6cZz5KL7DAgu8W-sOgm2182M2Dd0EGKw_aKTO3QQFZVNztGmi24OiC7b8.png?r=a32",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQPPCYybbdNt-GJjYnJKMWuJNhYlxrBmAH-qrMZBANH93Rcvc9b9GQSZuruhxR-RI2ioN-7pefzas46yRYW_9_GU_pFZ4LGeyV0WQtOKuAQ.png?r=f20",
       "netflix_watch_url": "https://www.netflix.com/watch/81498621",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 3,
-      "title_en": "KPop Demon Hunters",
-      "jp_title": "ドゥーイング・ライフ",
+      "title_en": "Final Destination: Bloodlines",
+      "jp_title": "ファイナル・デスティネーション: ブラッドラインズ",
       "year": null,
-      "genres": [],
-      "summary": "",
-      "runtime_minutes": 100,
-      "views_this_week": 2600000,
-      "weeks_in_top10": 68,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZWSzsAkjgBk9AaFX808aLhPEYmACvc9wolKMtxdad5NB39oDTNbkMmC_aoLEGN0zIFTtlPkr0dVgpJUU22VoG72CK0F8y8F2anweqRDN8k.png?r=77d",
-      "netflix_watch_url": "https://www.netflix.com/watch/82063750",
+      "genres": [
+        "ホラー",
+        "スリラー"
+      ],
+      "summary": "死の運命から逃れた者たちが次々と恐ろしい事故に巻き込まれる人気ホラーシリーズの最新作。本作では、より巧妙で予測不能なデス・トラップが仕掛けられ、観る者を極限の緊張感に突き落とします。抗うことのできない運命と、新たな形で襲い来る死の恐怖に戦慄せよ。",
+      "runtime_minutes": 110,
+      "views_this_week": 5800000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABcoFGFEhKfYQKxq6137xDK-4HzDM7o_8e1bkdkv5BPMWbpNH9adsyOic9rkgtQ0zlRG4n5qckLp3nuRkLrF8hvYorduYQR-Vdd9W_ttsy7k.png?r=e16",
+      "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 4,
-      "title_en": "Hot Wheels Let's Race: Attack of the T-Rex",
-      "jp_title": "ホットウィール レッツ・レース：ティラノサウルス襲来！",
-      "year": 2024,
+      "title_en": "The Day After Tomorrow",
+      "jp_title": "デイ・アフター・トゥモロー",
+      "year": 2004,
       "genres": [
-        "アニメ",
-        "キッズ",
-        "アドベンチャー"
+        "SF",
+        "パニック",
+        "ドラマ"
       ],
-      "summary": "大人気ミニカー「ホットウィール」の世界が舞台の、手に汗握るアドベンチャー！平和な街に突如として現れた巨大なティラノサウルスが暴れまわり、レースの開催が危ぶまれる。若きレーサーたちは、それぞれ自慢のホットウィールを駆使し、迫りくる脅威に立ち向かいながら、友情とチームワークを武器にスリル満点のレースと街の危機を救うため奮闘する。",
-      "runtime_minutes": 47,
-      "views_this_week": 2600000,
+      "summary": "地球温暖化が引き起こす未曾有の気候変動により、現代社会に新たな氷河期が迫るSFパニック超大作。気象学者のジャック・ホールは、急激な寒冷化と異常現象が世界を飲み込む中、ニューヨークに取り残された息子を救うため、極寒の地へと向かう。壮絶な自然の猛威と、その中で生き残ろうとする人々のドラマが、圧倒的なスケールで描かれる。",
+      "runtime_minutes": 124,
+      "views_this_week": 4400000,
       "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABYQxJYiiidKMtfzLinwAV1XEw1wtGZ8NHJDA22Yt2jc0AyV4Xz0lUuV_t7dhS20WIZfLkPOBXgp5Wyb5wxARZS7aMiM1PZh5EOeshQzLR9Y.png?r=2f3",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABWH9MYklBpthIh4seQcQaqIjtq38GhEYVbjkyGtGMCJnBHEOwrtCPch11fwpPfQUB-r0UsSWhMqGs9cqtyfGmC7xhAvkg7e1Yi2GNr8Xg_o.png?r=81a",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 5,
-      "title_en": "Ice Age 4: Continental Drift",
-      "jp_title": "アイス・エイジ4/パイレーツ大冒険",
-      "year": 2012,
+      "title_en": "Sing 2",
+      "jp_title": "SING/シング：ネクストステージ",
+      "year": 2022,
       "genres": [
         "アニメーション",
-        "アドベンチャー",
+        "ミュージカル",
         "コメディ"
       ],
-      "summary": "大陸移動によって故郷を離れ、海に投げ出されたマニー、ディエゴ、シドたち。彼らは流氷のイカダで冒険の旅に出ますが、そこには恐ろしい海賊が待ち受けていました。家族との再会を夢見て、危険な海を突き進む彼らの運命は？お馴染みのスクラットも、またしてもドングリを追いかけて地球規模の大騒動を巻き起こします！",
-      "runtime_minutes": 91,
-      "views_this_week": 2400000,
-      "weeks_in_top10": 3,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVPw3yLcIcltTnBzNiU_15Nc6hK1s33rXAVJUY6FjNIfUeRW-4ylebweGDZhDRDGazm4EIiFaHTNHjB14359qJ_YRsxYWFhaw0U09ETqJ-w.png?r=4a8",
+      "summary": "前作で最高のショーを成功させたバスター・ムーンと仲間たちが、さらなる夢の舞台、エンターテイメントの聖地レッド・ショア・シティに挑む。ショーを成功させるため、彼らは隠遁生活を送る伝説のロックスター、クレイ・キャロウェイを仲間に引き入れようとするが…。心震わす珠玉のヒットソングに乗せて、誰もが勇気をもらえる感動のミュージカル・エンターテイメント！",
+      "runtime_minutes": 110,
+      "views_this_week": 4300000,
+      "weeks_in_top10": 14,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABWllE62WgntbuGfxlhsGfdPAyI1lia5V4dxBLtdKrrPSJKY2aikAoY2qw2LUue8b5wVc_0xAiX7IWA4phbBZbKRwEC9zM6aRIjtf_HQOQ24.png?r=24b",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 6,
-      "title_en": "Ice Age: Dawn of the Dinosaurs",
-      "jp_title": "アイス・エイジ3 ティラノのおとしもの",
-      "year": 2009,
+      "title_en": "Sniper: The Last Stand",
+      "jp_title": "狙撃手",
+      "year": 2022,
       "genres": [
-        "アニメ",
-        "ファミリー"
-      ],
-      "summary": "「アイス・エイジ」シリーズ第3弾！マンモスのマニーとエリーに赤ちゃんが誕生する中、仲間たちは誤って恐竜たちが生き残っていた広大な地下世界へ迷い込んでしまいます。未知の脅威と新しい出会いが織りなす、笑いと感動に満ちた大冒険が、今再び幕を開けます。",
-      "runtime_minutes": 95,
-      "views_this_week": 2300000,
-      "weeks_in_top10": 7,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/6ov0b94xfwck6odsgmyp3ngao5uz/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/70107121",
-      "available_in_japan": true,
-      "filmarks_id": "2038"
-    },
-    {
-      "rank": 7,
-      "title_en": "Ice Age 5: Collision Course",
-      "jp_title": "アイス・エイジ5　止めろ！惑星大衝突",
-      "year": 2016,
-      "genres": [
-        "アニメ"
-      ],
-      "summary": "おなじみのアイス・エイジの仲間たちが、今回は地球に迫る未曾有の危機に立ち向かいます。あのドジなリスのスクラットが宇宙で巻き起こしたハプニングがきっかけで、地球に巨大な小惑星が衝突する運命に。マニーやシド、ディエゴたちは故郷を守るため、これまでにない壮大な冒険へと旅立ちます。笑いと感動、そして家族の絆が描かれるスペクタクル・コメディです！",
-      "runtime_minutes": 97,
-      "views_this_week": 2200000,
-      "weeks_in_top10": 7,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/w1p8oq2flc6ss2lfdk5x5u2d6eq6/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/80096067",
-      "available_in_japan": true,
-      "filmarks_id": "62635"
-    },
-    {
-      "rank": 8,
-      "title_en": "This Is Not a Test",
-      "jp_title": "デッドヒート・コネクション",
-      "year": 2002,
-      "genres": [
-        "スリラー",
-        "クライム",
+        "戦争",
+        "アクション",
         "ドラマ"
       ],
-      "summary": "銀行強盗を企てるカップルと、彼らに人質として捕らえられたセールスマン。計画通りに進むはずだった逃走劇は、思わぬ展開を見せる。閉鎖的な空間で繰り広げられる心理戦と、予測不能な裏切りが交錯する緊迫のクライムスリラー。",
-      "runtime_minutes": 103,
-      "views_this_week": 2100000,
+      "summary": "朝鮮戦争の激戦地で、百発百中の腕を持つ中国の熟練狙撃兵と若き兵士たちが、アメリカ軍との熾烈な死闘を繰り広げる。極寒の戦場で知略と勇気を尽くした攻防が息をのむ緊張感で描かれ、極限状況に置かれた兵士たちの人間ドラマが胸を打つ骨太な戦争アクションです。",
+      "runtime_minutes": 99,
+      "views_this_week": 3900000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABdisajhp1cZWhrw-1SmItPVY4xv1HW6v8V9W5ZR54FVn8RdSZra0Jl54O39aG46SXXO15cRXNGtKzNC1ICv2UmFDGoVeDaBZcK7koRu4aWI.png?r=4e3",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaKvSFjHWsFeBlkMAZ73bIAzrFZArAyTsdC9sPC6D3bZpHb6fDwG8owUuy3Kv9GE2E_IBOWRQfnBTD-SKRMaE2HDC3OZycD-wKC4-kLjHNQ.png?r=6d6",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 9,
-      "title_en": "Ice Age",
-      "jp_title": "アイス・エイジ",
-      "year": 2002,
+      "rank": 7,
+      "title_en": "Thanksgiving",
+      "jp_title": "サンクスギビング",
+      "year": 2023,
       "genres": [
-        "アニメ"
+        "ホラー",
+        "スラッシャー"
       ],
-      "summary": "氷河期に突入し、動物たちが南へ移動する中、はぐれてしまった人間の赤ちゃんを家族のもとへ送り届けるため、マンモス、ナマケモノ、サーベルタイガーの異色トリオが協力することに。厳しい自然の中、いがみ合いながらも次第に友情を育んでいく彼らの、笑いと感動に満ちた冒険を描いたCGアニメーションの傑作です。あの伝説のリス、スクラットの奮闘もお見逃しなく！",
-      "runtime_minutes": 83,
-      "views_this_week": 2100000,
-      "weeks_in_top10": 4,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/1rt40huyqoepssm78ezog3ctp98s/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/60022702",
+      "summary": "感謝祭の発祥地プリマスで、祝日の夜に惨劇が幕を開けるスラッシャーホラー。謎のマスクをかぶった殺人鬼が、感謝祭にまつわるモチーフで人々を恐怖に陥れます。逃げ惑う人々が次々と命を落とす中、この血まみれの宴を止めることはできるのか。予測不能な展開と過激な描写が連続する、戦慄のホラー体験。",
+      "runtime_minutes": 106,
+      "views_this_week": 3800000,
+      "weeks_in_top10": 2,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABb0_QuRla4RczJvrjJGajkBoqWUhuHC3Z5Gzco4RmjW3_r_Lf8KTRFEMhnBy67qY8EkWdP0PnXg4r4HNWfWKKycZChI_UuM_DCz0Kg1mzXg.png?r=8c7",
+      "netflix_watch_url": "",
+      "available_in_japan": false,
+      "filmarks_id": null
+    },
+    {
+      "rank": 8,
+      "title_en": "Sing",
+      "jp_title": "SING／シング",
+      "year": 2017,
+      "genres": [
+        "アニメ",
+        "音楽",
+        "ファミリー"
+      ],
+      "summary": "破産寸前の劇場を立て直すため、陽気なコアラの支配人バスター・ムーンが開催した歌のオーディション。人生を変えたい個性豊かな動物たちが集結し、それぞれの歌声と情熱をぶつけ合います。\n彼らが夢を追いかける姿は観る者すべてを勇気づけ、世代を超えて楽しめる名曲の数々が彩る、心温まるミュージック・エンターテインメントです。",
+      "runtime_minutes": 108,
+      "views_this_week": 3200000,
+      "weeks_in_top10": 18,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/cgmbgcbabd5883lgqkht9dudqfqt/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/80117526",
       "available_in_japan": true,
-      "filmarks_id": "3479"
+      "filmarks_id": "66874"
+    },
+    {
+      "rank": 9,
+      "title_en": "Kidnapped in Her Own Home: The Martha Carelli Story",
+      "jp_title": "誘拐された私",
+      "year": 2017,
+      "genres": [
+        "スリラー",
+        "ドラマ",
+        "クライム"
+      ],
+      "summary": "豪邸で幸せに暮らしていた裕福な女性マーサは、ある夜、侵入者によって拉致されてしまう。目覚めた場所は監禁部屋。家族への思いを胸に、自力での脱出を試みる彼女だが、犯人の目的は単なる身代金だけではないようだ。果たして、マーサは無事に生きて家族の元へ帰ることができるのか、そして事件の裏に隠された恐ろしい真実とは？",
+      "runtime_minutes": 88,
+      "views_this_week": 3100000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVP_5jaKjsYBh547RwfQFgeAaMBZv7cojIND-49VRQY0pgq7hgKBbcSBUbMe5KP_r7gpr6lF-WSxc3ZtkSD3JBa-qSimtcjfAOn0hLdQRx4.png?r=a50",
+      "netflix_watch_url": "",
+      "available_in_japan": false,
+      "filmarks_id": null
     },
     {
       "rank": 10,
-      "title_en": "Aliens in the Attic",
-      "jp_title": "屋根裏のエイリアン",
-      "year": 2009,
+      "title_en": "KPop Demon Hunters",
+      "jp_title": "Kポップ・デーモンハンターズ",
+      "year": null,
       "genres": [
+        "アニメ",
+        "アクション",
         "コメディ"
       ],
-      "summary": "夏休み、郊外の別荘で子供たちが発見したのは、屋根裏に潜む地球侵略を目論むエイリアンたち。大人たちに知られることなく、子供たちは特別な能力を持つエイリアンたちとの奇想天外な戦いを繰り広げます。果たして彼らは、小さな体と大きな勇気で地球の危機を救えるのでしょうか？",
-      "runtime_minutes": 86,
-      "views_this_week": 2100000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/4tutggg7cnivnak5y0k3lgcxevv0/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/70120160",
-      "available_in_japan": true,
-      "filmarks_id": "40307"
+      "summary": "人気絶頂のK-POPアイドルグループが、実は夜な夜な悪魔と戦う「デーモンハンター」だった！ 華やかなパフォーマンスの裏で、彼らは歌とダンスで鍛え上げた身体能力を駆使し、秘密の武器と共に悪魔を狩る。アイドルとしての輝きと、世界の命運をかけた戦いの間で揺れ動く彼らの、スタイリッシュでコミカルな活躍が描かれる、新感覚のアクションアドベンチャー。",
+      "runtime_minutes": 100,
+      "views_this_week": 2800000,
+      "weeks_in_top10": 69,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZWSzsAkjgBk9AaFX808aLhPEYmACvc9wolKMtxdad5NB39oDTNbkMmC_aoLEGN0zIFTtlPkr0dVgpJUU22VoG72CK0F8y8F2anweqRDN8k.png?r=77d",
+      "netflix_watch_url": "",
+      "available_in_japan": false,
+      "filmarks_id": null
     }
   ],
   "japan_movies": [
     {
       "rank": 1,
-      "title_en": "Black Showman",
-      "jp_title": "ブラックショーマンと名もなき殺人",
-      "year": 2021,
+      "title_en": "One Year to Live, Buy a Man",
+      "jp_title": "ワン・イヤー・トゥ・リヴ バイ・ア・マン",
+      "year": null,
       "genres": [
-        "ミステリー",
-        "コメディ"
+        "ヒューマンドラマ",
+        "ロマンス"
       ],
-      "summary": "恩師の死をきっかけに、華麗なマジシャンとしてのキャリアを捨てた男が再び表舞台へ。彼が披露するのは、謎解きという名のショー。型破りな捜査方法と軽妙なトークで、迷宮入り寸前の事件の真相に迫ります。予測不能な展開とユーモアが織りなす、新感覚ミステリーエンターテイメントです。",
+      "summary": "余命一年を宣告された主人公が、残された時間をどう過ごすかを模索する。そして、彼女が選んだのは「男性を買う」という大胆な選択だった。人生の終焉を前に、彼女が求める真実の愛、あるいは究極の自由とは何なのか。感動と驚きに満ちた、予測不能な物語が幕を開ける。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 3,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABYi4qA5ZXXQPJKxH_6OWlsrX0Pv-8uuUOFpCMUU07ope_JQQ868cO2C8gR_nMLp8482wTokP5mVrhCI5o7v_wRe85xH0dKFkrfQ-8-ZG9jA.png?r=f90",
-      "netflix_watch_url": "https://www.netflix.com/watch/81913551",
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABWGKJAj_3aVsyNyWnO7V6ycyFxMk5a74CzeBMWDHMyvMf2PyH1YYs3XKB5aa99HuErTMMKVHW5cgnA20s8u1yNF984nrvkAScL6e44GebXc.png?r=696",
+      "netflix_watch_url": "https://www.netflix.com/watch/81505776",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 2,
-      "title_en": "What if Shogun Ieyasu Tokugawa Was To Become the Prime Minister",
-      "jp_title": "もしも徳川家康が首相になったら",
-      "year": null,
+      "title_en": "The Ice Ruts",
+      "jp_title": "ジ・アイス・ラッツ",
+      "year": 1929,
       "genres": [
-        "コメディ",
-        "ドラマ"
+        "ドラマ",
+        "ロマンス"
       ],
-      "summary": "もしも徳川家康が現代の日本の首相になったら、一体何が起こるのか？ 徳川幕府を築き上げた稀代の政治家が、混迷する現代政治をどのように統治するのか、その手腕に注目が集まる。慣れない現代の文化や技術に戸惑いながらも、天下統一で培った知略と胆力で、新たな日本の未来を切り開こうとする姿をコミカルかつドラマチックに描く。歴史と現代が交錯する、予測不能の異色エンターテイメント。",
+      "summary": "1929年に製作された短編映画。氷の上で偶然出会い、恋に落ちる若いカップルの物語が描かれます。サイレント映画の時代に生まれた本作は、言葉に頼らない視覚的な表現と音楽によって、二人の淡い恋心を詩情豊かに紡ぎ出します。古き良き時代の純粋なロマンスが、観る者の心にそっと寄り添うでしょう。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABWLBYut4d835yx_mdasmCCrIISBdzQ72jZ9FuUG41j4RpXvOSksXgPHXx-csF01HyHe4QlwNWpodwZpSGnxZnsaYESEUajKPIyiNUNNHORU.png?r=f6f",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%82%E3%81%97%E3%82%82%E5%BE%B3%E5%B7%9D%E5%AE%B6%E5%BA%B7%E3%81%8C%E9%A6%96%E7%9B%B8%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%82%89",
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSFSHDIjcurh36pDWYTe_96TUh3jKOwy0ELSJosImUsGQ85KGr-HWTjs36hbUm42WIeWX_NLsgFr9mnzWXp_wmrWPvOa5d4bp3oZhQ3F6Ks.png?r=270",
+      "netflix_watch_url": "https://www.netflix.com/watch/82078375",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 3,
-      "title_en": "Shylock's Children",
-      "jp_title": "シャイロックズ・チルドレン",
-      "year": 1993,
+      "title_en": "Ride On",
+      "jp_title": "ライド・オン",
+      "year": 2024,
       "genres": [
-        "ドラマ"
+        "コメディ",
+        "アクション"
       ],
-      "summary": "1993年に制作されたインディペンデントドラマ。経済的な苦境に喘ぐ家族を舞台に、父と息子が抱える複雑な感情と、隠された秘密が次第に明らかになっていく。彼らの間に横たわる深い溝と葛藤が、観る者に問いかけるヒューマンドラマです。",
+      "summary": "伝説のスタントマンとして名を馳せたルオは、今や愛馬の赤兎（チートゥ）と細々と暮らしていた。ある日、赤兎が差し押さえの危機に直面し、娘のシャオバオを巻き込みながら、ルオは再びスタントマンとして再起を図る。ジャッキー・チェンが自らの半生を重ねたかのような、アクション満載で心温まるヒューマンドラマ。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABR6iMaWi_ah3G9XIqdoN1LI6pVwHxgUSvYbK8M8FsNiYrcEqw4Ms1XUOkNtdsSkLE4jR9we_lMfqeFb7AC-qUtTyjT6V6UvmVr3V4f-FBf0.png?r=4e8",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%AD%E3%83%83%E3%82%AF%E3%82%BA%E3%83%BB%E3%83%81%E3%83%AB%E3%83%89%E3%83%AC%E3%83%B3",
+      "weeks_in_top10": 1,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/9vr9mvw30jxx0tflvn30i04q46f4/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81751797",
       "available_in_japan": true,
-      "filmarks_id": null
+      "filmarks_id": "109191"
     },
     {
       "rank": 4,
-      "title_en": "Surviving Hurricane Otis",
-      "jp_title": "サバイビング・ハリケーン・オーティス",
-      "year": 2023,
-      "genres": [
-        "ドキュメンタリー"
-      ],
-      "summary": "2023年10月、メキシコのリゾート都市アカプルコを突如襲ったカテゴリー5のハリケーン・オーティス。その未曾有の猛威と、一夜にして壊滅状態となった街の様子、そして極限状況を生き抜いた人々の証言を克明に記録したドキュメンタリーです。想像を絶する自然災害の恐怖と、生存者たちの生の声を届ける衝撃作。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABb8_nucBre6BEoO0fX0gyuPMg7Ew42zHLKFmpzCVyKLdhiJrAwyfyjb407wbkexSZiJew1WaFoztuByhdOs2kzSd6aaStrVhaxgrr7nGWOE.png?r=156",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%B5%E3%83%90%E3%82%A4%E3%83%93%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%8F%E3%83%AA%E3%82%B1%E3%83%BC%E3%83%B3%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B9",
-      "available_in_japan": true,
-      "filmarks_id": null
-    },
-    {
-      "rank": 5,
-      "title_en": "The Guardian",
-      "jp_title": "守護神",
-      "year": 2007,
-      "genres": [
-        "ドラマ"
-      ],
-      "summary": "伝説的なベテラン救助員と、才能はあるものの自信過剰な新米訓練生の絆を描く海洋アクションドラマ。深い喪失感を抱える彼らが、厳しい訓練と危険なミッションを通じて互いに支え合い、真の救助隊員として成長していく姿を感動的に描きます。命を懸けた任務の裏にある人間ドラマが胸を打ちます。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/rmpww5rbv1lecdau4qc2njnsmmu7/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/70050482",
-      "available_in_japan": true,
-      "filmarks_id": "5776"
-    },
-    {
-      "rank": 6,
-      "title_en": "The Last House on the Left",
-      "jp_title": "ラスト・ハウス・オン・ザ・レフト",
-      "year": 2009,
-      "genres": [
-        "ホラー",
-        "スリラー",
-        "バイオレンス"
-      ],
-      "summary": "郊外の別荘で休暇を過ごすはずだった家族が、偶然出会った凶悪な犯罪者グループによって、想像を絶する暴力と悲劇に見舞われる。生き残った娘の復讐と、図らずも被害者の家に逃げ込んだ加害者たちとの間で始まる、極限の心理戦と暴力の応酬が描かれる。倫理の境界線が崩壊する中で、観る者の心に深い爪痕を残す戦慄のサイコスリラー。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABeCvVJIeCQuIzpXLRo_YJsQgr_GNzy9BYucaljSDQnKB86UYgkJZLT1IDNwS-IvxhkUQC9R3o71NflY3plYGGsySt4xyU109uJOn8r6tj_Y.png?r=538",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%A9%E3%82%B9%E3%83%88%E3%83%BB%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%BB%E3%82%AA%E3%83%B3%E3%83%BB%E3%82%B6%E3%83%BB%E3%83%AC%E3%83%95%E3%83%88",
-      "available_in_japan": true,
-      "filmarks_id": null
-    },
-    {
-      "rank": 7,
       "title_en": "Godzilla Minus One",
       "jp_title": "ゴジラ-1.0",
       "year": 2023,
@@ -308,66 +264,116 @@
       "summary": "焦土と化した戦後の日本に、突如として現れたゴジラ。無(ゼロ)から負(マイナス)へ、想像を絶する絶望を突きつけられた人々は、抗う術を探し求める。山崎貴監督が描く、かつてないほど恐ろしく、そしてドラマティックなゴジラの姿に、日本中、そして世界が熱狂した。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 2,
+      "weeks_in_top10": 3,
       "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/svuig4uev9335s8hyd7vhsnibcbr/_.jpg",
       "netflix_watch_url": "https://www.netflix.com/jp/title/81767635",
       "available_in_japan": true,
       "filmarks_id": "106496"
     },
     {
-      "rank": 8,
-      "title_en": "The Addams Family",
-      "jp_title": "アダムス・ファミリー",
-      "year": 2020,
+      "rank": 5,
+      "title_en": "Collision Course",
+      "jp_title": "激突!!",
+      "year": 1989,
       "genres": [
-        "アニメ",
-        "コメディ",
-        "ファミリー"
+        "アクション",
+        "コメディ"
       ],
-      "summary": "不気味だが心優しいアダムス一家。彼らのもとに、25年間行方不明だった一家の長男フェスターと名乗る男が現れる。しかし、その男はアダムス家の財産を狙う悪党の仲間だった。ダークで奇妙な美意識を持つアダムス一家が繰り広げる、ゴシックでユーモラスな大騒動を描いた人気作品です。",
+      "summary": "日本のエリート警官と型破りなアメリカ人刑事が、盗まれた最新兵器を追ってタッグを組む。文化も捜査スタイルも全く異なる二人が繰り広げる、ハチャメチャな追跡劇は予測不能。息の合った（あるいは合わない）コンビが、果たして地球の危機を救えるのか、痛快なアクションとコメディが炸裂する。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/pxkuwxw1ikje0chl5f0evbiyn2ox/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/81034769",
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRSr_0sZRNXcVTYdMZDP5ANidkTXpWTLM1ksPs-kLxb1z87aliA7d5QmGTpVvBeDInFSqMmUYYAMUWITSmrEDSaE3F6ZCrDcnNrUM7bSNq8.png?r=db4",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E6%BF%80%E7%AA%81%21%21",
       "available_in_japan": true,
-      "filmarks_id": "79832"
+      "filmarks_id": null
+    },
+    {
+      "rank": 6,
+      "title_en": "Black Showman",
+      "jp_title": "ブラック・ショーマン",
+      "year": 2025,
+      "genres": [
+        "ミステリー"
+      ],
+      "summary": "厳しい校則に縛られた高校を舞台に、生徒たちが自主制作映画に挑む物語。ショーマンを夢見る主人公が、友人たちと力を合わせ、閉鎖的な日常に一石を投じます。夢を追いかける青春の輝きと、旧態依然とした社会への抵抗を描いた作品です。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 4,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/870i9qhjzx5hery5snazdq7opupl/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/82758527",
+      "available_in_japan": true,
+      "filmarks_id": "119119"
+    },
+    {
+      "rank": 7,
+      "title_en": "Brave: Gunjo Senki",
+      "jp_title": "ブレイブ 群青戦記",
+      "year": 2021,
+      "genres": [
+        "アクション"
+      ],
+      "summary": "ある日突然、強豪校の生徒たちが丸ごと戦国時代にタイムスリップ。未来を知る彼らが、歴史を覆し、仲間たちと共に過酷な戦場で生き残るために奮闘する姿を描きます。高校生たちが力を合わせ、絆を深めながら戦い抜く、疾走感あふれる青春SFアクションです。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 1,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/bc5k3ult2jvilktryiqlil96rrgy/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/83066743",
+      "available_in_japan": true,
+      "filmarks_id": "88010"
+    },
+    {
+      "rank": 8,
+      "title_en": "Heist",
+      "jp_title": "スコア",
+      "year": 2002,
+      "genres": [
+        "犯罪",
+        "スリラー"
+      ],
+      "summary": "長年のキャリアを持つプロの金庫破り、ジョーが裏社会のボスから持ちかけられた最後の仕事は、金塊が眠る厳重な金庫からの美術品強奪だった。しかし、彼を信頼していたはずの相棒や、新たに加わった若い協力者との間に裏切りや巧妙な駆け引きが渦巻き、完璧なはずの計画は予測不能な方向へと転がっていく。緊迫感あふれる展開と、誰が味方で誰が敵かわからないだまし合いが見どころのクライム・スリラー。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZ9VLLsmfp1Xygs1hG2y13Qqbk59MUDSYRK2rzBmxLWubBkcekzL4s3oAo2w1abP5WlAXYfiDbJG61JKAJkIWHaHi1qptKuGphOLsX9V82Y.png?r=268",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%B9%E3%82%B3%E3%82%A2",
+      "available_in_japan": true,
+      "filmarks_id": null
     },
     {
       "rank": 9,
-      "title_en": "Black Night Parade",
-      "jp_title": "ブラックナイトパレード",
-      "year": 2022,
+      "title_en": "The Guardian",
+      "jp_title": "守護神",
+      "year": 2007,
       "genres": [
-        "コメディ"
+        "ドラマ"
       ],
-      "summary": "受験失敗、就職失敗、恋人なしの冴えない日々を送っていた日野三春は、突如としてクリスマスの裏側で活躍する「ブラックサンタ」にスカウトされる。\n悪い子の家にプレゼントを届けるという奇妙な職場で、個性的すぎる仲間たちと共に、三春は予測不能な騒動に巻き込まれていく。\nクリスマスの夜に繰り広げられる、笑いと感動のファンタジーコメディです。",
+      "summary": "伝説的なベテラン救助員と、才能はあるものの自信過剰な新米訓練生の絆を描く海洋アクションドラマ。深い喪失感を抱える彼らが、厳しい訓練と危険なミッションを通じて互いに支え合い、真の救助隊員として成長していく姿を感動的に描きます。命を懸けた任務の裏にある人間ドラマが胸を打ちます。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/3oeb4gqu59aq06btxu3pk46m1zbr/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/83066741",
+      "weeks_in_top10": 2,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/rmpww5rbv1lecdau4qc2njnsmmu7/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/70050482",
       "available_in_japan": true,
-      "filmarks_id": "104677"
+      "filmarks_id": "5776"
     },
     {
       "rank": 10,
-      "title_en": "Land of Happiness",
-      "jp_title": "ランド・オブ・ハピネス",
-      "year": null,
+      "title_en": "The Hobbit: An Unexpected Journey",
+      "jp_title": "ホビット 思いがけない冒険",
+      "year": 2012,
       "genres": [
-        "ドラマ",
-        "歴史",
-        "法廷"
+        "アドベンチャー・冒険",
+        "ファンタジー"
       ],
-      "summary": "1979年の激動の韓国を舞台に、軍事政権下で不可解な事件に巻き込まれた元軍人と、彼を救うため奔走する弁護士の姿を描く法廷ドラマ。歴史の渦に翻弄される人々の尊厳と真実をかけた闘いが、観る者の心を揺さぶります。実力派キャストが織りなす緊迫の展開に注目です。",
+      "summary": "J.R.R.トールキンの名作をピーター・ジャクソン監督が映画化した「ロード・オブ・ザ・リング」の前日譚。平凡なホビット族のビルボ・バギンズが、魔法使いガンダルフと13人のドワーフたちと共に、危険に満ちた遠い山への旅に出ます。彼らの行く手には、ゴブリンやオーク、そして謎めいた指輪との出会いが待ち受けており、中つ国を舞台に壮大な冒険が幕を開けます。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABUzmcQ9AqSITo9CoPEfrKQOIjA7YSow3LNy0qdkaYEaGyJraVEEz90stbrmONCtXRW2blquu9szGWoCLMs-NR-a56ZojfaLizAOrFc2djAs.png?r=af1",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%83%8F%E3%83%94%E3%83%8D%E3%82%B9",
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/70ad1chj81ghmys5lkmgiinpivs3/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/70226288",
       "available_in_japan": true,
-      "filmarks_id": null
+      "filmarks_id": "21414"
     }
   ]
 }
