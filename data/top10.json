@@ -1,14 +1,34 @@
 {
-  "updated_at": "2026-11-11T16:26:01+09:00",
+  "updated_at": "2026-11-18T17:09:19+09:00",
   "week_label": [
+    "https://www.netflix.com/watch/81486332",
     "https://www.netflix.com/watch/82090597",
-    "https://www.netflix.com/watch/81498621"
+    "https://www.netflix.com/watch/82138246",
+    "https://www.netflix.com/watch/81382720"
   ],
   "source": "Netflix Tudum",
   "source_url": "https://www.netflix.com/tudum/top10",
   "global_movies": [
     {
       "rank": 1,
+      "title_en": "Heartland",
+      "jp_title": "ハートランド",
+      "year": null,
+      "genres": [
+        "ミステリー",
+        "スリラー"
+      ],
+      "summary": "アメリカ中西部の広大な自然を舞台に、登場人物たちの人生の営みと、困難に立ち向かう姿を深く描く人間ドラマ。家族の絆、地域社会との繋がり、そして自身のルーツを見つめ直す旅を通じて、観る者の心に静かな感動と温かさを届けるでしょう。普遍的なテーマを丁寧に紡ぎ出す、心に響く物語が展開されます。",
+      "runtime_minutes": 114,
+      "views_this_week": 7300000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/yddncag9f9h9moyexcvawn6qq1mc/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81486332",
+      "available_in_japan": true,
+      "filmarks_id": "131290"
+    },
+    {
+      "rank": 2,
       "title_en": "A Dog's Perfect Christmas",
       "jp_title": "クリスマス・ワンダーランド",
       "year": 2021,
@@ -19,71 +39,71 @@
       ],
       "summary": "クリスマスを目前に、孤独な少女ホープは、迷子のワンちゃんと出会う。彼女は犬を家族に内緒で飼い始めるが、その存在はホープの家庭に予期せぬ変化をもたらす。ワンちゃんとの出会いが、冷え切っていた家族の絆を再び温め、心に残るクリスマスの奇跡を呼び起こす感動のファミリードラマ。",
       "runtime_minutes": 101,
-      "views_this_week": 8600000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABdZ-Aym4vS917I00pm4ZYsrQUFPlU2frV2ixHNZtm9O-8yOASEZCIjxbT04L1H6hgyuQux8xVjUfGlSmwqLs7M0zwtaKPPi7AG6iB3jhVPQ.png?r=6d1",
+      "views_this_week": 7200000,
+      "weeks_in_top10": 2,
+      "poster_url": "https://dnm.nflximg.net/api/v6/NQMscAviTbcSthK7LRWw8ctgi78/AAAABajSqorCgXHuHUXU8Iu6q7No4SIiDYesdFLO7SNtw3ooT_HxG_RUx38IFnO-7bQD2JylRnMF1vcvC4EhSN37W35KLKGiA_utesjjBx7kBZw.png?r=6d1",
       "netflix_watch_url": "https://www.netflix.com/watch/82090597",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 2,
-      "title_en": "Heist",
-      "jp_title": "K-POP デーモンハンターズ",
-      "year": 2024,
-      "genres": [
-        "アクション",
-        "コメディ",
-        "ファンタジー"
-      ],
-      "summary": "世界を熱狂させるK-POPアイドルたちが、その華やかなステージの裏で、密かに悪魔と戦う使命を背負っていたとしたら？アクション、コメディ、ファンタジーが融合したこの作品は、音楽と超常現象が見事に交差する、全く新しいエンターテイメント体験をお届けします。彼らは歌とダンスで世界を救えるのか、その秘密の戦いにご期待ください。",
-      "runtime_minutes": 109,
-      "views_this_week": 6300000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABQPPCYybbdNt-GJjYnJKMWuJNhYlxrBmAH-qrMZBANH93Rcvc9b9GQSZuruhxR-RI2ioN-7pefzas46yRYW_9_GU_pFZ4LGeyV0WQtOKuAQ.png?r=f20",
-      "netflix_watch_url": "https://www.netflix.com/watch/81498621",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
       "rank": 3,
-      "title_en": "Final Destination: Bloodlines",
-      "jp_title": "ファイナル・デスティネーション: ブラッドラインズ",
-      "year": null,
+      "title_en": "The Gospel of Christmas",
+      "jp_title": "ザ・ゴスペル・オブ・クリスマス",
+      "year": 2018,
       "genres": [
-        "ホラー",
-        "スリラー"
+        "ドラマ",
+        "ファミリー",
+        "音楽"
       ],
-      "summary": "死の運命から逃れた者たちが次々と恐ろしい事故に巻き込まれる人気ホラーシリーズの最新作。本作では、より巧妙で予測不能なデス・トラップが仕掛けられ、観る者を極限の緊張感に突き落とします。抗うことのできない運命と、新たな形で襲い来る死の恐怖に戦慄せよ。",
-      "runtime_minutes": 110,
-      "views_this_week": 5800000,
+      "summary": "クリスマスの季節、故郷への旅の途中で思いがけないトラブルに見舞われた一家。車が故障し、彼らは人里離れた小さな町でクリスマスを過ごすことになります。そこで出会ったのは、教会のクリスマス劇を成功させようと奮闘する地元の人々。家族の絆と、クリスマスの真の意味を問いかける、心温まる感動の物語です。",
+      "runtime_minutes": 105,
+      "views_this_week": 6100000,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABcoFGFEhKfYQKxq6137xDK-4HzDM7o_8e1bkdkv5BPMWbpNH9adsyOic9rkgtQ0zlRG4n5qckLp3nuRkLrF8hvYorduYQR-Vdd9W_ttsy7k.png?r=e16",
-      "netflix_watch_url": "",
+      "poster_url": "https://dnm.nflximg.net/api/v6/NQMscAviTbcSthK7LRWw8ctgi78/AAAABRxrAYoJnYTP6vOZQduRXv-KsKwyjHFCns_HiJxFsRpq6ZeEKnhWer-NhfIgc-mCgJPQyfi_eQa7W2F5sPmLPiRTHcWeLsMgVGKkzRbOB7A.png?r=36c",
+      "netflix_watch_url": "https://www.netflix.com/watch/82138246",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 4,
-      "title_en": "The Day After Tomorrow",
-      "jp_title": "デイ・アフター・トゥモロー",
-      "year": 2004,
+      "title_en": "Reminders of Him",
+      "jp_title": "リマインダーズ・オブ・ヒム",
+      "year": null,
       "genres": [
-        "SF",
-        "パニック",
+        "ロマンス",
         "ドラマ"
       ],
-      "summary": "地球温暖化が引き起こす未曾有の気候変動により、現代社会に新たな氷河期が迫るSFパニック超大作。気象学者のジャック・ホールは、急激な寒冷化と異常現象が世界を飲み込む中、ニューヨークに取り残された息子を救うため、極寒の地へと向かう。壮絶な自然の猛威と、その中で生き残ろうとする人々のドラマが、圧倒的なスケールで描かれる。",
-      "runtime_minutes": 124,
+      "summary": "悲劇的な過ちで服役したケンナは、出所後、幼い娘との再会を強く願う。しかし、娘の祖父母は彼女を拒み、再会を阻む。唯一手を差し伸べてくれたのは、謎めいたバーテンダーのライジャーだった。だが、彼もまたケンナの過去と深く繋がっていた。失われた愛と赦しを求める、感動的なドラマが展開される。",
+      "runtime_minutes": 114,
       "views_this_week": 4400000,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABWH9MYklBpthIh4seQcQaqIjtq38GhEYVbjkyGtGMCJnBHEOwrtCPch11fwpPfQUB-r0UsSWhMqGs9cqtyfGmC7xhAvkg7e1Yi2GNr8Xg_o.png?r=81a",
-      "netflix_watch_url": "",
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/NQMscAviTbcSthK7LRWw8ctgi78/AAAABSCaTuhUf4HeN-WTj6KLvHT7Cb2DxMz0gqYg8BishPMpyVmpWqsppHhThN0uMOvV7uyNC2Z-eDL0HUhMCx1x5-LKGHLaHeg8A8oTUqV7HxA.png?r=05d",
+      "netflix_watch_url": "https://www.netflix.com/watch/81382720",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 5,
+      "title_en": "Allen",
+      "jp_title": "アレン",
+      "year": null,
+      "genres": [
+        "ドラマ",
+        "SF",
+        "アドベンチャー・冒険"
+      ],
+      "summary": "この映画の詳細な情報は不明です。アレンという名前から想像される、個性的な登場人物の人生の葛藤や、ある出来事を巡る物語を描いているかもしれません。観客は、その背景にある人間ドラマや、謎に満ちた展開に引き込まれることでしょう。",
+      "runtime_minutes": 107,
+      "views_this_week": 3500000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/f5o1ntpqknak6354pz66ip58atxu/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81382720",
+      "available_in_japan": true,
+      "filmarks_id": "131533"
+    },
+    {
+      "rank": 6,
       "title_en": "Sing 2",
       "jp_title": "SING/シング：ネクストステージ",
       "year": 2022,
@@ -94,52 +114,68 @@
       ],
       "summary": "前作で最高のショーを成功させたバスター・ムーンと仲間たちが、さらなる夢の舞台、エンターテイメントの聖地レッド・ショア・シティに挑む。ショーを成功させるため、彼らは隠遁生活を送る伝説のロックスター、クレイ・キャロウェイを仲間に引き入れようとするが…。心震わす珠玉のヒットソングに乗せて、誰もが勇気をもらえる感動のミュージカル・エンターテイメント！",
       "runtime_minutes": 110,
-      "views_this_week": 4300000,
-      "weeks_in_top10": 14,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABWllE62WgntbuGfxlhsGfdPAyI1lia5V4dxBLtdKrrPSJKY2aikAoY2qw2LUue8b5wVc_0xAiX7IWA4phbBZbKRwEC9zM6aRIjtf_HQOQ24.png?r=24b",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 6,
-      "title_en": "Sniper: The Last Stand",
-      "jp_title": "狙撃手",
-      "year": 2022,
-      "genres": [
-        "戦争",
-        "アクション",
-        "ドラマ"
-      ],
-      "summary": "朝鮮戦争の激戦地で、百発百中の腕を持つ中国の熟練狙撃兵と若き兵士たちが、アメリカ軍との熾烈な死闘を繰り広げる。極寒の戦場で知略と勇気を尽くした攻防が息をのむ緊張感で描かれ、極限状況に置かれた兵士たちの人間ドラマが胸を打つ骨太な戦争アクションです。",
-      "runtime_minutes": 99,
-      "views_this_week": 3900000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABaKvSFjHWsFeBlkMAZ73bIAzrFZArAyTsdC9sPC6D3bZpHb6fDwG8owUuy3Kv9GE2E_IBOWRQfnBTD-SKRMaE2HDC3OZycD-wKC4-kLjHNQ.png?r=6d6",
+      "views_this_week": 3200000,
+      "weeks_in_top10": 15,
+      "poster_url": "https://dnm.nflximg.net/api/v6/NQMscAviTbcSthK7LRWw8ctgi78/AAAABbPaeJ6RjyddZhG6GyDqz1uITAoMMDPpgimtDSdS7vuI7A-Mm0Pg75SptRZE0t2EER78tlvp-v1eqRHhx2x395s5_R9zb6APzptn_sD9PjI.png?r=24b",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
       "rank": 7,
-      "title_en": "Thanksgiving",
-      "jp_title": "サンクスギビング",
-      "year": 2023,
+      "title_en": "How the Grinch Stole Christmas",
+      "jp_title": "グリンチ",
+      "year": 2018,
       "genres": [
-        "ホラー",
-        "スラッシャー"
+        "アニメ"
       ],
-      "summary": "感謝祭の発祥地プリマスで、祝日の夜に惨劇が幕を開けるスラッシャーホラー。謎のマスクをかぶった殺人鬼が、感謝祭にまつわるモチーフで人々を恐怖に陥れます。逃げ惑う人々が次々と命を落とす中、この血まみれの宴を止めることはできるのか。予測不能な展開と過激な描写が連続する、戦慄のホラー体験。",
-      "runtime_minutes": 106,
-      "views_this_week": 3800000,
-      "weeks_in_top10": 2,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABb0_QuRla4RczJvrjJGajkBoqWUhuHC3Z5Gzco4RmjW3_r_Lf8KTRFEMhnBy67qY8EkWdP0PnXg4r4HNWfWKKycZChI_UuM_DCz0Kg1mzXg.png?r=8c7",
+      "summary": "フーヴィル村の近くに住む、クリスマスが大嫌いな緑色のひねくれ者、グリンチ。彼は村人たちの賑やかなクリスマスを台無しにしようと、様々な悪事を企てる。果たしてグリンチはクリスマスの精神を理解し、その凍りついた心を溶かすことができるのか。ジム・キャリーが特殊メイクで熱演する、心温まるファンタジーコメディです。",
+      "runtime_minutes": 104,
+      "views_this_week": 3100000,
+      "weeks_in_top10": 9,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/kp0hteg0y9zvz8pl5t6sjdwbjdfb/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/80996790",
+      "available_in_japan": true,
+      "filmarks_id": "77503"
+    },
+    {
+      "rank": 8,
+      "title_en": "Funny Money: The Dane Cook Story",
+      "jp_title": "ファニー・マネー：デーン・クック・ストーリー",
+      "year": 2012,
+      "genres": [
+        "コメディ",
+        "ドキュメンタリー"
+      ],
+      "summary": "アメリカの人気コメディアン、デーン・クックのキャリアに深く切り込むドキュメンタリー。彼がどのようにしてスターダムにのし上がったのか、その成功の裏にあった葛藤や努力、そして彼ならではのユニークなコメディスタイルがどのように確立されたのかを探ります。爆笑必至のスタンドアップパフォーマンスはもちろん、彼の人間的な魅力にも迫る、ファン必見の作品です。",
+      "runtime_minutes": 119,
+      "views_this_week": 2600000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/NQMscAviTbcSthK7LRWw8ctgi78/AAAABc4TEQKe1ZssaeXUEFgONZVGjy5_V_GkHM_4UN_GrxniCS6oWNlMdBkgp5hsVSAwnequkZuSHsWc5PYDsRn5pxtyvv8KfOWoKklaaaeXHKY.png?r=c9f",
       "netflix_watch_url": "",
       "available_in_japan": false,
       "filmarks_id": null
     },
     {
-      "rank": 8,
+      "rank": 9,
+      "title_en": "All the Pretty Horses",
+      "jp_title": "すべての美しい馬",
+      "year": 2001,
+      "genres": [
+        "恋愛",
+        "西部劇"
+      ],
+      "summary": "テキサスの雄大な自然で育った若者、ジョン・グレイディ・コールが、親友と共にメキシコへと旅立つ青春ドラマ。広大な国境の彼方で、彼らを待ち受けるのは、美しい女性との出会い、友情の試練、そして厳しい現実だった。巨匠コーマック・マッカーシーの同名小説を映画化した本作は、西部劇のロマンと人生の厳しさを鮮烈に描き出します。",
+      "runtime_minutes": 117,
+      "views_this_week": 2600000,
+      "weeks_in_top10": 1,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/gx9411tt8gzfirymz3hug5v3j18b/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/60004267",
+      "available_in_japan": true,
+      "filmarks_id": "13758"
+    },
+    {
+      "rank": 10,
       "title_en": "Sing",
       "jp_title": "SING／シング",
       "year": 2017,
@@ -150,50 +186,12 @@
       ],
       "summary": "破産寸前の劇場を立て直すため、陽気なコアラの支配人バスター・ムーンが開催した歌のオーディション。人生を変えたい個性豊かな動物たちが集結し、それぞれの歌声と情熱をぶつけ合います。\n彼らが夢を追いかける姿は観る者すべてを勇気づけ、世代を超えて楽しめる名曲の数々が彩る、心温まるミュージック・エンターテインメントです。",
       "runtime_minutes": 108,
-      "views_this_week": 3200000,
-      "weeks_in_top10": 18,
+      "views_this_week": 2400000,
+      "weeks_in_top10": 19,
       "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/cgmbgcbabd5883lgqkht9dudqfqt/_.jpg",
       "netflix_watch_url": "https://www.netflix.com/jp/title/80117526",
       "available_in_japan": true,
       "filmarks_id": "66874"
-    },
-    {
-      "rank": 9,
-      "title_en": "Kidnapped in Her Own Home: The Martha Carelli Story",
-      "jp_title": "誘拐された私",
-      "year": 2017,
-      "genres": [
-        "スリラー",
-        "ドラマ",
-        "クライム"
-      ],
-      "summary": "豪邸で幸せに暮らしていた裕福な女性マーサは、ある夜、侵入者によって拉致されてしまう。目覚めた場所は監禁部屋。家族への思いを胸に、自力での脱出を試みる彼女だが、犯人の目的は単なる身代金だけではないようだ。果たして、マーサは無事に生きて家族の元へ帰ることができるのか、そして事件の裏に隠された恐ろしい真実とは？",
-      "runtime_minutes": 88,
-      "views_this_week": 3100000,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABVP_5jaKjsYBh547RwfQFgeAaMBZv7cojIND-49VRQY0pgq7hgKBbcSBUbMe5KP_r7gpr6lF-WSxc3ZtkSD3JBa-qSimtcjfAOn0hLdQRx4.png?r=a50",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
-    },
-    {
-      "rank": 10,
-      "title_en": "KPop Demon Hunters",
-      "jp_title": "Kポップ・デーモンハンターズ",
-      "year": null,
-      "genres": [
-        "アニメ",
-        "アクション",
-        "コメディ"
-      ],
-      "summary": "人気絶頂のK-POPアイドルグループが、実は夜な夜な悪魔と戦う「デーモンハンター」だった！ 華やかなパフォーマンスの裏で、彼らは歌とダンスで鍛え上げた身体能力を駆使し、秘密の武器と共に悪魔を狩る。アイドルとしての輝きと、世界の命運をかけた戦いの間で揺れ動く彼らの、スタイリッシュでコミカルな活躍が描かれる、新感覚のアクションアドベンチャー。",
-      "runtime_minutes": 100,
-      "views_this_week": 2800000,
-      "weeks_in_top10": 69,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZWSzsAkjgBk9AaFX808aLhPEYmACvc9wolKMtxdad5NB39oDTNbkMmC_aoLEGN0zIFTtlPkr0dVgpJUU22VoG72CK0F8y8F2anweqRDN8k.png?r=77d",
-      "netflix_watch_url": "",
-      "available_in_japan": false,
-      "filmarks_id": null
     }
   ],
   "japan_movies": [
@@ -209,32 +207,105 @@
       "summary": "余命一年を宣告された主人公が、残された時間をどう過ごすかを模索する。そして、彼女が選んだのは「男性を買う」という大胆な選択だった。人生の終焉を前に、彼女が求める真実の愛、あるいは究極の自由とは何なのか。感動と驚きに満ちた、予測不能な物語が幕を開ける。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABWGKJAj_3aVsyNyWnO7V6ycyFxMk5a74CzeBMWDHMyvMf2PyH1YYs3XKB5aa99HuErTMMKVHW5cgnA20s8u1yNF984nrvkAScL6e44GebXc.png?r=696",
+      "weeks_in_top10": 2,
+      "poster_url": "https://dnm.nflximg.net/api/v6/NQMscAviTbcSthK7LRWw8ctgi78/AAAABebkJeb_wc8h2ERfw7E14Y7Kbhgzj286npZv0NW5fi-GpvyhDVx-g2pgv1tPXTE31rqTpVpJAmPQc56inbSOTluK9Je7mRwYP6VNtFLA8Os.png?r=696",
       "netflix_watch_url": "https://www.netflix.com/watch/81505776",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 2,
-      "title_en": "The Ice Ruts",
-      "jp_title": "ジ・アイス・ラッツ",
-      "year": 1929,
+      "title_en": "5 Centimeters Per Second",
+      "jp_title": "秒速5センチメートル",
+      "year": 2025,
       "genres": [
         "ドラマ",
-        "ロマンス"
+        "恋愛"
       ],
-      "summary": "1929年に製作された短編映画。氷の上で偶然出会い、恋に落ちる若いカップルの物語が描かれます。サイレント映画の時代に生まれた本作は、言葉に頼らない視覚的な表現と音楽によって、二人の淡い恋心を詩情豊かに紡ぎ出します。古き良き時代の純粋なロマンスが、観る者の心にそっと寄り添うでしょう。",
+      "summary": "「秒速5センチメートル」は、新海誠監督が贈る、移りゆく季節の中で織りなされる少年と少女の心の距離を描いた連作短編アニメーション。淡い初恋の思い出や、再会を願う切ない心情が、美しい映像と繊細な描写で綴られていく。遠く離れても繋がっていたいと願う彼らの行く末は、観る者の心に深く響くことだろう。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABSFSHDIjcurh36pDWYTe_96TUh3jKOwy0ELSJosImUsGQ85KGr-HWTjs36hbUm42WIeWX_NLsgFr9mnzWXp_wmrWPvOa5d4bp3oZhQ3F6Ks.png?r=270",
-      "netflix_watch_url": "https://www.netflix.com/watch/82078375",
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/vku1e4zfn98wlkyc835t6ljm4gf3/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/82758559",
+      "available_in_japan": true,
+      "filmarks_id": "118757"
+    },
+    {
+      "rank": 3,
+      "title_en": "Godzilla Minus One",
+      "jp_title": "ゴジラ-1.0",
+      "year": 2023,
+      "genres": [
+        "SF",
+        "特撮",
+        "ドラマ"
+      ],
+      "summary": "終戦直後の焦土と化した日本に、突如として出現したゴジラ。想像を絶する絶望的な状況下で、人々は巨大な破壊者に対し、生き残りをかけた戦いを強いられる。圧倒的な恐怖と、そこから立ち上がろうとする人間の尊厳を描き、世界を熱狂させた日本発の怪獣映画の新たな傑作。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 4,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/svuig4uev9335s8hyd7vhsnibcbr/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/81767635",
+      "available_in_japan": true,
+      "filmarks_id": "106496"
+    },
+    {
+      "rank": 4,
+      "title_en": "Psychic Kusuo",
+      "jp_title": "斉木楠雄のΨ難",
+      "year": 2017,
+      "genres": [
+        "コメディ",
+        "学園",
+        "ファンタジー"
+      ],
+      "summary": "超能力を隠して生活する高校生・斉木楠雄の日常を描いた学園コメディ。彼を巡る個性豊かなクラスメイトたちが次々と騒動を巻き起こし、その度に楠雄は望まずして超能力で解決に導くハメに。平和な日常を願う彼の願いとは裏腹に、今日もまたトラブルは絶えない毎日だ。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/NQMscAviTbcSthK7LRWw8ctgi78/AAAABTHBmf7ZUHZxaDE94sKRorl-oc8CZTpa2yptoqNL3rNv5KmX8fNNVk-5FIxjzx3m6AahR8VkdmQfVojhKqZdj1AOTxJVCUsSOe1spygf26g.png?r=e7c",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E6%96%89%E6%9C%A8%E6%A5%A0%E9%9B%84%E3%81%AE%CE%A8%E9%9B%A3",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
-      "rank": 3,
+      "rank": 5,
+      "title_en": "Brave: Gunjo Senki",
+      "jp_title": "ブレイブ 群青戦記",
+      "year": 2021,
+      "genres": [
+        "アクション"
+      ],
+      "summary": "ある日突然、強豪校の生徒たちが丸ごと戦国時代にタイムスリップ。未来を知る彼らが、歴史を覆し、仲間たちと共に過酷な戦場で生き残るために奮闘する姿を描きます。高校生たちが力を合わせ、絆を深めながら戦い抜く、疾走感あふれる青春SFアクションです。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 2,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/bc5k3ult2jvilktryiqlil96rrgy/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/83066743",
+      "available_in_japan": true,
+      "filmarks_id": "88010"
+    },
+    {
+      "rank": 6,
+      "title_en": "Never Surrender",
+      "jp_title": "ネバー・サレンダー 肉弾凶器",
+      "year": 2009,
+      "genres": [
+        "アクション",
+        "スポーツ"
+      ],
+      "summary": "かつて総合格闘技のスターだった男が、愛する者のために再びリングへと舞い戻る熱いアクション映画。裏社会の陰謀に巻き込まれた彼が、過去の栄光と現在の苦悩を背負いながら、己の全てを賭けて強敵たちに挑みます。肉体と精神の限界を超える壮絶なバトルと、決して諦めない男の生き様が胸を打つ格闘エンターテイメントです。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 1,
+      "poster_url": "https://dnm.nflximg.net/api/v6/NQMscAviTbcSthK7LRWw8ctgi78/AAAABfNOmTjP1I3d5l7F_xcFefHA5dQFTXSw8xw5hjKQjHPWdAeC2NwYch1CZLevOA8yiAikOPsom9Z5LMxa_mugm9XXEkp2JqV4ihCPHLGmCoc.png?r=696",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%8D%E3%83%90%E3%83%BC%E3%83%BB%E3%82%B5%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC%20%E8%82%89%E5%BC%BE%E5%87%B6%E5%99%A8",
+      "available_in_japan": true,
+      "filmarks_id": null
+    },
+    {
+      "rank": 7,
       "title_en": "Ride On",
       "jp_title": "ライド・オン",
       "year": 2024,
@@ -245,135 +316,65 @@
       "summary": "伝説のスタントマンとして名を馳せたルオは、今や愛馬の赤兎（チートゥ）と細々と暮らしていた。ある日、赤兎が差し押さえの危機に直面し、娘のシャオバオを巻き込みながら、ルオは再びスタントマンとして再起を図る。ジャッキー・チェンが自らの半生を重ねたかのような、アクション満載で心温まるヒューマンドラマ。",
       "runtime_minutes": null,
       "views_this_week": null,
-      "weeks_in_top10": 1,
+      "weeks_in_top10": 2,
       "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/9vr9mvw30jxx0tflvn30i04q46f4/_.jpg",
       "netflix_watch_url": "https://www.netflix.com/jp/title/81751797",
       "available_in_japan": true,
       "filmarks_id": "109191"
     },
     {
-      "rank": 4,
-      "title_en": "Godzilla Minus One",
-      "jp_title": "ゴジラ-1.0",
-      "year": 2023,
+      "rank": 8,
+      "title_en": "Million Dollar Man",
+      "jp_title": "ミリオンダラー・マン",
+      "year": null,
       "genres": [
-        "怪獣",
-        "SF",
-        "ドラマ"
-      ],
-      "summary": "焦土と化した戦後の日本に、突如として現れたゴジラ。無(ゼロ)から負(マイナス)へ、想像を絶する絶望を突きつけられた人々は、抗う術を探し求める。山崎貴監督が描く、かつてないほど恐ろしく、そしてドラマティックなゴジラの姿に、日本中、そして世界が熱狂した。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 3,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/svuig4uev9335s8hyd7vhsnibcbr/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/81767635",
-      "available_in_japan": true,
-      "filmarks_id": "106496"
-    },
-    {
-      "rank": 5,
-      "title_en": "Collision Course",
-      "jp_title": "激突!!",
-      "year": 1989,
-      "genres": [
-        "アクション",
-        "コメディ"
-      ],
-      "summary": "日本のエリート警官と型破りなアメリカ人刑事が、盗まれた最新兵器を追ってタッグを組む。文化も捜査スタイルも全く異なる二人が繰り広げる、ハチャメチャな追跡劇は予測不能。息の合った（あるいは合わない）コンビが、果たして地球の危機を救えるのか、痛快なアクションとコメディが炸裂する。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABRSr_0sZRNXcVTYdMZDP5ANidkTXpWTLM1ksPs-kLxb1z87aliA7d5QmGTpVvBeDInFSqMmUYYAMUWITSmrEDSaE3F6ZCrDcnNrUM7bSNq8.png?r=db4",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E6%BF%80%E7%AA%81%21%21",
-      "available_in_japan": true,
-      "filmarks_id": null
-    },
-    {
-      "rank": 6,
-      "title_en": "Black Showman",
-      "jp_title": "ブラック・ショーマン",
-      "year": 2025,
-      "genres": [
-        "ミステリー"
-      ],
-      "summary": "厳しい校則に縛られた高校を舞台に、生徒たちが自主制作映画に挑む物語。ショーマンを夢見る主人公が、友人たちと力を合わせ、閉鎖的な日常に一石を投じます。夢を追いかける青春の輝きと、旧態依然とした社会への抵抗を描いた作品です。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 4,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/870i9qhjzx5hery5snazdq7opupl/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/82758527",
-      "available_in_japan": true,
-      "filmarks_id": "119119"
-    },
-    {
-      "rank": 7,
-      "title_en": "Brave: Gunjo Senki",
-      "jp_title": "ブレイブ 群青戦記",
-      "year": 2021,
-      "genres": [
+        "ドラマ",
         "アクション"
       ],
-      "summary": "ある日突然、強豪校の生徒たちが丸ごと戦国時代にタイムスリップ。未来を知る彼らが、歴史を覆し、仲間たちと共に過酷な戦場で生き残るために奮闘する姿を描きます。高校生たちが力を合わせ、絆を深めながら戦い抜く、疾走感あふれる青春SFアクションです。",
+      "summary": "大金を巡る究極のゲームに挑む男の物語。人生の一発逆転を夢見る主人公は、全てを失う覚悟で危険な挑戦に身を投じる。富と名声、そして生き残りをかけた熾烈な戦いの果てに、彼が手にするものは一体何なのか。手に汗握る展開と予測不能な結末が観る者を惹きつけます。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/bc5k3ult2jvilktryiqlil96rrgy/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/83066743",
-      "available_in_japan": true,
-      "filmarks_id": "88010"
-    },
-    {
-      "rank": 8,
-      "title_en": "Heist",
-      "jp_title": "スコア",
-      "year": 2002,
-      "genres": [
-        "犯罪",
-        "スリラー"
-      ],
-      "summary": "長年のキャリアを持つプロの金庫破り、ジョーが裏社会のボスから持ちかけられた最後の仕事は、金塊が眠る厳重な金庫からの美術品強奪だった。しかし、彼を信頼していたはずの相棒や、新たに加わった若い協力者との間に裏切りや巧妙な駆け引きが渦巻き、完璧なはずの計画は予測不能な方向へと転がっていく。緊迫感あふれる展開と、誰が味方で誰が敵かわからないだまし合いが見どころのクライム・スリラー。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 1,
-      "poster_url": "https://dnm.nflximg.net/api/v6/9R7jmI8ri5rJNRlvCsMBDHE5JuQ/AAAABZ9VLLsmfp1Xygs1hG2y13Qqbk59MUDSYRK2rzBmxLWubBkcekzL4s3oAo2w1abP5WlAXYfiDbJG61JKAJkIWHaHi1qptKuGphOLsX9V82Y.png?r=268",
-      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%82%B9%E3%82%B3%E3%82%A2",
+      "poster_url": "https://dnm.nflximg.net/api/v6/NQMscAviTbcSthK7LRWw8ctgi78/AAAABbs26BIwSViwWtsNt6lzueft8CWvz0mdyCezwU8qDLtwvgGQd1aUwWGXIxtORNjQeiEPoHUIsEueLBGOA-r_2nS9bUu_gLTGXWjZPrRGEc4.png?r=261",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%80%E3%83%A9%E3%83%BC%E3%83%BB%E3%83%9E%E3%83%B3",
       "available_in_japan": true,
       "filmarks_id": null
     },
     {
       "rank": 9,
-      "title_en": "The Guardian",
-      "jp_title": "守護神",
-      "year": 2007,
+      "title_en": "Possible Love",
+      "jp_title": "愛の変奏曲",
+      "year": 2005,
       "genres": [
-        "ドラマ"
+        "ドラマ",
+        "ロマンス"
       ],
-      "summary": "伝説的なベテラン救助員と、才能はあるものの自信過剰な新米訓練生の絆を描く海洋アクションドラマ。深い喪失感を抱える彼らが、厳しい訓練と危険なミッションを通じて互いに支え合い、真の救助隊員として成長していく姿を感動的に描きます。命を懸けた任務の裏にある人間ドラマが胸を打ちます。",
-      "runtime_minutes": null,
-      "views_this_week": null,
-      "weeks_in_top10": 2,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/rmpww5rbv1lecdau4qc2njnsmmu7/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/70050482",
-      "available_in_japan": true,
-      "filmarks_id": "5776"
-    },
-    {
-      "rank": 10,
-      "title_en": "The Hobbit: An Unexpected Journey",
-      "jp_title": "ホビット 思いがけない冒険",
-      "year": 2012,
-      "genres": [
-        "アドベンチャー・冒険",
-        "ファンタジー"
-      ],
-      "summary": "J.R.R.トールキンの名作をピーター・ジャクソン監督が映画化した「ロード・オブ・ザ・リング」の前日譚。平凡なホビット族のビルボ・バギンズが、魔法使いガンダルフと13人のドワーフたちと共に、危険に満ちた遠い山への旅に出ます。彼らの行く手には、ゴブリンやオーク、そして謎めいた指輪との出会いが待ち受けており、中つ国を舞台に壮大な冒険が幕を開けます。",
+      "summary": "韓国のラブストーリー「愛の変奏曲」は、恋愛に不器用な男女が、それぞれのパートナーとの関係や過去の経験を通して、揺れ動く感情と向き合っていく様を繊細に描きます。複数の視点から愛の形を問い直し、普遍的なテーマに深く迫ることで、観る者の心に静かに問いかける作品です。",
       "runtime_minutes": null,
       "views_this_week": null,
       "weeks_in_top10": 1,
-      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/70ad1chj81ghmys5lkmgiinpivs3/_.jpg",
-      "netflix_watch_url": "https://www.netflix.com/jp/title/70226288",
+      "poster_url": "https://dnm.nflximg.net/api/v6/NQMscAviTbcSthK7LRWw8ctgi78/AAAABZW2MqLeJOvh1k7PPL_Vaq-x7sqXUV9xDwhgm2PB_f1JF4doOPCEwyaCuFWNKrALW81pQ7ykXhTJTAMFmhpC0T0rJv0eAGH93ZaNXKvjTtU.png?r=a30",
+      "netflix_watch_url": "https://www.netflix.com/search?q=%E6%84%9B%E3%81%AE%E5%A4%89%E5%A5%8F%E6%9B%B2",
       "available_in_japan": true,
-      "filmarks_id": "21414"
+      "filmarks_id": null
+    },
+    {
+      "rank": 10,
+      "title_en": "Confess to Your Crimes",
+      "jp_title": "告白",
+      "year": 2010,
+      "genres": [
+        "ドラマ",
+        "サスペンス"
+      ],
+      "summary": "「わたしの娘は、このクラスの生徒に殺されました」。中学校の終業式、教師・森口悠子（松たか子）は、愛する娘を失った衝撃の告白を始める。その言葉は、教え子たちへの復讐の序章だった。少年法に守られた犯人に対し、静かに、そして周到に仕掛けられる心理戦と、予測不能な悲劇の連鎖が描かれる。人間の心の闇と正義のあり方を問う、衝撃的なサスペンス・ドラマ。",
+      "runtime_minutes": null,
+      "views_this_week": null,
+      "weeks_in_top10": 1,
+      "poster_url": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/qzg49wbk7r585vorqwg0fu8npfsr/_.jpg",
+      "netflix_watch_url": "https://www.netflix.com/jp/title/70153638",
+      "available_in_japan": true,
+      "filmarks_id": "32267"
     }
   ]
 }
