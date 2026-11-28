@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-28T03:15:56.837975+00:00",
+  "updated_at": "2026-11-28T04:06:06.403714+00:00",
   "source": "Filmarks",
   "cycle_phase_today": 0,
   "services": {
@@ -19454,6 +19454,19 @@
         "watch_url": "https://www.netflix.com/jp/title/60027583"
       },
       {
+        "id": "77725",
+        "title": "クリープ ２",
+        "url": "https://filmarks.com/movies/77725",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/nuq7pxw7p5gm89iud1xyog7t2mxc/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ホラー"
+        ],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/80168161"
+      },
+      {
         "id": "65507",
         "title": "砂の城",
         "url": "https://filmarks.com/movies/65507",
@@ -19465,20 +19478,6 @@
         ],
         "synopsis": "",
         "watch_url": "https://www.netflix.com/jp/title/80118916"
-      },
-      {
-        "id": "93654",
-        "title": "ボイス －深淵からの囁き－",
-        "url": "https://filmarks.com/movies/93654",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/lf8by8cwjjwv8kuly79ptjqtg0bc/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ホラー",
-          "スリラー"
-        ],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/81085815"
       },
       {
         "id": "73376",
@@ -19779,6 +19778,17 @@
         ],
         "synopsis": "世界を股にかける泥棒たちにパパとママがさらわれたらどうする? もちろん、スパイ道具を片手に知恵と勇気をふりしぼり、夜を徹して2人を助け出すしかない!",
         "watch_url": "https://www.netflix.com/jp/title/80238399"
+      },
+      {
+        "id": "98018",
+        "title": "衝動",
+        "url": "https://filmarks.com/movies/98018",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/qhu8earf6dkkfxxobz4ajrig435j/_.jpg",
+        "year": 2021,
+        "platform": "netflix",
+        "genres": [],
+        "synopsis": "舞台は2020年の東京・渋谷。名前を失った少年、声を失った少女。絶望し、社会の片隅に生きる孤独な二人が出会い、物語が動き出す。その出会いは罪か、罰か、それとも―――。",
+        "watch_url": "https://www.netflix.com/jp/title/83066639"
       },
       {
         "id": "84763",
@@ -20140,21 +20150,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81278276"
       },
       {
-        "id": "100001",
-        "title": "ニルマル・プルジャ：不可能を可能にした登山家",
-        "url": "https://filmarks.com/movies/100001",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/3nofl7625w1k9hh6b1lx9pvujafl/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "スポーツ",
-          "アドベンチャー・冒険",
-          "ドキュメンタリー"
-        ],
-        "synopsis": "恐れ知らずで楽しいことが大好きなネパールの登山家、ニルマル・\"ニムス\"・プルジャの目を通して、高地登山とネパールの深いつながりを探索する「ニルマル・プルジャ: 不可能を可能にした登山家」。",
-        "watch_url": "https://www.netflix.com/jp/title/81464765"
-      },
-      {
         "id": "68717",
         "title": "ディヴァイン",
         "url": "https://filmarks.com/movies/68717",
@@ -20177,19 +20172,6 @@
         ],
         "synopsis": "現代社会を生き抜くために必要なのは、古い\"常識\"にとらわれないこと。身勝手な親に捨てられた4人の子供たちが、新たな幸せを追い求める姿を描く長編アニメ。",
         "watch_url": "https://www.netflix.com/jp/title/80239482"
-      },
-      {
-        "id": "23671",
-        "title": "天国からのエール",
-        "url": "https://filmarks.com/movies/23671",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/ccv9ifx19ztcrwsz5s87p7mlff2w/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ドラマ"
-        ],
-        "synopsis": "アヤやユウヤらの音楽好きの高校生にとって、演奏の練習が出来る場所探しは大きな問題。そんな若者たちの声を聞いた小さな弁当屋を営む大城陽は、条件付きで自宅を改装したスタジオを無料で貸し出すこと",
-        "watch_url": "https://www.netflix.com/jp/title/80107358"
       },
       {
         "id": "84476",
@@ -20217,6 +20199,20 @@
         ],
         "synopsis": "石垣島の少女・汐里はある日、不思議な生物ゴーゴと出会う。ゴーゴが伝説の国ニライカナイの秘宝を守っていると聞いた彼女は、その探索に向かうが、凶悪な怪獣ダガーラが出現。インファント島から呼び寄",
         "watch_url": "https://www.netflix.com/jp/title/70189335"
+      },
+      {
+        "id": "100587",
+        "title": "Two",
+        "url": "https://filmarks.com/movies/100587",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/xokw00b286tgeqp1ri7ic006mes1/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "サスペンス",
+          "スリラー"
+        ],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/80202902"
       },
       {
         "id": "28403",
@@ -20270,6 +20266,17 @@
         ],
         "synopsis": "",
         "watch_url": "https://www.netflix.com/jp/title/80216758"
+      },
+      {
+        "id": "64152",
+        "title": "ハーモニー・オブ・ザ・デッド",
+        "url": "https://filmarks.com/movies/64152",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/q343gjxeeb06sj3vfbay89pwdth9/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [],
+        "synopsis": "ウィルス感染によるゾンビの大量発生で人類が絶滅寸前に追い込まれてから9年。生き残ったジャックと幼い娘のルー、アルコールで身体を壊したパトリックが暮らす雪に閉ざされた小さな街ハーモニーを、再",
+        "watch_url": "https://www.netflix.com/jp/title/80060190"
       },
       {
         "id": "71628",
@@ -20336,6 +20343,19 @@
         ],
         "synopsis": "失われた王国の王女、サファイア。\n災厄\"ネルガル\"に故郷シルバーランドのすべてを奪われ、絶望の果てにゴールドランドへとたどり着く。\n過去を抱えながらも、人々の優しさに触れ、ささやかな希望を",
         "watch_url": "https://www.netflix.com/jp/title/81493703"
+      },
+      {
+        "id": "49521",
+        "title": "アイドル・ハンズ",
+        "url": "https://filmarks.com/movies/49521",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/gx5gml0j61hitqr2q2jzanx628sr/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "コメディ"
+        ],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/20371448"
       },
       {
         "id": "110786",
@@ -20539,19 +20559,6 @@
         "watch_url": "https://www.netflix.com/jp/title/83192556"
       },
       {
-        "id": "102506",
-        "title": "知られざるマリリン・モンロー　残されたテープ",
-        "url": "https://filmarks.com/movies/102506",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/n6ntx5k2yzgpd8cou2fw0lmkle79/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ドキュメンタリー"
-        ],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/81216491"
-      },
-      {
         "id": "113466",
         "title": "オリオンと暗闇",
         "url": "https://filmarks.com/movies/113466",
@@ -20578,6 +20585,19 @@
         ],
         "synopsis": "東京でOLとして働いていたヒカリのもとに、故郷の京都から父の訃報が届く。幼い頃に母を亡くし、仕事に明け暮れていた父とはぎこちない関係のまま育ったヒカリだったが、葬儀のために故郷へ戻る。そこ",
         "watch_url": "https://www.netflix.com/jp/title/82637622"
+      },
+      {
+        "id": "91765",
+        "title": "あるメイドの秘密",
+        "url": "https://filmarks.com/movies/91765",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/jzlmjz7fu8hmxpetmgbakhju93mk/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ホラー"
+        ],
+        "synopsis": "幽霊屋敷で働き始めたメイドを待ち受ける、家主の恐るべき秘密と闇でうごめく怨霊の影。だが、恐怖におびえる彼女の胸には、復しゅう心が秘められていた...。",
+        "watch_url": "https://www.netflix.com/jp/title/81253166"
       },
       {
         "id": "70588",
@@ -20774,21 +20794,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81516046"
       },
       {
-        "id": "99758",
-        "title": "クリスマス・キャッスル",
-        "url": "https://filmarks.com/movies/99758",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/mzw6ayky9ugsajnzph18osf2qyf8/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "コメディ",
-          "アドベンチャー・冒険",
-          "ファミリー"
-        ],
-        "synopsis": "ブルック・シールズ主演の注目ラブコメディ！思い入れのあるスコットランドの城を購入したい有名作家のソフィー。売却を渋るオーナーとの間に予想外の展開が！？",
-        "watch_url": "https://www.netflix.com/jp/title/81026181"
-      },
-      {
         "id": "72631",
         "title": "劇場版 FAIRY TAIL DRAGON CRY",
         "url": "https://filmarks.com/movies/72631",
@@ -20947,21 +20952,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81153694"
       },
       {
-        "id": "129837",
-        "title": "エリーゼ: シャドーズ・オブ・ウーマン",
-        "url": "https://filmarks.com/movies/129837",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/d1vtntsi8u7uk0tdawjmh3hnd3te/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ドラマ",
-          "クライム",
-          "サスペンス"
-        ],
-        "synopsis": "「エリーゼ: シャドーズ・オブ・ウーマン」は、夫を殺害し、遺体をバラバラにした事件でブラジルを震撼 (しんかん) させたエリーゼ・マツナガの実話に着想を得た物語。エリーゼの波乱に満ちた関係",
-        "watch_url": "https://www.netflix.com/jp/title/81701598"
-      },
-      {
         "id": "93242",
         "title": "ヴァンパイアvsザ・ブロンクス",
         "url": "https://filmarks.com/movies/93242",
@@ -21024,6 +21014,17 @@
         "watch_url": "https://www.netflix.com/jp/title/80174093"
       },
       {
+        "id": "78614",
+        "title": "意表をつくアホらしい作戦",
+        "url": "https://filmarks.com/movies/78614",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/f31hr4gpzkh3yqcpnhsu043p5nbc/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/80107084"
+      },
+      {
         "id": "117826",
         "title": "REBEL MOON — パート2: ディレクターズカット",
         "url": "https://filmarks.com/movies/117826",
@@ -21036,20 +21037,6 @@
         ],
         "synopsis": "宇宙の片隅の星で無謀な戦いに挑むレベルズの戦士たち。ザック・スナイダー監督のSF超大作をさらに大胆にさらに過激に描き出す「REBEL MOON — チャプター2: 赦しの呪い」。",
         "watch_url": "https://www.netflix.com/jp/title/81746591"
-      },
-      {
-        "id": "127797",
-        "title": "BTS: THE RETURN",
-        "url": "https://filmarks.com/movies/127797",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/6cyx4qubohjevamwbiii583cf4yb/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "音楽",
-          "ドキュメンタリー"
-        ],
-        "synopsis": "ポップ界の王者BTSの待望のカムバックを追う長編ドキュメンタリー。高い評価を得ているバオ・グエン監督 (「名もなきジャーナリスト: 「あの少女」を撮ったのは誰なのか」「ポップスが最高に輝い",
-        "watch_url": "https://www.netflix.com/jp/title/82158609"
       },
       {
         "id": "104536",
@@ -21089,6 +21076,20 @@
         ],
         "synopsis": "「あなたがいてくれただけで笑えた」\nいじめの被害者から一転、ある事故で加害者となり、家族から見放され鬱々とした気持ちで町工場で働いている“ぼっち”の川本優花は、ある日、“ぼっち”になってし",
         "watch_url": "https://www.netflix.com/jp/title/83087557"
+      },
+      {
+        "id": "128328",
+        "title": "泥娃娃: 呪いの人形",
+        "url": "https://filmarks.com/movies/128328",
+        "thumb": "",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ホラー",
+          "スリラー"
+        ],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/82647937"
       },
       {
         "id": "67007",
@@ -21172,6 +21173,17 @@
         "watch_url": "https://www.netflix.com/jp/title/81416306"
       },
       {
+        "id": "53610",
+        "title": "スパークル",
+        "url": "https://filmarks.com/movies/53610",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/sl13uvvis7c83170chiuuurcbtpz/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/70228099"
+      },
+      {
         "id": "101412",
         "title": "地に落ちた信頼　ボーイング737MAX墜落事故",
         "url": "https://filmarks.com/movies/101412",
@@ -21196,21 +21208,6 @@
         ],
         "synopsis": "",
         "watch_url": "https://www.netflix.com/jp/title/80234465"
-      },
-      {
-        "id": "108701",
-        "title": "ラスト・キングダム　死すべき7人の王",
-        "url": "https://filmarks.com/movies/108701",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/roiicdrbghg5voazjh0s0khlj1tc/_.jpeg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ドラマ",
-          "アクション",
-          "アドベンチャー・冒険"
-        ],
-        "synopsis": "アレクサンダー・ドレイマンが再びベバンバーグの偉大な戦士ウートレッドとしてスクリーンに登場。ドラマシリーズから続投する人気キャラクターたちを連れて引き裂かれた王国を駆け巡り、新たに加わる仲",
-        "watch_url": "https://www.netflix.com/jp/title/81460361"
       },
       {
         "id": "28148",
@@ -21310,19 +21307,6 @@
         "watch_url": "https://www.netflix.com/jp/title/80106791"
       },
       {
-        "id": "126052",
-        "title": "ギレルモ・デル・トロのモンスター美学",
-        "url": "https://filmarks.com/movies/126052",
-        "thumb": "",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ドキュメンタリー"
-        ],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/82122396"
-      },
-      {
         "id": "4722",
         "title": "それいけ！アンパンマン よみがえれ バナナ島",
         "url": "https://filmarks.com/movies/4722",
@@ -21396,20 +21380,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81490650"
       },
       {
-        "id": "82474",
-        "title": "それいけ！アンパンマン　きらめけ！アイスの国のバニラ姫",
-        "url": "https://filmarks.com/movies/82474",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/g84xkycijb5bim53rxx0ob1p6tny/_.jpg",
-        "year": 2019,
-        "platform": "netflix",
-        "genres": [
-          "アニメ",
-          "ファミリー"
-        ],
-        "synopsis": "雪山の中に“アイスクリームでできたお城”が高くそびえる国があります。ここは国の主が“魔法のスプーン”を使ってアイスを生みだし、そのアイスが世界中で愛されている＜アイスの国＞。その国のお姫様",
-        "watch_url": "https://www.netflix.com/jp/title/81719829"
-      },
-      {
         "id": "103643",
         "title": "グラートベック人質事件：メディアが越えた一線",
         "url": "https://filmarks.com/movies/103643",
@@ -21474,6 +21444,21 @@
         ],
         "synopsis": "ある日突然、ビキニタウンがすべての住民ごと海の外にすくい上げられてしまう。サンディ・チークスとスポンジ・ボブは、悪党のたくらみからみんなを助けるため、テキサスを目指して旅に出る。\nNetf",
         "watch_url": "https://www.netflix.com/jp/title/81221340"
+      },
+      {
+        "id": "117009",
+        "title": "イン・ユア・ドリームズ: 願いがかなうなら",
+        "url": "https://filmarks.com/movies/117009",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/q17rbl1fxfe2ttdf5wbmti199j6s/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "アニメ",
+          "コメディ",
+          "アドベンチャー・冒険"
+        ],
+        "synopsis": "「イン・ユア・ドリームズ: 願いがかなうなら」は、スティーヴィー と弟のエリオットが、自分たちの夢の中の奇妙な世界を旅するコメディ・アドベンチャー。嫌味なキリンのぬいぐるみ、ゾンビの朝ごは",
+        "watch_url": "https://www.netflix.com/jp/title/80992977"
       },
       {
         "id": "107753",
@@ -21612,6 +21597,20 @@
         "watch_url": "https://www.netflix.com/jp/title/81520685"
       },
       {
+        "id": "125520",
+        "title": "エディ・マーフィ",
+        "url": "https://filmarks.com/movies/125520",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/jpv3pf3d1nqyatg3u9ajjje319bp/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ドキュメンタリー",
+          "伝記"
+        ],
+        "synopsis": "スタンドアップの天才児として頭角を現したのち、「サタデー・ナイト・ライブ」で旋風を巻き起こし、ハリウッドのアイコン的存在として愛されてきたエディ・マーフィ。\n本作「エディ・マーフィ」はマー",
+        "watch_url": "https://www.netflix.com/jp/title/81094163"
+      },
+      {
         "id": "104084",
         "title": "危険な関係",
         "url": "https://filmarks.com/movies/104084",
@@ -21634,33 +21633,6 @@
         "genres": [],
         "synopsis": "",
         "watch_url": "https://www.netflix.com/jp/title/80066073"
-      },
-      {
-        "id": "120239",
-        "title": "The Resemblance",
-        "url": "https://filmarks.com/movies/120239",
-        "thumb": "",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ドラマ",
-          "ショートフィルム・短編"
-        ],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/81923260"
-      },
-      {
-        "id": "123992",
-        "title": "そして彼女は闇を歩く",
-        "url": "https://filmarks.com/movies/123992",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/cfrlvso9vi4d7dl1nhwuk371cz72/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "サスペンス"
-        ],
-        "synopsis": "スペインにおけるテロとの戦いの転換点となった、テロ組織\"バスク祖国と自由 (ETA)\"への史上最大の潜入作戦を基にした物語。1990年代から2000年代を舞台に描く本作の主人公は、若き治安",
-        "watch_url": "https://www.netflix.com/jp/title/81700950"
       },
       {
         "id": "110521",
@@ -21931,6 +21903,19 @@
         "watch_url": "https://www.netflix.com/jp/title/81931120"
       },
       {
+        "id": "120534",
+        "title": "山猫は眠らない11 超兵器の暴発",
+        "url": "https://filmarks.com/movies/120534",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/1vpngdqp61t6my4ioai866t0hhu2/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "アクション"
+        ],
+        "synopsis": "殺傷能力を持つ超兵器を武器商人が解き放つのを阻止するため、一流狙撃手ブランドン･ベケットとゼロはコスタベルデへ派遣された。無慈悲な私兵団と戦う精鋭兵士のグループを率いるのだ。ベケットは、若",
+        "watch_url": "https://www.netflix.com/jp/title/82027214"
+      },
+      {
         "id": "116822",
         "title": "クレクス先生のふしぎな学校",
         "url": "https://filmarks.com/movies/116822",
@@ -22135,19 +22120,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81984117"
       },
       {
-        "id": "127957",
-        "title": "ジ・AIドック オア・ハウ・アイ・ビケイム・アン・アポカロプティミスト",
-        "url": "https://filmarks.com/movies/127957",
-        "thumb": "",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ドキュメンタリー"
-        ],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/82792555"
-      },
-      {
         "id": "119750",
         "title": "雪山の絆：僕らは何者だったのか",
         "url": "https://filmarks.com/movies/119750",
@@ -22173,21 +22145,6 @@
         ],
         "synopsis": "不正に手を染めたビジネスマンと社交好きな彼の妻。運命の日、悪名高きギャングのボスに娘が連れ去られたと知った2人が、我が子を救い出そうと奔走してゆく。",
         "watch_url": "https://www.netflix.com/jp/title/81393697"
-      },
-      {
-        "id": "99426",
-        "title": "スワロー：闇にのまれて",
-        "url": "https://filmarks.com/movies/99426",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/cfrop6senaiwcscwok7xir4u8gv3/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ドラマ",
-          "スリラー",
-          "歴史"
-        ],
-        "synopsis": "1980年代のナイジェリア、理不尽な人生に憤る若い女性は、麻薬の運び屋をする友人に協力することに。道を踏み外そうとする彼女を、厳しい現実が待っていた。",
-        "watch_url": "https://www.netflix.com/jp/title/81392180"
       },
       {
         "id": "128041",
@@ -22324,21 +22281,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81947520"
       },
       {
-        "id": "128963",
-        "title": "ママ、これってナニゴト?",
-        "url": "https://filmarks.com/movies/128963",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/wi8iraa7o1e9bcx0witqsrnb5spx/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ドラマ",
-          "恋愛",
-          "コメディ"
-        ],
-        "synopsis": "自宅でとんでもないトラブルが発生し、疎遠になっている娘たちに助けを求めた母親。どんな秘密も筒抜けになる詮索好きなご近所社会で、母娘三人による事件の隠蔽作戦が幕を開ける!\nNetflixで2",
-        "watch_url": "https://www.netflix.com/jp/title/81702997"
-      },
-      {
         "id": "115600",
         "title": "対岸へ: ダイアナ・ナイアド物語",
         "url": "https://filmarks.com/movies/115600",
@@ -22458,19 +22400,6 @@
         ],
         "synopsis": "ニューヨーク市で建築家として働くナタリー (レベル・ウィルソン) は、仕事で認められようと奮闘するものの、頼まれることといえば、超高層ビルの設計とはほど遠いコーヒーとベーグルのお使いばかり",
         "watch_url": "https://www.netflix.com/jp/title/80200642"
-      },
-      {
-        "id": "96288",
-        "title": "隔たる世界の2人",
-        "url": "https://filmarks.com/movies/96288",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/8vrvmfxgr2oyryzhoyj3ztkdvi95/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ショートフィルム・短編"
-        ],
-        "synopsis": "タイムループに閉じ込められた男が、愛犬が待つ自宅に戻る途中で、警官ともめて殺される恐怖を何度も繰り返す。アカデミー賞最優秀短編実写映画賞受賞作品。",
-        "watch_url": "https://www.netflix.com/jp/title/81447229"
       },
       {
         "id": "55899",
@@ -23399,19 +23328,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81120982"
       },
       {
-        "id": "11626",
-        "title": "相棒-劇場版- 絶体絶命！42.195km 東京ビッグシティマラソン",
-        "url": "https://filmarks.com/movies/11626",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/v5z46zxczgodu3abp1keo0oghvvy/_.jpg",
-        "year": 2008,
-        "platform": "netflix",
-        "genres": [
-          "アクション"
-        ],
-        "synopsis": "謎の連続殺人事件が発生し、現場に不可解な記号が残される。その後、犯人から警察に予測不能な連続爆破予告が届くが、右京の推理と薫の行動力で、犯人の狙いが「東京ビッグシティマラソン」にあると判明",
-        "watch_url": "https://www.netflix.com/jp/title/81397915"
-      },
-      {
         "id": "104820",
         "title": "スクロール",
         "url": "https://filmarks.com/movies/104820",
@@ -23558,32 +23474,6 @@
         "watch_url": "https://www.netflix.com/jp/title/492003"
       },
       {
-        "id": "71128",
-        "title": "相棒 劇場版Ⅳ 首都クライシス 人質は50万人！特命係 最後の決断",
-        "url": "https://filmarks.com/movies/71128",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/kshc7u0g3ja5am0f046rvb3ty2o8/_.jpg",
-        "year": 2017,
-        "platform": "netflix",
-        "genres": [
-          "サスペンス"
-        ],
-        "synopsis": "英国で日本領事館関係者の集団毒殺事件が発生。生き残った少女が国際犯罪組織に誘拐されるが、日本政府により事件は闇に葬られていた。7年後、政府に再びあの少女の身代金が要求されるが、政府は拒否。",
-        "watch_url": "https://www.netflix.com/jp/title/81399193"
-      },
-      {
-        "id": "73368",
-        "title": "バッド・ママのクリスマス",
-        "url": "https://filmarks.com/movies/73368",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/x9ayhpecrvs4l63ma6zbnc0oa2nm/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "コメディ"
-        ],
-        "synopsis": "ストレスで爆発寸前のママたち、エイミー、カーラ、キキが帰ってきた! クリスマス目前のこの時期に、3人の母親たちもやって来て、キレるのも時間の問題!?",
-        "watch_url": "https://www.netflix.com/jp/title/80177872"
-      },
-      {
         "id": "121106",
         "title": "啓示",
         "url": "https://filmarks.com/movies/121106",
@@ -23677,20 +23567,6 @@
         ],
         "synopsis": "冷酷な銀行強盗ボニーとクライド逮捕に駆り出された2人の元テキサス・レンジャーが、経験に裏打ちされた直感を頼りに悪党を追い詰める。史実に基づく犯罪ドラマ。",
         "watch_url": "https://www.netflix.com/jp/title/80200571"
-      },
-      {
-        "id": "20760",
-        "title": "friends もののけ島のナキ",
-        "url": "https://filmarks.com/movies/20760",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/15j8z91qk9o40wqr08pc8tton1ei/_.jpg",
-        "year": 2011,
-        "platform": "netflix",
-        "genres": [
-          "アニメ",
-          "ファミリー"
-        ],
-        "synopsis": "霧に隠された海の先に、恐ろしいもののけが住むと言い伝えられている島があった。近づくことさえ禁じられた不気味な島にある日、人間の赤ん坊・コタケが迷い込む。不思議なもののけたちは、突然現れたコ",
-        "watch_url": "https://www.netflix.com/jp/title/80063029"
       },
       {
         "id": "53348",
@@ -23902,32 +23778,6 @@
         "watch_url": "https://www.netflix.com/jp/title/80994666"
       },
       {
-        "id": "56380",
-        "title": "相棒 劇場版III 巨大密室！特命係 絶海の孤島へ",
-        "url": "https://filmarks.com/movies/56380",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/3nl4bf4po5ky3898jmp2owj3wu7x/_.jpg",
-        "year": 2014,
-        "platform": "netflix",
-        "genres": [
-          "サスペンス"
-        ],
-        "synopsis": "ある朝、警視庁特命係の狭い部屋に出勤前の2人を待つ1人の男の姿があった。元警視庁特命係、現警察庁長官官房付の神戸尊（及川光博）。杉下右京（水谷豊）にとっては懐かしい、そして甲斐享（成宮寛貴",
-        "watch_url": "https://www.netflix.com/jp/title/81399186"
-      },
-      {
-        "id": "115012",
-        "title": "雪の花 ―ともに在りて―",
-        "url": "https://filmarks.com/movies/115012",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/z4047dauuf8amzyeeuk3kxmlbfma/_.jpg",
-        "year": 2025,
-        "platform": "netflix",
-        "genres": [
-          "ドラマ"
-        ],
-        "synopsis": "江戸時代末期。死に至る病として恐れられていた疱瘡（天然痘）が猛威を振るい、多くの人命を奪っていた。福井藩の町医者で漢方医の笠原良策（松坂桃李）は、患者を救いたくとも何もすることができない自",
-        "watch_url": "https://www.netflix.com/jp/title/82734779"
-      },
-      {
         "id": "76026",
         "title": "エクリプス",
         "url": "https://filmarks.com/movies/76026",
@@ -24066,6 +23916,19 @@
         "watch_url": "https://www.netflix.com/jp/title/81488262"
       },
       {
+        "id": "84119",
+        "title": "リム・オブ・ザ・ワールド",
+        "url": "https://filmarks.com/movies/84119",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/r50jxlv0d0tgwno3rc7earq5sdum/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "アドベンチャー・冒険"
+        ],
+        "synopsis": "エイリアンに襲われ、キャンプ場に足止めされた4人の子供たち。出会ったばかりで互いのこともよく知らないけれど、こうなったら、力を合わせて地球を救うしかない!",
+        "watch_url": "https://www.netflix.com/jp/title/80218306"
+      },
+      {
         "id": "78587",
         "title": "ゲームオーバー！",
         "url": "https://filmarks.com/movies/78587",
@@ -24078,19 +23941,6 @@
         ],
         "synopsis": "夢だけは大きいが実績を伴わないダメ男3人組。けど、勤務先の高級ホテルがテロリストに占拠され、クールな戦士として立ち上がる。今こそヒーローになる大チャンス!?",
         "watch_url": "https://www.netflix.com/jp/title/80169617"
-      },
-      {
-        "id": "84119",
-        "title": "リム・オブ・ザ・ワールド",
-        "url": "https://filmarks.com/movies/84119",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/r50jxlv0d0tgwno3rc7earq5sdum/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "アドベンチャー・冒険"
-        ],
-        "synopsis": "エイリアンに襲われ、キャンプ場に足止めされた4人の子供たち。出会ったばかりで互いのこともよく知らないけれど、こうなったら、力を合わせて地球を救うしかない!",
-        "watch_url": "https://www.netflix.com/jp/title/80218306"
       },
       {
         "id": "100208",
@@ -24384,17 +24234,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81074110"
       },
       {
-        "id": "107329",
-        "title": "劇場版 君と世界が終わる日に FINAL",
-        "url": "https://filmarks.com/movies/107329",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/79bez2odpxntbocwm0z26klvdnxu/_.jpg",
-        "year": 2024,
-        "platform": "netflix",
-        "genres": [],
-        "synopsis": "希望の塔ユートピア。しかしそこは、人間の欲望が生み出した絶望の塔だった。\nユートピアではこの世界を救い出す唯一の方法、ゴーレムと呼ばれる化け物に対するワクチンを研究していた。\n特殊な抗体を",
-        "watch_url": "https://www.netflix.com/jp/title/81906805"
-      },
-      {
         "id": "80450",
         "title": "パッケージ: オレたちの\"珍\"騒動",
         "url": "https://filmarks.com/movies/80450",
@@ -24406,6 +24245,17 @@
         ],
         "synopsis": "大事な仲間が、春休みの旅行中にビックリの不幸なアクシデントに。4人の友は仲間を元の姿に戻すため、すべてを犠牲にする覚悟で男のシンボル救出作戦をスタート!",
         "watch_url": "https://www.netflix.com/jp/title/80175147"
+      },
+      {
+        "id": "107329",
+        "title": "劇場版 君と世界が終わる日に FINAL",
+        "url": "https://filmarks.com/movies/107329",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/79bez2odpxntbocwm0z26klvdnxu/_.jpg",
+        "year": 2024,
+        "platform": "netflix",
+        "genres": [],
+        "synopsis": "希望の塔ユートピア。しかしそこは、人間の欲望が生み出した絶望の塔だった。\nユートピアではこの世界を救い出す唯一の方法、ゴーレムと呼ばれる化け物に対するワクチンを研究していた。\n特殊な抗体を",
+        "watch_url": "https://www.netflix.com/jp/title/81906805"
       },
       {
         "id": "109000",
@@ -24684,20 +24534,6 @@
         "genres": [],
         "synopsis": "京都で起こった科学者の転落死を⽪切りに、ロンドン、トロントと世界中で同様の科学者たちの転落死が連続発⽣する。だが、殺⼈の物的証拠は⾒つからず、各地で⾃殺として処理されようとしていた。京都で",
         "watch_url": "https://www.netflix.com/jp/title/81726511"
-      },
-      {
-        "id": "114303",
-        "title": "ゴールドフィンガー 巨大金融詐欺事件",
-        "url": "https://filmarks.com/movies/114303",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/xh81y8p6zaw8kgna82s9icms4ier/_.jpg",
-        "year": 2025,
-        "platform": "netflix",
-        "genres": [
-          "ドラマ",
-          "スリラー"
-        ],
-        "synopsis": "イギリスによる植民地支配の終焉が近づく香港。身ひとつで入国した野心家の男、チン・ヤッイン（トニー・レオン）は、悪質な違法取引を通じて徐々に香港に足場を築いていく。\nそして 80 年代株式市",
-        "watch_url": "https://www.netflix.com/jp/title/82193386"
       },
       {
         "id": "86841",
@@ -25373,19 +25209,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81664623"
       },
       {
-        "id": "77725",
-        "title": "クリープ ２",
-        "url": "https://filmarks.com/movies/77725",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/nuq7pxw7p5gm89iud1xyog7t2mxc/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ホラー"
-        ],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/80168161"
-      },
-      {
         "id": "101846",
         "title": "野球部に花束を",
         "url": "https://filmarks.com/movies/101846",
@@ -25503,6 +25326,20 @@
         ],
         "synopsis": "ヨンサン駅での血みどろの戦いを経て、イの組織と消えたラクを追うウォノ、再び姿を現したブライアン、そして新たに登場したビッグ・ナイフの息詰まる戦いを描いた犯罪アクション映画。ウ ォノがブライ",
         "watch_url": "https://www.netflix.com/jp/title/81594923"
+      },
+      {
+        "id": "93654",
+        "title": "ボイス －深淵からの囁き－",
+        "url": "https://filmarks.com/movies/93654",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/lf8by8cwjjwv8kuly79ptjqtg0bc/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ホラー",
+          "スリラー"
+        ],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/81085815"
       },
       {
         "id": "12578",
@@ -25950,17 +25787,6 @@
         ],
         "synopsis": "ギリシャのナバロン島に設置されたドイツ軍の2門の大砲を破壊するため、6人のメンバーからなる特殊部隊が結成された。イギリス駆逐艦がここを通過するまでに、その大砲を破壊するのが使命だ。部隊は海",
         "watch_url": "https://www.netflix.com/jp/title/60000061"
-      },
-      {
-        "id": "98018",
-        "title": "衝動",
-        "url": "https://filmarks.com/movies/98018",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/qhu8earf6dkkfxxobz4ajrig435j/_.jpg",
-        "year": 2021,
-        "platform": "netflix",
-        "genres": [],
-        "synopsis": "舞台は2020年の東京・渋谷。名前を失った少年、声を失った少女。絶望し、社会の片隅に生きる孤独な二人が出会い、物語が動き出す。その出会いは罪か、罰か、それとも―――。",
-        "watch_url": "https://www.netflix.com/jp/title/83066639"
       },
       {
         "id": "85467",
@@ -26565,6 +26391,21 @@
         "watch_url": "https://www.netflix.com/jp/title/81681292"
       },
       {
+        "id": "100001",
+        "title": "ニルマル・プルジャ：不可能を可能にした登山家",
+        "url": "https://filmarks.com/movies/100001",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/3nofl7625w1k9hh6b1lx9pvujafl/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "スポーツ",
+          "アドベンチャー・冒険",
+          "ドキュメンタリー"
+        ],
+        "synopsis": "恐れ知らずで楽しいことが大好きなネパールの登山家、ニルマル・\"ニムス\"・プルジャの目を通して、高地登山とネパールの深いつながりを探索する「ニルマル・プルジャ: 不可能を可能にした登山家」。",
+        "watch_url": "https://www.netflix.com/jp/title/81464765"
+      },
+      {
         "id": "85098",
         "title": "グレート・ハック SNS史上最悪のスキャンダル",
         "url": "https://filmarks.com/movies/85098",
@@ -26641,6 +26482,19 @@
         ],
         "synopsis": "自伝「マイ・ストーリー」の出版ツアーで、人生や人とのつながり、希望について語るミシェル・オバマ元大統領夫人の姿をカメラに収めた密着ドキュメンタリー。",
         "watch_url": "https://www.netflix.com/jp/title/81122487"
+      },
+      {
+        "id": "23671",
+        "title": "天国からのエール",
+        "url": "https://filmarks.com/movies/23671",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/ccv9ifx19ztcrwsz5s87p7mlff2w/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ドラマ"
+        ],
+        "synopsis": "アヤやユウヤらの音楽好きの高校生にとって、演奏の練習が出来る場所探しは大きな問題。そんな若者たちの声を聞いた小さな弁当屋を営む大城陽は、条件付きで自宅を改装したスタジオを無料で貸し出すこと",
+        "watch_url": "https://www.netflix.com/jp/title/80107358"
       },
       {
         "id": "101506",
@@ -26826,20 +26680,6 @@
         ],
         "synopsis": "若い頃、愛弟子の手痛い裏切りで、夢を失ったおもちゃの発明家。ある日、やさしく好奇心旺盛な孫娘が彼の前に現れたことで、かつての情熱と希望が心によみがえる。",
         "watch_url": "https://www.netflix.com/jp/title/80232043"
-      },
-      {
-        "id": "100587",
-        "title": "Two",
-        "url": "https://filmarks.com/movies/100587",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/xokw00b286tgeqp1ri7ic006mes1/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "サスペンス",
-          "スリラー"
-        ],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/80202902"
       },
       {
         "id": "3422",
@@ -27064,17 +26904,6 @@
         ],
         "synopsis": "道路脇でひん死の状態で発見された後、幼い息子と夫を名乗る男、不可解な謎を残して亡くなったひとりの女性。この事件をきっかけに明らかになった、悪夢のような真実に迫るドキュメンタリー。",
         "watch_url": "https://www.netflix.com/jp/title/81212487"
-      },
-      {
-        "id": "64152",
-        "title": "ハーモニー・オブ・ザ・デッド",
-        "url": "https://filmarks.com/movies/64152",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/q343gjxeeb06sj3vfbay89pwdth9/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [],
-        "synopsis": "ウィルス感染によるゾンビの大量発生で人類が絶滅寸前に追い込まれてから9年。生き残ったジャックと幼い娘のルー、アルコールで身体を壊したパトリックが暮らす雪に閉ざされた小さな街ハーモニーを、再",
-        "watch_url": "https://www.netflix.com/jp/title/80060190"
       },
       {
         "id": "74743",
@@ -27324,19 +27153,6 @@
         ],
         "synopsis": "ローラ・ダーン、リアム・ヘムズワース共演のラブロマンス！モロッコで隠遁生活を送る小説家キャサリンは、年下の男性オーウェンと出会う。",
         "watch_url": "https://www.netflix.com/jp/title/81157573"
-      },
-      {
-        "id": "49521",
-        "title": "アイドル・ハンズ",
-        "url": "https://filmarks.com/movies/49521",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/gx5gml0j61hitqr2q2jzanx628sr/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "コメディ"
-        ],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/20371448"
       },
       {
         "id": "81910",
@@ -27949,6 +27765,19 @@
         "watch_url": "https://www.netflix.com/jp/title/82087556"
       },
       {
+        "id": "102506",
+        "title": "知られざるマリリン・モンロー　残されたテープ",
+        "url": "https://filmarks.com/movies/102506",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/n6ntx5k2yzgpd8cou2fw0lmkle79/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ドキュメンタリー"
+        ],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/81216491"
+      },
+      {
         "id": "95190",
         "title": "ナタ転生",
         "url": "https://filmarks.com/movies/95190",
@@ -27963,17 +27792,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81418302"
       },
       {
-        "id": "75634",
-        "title": "キングのメッセージ",
-        "url": "https://filmarks.com/movies/75634",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/92jero8z1ezco4uh80t8y8qvm13m/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/80155475"
-      },
-      {
         "id": "105717",
         "title": "星明かりを見上げれば",
         "url": "https://filmarks.com/movies/105717",
@@ -27985,6 +27803,17 @@
         ],
         "synopsis": "",
         "watch_url": "https://www.netflix.com/jp/title/81604901"
+      },
+      {
+        "id": "75634",
+        "title": "キングのメッセージ",
+        "url": "https://filmarks.com/movies/75634",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/92jero8z1ezco4uh80t8y8qvm13m/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/80155475"
       },
       {
         "id": "107276",
@@ -28077,19 +27906,6 @@
         ],
         "synopsis": "才能がありながらチャンスにめぐまれないカメラマンのもとにやってきた、古いアドベント・カレンダー。未来を予知できるその力が、運命の愛を呼び寄せる。",
         "watch_url": "https://www.netflix.com/jp/title/80242446"
-      },
-      {
-        "id": "91765",
-        "title": "あるメイドの秘密",
-        "url": "https://filmarks.com/movies/91765",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/jzlmjz7fu8hmxpetmgbakhju93mk/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ホラー"
-        ],
-        "synopsis": "幽霊屋敷で働き始めたメイドを待ち受ける、家主の恐るべき秘密と闇でうごめく怨霊の影。だが、恐怖におびえる彼女の胸には、復しゅう心が秘められていた...。",
-        "watch_url": "https://www.netflix.com/jp/title/81253166"
       },
       {
         "id": "109002",
@@ -28729,6 +28545,21 @@
         "watch_url": "https://www.netflix.com/jp/title/81318402"
       },
       {
+        "id": "99758",
+        "title": "クリスマス・キャッスル",
+        "url": "https://filmarks.com/movies/99758",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/mzw6ayky9ugsajnzph18osf2qyf8/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "コメディ",
+          "アドベンチャー・冒険",
+          "ファミリー"
+        ],
+        "synopsis": "ブルック・シールズ主演の注目ラブコメディ！思い入れのあるスコットランドの城を購入したい有名作家のソフィー。売却を渋るオーナーとの間に予想外の展開が！？",
+        "watch_url": "https://www.netflix.com/jp/title/81026181"
+      },
+      {
         "id": "121142",
         "title": "それいけ！アンパンマン　チャポンのヒーロー！",
         "url": "https://filmarks.com/movies/121142",
@@ -29261,6 +29092,21 @@
         "watch_url": "https://www.netflix.com/jp/title/80219704"
       },
       {
+        "id": "129837",
+        "title": "エリーゼ: シャドーズ・オブ・ウーマン",
+        "url": "https://filmarks.com/movies/129837",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/d1vtntsi8u7uk0tdawjmh3hnd3te/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ドラマ",
+          "クライム",
+          "サスペンス"
+        ],
+        "synopsis": "「エリーゼ: シャドーズ・オブ・ウーマン」は、夫を殺害し、遺体をバラバラにした事件でブラジルを震撼 (しんかん) させたエリーゼ・マツナガの実話に着想を得た物語。エリーゼの波乱に満ちた関係",
+        "watch_url": "https://www.netflix.com/jp/title/81701598"
+      },
+      {
         "id": "98014",
         "title": "スーパーヒーローへの道",
         "url": "https://filmarks.com/movies/98014",
@@ -29600,15 +29446,18 @@
         "watch_url": "https://www.netflix.com/jp/title/81058435"
       },
       {
-        "id": "78614",
-        "title": "意表をつくアホらしい作戦",
-        "url": "https://filmarks.com/movies/78614",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/f31hr4gpzkh3yqcpnhsu043p5nbc/_.jpg",
+        "id": "127797",
+        "title": "BTS: THE RETURN",
+        "url": "https://filmarks.com/movies/127797",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/6cyx4qubohjevamwbiii583cf4yb/_.jpg",
         "year": null,
         "platform": "netflix",
-        "genres": [],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/80107084"
+        "genres": [
+          "音楽",
+          "ドキュメンタリー"
+        ],
+        "synopsis": "ポップ界の王者BTSの待望のカムバックを追う長編ドキュメンタリー。高い評価を得ているバオ・グエン監督 (「名もなきジャーナリスト: 「あの少女」を撮ったのは誰なのか」「ポップスが最高に輝い",
+        "watch_url": "https://www.netflix.com/jp/title/82158609"
       },
       {
         "id": "90012",
@@ -29909,20 +29758,6 @@
         ],
         "synopsis": "不名誉な引退をした総合格闘家のジャッキー・ジャスティス (ハル・ベリー) 。現役最後の試合以来、長年運に見放され、煮えたぎる怒りと後悔にさいなまれながらも、マネージャーであり恋人でもあるデ",
         "watch_url": "https://www.netflix.com/jp/title/81043365"
-      },
-      {
-        "id": "128328",
-        "title": "泥娃娃: 呪いの人形",
-        "url": "https://filmarks.com/movies/128328",
-        "thumb": "",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ホラー",
-          "スリラー"
-        ],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/82647937"
       },
       {
         "id": "114222",
@@ -30357,17 +30192,6 @@
         "watch_url": "https://www.netflix.com/jp/title/81662920"
       },
       {
-        "id": "53610",
-        "title": "スパークル",
-        "url": "https://filmarks.com/movies/53610",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/sl13uvvis7c83170chiuuurcbtpz/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [],
-        "synopsis": "",
-        "watch_url": "https://www.netflix.com/jp/title/70228099"
-      },
-      {
         "id": "98286",
         "title": "悩める失恋の処方箋",
         "url": "https://filmarks.com/movies/98286",
@@ -30581,6 +30405,21 @@
         ],
         "synopsis": "",
         "watch_url": "https://www.netflix.com/jp/title/81280352"
+      },
+      {
+        "id": "108701",
+        "title": "ラスト・キングダム　死すべき7人の王",
+        "url": "https://filmarks.com/movies/108701",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/roiicdrbghg5voazjh0s0khlj1tc/_.jpeg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ドラマ",
+          "アクション",
+          "アドベンチャー・冒険"
+        ],
+        "synopsis": "アレクサンダー・ドレイマンが再びベバンバーグの偉大な戦士ウートレッドとしてスクリーンに登場。ドラマシリーズから続投する人気キャラクターたちを連れて引き裂かれた王国を駆け巡り、新たに加わる仲",
+        "watch_url": "https://www.netflix.com/jp/title/81460361"
       },
       {
         "id": "68284",
@@ -31163,6 +31002,19 @@
         "watch_url": "https://www.netflix.com/jp/title/80081846"
       },
       {
+        "id": "126052",
+        "title": "ギレルモ・デル・トロのモンスター美学",
+        "url": "https://filmarks.com/movies/126052",
+        "thumb": "",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ドキュメンタリー"
+        ],
+        "synopsis": "",
+        "watch_url": "https://www.netflix.com/jp/title/82122396"
+      },
+      {
         "id": "23288",
         "title": "それいけ！アンパンマン つみき城のひみつ",
         "url": "https://filmarks.com/movies/23288",
@@ -31609,6 +31461,20 @@
         ],
         "synopsis": "エジプトに向かう途中で、東京に立ち寄ったアメリカ人記者スティーブ･マーティン。そんななか、怪獣ゴジラが出現して東京へと上陸する。防衛隊による攻撃が通用せずに大混乱に陥るなか、芹沢博士が兵器",
         "watch_url": "https://www.netflix.com/jp/title/549174"
+      },
+      {
+        "id": "82474",
+        "title": "それいけ！アンパンマン　きらめけ！アイスの国のバニラ姫",
+        "url": "https://filmarks.com/movies/82474",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/g84xkycijb5bim53rxx0ob1p6tny/_.jpg",
+        "year": 2019,
+        "platform": "netflix",
+        "genres": [
+          "アニメ",
+          "ファミリー"
+        ],
+        "synopsis": "雪山の中に“アイスクリームでできたお城”が高くそびえる国があります。ここは国の主が“魔法のスプーン”を使ってアイスを生みだし、そのアイスが世界中で愛されている＜アイスの国＞。その国のお姫様",
+        "watch_url": "https://www.netflix.com/jp/title/81719829"
       },
       {
         "id": "90497",
@@ -32423,21 +32289,6 @@
         ],
         "synopsis": "",
         "watch_url": "https://www.netflix.com/jp/title/82757303"
-      },
-      {
-        "id": "117009",
-        "title": "イン・ユア・ドリームズ: 願いがかなうなら",
-        "url": "https://filmarks.com/movies/117009",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/q17rbl1fxfe2ttdf5wbmti199j6s/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "アニメ",
-          "コメディ",
-          "アドベンチャー・冒険"
-        ],
-        "synopsis": "「イン・ユア・ドリームズ: 願いがかなうなら」は、スティーヴィー と弟のエリオットが、自分たちの夢の中の奇妙な世界を旅するコメディ・アドベンチャー。嫌味なキリンのぬいぐるみ、ゾンビの朝ごは",
-        "watch_url": "https://www.netflix.com/jp/title/80992977"
       },
       {
         "id": "89576",
@@ -33674,20 +33525,6 @@
         ],
         "synopsis": "",
         "watch_url": "https://www.netflix.com/jp/title/70059971"
-      },
-      {
-        "id": "125520",
-        "title": "エディ・マーフィ",
-        "url": "https://filmarks.com/movies/125520",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/jpv3pf3d1nqyatg3u9ajjje319bp/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "ドキュメンタリー",
-          "伝記"
-        ],
-        "synopsis": "スタンドアップの天才児として頭角を現したのち、「サタデー・ナイト・ライブ」で旋風を巻き起こし、ハリウッドのアイコン的存在として愛されてきたエディ・マーフィ。\n本作「エディ・マーフィ」はマー",
-        "watch_url": "https://www.netflix.com/jp/title/81094163"
       },
       {
         "id": "120003",
@@ -36950,6 +36787,20 @@
         "watch_url": "https://www.netflix.com/jp/title/81462290"
       },
       {
+        "id": "114100",
+        "title": "米国マジカル・ニグロ協会",
+        "url": "https://filmarks.com/movies/114100",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/pzhy5aup78on0s3xujvyk1zs6pmg/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "コメディ",
+          "ファンタジー"
+        ],
+        "synopsis": "白人の人生を楽にすることを至上命題として献身する魔法使いの黒人の秘密結社。本作はそんな組織にスカウトされた青年アレンを描く斬新な風刺コメディだ。",
+        "watch_url": "https://www.netflix.com/jp/title/81942033"
+      },
+      {
         "id": "79219",
         "title": "マーキュリー13 宇宙開発を支えた女性たち",
         "url": "https://filmarks.com/movies/79219",
@@ -36974,20 +36825,6 @@
         ],
         "synopsis": "1835年の世界にいたフランメルという生き物2匹が、なぜか現代の上海にタイムスリップしてしまいます。",
         "watch_url": "https://www.netflix.com/jp/title/81159137"
-      },
-      {
-        "id": "114100",
-        "title": "米国マジカル・ニグロ協会",
-        "url": "https://filmarks.com/movies/114100",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/pzhy5aup78on0s3xujvyk1zs6pmg/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "コメディ",
-          "ファンタジー"
-        ],
-        "synopsis": "白人の人生を楽にすることを至上命題として献身する魔法使いの黒人の秘密結社。本作はそんな組織にスカウトされた青年アレンを描く斬新な風刺コメディだ。",
-        "watch_url": "https://www.netflix.com/jp/title/81942033"
       },
       {
         "id": "82269",
@@ -37666,19 +37503,6 @@
         ],
         "synopsis": "",
         "watch_url": "https://www.netflix.com/jp/title/81034010"
-      },
-      {
-        "id": "120534",
-        "title": "山猫は眠らない11 超兵器の暴発",
-        "url": "https://filmarks.com/movies/120534",
-        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/1vpngdqp61t6my4ioai866t0hhu2/_.jpg",
-        "year": null,
-        "platform": "netflix",
-        "genres": [
-          "アクション"
-        ],
-        "synopsis": "殺傷能力を持つ超兵器を武器商人が解き放つのを阻止するため、一流狙撃手ブランドン･ベケットとゼロはコスタベルデへ派遣された。無慈悲な私兵団と戦う精鋭兵士のグループを率いるのだ。ベケットは、若",
-        "watch_url": "https://www.netflix.com/jp/title/82027214"
       },
       {
         "id": "123112",
@@ -42058,6 +41882,21 @@
         "watch_url": "https://www.netflix.com/jp/title/81750030"
       },
       {
+        "id": "99426",
+        "title": "スワロー：闇にのまれて",
+        "url": "https://filmarks.com/movies/99426",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/cfrop6senaiwcscwok7xir4u8gv3/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ドラマ",
+          "スリラー",
+          "歴史"
+        ],
+        "synopsis": "1980年代のナイジェリア、理不尽な人生に憤る若い女性は、麻薬の運び屋をする友人に協力することに。道を踏み外そうとする彼女を、厳しい現実が待っていた。",
+        "watch_url": "https://www.netflix.com/jp/title/81392180"
+      },
+      {
         "id": "99968",
         "title": "変わらぬ愛で",
         "url": "https://filmarks.com/movies/99968",
@@ -44753,6 +44592,21 @@
         ],
         "synopsis": "2023年サッカー女子ワールドカップで優勝したスペインの代表チームの選手が集結。波乱に満ちた大会と、彼女たちの勝利に影を落とした\"キス騒動\"を振り返る。",
         "watch_url": "https://www.netflix.com/jp/title/81737633"
+      },
+      {
+        "id": "128963",
+        "title": "ママ、これってナニゴト?",
+        "url": "https://filmarks.com/movies/128963",
+        "thumb": "https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/wi8iraa7o1e9bcx0witqsrnb5spx/_.jpg",
+        "year": null,
+        "platform": "netflix",
+        "genres": [
+          "ドラマ",
+          "恋愛",
+          "コメディ"
+        ],
+        "synopsis": "自宅でとんでもないトラブルが発生し、疎遠になっている娘たちに助けを求めた母親。どんな秘密も筒抜けになる詮索好きなご近所社会で、母娘三人による事件の隠蔽作戦が幕を開ける!\nNetflixで2",
+        "watch_url": "https://www.netflix.com/jp/title/81702997"
       },
       {
         "id": "83631",
